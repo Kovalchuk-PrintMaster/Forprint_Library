@@ -1,0 +1,42 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.egg-info/
+.eggs/
+build/
+dist/
+
+# Virtual environments
+.venv/
+.venv_*/
+venv/
+
+# Test / lint caches
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.coverage
+htmlcov/
+
+# Local environment
+.env
+.env.*
+!.env.example
+
+# Temporary backups
+*.backup
+*.bak
+*.tmp
+*.swp
+*.swo
+app.backup_before_stage2/
+tests.backup_before_stage2/
+*.backup_before_stage2
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

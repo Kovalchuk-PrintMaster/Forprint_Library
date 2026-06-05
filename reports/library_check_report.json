@@ -1,0 +1,103 @@
+{
+  "module_id": "forprint_library",
+  "report": "library_check_report",
+  "generated_at": "2026-06-05T18:21:47",
+  "summary": {
+    "ok": 11,
+    "warn": 2,
+    "failed": 0
+  },
+  "checks": [
+    {
+      "name": "Ruff lint",
+      "expected": "No lint errors",
+      "status": "OK",
+      "seconds": 0.03899988700868562,
+      "details": "All checks passed!"
+    },
+    {
+      "name": "Pytest",
+      "expected": "All tests pass",
+      "status": "OK",
+      "seconds": 0.31477663898840547,
+      "details": ".....                                                                    [100%]\n5 passed in 0.03s"
+    },
+    {
+      "name": "Catalog seed validation",
+      "expected": "Seed exists or is deferred to Checkpoint B",
+      "status": "WARN",
+      "seconds": 0.00013027299428358674,
+      "details": "Deferred to Checkpoint B."
+    },
+    {
+      "name": "Required architecture docs",
+      "expected": "Docs exist or are deferred to Checkpoint C",
+      "status": "WARN",
+      "seconds": 0.00024729600409045815,
+      "details": "Deferred to Checkpoint C: ['docs/architecture/canonical_id_policy.md', 'docs/architecture/alias_policy.md', 'docs/architecture/dependent_module_usage.md']"
+    },
+    {
+      "name": "Blueprint source config",
+      "expected": "blueprint_source.yaml is valid",
+      "status": "OK",
+      "seconds": 0.002484611002728343,
+      "details": "coordination/blueprint_source.yaml"
+    },
+    {
+      "name": "Prompts index",
+      "expected": "coordination/prompts/index.yaml is valid",
+      "status": "OK",
+      "seconds": 0.0010197420488111675,
+      "details": "coordination/prompts/index.yaml"
+    },
+    {
+      "name": "Reports index",
+      "expected": "coordination/reports/index.yaml is valid",
+      "status": "OK",
+      "seconds": 0.0011465710122138262,
+      "details": "coordination/reports/index.yaml"
+    },
+    {
+      "name": "Coordination status YAML",
+      "expected": "current_status.yaml exists",
+      "status": "OK",
+      "seconds": 2.625701017677784e-05,
+      "details": "coordination/status/current_status.yaml"
+    },
+    {
+      "name": "Coordination status MD",
+      "expected": "current_status.md exists",
+      "status": "OK",
+      "seconds": 1.9197002984583378e-05,
+      "details": "coordination/status/current_status.md"
+    },
+    {
+      "name": "Next questions",
+      "expected": "next_questions_for_blueprint.md exists",
+      "status": "OK",
+      "seconds": 1.818698365241289e-05,
+      "details": "coordination/status/next_questions_for_blueprint.md"
+    },
+    {
+      "name": "Module manifest boundary",
+      "expected": "Manifest exists and forbids operational ownership",
+      "status": "OK",
+      "seconds": 0.0093609580071643,
+      "details": "Boundary exclusions are present."
+    },
+    {
+      "name": "Makefile standard targets",
+      "expected": "Required targets exist",
+      "status": "OK",
+      "seconds": 0.00015191297279670835,
+      "details": "All required targets found."
+    },
+    {
+      "name": "Blueprint policy check",
+      "expected": "Blueprint paths readable; module directives may be deferred",
+      "status": "OK",
+      "seconds": 0.05079548101639375,
+      "details": "OK: Blueprint root: /srv/software_development/forprint-project/forprint_system_blueprint\nOK: Global policy: /srv/software_development/forprint-project/forprint_system_blueprint/coordination/global_policy\nOK: Standards: /srv/software_development/forprint-project/forprint_system_blueprint/coordination/standards\nOK: Module policy: /srv/software_development/forprint-project/forprint_system_blueprint/coordination/module_policy/forprint_library/module_policy.md\nOK: Global directives index: /srv/software_development/forprint-project/forprint_system_blueprint/coordination/directives/global/index.yaml\nWARN: Module directives index missing/deferred: /srv/software_development/forprint-project/forprint_system_blueprint/coordination/directives/modules/forprint_library/index.yaml"
+    }
+  ]
+}

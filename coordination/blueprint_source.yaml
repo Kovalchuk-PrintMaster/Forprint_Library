@@ -1,0 +1,8 @@
+blueprint_source:
+  module_id: forprint_library
+  blueprint_root: /srv/software_development/forprint-project/forprint_system_blueprint
+  module_policy_path: coordination/module_policy/forprint_library/module_policy.md
+  global_policy_path: coordination/global_policy
+  standards_path: coordination/standards
+  module_directives_index: coordination/directives/modules/forprint_library/index.yaml
+  module_directives_index_status: pending_blueprint_directive_index
