@@ -1,0 +1,63 @@
+catalog_type: print_modes
+metadata:
+  id: canonical_catalog_seed_v0_1
+  name: Canonical Catalog Seed v0.1
+  version: '0.1'
+  catalog_status: draft_canonical_seed
+  schema_status: unstable_v0_1
+  usage: allowed_for_projection_use
+  contract_status: not_final_contract
+  owner_module: forprint_library
+  notes: 'Draft canonical seed for projection use by dependent ForPrint modules. This
+    is not a final production contract.
+
+    '
+items:
+- id: color_4_0
+  name_uk: 4+0
+  name_en: Full color one side
+  aliases:
+  - 4+0
+  - односторонній повноколір
+  - full color one side
+  status: draft
+  version: '0.1'
+  owner_module: forprint_library
+  schema_status: unstable_v0_1
+  notes: Draft print mode entry.
+- id: color_4_4
+  name_uk: 4+4
+  name_en: Full color both sides
+  aliases:
+  - 4+4
+  - двосторонній повноколір
+  - full color both sides
+  status: draft
+  version: '0.1'
+  owner_module: forprint_library
+  schema_status: unstable_v0_1
+  notes: Draft print mode entry.
+- id: color_1_0
+  name_uk: 1+0
+  name_en: One color one side
+  aliases:
+  - 1+0
+  - односторонній один колір
+  - one color one side
+  status: draft
+  version: '0.1'
+  owner_module: forprint_library
+  schema_status: unstable_v0_1
+  notes: Draft print mode entry.
+- id: color_1_1
+  name_uk: 1+1
+  name_en: One color both sides
+  aliases:
+  - 1+1
+  - двосторонній один колір
+  - one color both sides
+  status: draft
+  version: '0.1'
+  owner_module: forprint_library
+  schema_status: unstable_v0_1
+  notes: Draft print mode entry.

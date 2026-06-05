@@ -1,0 +1,61 @@
+module_id: forprint_library
+status: catalog_seed_v0_1_checkpoint_b
+stage: checkpoint_b
+updated_at: "2026-06-05"
+owner_module: forprint_library
+
+current_focus:
+  - canonical catalog seed v0.1
+  - schema validation
+  - component catalog files
+  - alias and ID sanity checks
+  - projection-safe draft catalog source for dependent modules
+
+boundary_confirmation:
+  owns:
+    - canonical catalog semantics
+    - stable catalog IDs
+    - aliases
+    - contract definitions
+  does_not_own:
+    - clients
+    - orders
+    - payments
+    - warehouse stock truth
+    - production runtime
+    - 1C synchronization
+    - CRM workflow
+    - Telegram runtime
+    - Calculator logic
+
+catalog_seed_v0_1:
+  catalog_status: draft_canonical_seed
+  schema_status: unstable_v0_1
+  usage: allowed_for_projection_use
+  contract_status: not_final_contract
+  owner_module: forprint_library
+  projection_use_allowed_for:
+    - calculator_engine
+    - telegram_bot
+    - forprint_operational_registry
+    - forprint_accounting_registry_service
+    - forprint_prepress_hub
+
+checkpoint_a:
+  coordination_structure: done
+  makefile_standard: done
+  check_report: done
+  commit: e2f9302
+
+checkpoint_b:
+  catalog_seed: in_progress
+  schemas: in_progress
+  component_catalogs: in_progress
+  validation_tests: in_progress
+  check_report_catalog_validation: in_progress
+
+checkpoint_c:
+  docs_policy_pack: deferred
+
+checkpoint_d:
+  final_report_and_status: deferred

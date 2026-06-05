@@ -1,0 +1,75 @@
+metadata:
+  id: canonical_catalog_seed_v0_1_example
+  name: Canonical Catalog Seed v0.1 Example
+  version: '0.1'
+  catalog_status: draft_canonical_seed
+  schema_status: unstable_v0_1
+  usage: allowed_for_projection_use
+  contract_status: not_final_contract
+  owner_module: forprint_library
+  notes: Example projection-safe catalog seed structure.
+materials:
+- id: paper_300g_matte
+  name_uk: Папір 300 г матовий
+  name_en: 300 gsm matte paper
+  aliases:
+  - папір 300 мат
+  - 300gsm matte
+  - матовий папір 300 г
+  status: draft
+  version: '0.1'
+  owner_module: forprint_library
+  schema_status: unstable_v0_1
+  notes: Synthetic draft material entry.
+product_families:
+- id: business_card
+  name_uk: Візитка
+  name_en: Business card
+  aliases:
+  - візитка
+  - business card
+  - карточка
+  status: draft
+  version: '0.1'
+  owner_module: forprint_library
+  schema_status: unstable_v0_1
+  notes: Draft product family for small-format contact cards.
+operations:
+- id: digital_print
+  name_uk: Цифровий друк
+  name_en: Digital print
+  aliases:
+  - цифровий друк
+  - digital print
+  - друк цифровий
+  status: draft
+  version: '0.1'
+  owner_module: forprint_library
+  schema_status: unstable_v0_1
+  notes: Draft operation entry.
+print_modes:
+- id: color_4_0
+  name_uk: 4+0
+  name_en: Full color one side
+  aliases:
+  - 4+0
+  - односторонній повноколір
+  - full color one side
+  status: draft
+  version: '0.1'
+  owner_module: forprint_library
+  schema_status: unstable_v0_1
+  notes: Draft print mode entry.
+finishing_options:
+- id: none
+  name_uk: Без постобробки
+  name_en: No finishing
+  aliases:
+  - без постобробки
+  - no finishing
+  - без додаткової обробки
+  status: draft
+  version: '0.1'
+  owner_module: forprint_library
+  schema_status: unstable_v0_1
+  notes: Draft finishing option entry.

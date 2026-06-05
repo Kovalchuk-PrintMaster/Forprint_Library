@@ -227,7 +227,36 @@ def collect_results(skip_external: bool = False) -> list[CheckResult]:
         run_command("Ruff lint", "No lint errors", 
                     [python, "-m", "ruff", "check", "app", "scripts", "tests"]),
         run_command("Pytest", "All tests pass", [python, "-m", "pytest"]),
-        check_catalog_seed_deferred(),
+        run_command(
+            "Catalog seed validation",
+            "Seed is valid",
+            [python, "scripts/validate_catalog_seed.py", "--check", "seed"],
+        ),
+        run_command(
+            "Schema files validation",
+            "Schemas are valid",
+            [python, "scripts/validate_catalog_seed.py", "--check", "schemas"],
+        ),
+        run_command(
+            "Component catalog files",
+            "Component catalogs validate",
+            [python, "scripts/validate_catalog_seed.py", "--check", "files"],
+        ),
+        run_command(
+            "Catalog uniqueness validation",
+            "Catalog item IDs are unique",
+            [python, "scripts/validate_catalog_seed.py", "--check", "uniqueness"],
+        ),
+        run_command(
+            "Alias sanity validation",
+            "Aliases are lists and non-conflicting",
+            [python, "scripts/validate_catalog_seed.py", "--check", "aliases"],
+        ),
+        run_command(
+            "Example catalog seed",
+            "Example seed validates",
+            [python, "scripts/validate_catalog_seed.py", "--check", "example"],
+        ),
         check_architecture_docs_deferred(),
         check_yaml_file(
             "Blueprint source config",

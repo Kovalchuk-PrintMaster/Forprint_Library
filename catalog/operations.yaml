@@ -1,0 +1,99 @@
+catalog_type: operations
+metadata:
+  id: canonical_catalog_seed_v0_1
+  name: Canonical Catalog Seed v0.1
+  version: '0.1'
+  catalog_status: draft_canonical_seed
+  schema_status: unstable_v0_1
+  usage: allowed_for_projection_use
+  contract_status: not_final_contract
+  owner_module: forprint_library
+  notes: 'Draft canonical seed for projection use by dependent ForPrint modules. This
+    is not a final production contract.
+
+    '
+items:
+- id: digital_print
+  name_uk: Цифровий друк
+  name_en: Digital print
+  aliases:
+  - цифровий друк
+  - digital print
+  - друк цифровий
+  status: draft
+  version: '0.1'
+  owner_module: forprint_library
+  schema_status: unstable_v0_1
+  notes: Draft operation entry.
+- id: large_format_print
+  name_uk: Широкоформатний друк
+  name_en: Large-format print
+  aliases:
+  - широкоформатний друк
+  - large format print
+  - друк на банері
+  status: draft
+  version: '0.1'
+  owner_module: forprint_library
+  schema_status: unstable_v0_1
+  notes: Draft operation entry.
+- id: cutting
+  name_uk: Різання
+  name_en: Cutting
+  aliases:
+  - різання
+  - cutting
+  - порізка
+  status: draft
+  version: '0.1'
+  owner_module: forprint_library
+  schema_status: unstable_v0_1
+  notes: Draft operation entry.
+- id: lamination
+  name_uk: Ламінування
+  name_en: Lamination
+  aliases:
+  - ламінування
+  - lamination
+  - покриття плівкою
+  status: draft
+  version: '0.1'
+  owner_module: forprint_library
+  schema_status: unstable_v0_1
+  notes: Draft operation entry.
+- id: rounding
+  name_uk: Заокруглення кутів
+  name_en: Corner rounding
+  aliases:
+  - заокруглення кутів
+  - corner rounding
+  - округлення кутів
+  status: draft
+  version: '0.1'
+  owner_module: forprint_library
+  schema_status: unstable_v0_1
+  notes: Draft operation entry.
+- id: folding
+  name_uk: Фальцювання
+  name_en: Folding
+  aliases:
+  - фальцювання
+  - folding operation
+  - згинання продукції
+  status: draft
+  version: '0.1'
+  owner_module: forprint_library
+  schema_status: unstable_v0_1
+  notes: Draft operation entry.
+- id: scoring
+  name_uk: Бігування
+  name_en: Scoring
+  aliases:
+  - бігування
+  - scoring
+  - лінія згину
+  status: draft
+  version: '0.1'
+  owner_module: forprint_library
+  schema_status: unstable_v0_1
+  notes: Draft operation entry.

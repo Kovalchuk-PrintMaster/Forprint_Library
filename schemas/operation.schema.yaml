@@ -1,0 +1,87 @@
+$schema: https://json-schema.org/draft/2020-12/schema
+title: ForPrint Operation Catalog
+type: object
+required:
+- catalog_type
+- metadata
+- items
+properties:
+  catalog_type:
+    const: operations
+  metadata:
+    type: object
+    required:
+    - id
+    - version
+    - catalog_status
+    - schema_status
+    - usage
+    - contract_status
+    - owner_module
+    properties:
+      id:
+        type: string
+      name:
+        type: string
+      version:
+        type: string
+      catalog_status:
+        const: draft_canonical_seed
+      schema_status:
+        const: unstable_v0_1
+      usage:
+        const: allowed_for_projection_use
+      contract_status:
+        const: not_final_contract
+      owner_module:
+        const: forprint_library
+      notes:
+        type: string
+    additionalProperties: true
+  items:
+    type: array
+    minItems: 1
+    items:
+      type: object
+      required:
+      - id
+      - name_uk
+      - name_en
+      - aliases
+      - status
+      - version
+      - owner_module
+      - schema_status
+      - notes
+      properties:
+        id:
+          type: string
+          pattern: ^[a-z0-9_]+$
+        name_uk:
+          type: string
+          minLength: 1
+        name_en:
+          type: string
+          minLength: 1
+        aliases:
+          type: array
+          minItems: 1
+          items:
+            type: string
+            minLength: 1
+        status:
+          enum:
+          - draft
+          - active
+          - deprecated
+          - experimental
+        version:
+          type: string
+        owner_module:
+          const: forprint_library
+        schema_status:
+          const: unstable_v0_1
+        notes:
+          type: string
+      additionalProperties: true
+additionalProperties: false
