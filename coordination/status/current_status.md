@@ -1,60 +1,73 @@
 # ForPrint Library Current Status
 
-Status: `docs_policy_pack_checkpoint_c`
+Status: `bootstrap_completed_pending_blueprint_review`
 
-ForPrint Library is documenting its canonical catalog, alias, seed and dependent
-module usage policies.
+ForPrint Library has completed the main bootstrap sequence for coordination
+readiness and Canonical Catalog Seed v0.1.
 
-## Completed
+## Completed checkpoints
 
-Checkpoint A:
+### Checkpoint A
 
-- coordination structure;
-- standard Makefile command surface;
-- visual check-report runner;
-- basic project standard tests;
-- Blueprint policy/check/sync scripts;
-- first commit and push.
-
-Checkpoint A commit:
+Coordination and check-report standard.
 
 ```text
 e2f9302 Bootstrap Library coordination and check report standard
 ```
 
-Checkpoint B:
+### Checkpoint B
 
-- Canonical Catalog Seed v0.1;
-- component catalog files;
-- schema files;
-- catalog loader;
-- catalog validator;
-- simple registry and alias resolver;
-- contract and integration tests for projection readiness.
-
-Checkpoint B commit:
+Canonical Catalog Seed v0.1, schemas, component catalogs, loader, validator,
+registry and projection-readiness tests.
 
 ```text
 bb7a317 Add Library canonical catalog seed v0.1
 ```
 
+### Checkpoint C
+
+Architecture policy documentation:
+
+- Library boundaries;
+- catalog seed policy;
+- canonical ID policy;
+- alias policy;
+- dependent module usage policy.
+
+```text
+967d74a Document Library catalog boundaries and dependent usage
+```
+
 ## Current checkpoint
 
-Checkpoint C:
-
-- `docs/architecture/library_boundaries.md`;
-- `docs/architecture/catalog_seed_policy.md`;
-- `docs/architecture/canonical_id_policy.md`;
-- `docs/architecture/alias_policy.md`;
-- `docs/architecture/dependent_module_usage.md`;
-- architecture documentation tests.
-
-## Deferred
-
-Checkpoint D will finalize:
+Checkpoint D finalizes:
 
 - completion report;
-- coordination report index;
-- final status;
-- final check;
-- commit and push.
+- reports index;
+- current status;
+- final `make check`;
+- final `make check-report`;
+- final commit and push.
+
+## Current catalog seed status
+
+```yaml
+catalog_status: draft_canonical_seed
+schema_status: unstable_v0_1
+usage: allowed_for_projection_use
+contract_status: not_final_contract
+owner_module: forprint_library
+```
+
+## Boundary
+
+ForPrint Library remains the canonical catalog and semantic authority.
+
+It does not own clients, orders, payments, warehouse stock truth, production
+runtime, 1C synchronization, CRM workflow, Telegram runtime, Calculator logic or
+external customer communication.
+
+## Recommended next step
+
+Pause Library after final bootstrap commit and pass the completion report to
+ForPrint System Blueprint for review.

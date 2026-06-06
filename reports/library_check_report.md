@@ -1,14 +1,14 @@
 # ForPrint Library Check Report
 
-Generated at: `2026-06-06T12:06:56`
+Generated at: `2026-06-06T12:11:07`
 
 | Check | Expected result | Status | Time | Details |
 |---|---|---:|---:|---|
 | Ruff lint | No lint errors | OK | 0.04s | All checks passed! |
-| Pytest | All tests pass | OK | 0.91s | .............................                                            [100%]<br>29 passed in 0.60s |
-| Catalog seed validation | Seed is valid | OK | 0.21s | OK: catalog validation check 'seed' passed. |
+| Pytest | All tests pass | OK | 0.92s | .................................                                        [100%]<br>33 passed in 0.62s |
+| Catalog seed validation | Seed is valid | OK | 0.20s | OK: catalog validation check 'seed' passed. |
 | Schema files validation | Schemas are valid | OK | 0.24s | OK: catalog validation check 'schemas' passed. |
-| Component catalog files | Component catalogs validate | OK | 0.28s | OK: catalog validation check 'files' passed. |
+| Component catalog files | Component catalogs validate | OK | 0.29s | OK: catalog validation check 'files' passed. |
 | Catalog uniqueness validation | Catalog item IDs are unique | OK | 0.16s | OK: catalog validation check 'uniqueness' passed. |
 | Alias sanity validation | Aliases are lists and non-conflicting | OK | 0.16s | OK: catalog validation check 'aliases' passed. |
 | Example catalog seed | Example seed validates | OK | 0.16s | OK: catalog validation check 'example' passed. |

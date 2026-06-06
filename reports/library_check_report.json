@@ -1,7 +1,7 @@
 {
   "module_id": "forprint_library",
   "report": "library_check_report",
-  "generated_at": "2026-06-06T12:06:56",
+  "generated_at": "2026-06-06T12:11:07",
   "summary": {
     "ok": 18,
     "warn": 0,
@@ -12,126 +12,126 @@
       "name": "Ruff lint",
       "expected": "No lint errors",
       "status": "OK",
-      "seconds": 0.037300741008948535,
+      "seconds": 0.0354819759959355,
       "details": "All checks passed!"
     },
     {
       "name": "Pytest",
       "expected": "All tests pass",
       "status": "OK",
-      "seconds": 0.9083607679931447,
-      "details": ".............................                                            [100%]\n29 passed in 0.60s"
+      "seconds": 0.9194335219799541,
+      "details": ".................................                                        [100%]\n33 passed in 0.62s"
     },
     {
       "name": "Catalog seed validation",
       "expected": "Seed is valid",
       "status": "OK",
-      "seconds": 0.21260147995781153,
+      "seconds": 0.20358393900096416,
       "details": "OK: catalog validation check 'seed' passed."
     },
     {
       "name": "Schema files validation",
       "expected": "Schemas are valid",
       "status": "OK",
-      "seconds": 0.2389508470077999,
+      "seconds": 0.23866721004014835,
       "details": "OK: catalog validation check 'schemas' passed."
     },
     {
       "name": "Component catalog files",
       "expected": "Component catalogs validate",
       "status": "OK",
-      "seconds": 0.27914760902058333,
+      "seconds": 0.2869089440209791,
       "details": "OK: catalog validation check 'files' passed."
     },
     {
       "name": "Catalog uniqueness validation",
       "expected": "Catalog item IDs are unique",
       "status": "OK",
-      "seconds": 0.15934747300343588,
+      "seconds": 0.15702596702612936,
       "details": "OK: catalog validation check 'uniqueness' passed."
     },
     {
       "name": "Alias sanity validation",
       "expected": "Aliases are lists and non-conflicting",
       "status": "OK",
-      "seconds": 0.1584369420306757,
+      "seconds": 0.15713450603652745,
       "details": "OK: catalog validation check 'aliases' passed."
     },
     {
       "name": "Example catalog seed",
       "expected": "Example seed validates",
       "status": "OK",
-      "seconds": 0.16259118798188865,
+      "seconds": 0.16135669098002836,
       "details": "OK: catalog validation check 'example' passed."
     },
     {
       "name": "Required architecture docs",
       "expected": "Docs exist or are deferred to Checkpoint C",
       "status": "OK",
-      "seconds": 0.0002134540118277073,
+      "seconds": 0.00020830001449212432,
       "details": "Required architecture docs exist."
     },
     {
       "name": "Blueprint source config",
       "expected": "blueprint_source.yaml is valid",
       "status": "OK",
-      "seconds": 0.0024402179988101125,
+      "seconds": 0.0024181969929486513,
       "details": "coordination/blueprint_source.yaml"
     },
     {
       "name": "Prompts index",
       "expected": "coordination/prompts/index.yaml is valid",
       "status": "OK",
-      "seconds": 0.0010176569921895862,
+      "seconds": 0.0010241069830954075,
       "details": "coordination/prompts/index.yaml"
     },
     {
       "name": "Reports index",
       "expected": "coordination/reports/index.yaml is valid",
       "status": "OK",
-      "seconds": 0.0011277790181338787,
+      "seconds": 0.004752302018459886,
       "details": "coordination/reports/index.yaml"
     },
     {
       "name": "Coordination status YAML",
       "expected": "current_status.yaml exists",
       "status": "OK",
-      "seconds": 2.5954970624297857e-05,
+      "seconds": 2.7381989639252424e-05,
       "details": "coordination/status/current_status.yaml"
     },
     {
       "name": "Coordination status MD",
       "expected": "current_status.md exists",
       "status": "OK",
-      "seconds": 2.0874023903161287e-05,
+      "seconds": 2.1618034224957228e-05,
       "details": "coordination/status/current_status.md"
     },
     {
       "name": "Next questions",
       "expected": "next_questions_for_blueprint.md exists",
       "status": "OK",
-      "seconds": 1.8115038983523846e-05,
+      "seconds": 1.9347993656992912e-05,
       "details": "coordination/status/next_questions_for_blueprint.md"
     },
     {
       "name": "Module manifest boundary",
       "expected": "Manifest exists and forbids operational ownership",
       "status": "OK",
-      "seconds": 0.009323020000010729,
+      "seconds": 0.009042766992934048,
       "details": "Boundary exclusions are present."
     },
     {
       "name": "Makefile standard targets",
       "expected": "Required targets exist",
       "status": "OK",
-      "seconds": 0.00014656694838777184,
+      "seconds": 0.00014921004185453057,
       "details": "All required targets found."
     },
     {
       "name": "Blueprint policy check",
       "expected": "Blueprint paths readable; module directives may be deferred",
       "status": "OK",
-      "seconds": 0.05087096802890301,
+      "seconds": 0.0509048419771716,
       "details": "OK: Blueprint root: /srv/software_development/forprint-project/forprint_system_blueprint\nOK: Global policy: /srv/software_development/forprint-project/forprint_system_blueprint/coordination/global_policy\nOK: Standards: /srv/software_development/forprint-project/forprint_system_blueprint/coordination/standards\nOK: Module policy: /srv/software_development/forprint-project/forprint_system_blueprint/coordination/module_policy/forprint_library/module_policy.md\nOK: Global directives index: /srv/software_development/forprint-project/forprint_system_blueprint/coordination/directives/global/index.yaml\nWARN: Module directives index missing/deferred: /srv/software_development/forprint-project/forprint_system_blueprint/coordination/directives/modules/forprint_library/index.yaml"
     }
   ]
