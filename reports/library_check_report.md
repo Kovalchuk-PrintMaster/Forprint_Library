@@ -1,18 +1,18 @@
 # ForPrint Library Check Report
 
-Generated at: `2026-06-05T19:38:14`
+Generated at: `2026-06-06T12:06:56`
 
 | Check | Expected result | Status | Time | Details |
 |---|---|---:|---:|---|
 | Ruff lint | No lint errors | OK | 0.04s | All checks passed! |
-| Pytest | All tests pass | OK | 0.90s | .......................                                                  [100%]<br>23 passed in 0.60s |
+| Pytest | All tests pass | OK | 0.91s | .............................                                            [100%]<br>29 passed in 0.60s |
 | Catalog seed validation | Seed is valid | OK | 0.21s | OK: catalog validation check 'seed' passed. |
-| Schema files validation | Schemas are valid | OK | 0.25s | OK: catalog validation check 'schemas' passed. |
+| Schema files validation | Schemas are valid | OK | 0.24s | OK: catalog validation check 'schemas' passed. |
 | Component catalog files | Component catalogs validate | OK | 0.28s | OK: catalog validation check 'files' passed. |
 | Catalog uniqueness validation | Catalog item IDs are unique | OK | 0.16s | OK: catalog validation check 'uniqueness' passed. |
 | Alias sanity validation | Aliases are lists and non-conflicting | OK | 0.16s | OK: catalog validation check 'aliases' passed. |
-| Example catalog seed | Example seed validates | OK | 0.15s | OK: catalog validation check 'example' passed. |
-| Required architecture docs | Docs exist or are deferred to Checkpoint C | WARN | 0.00s | Deferred to Checkpoint C: ['docs/architecture/canonical_id_policy.md', 'docs/architecture/alias_policy.md', 'docs/architecture/dependent_module_usage.md'] |
+| Example catalog seed | Example seed validates | OK | 0.16s | OK: catalog validation check 'example' passed. |
+| Required architecture docs | Docs exist or are deferred to Checkpoint C | OK | 0.00s | Required architecture docs exist. |
 | Blueprint source config | blueprint_source.yaml is valid | OK | 0.00s | coordination/blueprint_source.yaml |
 | Prompts index | coordination/prompts/index.yaml is valid | OK | 0.00s | coordination/prompts/index.yaml |
 | Reports index | coordination/reports/index.yaml is valid | OK | 0.00s | coordination/reports/index.yaml |

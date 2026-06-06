@@ -1,15 +1,15 @@
 module_id: forprint_library
-status: catalog_seed_v0_1_checkpoint_b
-stage: checkpoint_b
+status: docs_policy_pack_checkpoint_c
+stage: checkpoint_c
 updated_at: "2026-06-05"
 owner_module: forprint_library
 
 current_focus:
-  - canonical catalog seed v0.1
-  - schema validation
-  - component catalog files
-  - alias and ID sanity checks
-  - projection-safe draft catalog source for dependent modules
+  - canonical ID policy
+  - alias policy
+  - dependent module usage policy
+  - catalog seed policy
+  - Library boundary documentation
 
 boundary_confirmation:
   owns:
@@ -48,14 +48,16 @@ checkpoint_a:
   commit: e2f9302
 
 checkpoint_b:
-  catalog_seed: in_progress
-  schemas: in_progress
-  component_catalogs: in_progress
-  validation_tests: in_progress
-  check_report_catalog_validation: in_progress
+  catalog_seed: done
+  schemas: done
+  component_catalogs: done
+  validation_tests: done
+  check_report_catalog_validation: done
+  commit: bb7a317
 
 checkpoint_c:
-  docs_policy_pack: deferred
+  docs_policy_pack: in_progress
+  architecture_tests: in_progress
 
 checkpoint_d:
   final_report_and_status: deferred
