@@ -1,0 +1,1803 @@
+metadata:
+  id: shared_operational_dictionary_v0_1
+  name: Shared Operational Dictionary v0.1
+  version: '0.1'
+  dictionary_status: draft_shared_operational_dictionary_v0_1
+  schema_status: unstable_v0_1
+  usage: allowed_for_projection_use
+  contract_status: not_final_contract
+  owner_module: forprint_library
+  unit_dictionary_status: not_final_inventory_unit_system
+dictionary_groups:
+  source_system:
+  - id: forprint_operational_registry
+    label_uk: Forprint Operational Registry
+    label_en: Forprint Operational Registry
+    description: Canonical shared operational dictionary value 'forprint_operational_registry'
+      for dictionary group 'source_system'.
+    status: active
+    aliases:
+    - operational_registry
+    - opr
+    owner_module: forprint_library
+    dictionary_group: source_system
+    version: '0.1'
+    notes: Draft shared operational dictionary entry.
+  - id: forprint_library
+    label_uk: Forprint Library
+    label_en: Forprint Library
+    description: Canonical shared operational dictionary value 'forprint_library'
+      for dictionary group 'source_system'.
+    status: active
+    aliases:
+    - library
+    owner_module: forprint_library
+    dictionary_group: source_system
+    version: '0.1'
+    notes: Draft shared operational dictionary entry.
+  - id: calculator_engine
+    label_uk: Calculator Engine
+    label_en: Calculator Engine
+    description: Canonical shared operational dictionary value 'calculator_engine'
+      for dictionary group 'source_system'.
+    status: active
+    aliases:
+    - calculator
+    owner_module: forprint_library
+    dictionary_group: source_system
+    version: '0.1'
+    notes: Draft shared operational dictionary entry.
+  - id: accounting_registry_service
+    label_uk: Accounting Registry Service
+    label_en: Accounting Registry Service
+    description: Canonical shared operational dictionary value 'accounting_registry_service'
+      for dictionary group 'source_system'.
+    status: active
+    aliases:
+    - accounting_registry
+    owner_module: forprint_library
+    dictionary_group: source_system
+    version: '0.1'
+    notes: Draft shared operational dictionary entry.
+  - id: telegram_bot
+    label_uk: Telegram Bot
+    label_en: Telegram Bot
+    description: Canonical shared operational dictionary value 'telegram_bot' for
+      dictionary group 'source_system'.
+    status: active
+    aliases:
+    - telegram
+    owner_module: forprint_library
+    dictionary_group: source_system
+    version: '0.1'
+    notes: Draft shared operational dictionary entry.
+  - id: forprint_crm
+    label_uk: Forprint Crm
+    label_en: Forprint Crm
+    description: Canonical shared operational dictionary value 'forprint_crm' for
+      dictionary group 'source_system'.
+    status: active
+    aliases: []
+    owner_module: forprint_library
+    dictionary_group: source_system
+    version: '0.1'
+    notes: Draft shared operational dictionary entry.
+  - id: forprint_integration_gateway
+    label_uk: Forprint Integration Gateway
+    label_en: Forprint Integration Gateway
+    description: Canonical shared operational dictionary value 'forprint_integration_gateway'
+      for dictionary group 'source_system'.
+    status: active
+    aliases: []
+    owner_module: forprint_library
+    dictionary_group: source_system
+    version: '0.1'
+    notes: Draft shared operational dictionary entry.
+  - id: forprint_prepress_hub
+    label_uk: Forprint Prepress Hub
+    label_en: Forprint Prepress Hub
+    description: Canonical shared operational dictionary value 'forprint_prepress_hub'
+      for dictionary group 'source_system'.
+    status: active
+    aliases: []
+    owner_module: forprint_library
+    dictionary_group: source_system
+    version: '0.1'
+    notes: Draft shared operational dictionary entry.
+  - id: warehouse_service
+    label_uk: Warehouse Service
+    label_en: Warehouse Service
+    description: Canonical shared operational dictionary value 'warehouse_service'
+      for dictionary group 'source_system'.
+    status: active
+    aliases: []
+    owner_module: forprint_library
+    dictionary_group: source_system
+    version: '0.1'
+    notes: Draft shared operational dictionary entry.
+  - id: logistics_service
+    label_uk: Logistics Service
+    label_en: Logistics Service
+    description: Canonical shared operational dictionary value 'logistics_service'
+      for dictionary group 'source_system'.
+    status: active
+    aliases: []
+    owner_module: forprint_library
+    dictionary_group: source_system
+    version: '0.1'
+    notes: Draft shared operational dictionary entry.
+  - id: website
+    label_uk: Website
+    label_en: Website
+    description: Canonical shared operational dictionary value 'website' for dictionary
+      group 'source_system'.
+    status: active
+    aliases: []
+    owner_module: forprint_library
+    dictionary_group: source_system
+    version: '0.1'
+    notes: Draft shared operational dictionary entry.
+  - id: mobile_app
+    label_uk: Mobile App
+    label_en: Mobile App
+    description: Canonical shared operational dictionary value 'mobile_app' for dictionary
+      group 'source_system'.
+    status: active
+    aliases: []
+    owner_module: forprint_library
+    dictionary_group: source_system
+    version: '0.1'
+    notes: Draft shared operational dictionary entry.
+  - id: one_c_bas
+    label_uk: 1C/BAS
+    label_en: One C Bas
+    description: Canonical shared operational dictionary value 'one_c_bas' for dictionary
+      group 'source_system'.
+    status: active
+    aliases:
+    - 1c
+    - bas
+    - 1c_bas
+    owner_module: forprint_library
+    dictionary_group: source_system
+    version: '0.1'
+    notes: Draft shared operational dictionary entry.
+  - id: sanitized_demo
+    label_uk: Sanitized Demo
+    label_en: Sanitized Demo
+    description: Canonical shared operational dictionary value 'sanitized_demo' for
+      dictionary group 'source_system'.
+    status: active
+    aliases: []
+    owner_module: forprint_library
+    dictionary_group: source_system
+    version: '0.1'
+    notes: Draft shared operational dictionary entry.
+  - id: manual_entry
+    label_uk: Manual Entry
+    label_en: Manual Entry
+    description: Canonical shared operational dictionary value 'manual_entry' for
+      dictionary group 'source_system'.
+    status: active
+    aliases:
+    - manual
+    - ручне введення
+    owner_module: forprint_library
+    dictionary_group: source_system
+    version: '0.1'
+    notes: Draft shared operational dictionary entry.
+  - id: unknown
+    label_uk: Невідомо
+    label_en: Unknown
+    description: Canonical shared operational dictionary value 'unknown' for dictionary
+      group 'source_system'.
+    status: active
+    aliases: &id001
+    - невідомо
+    owner_module: forprint_library
+    dictionary_group: source_system
+    version: '0.1'
+    notes: Draft shared operational dictionary entry.
+  entity_type:
+  - id: client_account
+    label_uk: Client Account
+    label_en: Client Account
+    description: Canonical shared operational dictionary value 'client_account' for
+      dictionary group 'entity_type'.
+    status: active
+    aliases: []
+    owner_module: forprint_library
+    dictionary_group: entity_type
+    version: '0.1'
+    notes: Draft shared operational dictionary entry.
+  - id: client_group
+    label_uk: Client Group
+    label_en: Client Group
+    description: Canonical shared operational dictionary value 'client_group' for
+      dictionary group 'entity_type'.
+    status: active
+    aliases: []
+    owner_module: forprint_library
+    dictionary_group: entity_type
+    version: '0.1'
+    notes: Draft shared operational dictionary entry.
+  - id: contact_person
+    label_uk: Contact Person
+    label_en: Contact Person
+    description: Canonical shared operational dictionary value 'contact_person' for
+      dictionary group 'entity_type'.
+    status: active
+    aliases: []
+    owner_module: forprint_library
+    dictionary_group: entity_type
+    version: '0.1'
+    notes: Draft shared operational dictionary entry.
+  - id: contact_method
+    label_uk: Contact Method
+    label_en: Contact Method
+    description: Canonical shared operational dictionary value 'contact_method' for
+      dictionary group 'entity_type'.
+    status: active
+    aliases: []
+    owner_module: forprint_library
+    dictionary_group: entity_type
+    version: '0.1'
+    notes: Draft shared operational dictionary entry.
+  - id: client_address
+    label_uk: Client Address
+    label_en: Client Address
+    description: Canonical shared operational dictionary value 'client_address' for
+      dictionary group 'entity_type'.
+    status: active
+    aliases: []
+    owner_module: forprint_library
+    dictionary_group: entity_type
+    version: '0.1'
+    notes: Draft shared operational dictionary entry.
+  - id: legal_entity_profile
+    label_uk: Legal Entity Profile
+    label_en: Legal Entity Profile
+    description: Canonical shared operational dictionary value 'legal_entity_profile'
+      for dictionary group 'entity_type'.
+    status: active
+    aliases: []
+    owner_module: forprint_library
+    dictionary_group: entity_type
+    version: '0.1'
+    notes: Draft shared operational dictionary entry.
+  - id: external_reference
+    label_uk: External Reference
+    label_en: External Reference
+    description: Canonical shared operational dictionary value 'external_reference'
+      for dictionary group 'entity_type'.
+    status: active
+    aliases: []
+    owner_module: forprint_library
+    dictionary_group: entity_type
+    version: '0.1'
+    notes: Draft shared operational dictionary entry.
+  - id: order
+    label_uk: Order
+    label_en: Order
+    description: Canonical shared operational dictionary value 'order' for dictionary
+      group 'entity_type'.
+    status: active
+    aliases: []
+    owner_module: forprint_library
+    dictionary_group: entity_type
+    version: '0.1'
+    notes: Draft shared operational dictionary entry.
+  - id: order_line
+    label_uk: Order Line
+    label_en: Order Line
+    description: Canonical shared operational dictionary value 'order_line' for dictionary
+      group 'entity_type'.
+    status: active
+    aliases: []
+    owner_module: forprint_library
+    dictionary_group: entity_type
+    version: '0.1'
+    notes: Draft shared operational dictionary entry.
+  - id: calculator_output_package
+    label_uk: Calculator Output Package
+    label_en: Calculator Output Package
+    description: Canonical shared operational dictionary value 'calculator_output_package'
+      for dictionary group 'entity_type'.
+    status: active
+    aliases: []
+    owner_module: forprint_library
+    dictionary_group: entity_type
+    version: '0.1'
+    notes: Draft shared operational dictionary entry.
+  - id: product_service_reference
+    label_uk: Product Service Reference
+    label_en: Product Service Reference
+    description: Canonical shared operational dictionary value 'product_service_reference'
+      for dictionary group 'entity_type'.
+    status: active
+    aliases: []
+    owner_module: forprint_library
+    dictionary_group: entity_type
+    version: '0.1'
+    notes: Draft shared operational dictionary entry.
+  - id: material_requirement
+    label_uk: Material Requirement
+    label_en: Material Requirement
+    description: Canonical shared operational dictionary value 'material_requirement'
+      for dictionary group 'entity_type'.
+    status: active
+    aliases: []
+    owner_module: forprint_library
+    dictionary_group: entity_type
+    version: '0.1'
+    notes: Draft shared operational dictionary entry.
+  - id: payment_projection
+    label_uk: Payment Projection
+    label_en: Payment Projection
+    description: Canonical shared operational dictionary value 'payment_projection'
+      for dictionary group 'entity_type'.
+    status: active
+    aliases: []
+    owner_module: forprint_library
+    dictionary_group: entity_type
+    version: '0.1'
+    notes: Draft shared operational dictionary entry.
+  - id: workflow_template
+    label_uk: Workflow Template
+    label_en: Workflow Template
+    description: Canonical shared operational dictionary value 'workflow_template'
+      for dictionary group 'entity_type'.
+    status: active
+    aliases: []
+    owner_module: forprint_library
+    dictionary_group: entity_type
+    version: '0.1'
+    notes: Draft shared operational dictionary entry.
+  - id: workflow_stage
+    label_uk: Workflow Stage
+    label_en: Workflow Stage
+    description: Canonical shared operational dictionary value 'workflow_stage' for
+      dictionary group 'entity_type'.
+    status: active
+    aliases: []
+    owner_module: forprint_library
+    dictionary_group: entity_type
+    version: '0.1'
+    notes: Draft shared operational dictionary entry.
+  - id: deadline_control
+    label_uk: Deadline Control
+    label_en: Deadline Control
+    description: Canonical shared operational dictionary value 'deadline_control'
+      for dictionary group 'entity_type'.
+    status: active
+    aliases: []
+    owner_module: forprint_library
+    dictionary_group: entity_type
+    version: '0.1'
+    notes: Draft shared operational dictionary entry.
+  - id: contractor_reference
+    label_uk: Contractor Reference
+    label_en: Contractor Reference
+    description: Canonical shared operational dictionary value 'contractor_reference'
+      for dictionary group 'entity_type'.
+    status: active
+    aliases: []
+    owner_module: forprint_library
+    dictionary_group: entity_type
+    version: '0.1'
+    notes: Draft shared operational dictionary entry.
+  - id: alert_rule
+    label_uk: Alert Rule
+    label_en: Alert Rule
+    description: Canonical shared operational dictionary value 'alert_rule' for dictionary
+      group 'entity_type'.
+    status: active
+    aliases: []
+    owner_module: forprint_library
+    dictionary_group: entity_type
+    version: '0.1'
+    notes: Draft shared operational dictionary entry.
+  - id: alert_event
+    label_uk: Alert Event
+    label_en: Alert Event
+    description: Canonical shared operational dictionary value 'alert_event' for dictionary
+      group 'entity_type'.
+    status: active
+    aliases: []
+    owner_module: forprint_library
+    dictionary_group: entity_type
+    version: '0.1'
+    notes: Draft shared operational dictionary entry.
+  - id: report_definition
+    label_uk: Report Definition
+    label_en: Report Definition
+    description: Canonical shared operational dictionary value 'report_definition'
+      for dictionary group 'entity_type'.
+    status: active
+    aliases: []
+    owner_module: forprint_library
+    dictionary_group: entity_type
+    version: '0.1'
+    notes: Draft shared operational dictionary entry.
+  - id: report_projection
+    label_uk: Report Projection
+    label_en: Report Projection
+    description: Canonical shared operational dictionary value 'report_projection'
+      for dictionary group 'entity_type'.
+    status: active
+    aliases: []
+    owner_module: forprint_library
+    dictionary_group: entity_type
+    version: '0.1'
+    notes: Draft shared operational dictionary entry.
+  - id: operational_event
+    label_uk: Operational Event
+    label_en: Operational Event
+    description: Canonical shared operational dictionary value 'operational_event'
+      for dictionary group 'entity_type'.
+    status: active
+    aliases: []
+    owner_module: forprint_library
+    dictionary_group: entity_type
+    version: '0.1'
+    notes: Draft shared operational dictionary entry.
+  - id: unknown
+    label_uk: Невідомо
+    label_en: Unknown
+    description: Canonical shared operational dictionary value 'unknown' for dictionary
+      group 'entity_type'.
+    status: active
+    aliases: *id001
+    owner_module: forprint_library
+    dictionary_group: entity_type
+    version: '0.1'
+    notes: Draft shared operational dictionary entry.
+  order_status:
+  - id: draft
+    label_uk: Чернетка
+    label_en: Draft
+    description: Canonical shared operational dictionary value 'draft' for dictionary
+      group 'order_status'.
+    status: active
+    aliases: &id002
+    - чернетка
+    owner_module: forprint_library
+    dictionary_group: order_status
+    version: '0.1'
+    notes: Draft shared operational dictionary entry.
+  - id: needs_review
+    label_uk: Потребує перевірки
+    label_en: Needs Review
+    description: Canonical shared operational dictionary value 'needs_review' for
+      dictionary group 'order_status'.
+    status: active
+    aliases: []
+    owner_module: forprint_library
+    dictionary_group: order_status
+    version: '0.1'
+    notes: Draft shared operational dictionary entry.
+  - id: confirmed
+    label_uk: Підтверджено
+    label_en: Confirmed
+    description: Canonical shared operational dictionary value 'confirmed' for dictionary
+      group 'order_status'.
+    status: active
+    aliases: &id008
+    - підтверджено
+    owner_module: forprint_library
+    dictionary_group: order_status
+    version: '0.1'
+    notes: Draft shared operational dictionary entry.
+  - id: in_progress
+    label_uk: У роботі
+    label_en: In Progress
+    description: Canonical shared operational dictionary value 'in_progress' for dictionary
+      group 'order_status'.
+    status: active
+    aliases: &id003
+    - у роботі
+    owner_module: forprint_library
+    dictionary_group: order_status
+    version: '0.1'
+    notes: Draft shared operational dictionary entry.
+  - id: completed
+    label_uk: Завершено
+    label_en: Completed
+    description: Canonical shared operational dictionary value 'completed' for dictionary
+      group 'order_status'.
+    status: active
+    aliases: &id004
+    - завершено
+    owner_module: forprint_library
+    dictionary_group: order_status
+    version: '0.1'
+    notes: Draft shared operational dictionary entry.
+  - id: cancelled
+    label_uk: Скасовано
+    label_en: Cancelled
+    description: Canonical shared operational dictionary value 'cancelled' for dictionary
+      group 'order_status'.
+    status: active
+    aliases: &id005
+    - скасовано
+    owner_module: forprint_library
+    dictionary_group: order_status
+    version: '0.1'
+    notes: Draft shared operational dictionary entry.
+  - id: blocked
+    label_uk: Заблоковано
+    label_en: Blocked
+    description: Canonical shared operational dictionary value 'blocked' for dictionary
+      group 'order_status'.
+    status: active
+    aliases: []
+    owner_module: forprint_library
+    dictionary_group: order_status
+    version: '0.1'
+    notes: Draft shared operational dictionary entry.
+  - id: manual_review_required
+    label_uk: Потрібна ручна перевірка
+    label_en: Manual Review Required
+    description: Canonical shared operational dictionary value 'manual_review_required'
+      for dictionary group 'order_status'.
+    status: active
+    aliases: &id006
+    - manual_review
+    - ручна перевірка
+    owner_module: forprint_library
+    dictionary_group: order_status
+    version: '0.1'
+    notes: Draft shared operational dictionary entry.
+  - id: archived
+    label_uk: Архівовано
+    label_en: Archived
+    description: Canonical shared operational dictionary value 'archived' for dictionary
+      group 'order_status'.
+    status: active
+    aliases: []
+    owner_module: forprint_library
+    dictionary_group: order_status
+    version: '0.1'
+    notes: Draft shared operational dictionary entry.
+  - id: unknown
+    label_uk: Невідомо
+    label_en: Unknown
+    description: Canonical shared operational dictionary value 'unknown' for dictionary
+      group 'order_status'.
+    status: active
+    aliases: *id001
+    owner_module: forprint_library
+    dictionary_group: order_status
+    version: '0.1'
+    notes: Draft shared operational dictionary entry.
+  order_line_status:
+  - id: draft
+    label_uk: Чернетка
+    label_en: Draft
+    description: Canonical shared operational dictionary value 'draft' for dictionary
+      group 'order_line_status'.
+    status: active
+    aliases: *id002
+    owner_module: forprint_library
+    dictionary_group: order_line_status
+    version: '0.1'
+    notes: Draft shared operational dictionary entry.
+  - id: pending_reference_resolution
+    label_uk: Pending Reference Resolution
+    label_en: Pending Reference Resolution
+    description: Canonical shared operational dictionary value 'pending_reference_resolution'
+      for dictionary group 'order_line_status'.
+    status: active
+    aliases: []
+    owner_module: forprint_library
+    dictionary_group: order_line_status
+    version: '0.1'
+    notes: Draft shared operational dictionary entry.
+  - id: ready
+    label_uk: Готово
+    label_en: Ready
+    description: Canonical shared operational dictionary value 'ready' for dictionary
+      group 'order_line_status'.
+    status: active
+    aliases: []
+    owner_module: forprint_library
+    dictionary_group: order_line_status
+    version: '0.1'
+    notes: Draft shared operational dictionary entry.
+  - id: in_progress
+    label_uk: У роботі
+    label_en: In Progress
+    description: Canonical shared operational dictionary value 'in_progress' for dictionary
+      group 'order_line_status'.
+    status: active
+    aliases: *id003
+    owner_module: forprint_library
+    dictionary_group: order_line_status
+    version: '0.1'
+    notes: Draft shared operational dictionary entry.
+  - id: completed
+    label_uk: Завершено
+    label_en: Completed
+    description: Canonical shared operational dictionary value 'completed' for dictionary
+      group 'order_line_status'.
+    status: active
+    aliases: *id004
+    owner_module: forprint_library
+    dictionary_group: order_line_status
+    version: '0.1'
+    notes: Draft shared operational dictionary entry.
+  - id: cancelled
+    label_uk: Скасовано
+    label_en: Cancelled
+    description: Canonical shared operational dictionary value 'cancelled' for dictionary
+      group 'order_line_status'.
+    status: active
+    aliases: *id005
+    owner_module: forprint_library
+    dictionary_group: order_line_status
+    version: '0.1'
+    notes: Draft shared operational dictionary entry.
+  - id: manual_review_required
+    label_uk: Потрібна ручна перевірка
+    label_en: Manual Review Required
+    description: Canonical shared operational dictionary value 'manual_review_required'
+      for dictionary group 'order_line_status'.
+    status: active
+    aliases: *id006
+    owner_module: forprint_library
+    dictionary_group: order_line_status
+    version: '0.1'
+    notes: Draft shared operational dictionary entry.
+  - id: unknown
+    label_uk: Невідомо
+    label_en: Unknown
+    description: Canonical shared operational dictionary value 'unknown' for dictionary
+      group 'order_line_status'.
+    status: active
+    aliases: *id001
+    owner_module: forprint_library
+    dictionary_group: order_line_status
+    version: '0.1'
+    notes: Draft shared operational dictionary entry.
+  payment_status:
+  - id: not_invoiced
+    label_uk: Not Invoiced
+    label_en: Not Invoiced
+    description: Canonical shared operational dictionary value 'not_invoiced' for
+      dictionary group 'payment_status'.
+    status: active
+    aliases: []
+    owner_module: forprint_library
+    dictionary_group: payment_status
+    version: '0.1'
+    notes: Draft shared operational dictionary entry.
+  - id: invoice_reference_pending
+    label_uk: Invoice Reference Pending
+    label_en: Invoice Reference Pending
+    description: Canonical shared operational dictionary value 'invoice_reference_pending'
+      for dictionary group 'payment_status'.
+    status: active
+    aliases: []
+    owner_module: forprint_library
+    dictionary_group: payment_status
+    version: '0.1'
+    notes: Draft shared operational dictionary entry.
+  - id: unpaid
+    label_uk: Не оплачено
+    label_en: Unpaid
+    description: Canonical shared operational dictionary value 'unpaid' for dictionary
+      group 'payment_status'.
+    status: active
+    aliases:
+    - не оплачено
+    owner_module: forprint_library
+    dictionary_group: payment_status
+    version: '0.1'
+    notes: Draft shared operational dictionary entry.
+  - id: partially_paid
+    label_uk: Частково оплачено
+    label_en: Partially Paid
+    description: Canonical shared operational dictionary value 'partially_paid' for
+      dictionary group 'payment_status'.
+    status: active
+    aliases:
+    - частково оплачено
+    owner_module: forprint_library
+    dictionary_group: payment_status
+    version: '0.1'
+    notes: Draft shared operational dictionary entry.
+  - id: paid_reference_confirmed
+    label_uk: Підтверджено оплату
+    label_en: Paid Reference Confirmed
+    description: Canonical shared operational dictionary value 'paid_reference_confirmed'
+      for dictionary group 'payment_status'.
+    status: active
+    aliases:
+    - paid
+    - оплачено
+    owner_module: forprint_library
+    dictionary_group: payment_status
+    version: '0.1'
+    notes: Draft shared operational dictionary entry.
+  - id: overdue
+    label_uk: Прострочено
+    label_en: Overdue
+    description: Canonical shared operational dictionary value 'overdue' for dictionary
+      group 'payment_status'.
+    status: active
+    aliases:
+    - прострочено
+    owner_module: forprint_library
+    dictionary_group: payment_status
+    version: '0.1'
+    notes: Draft shared operational dictionary entry.
+  - id: cancelled
+    label_uk: Скасовано
+    label_en: Cancelled
+    description: Canonical shared operational dictionary value 'cancelled' for dictionary
+      group 'payment_status'.
+    status: active
+    aliases: *id005
+    owner_module: forprint_library
+    dictionary_group: payment_status
+    version: '0.1'
+    notes: Draft shared operational dictionary entry.
+  - id: unknown
+    label_uk: Невідомо
+    label_en: Unknown
+    description: Canonical shared operational dictionary value 'unknown' for dictionary
+      group 'payment_status'.
+    status: active
+    aliases: *id001
+    owner_module: forprint_library
+    dictionary_group: payment_status
+    version: '0.1'
+    notes: Draft shared operational dictionary entry.
+  production_status:
+  - id: not_started
+    label_uk: Не розпочато
+    label_en: Not Started
+    description: Canonical shared operational dictionary value 'not_started' for dictionary
+      group 'production_status'.
+    status: active
+    aliases: []
+    owner_module: forprint_library
+    dictionary_group: production_status
+    version: '0.1'
+    notes: Draft shared operational dictionary entry.
+  - id: ready
+    label_uk: Готово
+    label_en: Ready
+    description: Canonical shared operational dictionary value 'ready' for dictionary
+      group 'production_status'.
+    status: active
+    aliases: []
+    owner_module: forprint_library
+    dictionary_group: production_status
+    version: '0.1'
+    notes: Draft shared operational dictionary entry.
+  - id: in_progress
+    label_uk: У роботі
+    label_en: In Progress
+    description: Canonical shared operational dictionary value 'in_progress' for dictionary
+      group 'production_status'.
+    status: active
+    aliases: *id003
+    owner_module: forprint_library
+    dictionary_group: production_status
+    version: '0.1'
+    notes: Draft shared operational dictionary entry.
+  - id: waiting_external_contractor
+    label_uk: Очікування зовнішнього підрядника
+    label_en: Waiting External Contractor
+    description: Canonical shared operational dictionary value 'waiting_external_contractor'
+      for dictionary group 'production_status'.
+    status: active
+    aliases: &id007
+    - external_contractor_wait
+    owner_module: forprint_library
+    dictionary_group: production_status
+    version: '0.1'
+    notes: Draft shared operational dictionary entry.
+  - id: blocked
+    label_uk: Заблоковано
+    label_en: Blocked
+    description: Canonical shared operational dictionary value 'blocked' for dictionary
+      group 'production_status'.
+    status: active
+    aliases: []
+    owner_module: forprint_library
+    dictionary_group: production_status
+    version: '0.1'
+    notes: Draft shared operational dictionary entry.
+  - id: completed
+    label_uk: Завершено
+    label_en: Completed
+    description: Canonical shared operational dictionary value 'completed' for dictionary
+      group 'production_status'.
+    status: active
+    aliases: *id004
+    owner_module: forprint_library
+    dictionary_group: production_status
+    version: '0.1'
+    notes: Draft shared operational dictionary entry.
+  - id: cancelled
+    label_uk: Скасовано
+    label_en: Cancelled
+    description: Canonical shared operational dictionary value 'cancelled' for dictionary
+      group 'production_status'.
+    status: active
+    aliases: *id005
+    owner_module: forprint_library
+    dictionary_group: production_status
+    version: '0.1'
+    notes: Draft shared operational dictionary entry.
+  - id: unknown
+    label_uk: Невідомо
+    label_en: Unknown
+    description: Canonical shared operational dictionary value 'unknown' for dictionary
+      group 'production_status'.
+    status: active
+    aliases: *id001
+    owner_module: forprint_library
+    dictionary_group: production_status
+    version: '0.1'
+    notes: Draft shared operational dictionary entry.
+  workflow_status:
+  - id: not_started
+    label_uk: Не розпочато
+    label_en: Not Started
+    description: Canonical shared operational dictionary value 'not_started' for dictionary
+      group 'workflow_status'.
+    status: active
+    aliases: []
+    owner_module: forprint_library
+    dictionary_group: workflow_status
+    version: '0.1'
+    notes: Draft shared operational dictionary entry.
+  - id: active
+    label_uk: Активний
+    label_en: Active
+    description: Canonical shared operational dictionary value 'active' for dictionary
+      group 'workflow_status'.
+    status: active
+    aliases: []
+    owner_module: forprint_library
+    dictionary_group: workflow_status
+    version: '0.1'
+    notes: Draft shared operational dictionary entry.
+  - id: blocked
+    label_uk: Заблоковано
+    label_en: Blocked
+    description: Canonical shared operational dictionary value 'blocked' for dictionary
+      group 'workflow_status'.
+    status: active
+    aliases: []
+    owner_module: forprint_library
+    dictionary_group: workflow_status
+    version: '0.1'
+    notes: Draft shared operational dictionary entry.
+  - id: completed
+    label_uk: Завершено
+    label_en: Completed
+    description: Canonical shared operational dictionary value 'completed' for dictionary
+      group 'workflow_status'.
+    status: active
+    aliases: *id004
+    owner_module: forprint_library
+    dictionary_group: workflow_status
+    version: '0.1'
+    notes: Draft shared operational dictionary entry.
+  - id: cancelled
+    label_uk: Скасовано
+    label_en: Cancelled
+    description: Canonical shared operational dictionary value 'cancelled' for dictionary
+      group 'workflow_status'.
+    status: active
+    aliases: *id005
+    owner_module: forprint_library
+    dictionary_group: workflow_status
+    version: '0.1'
+    notes: Draft shared operational dictionary entry.
+  - id: manual_review_required
+    label_uk: Потрібна ручна перевірка
+    label_en: Manual Review Required
+    description: Canonical shared operational dictionary value 'manual_review_required'
+      for dictionary group 'workflow_status'.
+    status: active
+    aliases: *id006
+    owner_module: forprint_library
+    dictionary_group: workflow_status
+    version: '0.1'
+    notes: Draft shared operational dictionary entry.
+  - id: unknown
+    label_uk: Невідомо
+    label_en: Unknown
+    description: Canonical shared operational dictionary value 'unknown' for dictionary
+      group 'workflow_status'.
+    status: active
+    aliases: *id001
+    owner_module: forprint_library
+    dictionary_group: workflow_status
+    version: '0.1'
+    notes: Draft shared operational dictionary entry.
+  workflow_stage_status:
+  - id: not_started
+    label_uk: Не розпочато
+    label_en: Not Started
+    description: Canonical shared operational dictionary value 'not_started' for dictionary
+      group 'workflow_stage_status'.
+    status: active
+    aliases: []
+    owner_module: forprint_library
+    dictionary_group: workflow_stage_status
+    version: '0.1'
+    notes: Draft shared operational dictionary entry.
+  - id: ready
+    label_uk: Готово
+    label_en: Ready
+    description: Canonical shared operational dictionary value 'ready' for dictionary
+      group 'workflow_stage_status'.
+    status: active
+    aliases: []
+    owner_module: forprint_library
+    dictionary_group: workflow_stage_status
+    version: '0.1'
+    notes: Draft shared operational dictionary entry.
+  - id: in_progress
+    label_uk: У роботі
+    label_en: In Progress
+    description: Canonical shared operational dictionary value 'in_progress' for dictionary
+      group 'workflow_stage_status'.
+    status: active
+    aliases: *id003
+    owner_module: forprint_library
+    dictionary_group: workflow_stage_status
+    version: '0.1'
+    notes: Draft shared operational dictionary entry.
+  - id: blocked
+    label_uk: Заблоковано
+    label_en: Blocked
+    description: Canonical shared operational dictionary value 'blocked' for dictionary
+      group 'workflow_stage_status'.
+    status: active
+    aliases: []
+    owner_module: forprint_library
+    dictionary_group: workflow_stage_status
+    version: '0.1'
+    notes: Draft shared operational dictionary entry.
+  - id: waiting_external_contractor
+    label_uk: Очікування зовнішнього підрядника
+    label_en: Waiting External Contractor
+    description: Canonical shared operational dictionary value 'waiting_external_contractor'
+      for dictionary group 'workflow_stage_status'.
+    status: active
+    aliases: *id007
+    owner_module: forprint_library
+    dictionary_group: workflow_stage_status
+    version: '0.1'
+    notes: Draft shared operational dictionary entry.
+  - id: completed
+    label_uk: Завершено
+    label_en: Completed
+    description: Canonical shared operational dictionary value 'completed' for dictionary
+      group 'workflow_stage_status'.
+    status: active
+    aliases: *id004
+    owner_module: forprint_library
+    dictionary_group: workflow_stage_status
+    version: '0.1'
+    notes: Draft shared operational dictionary entry.
+  - id: cancelled
+    label_uk: Скасовано
+    label_en: Cancelled
+    description: Canonical shared operational dictionary value 'cancelled' for dictionary
+      group 'workflow_stage_status'.
+    status: active
+    aliases: *id005
+    owner_module: forprint_library
+    dictionary_group: workflow_stage_status
+    version: '0.1'
+    notes: Draft shared operational dictionary entry.
+  - id: late
+    label_uk: Прострочено
+    label_en: Late
+    description: Canonical shared operational dictionary value 'late' for dictionary
+      group 'workflow_stage_status'.
+    status: active
+    aliases:
+    - прострочений етап
+    owner_module: forprint_library
+    dictionary_group: workflow_stage_status
+    version: '0.1'
+    notes: Draft shared operational dictionary entry.
+  - id: manual_review_required
+    label_uk: Потрібна ручна перевірка
+    label_en: Manual Review Required
+    description: Canonical shared operational dictionary value 'manual_review_required'
+      for dictionary group 'workflow_stage_status'.
+    status: active
+    aliases: *id006
+    owner_module: forprint_library
+    dictionary_group: workflow_stage_status
+    version: '0.1'
+    notes: Draft shared operational dictionary entry.
+  - id: unknown
+    label_uk: Невідомо
+    label_en: Unknown
+    description: Canonical shared operational dictionary value 'unknown' for dictionary
+      group 'workflow_stage_status'.
+    status: active
+    aliases: *id001
+    owner_module: forprint_library
+    dictionary_group: workflow_stage_status
+    version: '0.1'
+    notes: Draft shared operational dictionary entry.
+  material_requirement_status:
+  - id: planned
+    label_uk: Заплановано
+    label_en: Planned
+    description: Canonical shared operational dictionary value 'planned' for dictionary
+      group 'material_requirement_status'.
+    status: active
+    aliases: []
+    owner_module: forprint_library
+    dictionary_group: material_requirement_status
+    version: '0.1'
+    notes: Draft shared operational dictionary entry.
+  - id: library_reference_pending
+    label_uk: Library Reference Pending
+    label_en: Library Reference Pending
+    description: Canonical shared operational dictionary value 'library_reference_pending'
+      for dictionary group 'material_requirement_status'.
+    status: active
+    aliases: []
+    owner_module: forprint_library
+    dictionary_group: material_requirement_status
+    version: '0.1'
+    notes: Draft shared operational dictionary entry.
+  - id: warehouse_reference_pending
+    label_uk: Warehouse Reference Pending
+    label_en: Warehouse Reference Pending
+    description: Canonical shared operational dictionary value 'warehouse_reference_pending'
+      for dictionary group 'material_requirement_status'.
+    status: active
+    aliases:
+    - warehouse_pending
+    owner_module: forprint_library
+    dictionary_group: material_requirement_status
+    version: '0.1'
+    notes: Draft shared operational dictionary entry.
+  - id: reserved_reference_pending
+    label_uk: Reserved Reference Pending
+    label_en: Reserved Reference Pending
+    description: Canonical shared operational dictionary value 'reserved_reference_pending'
+      for dictionary group 'material_requirement_status'.
+    status: active
+    aliases: []
+    owner_module: forprint_library
+    dictionary_group: material_requirement_status
+    version: '0.1'
+    notes: Draft shared operational dictionary entry.
+  - id: confirmed
+    label_uk: Підтверджено
+    label_en: Confirmed
+    description: Canonical shared operational dictionary value 'confirmed' for dictionary
+      group 'material_requirement_status'.
+    status: active
+    aliases: *id008
+    owner_module: forprint_library
+    dictionary_group: material_requirement_status
+    version: '0.1'
+    notes: Draft shared operational dictionary entry.
+  - id: fulfilled
+    label_uk: Виконано
+    label_en: Fulfilled
+    description: Canonical shared operational dictionary value 'fulfilled' for dictionary
+      group 'material_requirement_status'.
+    status: active
+    aliases: []
+    owner_module: forprint_library
+    dictionary_group: material_requirement_status
+    version: '0.1'
+    notes: Draft shared operational dictionary entry.
+  - id: cancelled
+    label_uk: Скасовано
+    label_en: Cancelled
+    description: Canonical shared operational dictionary value 'cancelled' for dictionary
+      group 'material_requirement_status'.
+    status: active
+    aliases: *id005
+    owner_module: forprint_library
+    dictionary_group: material_requirement_status
+    version: '0.1'
+    notes: Draft shared operational dictionary entry.
+  - id: unknown
+    label_uk: Невідомо
+    label_en: Unknown
+    description: Canonical shared operational dictionary value 'unknown' for dictionary
+      group 'material_requirement_status'.
+    status: active
+    aliases: *id001
+    owner_module: forprint_library
+    dictionary_group: material_requirement_status
+    version: '0.1'
+    notes: Draft shared operational dictionary entry.
+  reference_resolution_status:
+  - id: draft_display_only
+    label_uk: Draft Display Only
+    label_en: Draft Display Only
+    description: Canonical shared operational dictionary value 'draft_display_only'
+      for dictionary group 'reference_resolution_status'.
+    status: active
+    aliases: []
+    owner_module: forprint_library
+    dictionary_group: reference_resolution_status
+    version: '0.1'
+    notes: Draft shared operational dictionary entry.
+  - id: reference_pending
+    label_uk: Reference Pending
+    label_en: Reference Pending
+    description: Canonical shared operational dictionary value 'reference_pending'
+      for dictionary group 'reference_resolution_status'.
+    status: active
+    aliases: []
+    owner_module: forprint_library
+    dictionary_group: reference_resolution_status
+    version: '0.1'
+    notes: Draft shared operational dictionary entry.
+  - id: reference_confirmed
+    label_uk: Reference Confirmed
+    label_en: Reference Confirmed
+    description: Canonical shared operational dictionary value 'reference_confirmed'
+      for dictionary group 'reference_resolution_status'.
+    status: active
+    aliases: []
+    owner_module: forprint_library
+    dictionary_group: reference_resolution_status
+    version: '0.1'
+    notes: Draft shared operational dictionary entry.
+  - id: ambiguous_manual_review_required
+    label_uk: Ambiguous Manual Review Required
+    label_en: Ambiguous Manual Review Required
+    description: Canonical shared operational dictionary value 'ambiguous_manual_review_required'
+      for dictionary group 'reference_resolution_status'.
+    status: active
+    aliases: []
+    owner_module: forprint_library
+    dictionary_group: reference_resolution_status
+    version: '0.1'
+    notes: Draft shared operational dictionary entry.
+  - id: deprecated_reference
+    label_uk: Deprecated Reference
+    label_en: Deprecated Reference
+    description: Canonical shared operational dictionary value 'deprecated_reference'
+      for dictionary group 'reference_resolution_status'.
+    status: deprecated
+    aliases: []
+    owner_module: forprint_library
+    dictionary_group: reference_resolution_status
+    version: '0.1'
+    notes: Draft shared operational dictionary entry.
+  - id: unknown
+    label_uk: Невідомо
+    label_en: Unknown
+    description: Canonical shared operational dictionary value 'unknown' for dictionary
+      group 'reference_resolution_status'.
+    status: active
+    aliases: *id001
+    owner_module: forprint_library
+    dictionary_group: reference_resolution_status
+    version: '0.1'
+    notes: Draft shared operational dictionary entry.
+  product_service_reference_status:
+  - id: draft_display_only
+    label_uk: Draft Display Only
+    label_en: Draft Display Only
+    description: Canonical shared operational dictionary value 'draft_display_only'
+      for dictionary group 'product_service_reference_status'.
+    status: active
+    aliases: []
+    owner_module: forprint_library
+    dictionary_group: product_service_reference_status
+    version: '0.1'
+    notes: Draft shared operational dictionary entry.
+  - id: library_reference_pending
+    label_uk: Library Reference Pending
+    label_en: Library Reference Pending
+    description: Canonical shared operational dictionary value 'library_reference_pending'
+      for dictionary group 'product_service_reference_status'.
+    status: active
+    aliases: []
+    owner_module: forprint_library
+    dictionary_group: product_service_reference_status
+    version: '0.1'
+    notes: Draft shared operational dictionary entry.
+  - id: library_reference_confirmed
+    label_uk: Library Reference Confirmed
+    label_en: Library Reference Confirmed
+    description: Canonical shared operational dictionary value 'library_reference_confirmed'
+      for dictionary group 'product_service_reference_status'.
+    status: active
+    aliases: []
+    owner_module: forprint_library
+    dictionary_group: product_service_reference_status
+    version: '0.1'
+    notes: Draft shared operational dictionary entry.
+  - id: ambiguous_manual_review_required
+    label_uk: Ambiguous Manual Review Required
+    label_en: Ambiguous Manual Review Required
+    description: Canonical shared operational dictionary value 'ambiguous_manual_review_required'
+      for dictionary group 'product_service_reference_status'.
+    status: active
+    aliases: []
+    owner_module: forprint_library
+    dictionary_group: product_service_reference_status
+    version: '0.1'
+    notes: Draft shared operational dictionary entry.
+  - id: deprecated_reference
+    label_uk: Deprecated Reference
+    label_en: Deprecated Reference
+    description: Canonical shared operational dictionary value 'deprecated_reference'
+      for dictionary group 'product_service_reference_status'.
+    status: deprecated
+    aliases: []
+    owner_module: forprint_library
+    dictionary_group: product_service_reference_status
+    version: '0.1'
+    notes: Draft shared operational dictionary entry.
+  - id: unknown
+    label_uk: Невідомо
+    label_en: Unknown
+    description: Canonical shared operational dictionary value 'unknown' for dictionary
+      group 'product_service_reference_status'.
+    status: active
+    aliases: *id001
+    owner_module: forprint_library
+    dictionary_group: product_service_reference_status
+    version: '0.1'
+    notes: Draft shared operational dictionary entry.
+  contractor_reference_status:
+  - id: display_only
+    label_uk: Display Only
+    label_en: Display Only
+    description: Canonical shared operational dictionary value 'display_only' for
+      dictionary group 'contractor_reference_status'.
+    status: active
+    aliases: []
+    owner_module: forprint_library
+    dictionary_group: contractor_reference_status
+    version: '0.1'
+    notes: Draft shared operational dictionary entry.
+  - id: client_account_reference_pending
+    label_uk: Client Account Reference Pending
+    label_en: Client Account Reference Pending
+    description: Canonical shared operational dictionary value 'client_account_reference_pending'
+      for dictionary group 'contractor_reference_status'.
+    status: active
+    aliases: []
+    owner_module: forprint_library
+    dictionary_group: contractor_reference_status
+    version: '0.1'
+    notes: Draft shared operational dictionary entry.
+  - id: client_account_reference_confirmed
+    label_uk: Client Account Reference Confirmed
+    label_en: Client Account Reference Confirmed
+    description: Canonical shared operational dictionary value 'client_account_reference_confirmed'
+      for dictionary group 'contractor_reference_status'.
+    status: active
+    aliases: []
+    owner_module: forprint_library
+    dictionary_group: contractor_reference_status
+    version: '0.1'
+    notes: Draft shared operational dictionary entry.
+  - id: external_reference_pending
+    label_uk: External Reference Pending
+    label_en: External Reference Pending
+    description: Canonical shared operational dictionary value 'external_reference_pending'
+      for dictionary group 'contractor_reference_status'.
+    status: active
+    aliases: []
+    owner_module: forprint_library
+    dictionary_group: contractor_reference_status
+    version: '0.1'
+    notes: Draft shared operational dictionary entry.
+  - id: manual_review_required
+    label_uk: Потрібна ручна перевірка
+    label_en: Manual Review Required
+    description: Canonical shared operational dictionary value 'manual_review_required'
+      for dictionary group 'contractor_reference_status'.
+    status: active
+    aliases: *id006
+    owner_module: forprint_library
+    dictionary_group: contractor_reference_status
+    version: '0.1'
+    notes: Draft shared operational dictionary entry.
+  - id: unknown
+    label_uk: Невідомо
+    label_en: Unknown
+    description: Canonical shared operational dictionary value 'unknown' for dictionary
+      group 'contractor_reference_status'.
+    status: active
+    aliases: *id001
+    owner_module: forprint_library
+    dictionary_group: contractor_reference_status
+    version: '0.1'
+    notes: Draft shared operational dictionary entry.
+  deadline_type:
+  - id: order_due
+    label_uk: Order Due
+    label_en: Order Due
+    description: Canonical shared operational dictionary value 'order_due' for dictionary
+      group 'deadline_type'.
+    status: active
+    aliases: []
+    owner_module: forprint_library
+    dictionary_group: deadline_type
+    version: '0.1'
+    notes: Draft shared operational dictionary entry.
+  - id: stage_due
+    label_uk: Stage Due
+    label_en: Stage Due
+    description: Canonical shared operational dictionary value 'stage_due' for dictionary
+      group 'deadline_type'.
+    status: active
+    aliases: []
+    owner_module: forprint_library
+    dictionary_group: deadline_type
+    version: '0.1'
+    notes: Draft shared operational dictionary entry.
+  - id: payment_due
+    label_uk: Payment Due
+    label_en: Payment Due
+    description: Canonical shared operational dictionary value 'payment_due' for dictionary
+      group 'deadline_type'.
+    status: active
+    aliases: []
+    owner_module: forprint_library
+    dictionary_group: deadline_type
+    version: '0.1'
+    notes: Draft shared operational dictionary entry.
+  - id: material_required_by
+    label_uk: Material Required By
+    label_en: Material Required By
+    description: Canonical shared operational dictionary value 'material_required_by'
+      for dictionary group 'deadline_type'.
+    status: active
+    aliases: []
+    owner_module: forprint_library
+    dictionary_group: deadline_type
+    version: '0.1'
+    notes: Draft shared operational dictionary entry.
+  - id: manual_review_due
+    label_uk: Manual Review Due
+    label_en: Manual Review Due
+    description: Canonical shared operational dictionary value 'manual_review_due'
+      for dictionary group 'deadline_type'.
+    status: active
+    aliases: []
+    owner_module: forprint_library
+    dictionary_group: deadline_type
+    version: '0.1'
+    notes: Draft shared operational dictionary entry.
+  - id: unknown
+    label_uk: Невідомо
+    label_en: Unknown
+    description: Canonical shared operational dictionary value 'unknown' for dictionary
+      group 'deadline_type'.
+    status: active
+    aliases: *id001
+    owner_module: forprint_library
+    dictionary_group: deadline_type
+    version: '0.1'
+    notes: Draft shared operational dictionary entry.
+  alert_rule_type:
+  - id: workflow_stage_late
+    label_uk: Workflow Stage Late
+    label_en: Workflow Stage Late
+    description: Canonical shared operational dictionary value 'workflow_stage_late'
+      for dictionary group 'alert_rule_type'.
+    status: active
+    aliases: []
+    owner_module: forprint_library
+    dictionary_group: alert_rule_type
+    version: '0.1'
+    notes: Draft shared operational dictionary entry.
+  - id: order_deadline_near
+    label_uk: Order Deadline Near
+    label_en: Order Deadline Near
+    description: Canonical shared operational dictionary value 'order_deadline_near'
+      for dictionary group 'alert_rule_type'.
+    status: active
+    aliases: []
+    owner_module: forprint_library
+    dictionary_group: alert_rule_type
+    version: '0.1'
+    notes: Draft shared operational dictionary entry.
+  - id: payment_overdue
+    label_uk: Payment Overdue
+    label_en: Payment Overdue
+    description: Canonical shared operational dictionary value 'payment_overdue' for
+      dictionary group 'alert_rule_type'.
+    status: active
+    aliases: []
+    owner_module: forprint_library
+    dictionary_group: alert_rule_type
+    version: '0.1'
+    notes: Draft shared operational dictionary entry.
+  - id: material_requirement_unresolved
+    label_uk: Material Requirement Unresolved
+    label_en: Material Requirement Unresolved
+    description: Canonical shared operational dictionary value 'material_requirement_unresolved'
+      for dictionary group 'alert_rule_type'.
+    status: active
+    aliases: []
+    owner_module: forprint_library
+    dictionary_group: alert_rule_type
+    version: '0.1'
+    notes: Draft shared operational dictionary entry.
+  - id: manual_review_stale
+    label_uk: Manual Review Stale
+    label_en: Manual Review Stale
+    description: Canonical shared operational dictionary value 'manual_review_stale'
+      for dictionary group 'alert_rule_type'.
+    status: active
+    aliases: []
+    owner_module: forprint_library
+    dictionary_group: alert_rule_type
+    version: '0.1'
+    notes: Draft shared operational dictionary entry.
+  - id: contractor_stage_blocked
+    label_uk: Contractor Stage Blocked
+    label_en: Contractor Stage Blocked
+    description: Canonical shared operational dictionary value 'contractor_stage_blocked'
+      for dictionary group 'alert_rule_type'.
+    status: active
+    aliases: []
+    owner_module: forprint_library
+    dictionary_group: alert_rule_type
+    version: '0.1'
+    notes: Draft shared operational dictionary entry.
+  - id: unknown
+    label_uk: Невідомо
+    label_en: Unknown
+    description: Canonical shared operational dictionary value 'unknown' for dictionary
+      group 'alert_rule_type'.
+    status: active
+    aliases: *id001
+    owner_module: forprint_library
+    dictionary_group: alert_rule_type
+    version: '0.1'
+    notes: Draft shared operational dictionary entry.
+  alert_severity:
+  - id: info
+    label_uk: Інформаційно
+    label_en: Info
+    description: Canonical shared operational dictionary value 'info' for dictionary
+      group 'alert_severity'.
+    status: active
+    aliases: []
+    owner_module: forprint_library
+    dictionary_group: alert_severity
+    version: '0.1'
+    notes: Draft shared operational dictionary entry.
+  - id: warning
+    label_uk: Попередження
+    label_en: Warning
+    description: Canonical shared operational dictionary value 'warning' for dictionary
+      group 'alert_severity'.
+    status: active
+    aliases:
+    - warn
+    owner_module: forprint_library
+    dictionary_group: alert_severity
+    version: '0.1'
+    notes: Draft shared operational dictionary entry.
+  - id: high
+    label_uk: Високий
+    label_en: High
+    description: Canonical shared operational dictionary value 'high' for dictionary
+      group 'alert_severity'.
+    status: active
+    aliases: []
+    owner_module: forprint_library
+    dictionary_group: alert_severity
+    version: '0.1'
+    notes: Draft shared operational dictionary entry.
+  - id: critical
+    label_uk: Критичний
+    label_en: Critical
+    description: Canonical shared operational dictionary value 'critical' for dictionary
+      group 'alert_severity'.
+    status: active
+    aliases:
+    - crit
+    owner_module: forprint_library
+    dictionary_group: alert_severity
+    version: '0.1'
+    notes: Draft shared operational dictionary entry.
+  - id: unknown
+    label_uk: Невідомо
+    label_en: Unknown
+    description: Canonical shared operational dictionary value 'unknown' for dictionary
+      group 'alert_severity'.
+    status: active
+    aliases: *id001
+    owner_module: forprint_library
+    dictionary_group: alert_severity
+    version: '0.1'
+    notes: Draft shared operational dictionary entry.
+  alert_event_status:
+  - id: open
+    label_uk: Відкрито
+    label_en: Open
+    description: Canonical shared operational dictionary value 'open' for dictionary
+      group 'alert_event_status'.
+    status: active
+    aliases: []
+    owner_module: forprint_library
+    dictionary_group: alert_event_status
+    version: '0.1'
+    notes: Draft shared operational dictionary entry.
+  - id: acknowledged
+    label_uk: Підтверджено оператором
+    label_en: Acknowledged
+    description: Canonical shared operational dictionary value 'acknowledged' for
+      dictionary group 'alert_event_status'.
+    status: active
+    aliases: []
+    owner_module: forprint_library
+    dictionary_group: alert_event_status
+    version: '0.1'
+    notes: Draft shared operational dictionary entry.
+  - id: resolved
+    label_uk: Вирішено
+    label_en: Resolved
+    description: Canonical shared operational dictionary value 'resolved' for dictionary
+      group 'alert_event_status'.
+    status: active
+    aliases: []
+    owner_module: forprint_library
+    dictionary_group: alert_event_status
+    version: '0.1'
+    notes: Draft shared operational dictionary entry.
+  - id: ignored
+    label_uk: Проігноровано
+    label_en: Ignored
+    description: Canonical shared operational dictionary value 'ignored' for dictionary
+      group 'alert_event_status'.
+    status: active
+    aliases: []
+    owner_module: forprint_library
+    dictionary_group: alert_event_status
+    version: '0.1'
+    notes: Draft shared operational dictionary entry.
+  - id: failed_to_notify
+    label_uk: Failed To Notify
+    label_en: Failed To Notify
+    description: Canonical shared operational dictionary value 'failed_to_notify'
+      for dictionary group 'alert_event_status'.
+    status: active
+    aliases: []
+    owner_module: forprint_library
+    dictionary_group: alert_event_status
+    version: '0.1'
+    notes: Draft shared operational dictionary entry.
+  - id: unknown
+    label_uk: Невідомо
+    label_en: Unknown
+    description: Canonical shared operational dictionary value 'unknown' for dictionary
+      group 'alert_event_status'.
+    status: active
+    aliases: *id001
+    owner_module: forprint_library
+    dictionary_group: alert_event_status
+    version: '0.1'
+    notes: Draft shared operational dictionary entry.
+  notification_status:
+  - id: not_sent
+    label_uk: Не надіслано
+    label_en: Not Sent
+    description: Canonical shared operational dictionary value 'not_sent' for dictionary
+      group 'notification_status'.
+    status: active
+    aliases: []
+    owner_module: forprint_library
+    dictionary_group: notification_status
+    version: '0.1'
+    notes: Draft shared operational dictionary entry.
+  - id: queued
+    label_uk: У черзі
+    label_en: Queued
+    description: Canonical shared operational dictionary value 'queued' for dictionary
+      group 'notification_status'.
+    status: active
+    aliases: []
+    owner_module: forprint_library
+    dictionary_group: notification_status
+    version: '0.1'
+    notes: Draft shared operational dictionary entry.
+  - id: sent
+    label_uk: Надіслано
+    label_en: Sent
+    description: Canonical shared operational dictionary value 'sent' for dictionary
+      group 'notification_status'.
+    status: active
+    aliases: []
+    owner_module: forprint_library
+    dictionary_group: notification_status
+    version: '0.1'
+    notes: Draft shared operational dictionary entry.
+  - id: failed
+    label_uk: Помилка
+    label_en: Failed
+    description: Canonical shared operational dictionary value 'failed' for dictionary
+      group 'notification_status'.
+    status: active
+    aliases: []
+    owner_module: forprint_library
+    dictionary_group: notification_status
+    version: '0.1'
+    notes: Draft shared operational dictionary entry.
+  - id: disabled
+    label_uk: Вимкнено
+    label_en: Disabled
+    description: Canonical shared operational dictionary value 'disabled' for dictionary
+      group 'notification_status'.
+    status: active
+    aliases: []
+    owner_module: forprint_library
+    dictionary_group: notification_status
+    version: '0.1'
+    notes: Draft shared operational dictionary entry.
+  - id: unknown
+    label_uk: Невідомо
+    label_en: Unknown
+    description: Canonical shared operational dictionary value 'unknown' for dictionary
+      group 'notification_status'.
+    status: active
+    aliases: *id001
+    owner_module: forprint_library
+    dictionary_group: notification_status
+    version: '0.1'
+    notes: Draft shared operational dictionary entry.
+  unit:
+  - id: pcs
+    label_uk: Штуки
+    label_en: Pcs
+    description: Canonical shared operational dictionary value 'pcs' for dictionary
+      group 'unit'.
+    status: active
+    aliases:
+    - piece
+    - pieces
+    - шт
+    owner_module: forprint_library
+    dictionary_group: unit
+    version: '0.1'
+    notes: Draft shared operational dictionary entry.
+  - id: set
+    label_uk: Комплект
+    label_en: Set
+    description: Canonical shared operational dictionary value 'set' for dictionary
+      group 'unit'.
+    status: active
+    aliases: []
+    owner_module: forprint_library
+    dictionary_group: unit
+    version: '0.1'
+    notes: Draft shared operational dictionary entry.
+  - id: m
+    label_uk: Метри
+    label_en: M
+    description: Canonical shared operational dictionary value 'm' for dictionary
+      group 'unit'.
+    status: active
+    aliases: []
+    owner_module: forprint_library
+    dictionary_group: unit
+    version: '0.1'
+    notes: Draft shared operational dictionary entry.
+  - id: m2
+    label_uk: Квадратні метри
+    label_en: M2
+    description: Canonical shared operational dictionary value 'm2' for dictionary
+      group 'unit'.
+    status: active
+    aliases:
+    - sqm
+    - square_meter
+    - м2
+    owner_module: forprint_library
+    dictionary_group: unit
+    version: '0.1'
+    notes: Draft shared operational dictionary entry.
+  - id: kg
+    label_uk: Кілограми
+    label_en: Kg
+    description: Canonical shared operational dictionary value 'kg' for dictionary
+      group 'unit'.
+    status: active
+    aliases: []
+    owner_module: forprint_library
+    dictionary_group: unit
+    version: '0.1'
+    notes: Draft shared operational dictionary entry.
+  - id: g
+    label_uk: Грами
+    label_en: G
+    description: Canonical shared operational dictionary value 'g' for dictionary
+      group 'unit'.
+    status: active
+    aliases: []
+    owner_module: forprint_library
+    dictionary_group: unit
+    version: '0.1'
+    notes: Draft shared operational dictionary entry.
+  - id: l
+    label_uk: Літри
+    label_en: L
+    description: Canonical shared operational dictionary value 'l' for dictionary
+      group 'unit'.
+    status: active
+    aliases: []
+    owner_module: forprint_library
+    dictionary_group: unit
+    version: '0.1'
+    notes: Draft shared operational dictionary entry.
+  - id: ml
+    label_uk: Мілілітри
+    label_en: Ml
+    description: Canonical shared operational dictionary value 'ml' for dictionary
+      group 'unit'.
+    status: active
+    aliases: []
+    owner_module: forprint_library
+    dictionary_group: unit
+    version: '0.1'
+    notes: Draft shared operational dictionary entry.
+  - id: hour
+    label_uk: Година
+    label_en: Hour
+    description: Canonical shared operational dictionary value 'hour' for dictionary
+      group 'unit'.
+    status: active
+    aliases: []
+    owner_module: forprint_library
+    dictionary_group: unit
+    version: '0.1'
+    notes: Draft shared operational dictionary entry.
+  - id: minute
+    label_uk: Хвилина
+    label_en: Minute
+    description: Canonical shared operational dictionary value 'minute' for dictionary
+      group 'unit'.
+    status: active
+    aliases: []
+    owner_module: forprint_library
+    dictionary_group: unit
+    version: '0.1'
+    notes: Draft shared operational dictionary entry.
+  - id: service
+    label_uk: Послуга
+    label_en: Service
+    description: Canonical shared operational dictionary value 'service' for dictionary
+      group 'unit'.
+    status: active
+    aliases:
+    - послуга
+    owner_module: forprint_library
+    dictionary_group: unit
+    version: '0.1'
+    notes: Draft shared operational dictionary entry.
+  - id: unknown
+    label_uk: Невідомо
+    label_en: Unknown
+    description: Canonical shared operational dictionary value 'unknown' for dictionary
+      group 'unit'.
+    status: active
+    aliases: *id001
+    owner_module: forprint_library
+    dictionary_group: unit
+    version: '0.1'
+    notes: Draft shared operational dictionary entry.

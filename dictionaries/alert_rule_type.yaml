@@ -1,0 +1,90 @@
+dictionary_group: alert_rule_type
+metadata:
+  id: shared_operational_dictionary_v0_1
+  name: Shared Operational Dictionary v0.1
+  version: '0.1'
+  dictionary_status: draft_shared_operational_dictionary_v0_1
+  schema_status: unstable_v0_1
+  usage: allowed_for_projection_use
+  contract_status: not_final_contract
+  owner_module: forprint_library
+  unit_dictionary_status: not_final_inventory_unit_system
+entries:
+- id: workflow_stage_late
+  label_uk: Workflow Stage Late
+  label_en: Workflow Stage Late
+  description: Canonical shared operational dictionary value 'workflow_stage_late'
+    for dictionary group 'alert_rule_type'.
+  status: active
+  aliases: []
+  owner_module: forprint_library
+  dictionary_group: alert_rule_type
+  version: '0.1'
+  notes: Draft shared operational dictionary entry.
+- id: order_deadline_near
+  label_uk: Order Deadline Near
+  label_en: Order Deadline Near
+  description: Canonical shared operational dictionary value 'order_deadline_near'
+    for dictionary group 'alert_rule_type'.
+  status: active
+  aliases: []
+  owner_module: forprint_library
+  dictionary_group: alert_rule_type
+  version: '0.1'
+  notes: Draft shared operational dictionary entry.
+- id: payment_overdue
+  label_uk: Payment Overdue
+  label_en: Payment Overdue
+  description: Canonical shared operational dictionary value 'payment_overdue' for
+    dictionary group 'alert_rule_type'.
+  status: active
+  aliases: []
+  owner_module: forprint_library
+  dictionary_group: alert_rule_type
+  version: '0.1'
+  notes: Draft shared operational dictionary entry.
+- id: material_requirement_unresolved
+  label_uk: Material Requirement Unresolved
+  label_en: Material Requirement Unresolved
+  description: Canonical shared operational dictionary value 'material_requirement_unresolved'
+    for dictionary group 'alert_rule_type'.
+  status: active
+  aliases: []
+  owner_module: forprint_library
+  dictionary_group: alert_rule_type
+  version: '0.1'
+  notes: Draft shared operational dictionary entry.
+- id: manual_review_stale
+  label_uk: Manual Review Stale
+  label_en: Manual Review Stale
+  description: Canonical shared operational dictionary value 'manual_review_stale'
+    for dictionary group 'alert_rule_type'.
+  status: active
+  aliases: []
+  owner_module: forprint_library
+  dictionary_group: alert_rule_type
+  version: '0.1'
+  notes: Draft shared operational dictionary entry.
+- id: contractor_stage_blocked
+  label_uk: Contractor Stage Blocked
+  label_en: Contractor Stage Blocked
+  description: Canonical shared operational dictionary value 'contractor_stage_blocked'
+    for dictionary group 'alert_rule_type'.
+  status: active
+  aliases: []
+  owner_module: forprint_library
+  dictionary_group: alert_rule_type
+  version: '0.1'
+  notes: Draft shared operational dictionary entry.
+- id: unknown
+  label_uk: Невідомо
+  label_en: Unknown
+  description: Canonical shared operational dictionary value 'unknown' for dictionary
+    group 'alert_rule_type'.
+  status: active
+  aliases:
+  - невідомо
+  owner_module: forprint_library
+  dictionary_group: alert_rule_type
+  version: '0.1'
+  notes: Draft shared operational dictionary entry.

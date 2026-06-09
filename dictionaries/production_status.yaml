@@ -1,0 +1,105 @@
+dictionary_group: production_status
+metadata:
+  id: shared_operational_dictionary_v0_1
+  name: Shared Operational Dictionary v0.1
+  version: '0.1'
+  dictionary_status: draft_shared_operational_dictionary_v0_1
+  schema_status: unstable_v0_1
+  usage: allowed_for_projection_use
+  contract_status: not_final_contract
+  owner_module: forprint_library
+  unit_dictionary_status: not_final_inventory_unit_system
+entries:
+- id: not_started
+  label_uk: Не розпочато
+  label_en: Not Started
+  description: Canonical shared operational dictionary value 'not_started' for dictionary
+    group 'production_status'.
+  status: active
+  aliases: []
+  owner_module: forprint_library
+  dictionary_group: production_status
+  version: '0.1'
+  notes: Draft shared operational dictionary entry.
+- id: ready
+  label_uk: Готово
+  label_en: Ready
+  description: Canonical shared operational dictionary value 'ready' for dictionary
+    group 'production_status'.
+  status: active
+  aliases: []
+  owner_module: forprint_library
+  dictionary_group: production_status
+  version: '0.1'
+  notes: Draft shared operational dictionary entry.
+- id: in_progress
+  label_uk: У роботі
+  label_en: In Progress
+  description: Canonical shared operational dictionary value 'in_progress' for dictionary
+    group 'production_status'.
+  status: active
+  aliases:
+  - у роботі
+  owner_module: forprint_library
+  dictionary_group: production_status
+  version: '0.1'
+  notes: Draft shared operational dictionary entry.
+- id: waiting_external_contractor
+  label_uk: Очікування зовнішнього підрядника
+  label_en: Waiting External Contractor
+  description: Canonical shared operational dictionary value 'waiting_external_contractor'
+    for dictionary group 'production_status'.
+  status: active
+  aliases:
+  - external_contractor_wait
+  owner_module: forprint_library
+  dictionary_group: production_status
+  version: '0.1'
+  notes: Draft shared operational dictionary entry.
+- id: blocked
+  label_uk: Заблоковано
+  label_en: Blocked
+  description: Canonical shared operational dictionary value 'blocked' for dictionary
+    group 'production_status'.
+  status: active
+  aliases: []
+  owner_module: forprint_library
+  dictionary_group: production_status
+  version: '0.1'
+  notes: Draft shared operational dictionary entry.
+- id: completed
+  label_uk: Завершено
+  label_en: Completed
+  description: Canonical shared operational dictionary value 'completed' for dictionary
+    group 'production_status'.
+  status: active
+  aliases:
+  - завершено
+  owner_module: forprint_library
+  dictionary_group: production_status
+  version: '0.1'
+  notes: Draft shared operational dictionary entry.
+- id: cancelled
+  label_uk: Скасовано
+  label_en: Cancelled
+  description: Canonical shared operational dictionary value 'cancelled' for dictionary
+    group 'production_status'.
+  status: active
+  aliases:
+  - скасовано
+  owner_module: forprint_library
+  dictionary_group: production_status
+  version: '0.1'
+  notes: Draft shared operational dictionary entry.
+- id: unknown
+  label_uk: Невідомо
+  label_en: Unknown
+  description: Canonical shared operational dictionary value 'unknown' for dictionary
+    group 'production_status'.
+  status: active
+  aliases:
+  - невідомо
+  owner_module: forprint_library
+  dictionary_group: production_status
+  version: '0.1'
+  notes: Draft shared operational dictionary entry.

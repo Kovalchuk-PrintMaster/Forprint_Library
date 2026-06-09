@@ -1,0 +1,182 @@
+$schema: https://json-schema.org/draft/2020-12/schema
+title: ForPrint Shared Operational Dictionary
+type: object
+required:
+- metadata
+- dictionary_groups
+properties:
+  metadata:
+    type: object
+    required:
+    - id
+    - version
+    - dictionary_status
+    - schema_status
+    - usage
+    - contract_status
+    - owner_module
+    properties:
+      id:
+        type: string
+      name:
+        type: string
+      version:
+        const: '0.1'
+      dictionary_status:
+        const: draft_shared_operational_dictionary_v0_1
+      schema_status:
+        const: unstable_v0_1
+      usage:
+        const: allowed_for_projection_use
+      contract_status:
+        const: not_final_contract
+      owner_module:
+        const: forprint_library
+      unit_dictionary_status:
+        const: not_final_inventory_unit_system
+    additionalProperties: true
+  dictionary_groups:
+    type: object
+    required:
+    - source_system
+    - entity_type
+    - order_status
+    - order_line_status
+    - payment_status
+    - production_status
+    - workflow_status
+    - workflow_stage_status
+    - material_requirement_status
+    - reference_resolution_status
+    - product_service_reference_status
+    - contractor_reference_status
+    - deadline_type
+    - alert_rule_type
+    - alert_severity
+    - alert_event_status
+    - notification_status
+    - unit
+    properties:
+      source_system:
+        type: array
+        items:
+          $ref: '#/$defs/dictionary_entry'
+      entity_type:
+        type: array
+        items:
+          $ref: '#/$defs/dictionary_entry'
+      order_status:
+        type: array
+        items:
+          $ref: '#/$defs/dictionary_entry'
+      order_line_status:
+        type: array
+        items:
+          $ref: '#/$defs/dictionary_entry'
+      payment_status:
+        type: array
+        items:
+          $ref: '#/$defs/dictionary_entry'
+      production_status:
+        type: array
+        items:
+          $ref: '#/$defs/dictionary_entry'
+      workflow_status:
+        type: array
+        items:
+          $ref: '#/$defs/dictionary_entry'
+      workflow_stage_status:
+        type: array
+        items:
+          $ref: '#/$defs/dictionary_entry'
+      material_requirement_status:
+        type: array
+        items:
+          $ref: '#/$defs/dictionary_entry'
+      reference_resolution_status:
+        type: array
+        items:
+          $ref: '#/$defs/dictionary_entry'
+      product_service_reference_status:
+        type: array
+        items:
+          $ref: '#/$defs/dictionary_entry'
+      contractor_reference_status:
+        type: array
+        items:
+          $ref: '#/$defs/dictionary_entry'
+      deadline_type:
+        type: array
+        items:
+          $ref: '#/$defs/dictionary_entry'
+      alert_rule_type:
+        type: array
+        items:
+          $ref: '#/$defs/dictionary_entry'
+      alert_severity:
+        type: array
+        items:
+          $ref: '#/$defs/dictionary_entry'
+      alert_event_status:
+        type: array
+        items:
+          $ref: '#/$defs/dictionary_entry'
+      notification_status:
+        type: array
+        items:
+          $ref: '#/$defs/dictionary_entry'
+      unit:
+        type: array
+        items:
+          $ref: '#/$defs/dictionary_entry'
+    additionalProperties: false
+additionalProperties: false
+$defs:
+  dictionary_entry:
+    $schema: https://json-schema.org/draft/2020-12/schema
+    title: ForPrint Dictionary Entry
+    type: object
+    required:
+    - id
+    - label_uk
+    - label_en
+    - description
+    - status
+    - aliases
+    - owner_module
+    - dictionary_group
+    - version
+    - notes
+    properties:
+      id:
+        type: string
+        pattern: ^[a-z0-9_]+$
+      label_uk:
+        type: string
+        minLength: 1
+      label_en:
+        type: string
+        minLength: 1
+      description:
+        type: string
+        minLength: 1
+      status:
+        enum:
+        - active
+        - draft
+        - deprecated
+      aliases:
+        type: array
+        items:
+          type: string
+          minLength: 1
+      owner_module:
+        const: forprint_library
+      dictionary_group:
+        type: string
+        minLength: 1
+      version:
+        const: '0.1'
+      notes:
+        type: string
+    additionalProperties: true
