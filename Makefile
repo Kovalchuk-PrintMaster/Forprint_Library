@@ -2,7 +2,10 @@ PYTHON ?= .venv_forprint_library/bin/python
 PIP := $(PYTHON) -m pip
 BLUEPRINT_ROOT ?= /srv/software_development/forprint-project/forprint_system_blueprint
 
-.PHONY: install run lint lint-fix test check check-report blueprint-pull blueprint-check blueprint-sync-directives coordination-check coordination-fix module-policy-check format clean
+.PHONY: install run lint lint-fix test check check-report 
+		blueprint-pull blueprint-check blueprint-sync-directives 
+		coordination-check coordination-fix module-policy-check format clean
+		dictionary-preview status-report
 
 install:
 	$(PIP) install -e ".[dev]"
@@ -68,3 +71,9 @@ clean:
 	find . -type d -name ".pytest_cache" -prune -exec rm -rf {} +
 	find . -type d -name ".ruff_cache" -prune -exec rm -rf {} +
 	find . -type d -name "*.egg-info" -prune -exec rm -rf {} +
+
+dictionary-preview:
+	PYTHONPATH=app $(PYTHON) scripts/preview_shared_operational_dictionaries.py
+
+status-report:
+	$(MAKE) check-report

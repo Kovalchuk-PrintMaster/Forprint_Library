@@ -1,14 +1,14 @@
 # ForPrint Library Check Report
 
-Generated at: `2026-06-09T15:52:09`
+Generated at: `2026-06-09T15:59:03`
 
 | Check | Expected result | Status | Time | Details |
 |---|---|---:|---:|---|
-| Ruff lint | No lint errors | OK | 0.04s | All checks passed! |
-| Pytest | All tests pass | OK | 2.47s | ....................................................                     [100%]<br>52 passed in 2.17s |
-| Catalog seed validation | Seed is valid | OK | 0.21s | OK: catalog validation check 'seed' passed. |
-| Schema files validation | Schemas are valid | OK | 0.25s | OK: catalog validation check 'schemas' passed. |
-| Component catalog files | Component catalogs validate | OK | 0.27s | OK: catalog validation check 'files' passed. |
+| Ruff lint | No lint errors | OK | 0.03s | All checks passed! |
+| Pytest | All tests pass | OK | 2.86s | .............................................................            [100%]<br>61 passed in 2.54s |
+| Catalog seed validation | Seed is valid | OK | 0.20s | OK: catalog validation check 'seed' passed. |
+| Schema files validation | Schemas are valid | OK | 0.24s | OK: catalog validation check 'schemas' passed. |
+| Component catalog files | Component catalogs validate | OK | 0.28s | OK: catalog validation check 'files' passed. |
 | Catalog uniqueness validation | Catalog item IDs are unique | OK | 0.16s | OK: catalog validation check 'uniqueness' passed. |
 | Alias sanity validation | Aliases are lists and non-conflicting | OK | 0.16s | OK: catalog validation check 'aliases' passed. |
 | Example catalog seed | Example seed validates | OK | 0.16s | OK: catalog validation check 'example' passed. |
@@ -21,4 +21,4 @@ Generated at: `2026-06-09T15:52:09`
 | Next questions | next_questions_for_blueprint.md exists | OK | 0.00s | coordination/status/next_questions_for_blueprint.md |
 | Module manifest boundary | Manifest exists and forbids operational ownership | OK | 0.01s | Boundary exclusions are present. |
 | Makefile standard targets | Required targets exist | OK | 0.00s | All required targets found. |
-| Blueprint policy check | Blueprint paths readable; module directives may be deferred | OK | 0.05s | OK: Blueprint root: /srv/software_development/forprint-project/forprint_system_blueprint<br>OK: Global policy: /srv/software_development/forprint-project/forprint_system_blueprint/coordination/global_policy<br>OK: Standards: /srv/software_development/forprint-project/forprint_system_blueprint/coordination/standards<br>OK: Module policy: /srv/software_development/forprint-project/forprint_system_blueprint/coordination/module_policy/forprint_library/module_policy.md<br>OK: Global directives index: /srv/software_development/forprint-project/forprint_system_blueprint/coordination/directives/global/index.yaml<br>WARN: Module directives index missing/deferred: /srv/software_development/forprint-project/forprint_system_blueprint/coordination/directives/modules/forprint_library/index.yaml |
+| Blueprint policy check | Blueprint paths readable; module directives may be deferred | OK | 0.06s | OK: Blueprint root: /srv/software_development/forprint-project/forprint_system_blueprint<br>OK: Global policy: /srv/software_development/forprint-project/forprint_system_blueprint/coordination/global_policy<br>OK: Standards: /srv/software_development/forprint-project/forprint_system_blueprint/coordination/standards<br>OK: Module policy: /srv/software_development/forprint-project/forprint_system_blueprint/coordination/module_policy/forprint_library/module_policy.md<br>OK: Global directives index: /srv/software_development/forprint-project/forprint_system_blueprint/coordination/directives/global/index.yaml<br>WARN: Module directives index missing/deferred: /srv/software_development/forprint-project/forprint_system_blueprint/coordination/directives/modules/forprint_library/index.yaml |
