@@ -103,6 +103,8 @@ def check_make_targets() -> CheckResult:
         "coordination-check",
         "coordination-fix",
         "module-policy-check",
+        "dictionary-preview",
+        "status-report",
     }
 
     if not makefile.exists():
@@ -256,6 +258,61 @@ def collect_results(skip_external: bool = False) -> list[CheckResult]:
             "Example catalog seed",
             "Example seed validates",
             [python, "scripts/validate_catalog_seed.py", "--check", "example"],
+        ),
+        run_command(
+            "Shared dictionary files",
+            "Shared operational dictionary validates",
+            [
+                python,
+                "scripts/validate_shared_operational_dictionaries.py",
+                "--check",
+                "shared",
+            ],
+        ),
+        run_command(
+            "Dictionary schemas",
+            "Dictionary schemas are valid",
+            [
+                python,
+                "scripts/validate_shared_operational_dictionaries.py",
+                "--check",
+                "schemas",
+            ],
+        ),
+        run_command(
+            "Dictionary group files",
+            "Dictionary group files validate",
+            [
+                python,
+                "scripts/validate_shared_operational_dictionaries.py",
+                "--check",
+                "groups",
+            ],
+        ),
+        run_command(
+            "Dictionary required values",
+            "Required shared dictionary values exist",
+            [
+                python,
+                "scripts/validate_shared_operational_dictionaries.py",
+                "--check",
+                "required-values",
+            ],
+        ),
+        run_command(
+            "Dictionary resolver/examples",
+            "Resolver and dictionary examples work",
+            [
+                python,
+                "-m",
+                "pytest",
+                "tests/integration/test_dictionary_resolver_and_preview.py",
+            ],
+        ),
+        run_command(
+            "Dictionary preview",
+            "Terminal dictionary preview renders",
+            [python, "scripts/preview_shared_operational_dictionaries.py"],
         ),
         check_architecture_docs_deferred(),
         check_yaml_file(

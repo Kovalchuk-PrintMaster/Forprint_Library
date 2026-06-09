@@ -1,25 +1,39 @@
-
 module_id: forprint_library
 index_type: coordination_reports
-updated_at: "2026-06-06"
-
+updated_at: '2026-06-09'
 completion_reports:
-  - id: 2026-06-06__forprint_library__report__catalog-seed-v0-1-and-coordination-bootstrap
-    path: coordination/reports/completion/2026-06-06__forprint_library__report__catalog-seed-v0-1-and-coordination-bootstrap.md
-    status: completed
-    checkpoint: checkpoint_d
-    summary: Canonical Catalog Seed v0.1 and coordination bootstrap completion report.
-
+- id: 2026-06-06__forprint_library__report__catalog-seed-v0-1-and-coordination-bootstrap
+  path: coordination/reports/completion/2026-06-06__forprint_library__report__catalog-seed-v0-1-and-coordination-bootstrap.md
+  status: completed
+  checkpoint: checkpoint_d
+  summary: Canonical Catalog Seed v0.1 and coordination bootstrap completion report.
+- id: 2026-06-09__forprint_library__report__shared-operational-dictionary-v0-1
+  path: coordination/reports/completion/2026-06-09__forprint_library__report__shared-operational-dictionary-v0-1.md
+  status: completed
+  phase: shared_operational_dictionary_v0_1
+  summary: Shared Operational Dictionary v0.1 completion report.
 commit_reports:
-  - id: checkpoint_a
-    commit: e2f9302
-    message: Bootstrap Library coordination and check report standard
-    status: pushed
-  - id: checkpoint_b
-    commit: bb7a317
-    message: Add Library canonical catalog seed v0.1
-    status: pushed
-  - id: checkpoint_c
-    commit: 967d74a
-    message: Document Library catalog boundaries and dependent usage
-    status: pushed
+- id: checkpoint_a
+  commit: e2f9302
+  message: Bootstrap Library coordination and check report standard
+  status: pushed
+- id: checkpoint_b
+  commit: bb7a317
+  message: Add Library canonical catalog seed v0.1
+  status: pushed
+- id: checkpoint_c
+  commit: 967d74a
+  message: Document Library catalog boundaries and dependent usage
+  status: pushed
+- id: shared_dictionary_checkpoint_a
+  commit: 18900ee
+  message: Add shared operational dictionary files
+  status: pushed
+- id: shared_dictionary_checkpoint_b
+  commit: 2fc7694
+  message: Add shared dictionary resolver and preview
+  status: pushed
+- id: shared_dictionary_checkpoint_c
+  commit: pending
+  message: Finalize shared operational dictionary checkpoint
+  status: pending_final_commit

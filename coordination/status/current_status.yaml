@@ -1,32 +1,30 @@
 module_id: forprint_library
-status: bootstrap_completed_pending_blueprint_review
-stage: checkpoint_d
-updated_at: "2026-06-06"
+status: shared_operational_dictionary_v0_1_ready_pending_blueprint_review
+stage: shared_operational_dictionary_v0_1_checkpoint_c
+updated_at: '2026-06-09'
 owner_module: forprint_library
-
 current_focus:
-  - final bootstrap report
-  - coordination report index
-  - final check-report
-  - pause before next Blueprint-directed step
-
+- shared operational dictionary v0.1
+- canonical enum and status definitions
+- dictionary resolver and terminal preview
+- dictionary architecture policy documentation
+- coordination report for Blueprint review
 boundary_confirmation:
   owns:
-    - canonical catalog semantics
-    - stable catalog IDs
-    - aliases
-    - contract definitions
+  - canonical catalog semantics
+  - stable catalog IDs
+  - aliases
+  - contract definitions
   does_not_own:
-    - clients
-    - orders
-    - payments
-    - warehouse stock truth
-    - production runtime
-    - 1C synchronization
-    - CRM workflow
-    - Telegram runtime
-    - Calculator logic
-
+  - clients
+  - orders
+  - payments
+  - warehouse stock truth
+  - production runtime
+  - 1C synchronization
+  - CRM workflow
+  - Telegram runtime
+  - Calculator logic
 catalog_seed_v0_1:
   catalog_status: draft_canonical_seed
   schema_status: unstable_v0_1
@@ -34,18 +32,16 @@ catalog_seed_v0_1:
   contract_status: not_final_contract
   owner_module: forprint_library
   projection_use_allowed_for:
-    - calculator_engine
-    - telegram_bot
-    - forprint_operational_registry
-    - forprint_accounting_registry_service
-    - forprint_prepress_hub
-
+  - calculator_engine
+  - telegram_bot
+  - forprint_operational_registry
+  - forprint_accounting_registry_service
+  - forprint_prepress_hub
 checkpoint_a:
   coordination_structure: done
   makefile_standard: done
   check_report: done
   commit: e2f9302
-
 checkpoint_b:
   catalog_seed: done
   schemas: done
@@ -53,22 +49,51 @@ checkpoint_b:
   validation_tests: done
   check_report_catalog_validation: done
   commit: bb7a317
-
 checkpoint_c:
   docs_policy_pack: done
   architecture_tests: done
   commit: 967d74a
-
 checkpoint_d:
   final_report_and_status: in_progress
   reports_index: in_progress
   final_check: pending
   commit: pending
-
 next_recommended_step:
   status: wait_for_blueprint_review
   options:
-    - extend_catalog_seed_with_real_sanitized_examples
-    - add_template_and_technical_card_draft_schemas
-    - create_projection_export_for_calculator_engine
-    - create_blueprint_module_directive_index
+  - align Operational Registry local enum values with Library dictionary IDs
+  - create Blueprint module directive index for forprint_library
+  - define projection export contract for consuming modules
+  - extend dictionary aliases based on real sanitized module usage
+current_phase: shared_operational_dictionary_v0_1
+last_completed_step: shared_operational_dictionary_ready
+shared_operational_dictionary_v0_1:
+  dictionary_status: draft_shared_operational_dictionary_v0_1
+  schema_status: unstable_v0_1
+  usage: allowed_for_projection_use
+  contract_status: not_final_contract
+  owner_module: forprint_library
+  unit_dictionary_status: not_final_inventory_unit_system
+  dictionary_groups_count: 18
+  dictionary_files: done
+  schemas: done
+  loader_validation: done
+  resolver: done
+  terminal_preview: done
+  examples: done
+  architecture_docs: done
+  check_report_extension: done
+  coordination_report: done
+shared_operational_dictionary_checkpoints:
+  checkpoint_a:
+    name: dictionary_files_and_schemas
+    status: done
+    commit: 18900ee
+  checkpoint_b:
+    name: resolver_examples_and_preview
+    status: done
+    commit: 2fc7694
+  checkpoint_c:
+    name: docs_check_report_and_coordination
+    status: in_progress_until_final_commit
+    commit: pending

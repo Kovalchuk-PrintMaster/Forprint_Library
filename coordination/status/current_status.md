@@ -1,73 +1,52 @@
 # ForPrint Library Current Status
 
-Status: `bootstrap_completed_pending_blueprint_review`
+    Status: `shared_operational_dictionary_v0_1_ready_pending_blueprint_review`
 
-ForPrint Library has completed the main bootstrap sequence for coordination
-readiness and Canonical Catalog Seed v0.1.
+    ForPrint Library has completed Shared Operational Dictionary / Enum Canonicalization v0.1.
 
-## Completed checkpoints
+    ## Current phase
 
-### Checkpoint A
+    `shared_operational_dictionary_v0_1`
 
-Coordination and check-report standard.
+    ## Last completed step
 
-```text
-e2f9302 Bootstrap Library coordination and check report standard
-```
+    `shared_operational_dictionary_ready`
 
-### Checkpoint B
+    ## Completed shared dictionary checkpoints
 
-Canonical Catalog Seed v0.1, schemas, component catalogs, loader, validator,
-registry and projection-readiness tests.
+    ### Checkpoint A
 
-```text
-bb7a317 Add Library canonical catalog seed v0.1
-```
+    Dictionary files, schemas, loader validation and tests.
 
-### Checkpoint C
+    ```text
+    18900ee Add shared operational dictionary files
+    Checkpoint B
 
-Architecture policy documentation:
+    Dictionary resolver, resolution examples and terminal preview.
 
-- Library boundaries;
-- catalog seed policy;
-- canonical ID policy;
-- alias policy;
-- dependent module usage policy.
+    2fc7694 Add shared dictionary resolver and preview
+    Checkpoint C
 
-```text
-967d74a Document Library catalog boundaries and dependent usage
-```
+    Dictionary architecture docs, check-report extension and coordination report.
 
-## Current checkpoint
+    pending final commit
+    Shared dictionary status
+    dictionary_status: draft_shared_operational_dictionary_v0_1
+    schema_status: unstable_v0_1
+    usage: allowed_for_projection_use
+    contract_status: not_final_contract
+    owner_module: forprint_library
+    unit_dictionary_status: not_final_inventory_unit_system
+    Boundary confirmation
 
-Checkpoint D finalizes:
+    This step added canonical dictionary IDs, enum values, status definitions,
+    labels, aliases, schemas, docs, resolver helpers and terminal preview.
 
-- completion report;
-- reports index;
-- current status;
-- final `make check`;
-- final `make check-report`;
-- final commit and push.
+    It did not add real operational orders, real clients, real payments, real
+    material stock, real product catalog, real 1C sync, Calculator formulas,
+    Telegram runtime, CRM dashboard or Warehouse stock truth.
 
-## Current catalog seed status
+    Recommended next step
 
-```yaml
-catalog_status: draft_canonical_seed
-schema_status: unstable_v0_1
-usage: allowed_for_projection_use
-contract_status: not_final_contract
-owner_module: forprint_library
-```
-
-## Boundary
-
-ForPrint Library remains the canonical catalog and semantic authority.
-
-It does not own clients, orders, payments, warehouse stock truth, production
-runtime, 1C synchronization, CRM workflow, Telegram runtime, Calculator logic or
-external customer communication.
-
-## Recommended next step
-
-Pause Library after final bootstrap commit and pass the completion report to
-ForPrint System Blueprint for review.
+    Pause Library after final commit and pass the completion report to ForPrint
+    System Blueprint for review.

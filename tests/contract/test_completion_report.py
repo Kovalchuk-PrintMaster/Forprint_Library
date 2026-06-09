@@ -45,12 +45,18 @@ def test_reports_index_references_completion_report() -> None:
     assert REPORT_ID in report_ids
 
 
-def test_current_status_marks_bootstrap_completed() -> None:
+def test_current_status_keeps_known_project_phase() -> None:
     data = yaml.safe_load(
         (ROOT / "coordination" / "status" / "current_status.yaml").read_text(
             encoding="utf-8"
         )
     )
 
-    assert data["status"] == "bootstrap_completed_pending_blueprint_review"
-    assert data["stage"] == "checkpoint_d"
+    allowed_statuses = {
+        "bootstrap_completed_pending_blueprint_review",
+        "shared_operational_dictionary_v0_1_ready_pending_blueprint_review",
+    }
+
+    assert data["status"] in allowed_statuses
+    assert data["module_id"] == "forprint_library"
+    assert data["owner_module"] == "forprint_library"
