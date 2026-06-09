@@ -1,7 +1,7 @@
 module_id: forprint_library
 status: shared_operational_dictionary_v0_1_ready_pending_blueprint_review
 stage: shared_operational_dictionary_v0_1_checkpoint_c
-updated_at: '2026-06-09'
+updated_at: '2026-06-09T15:18:52.703286+00:00'
 owner_module: forprint_library
 current_focus:
 - shared operational dictionary v0.1
@@ -97,3 +97,40 @@ shared_operational_dictionary_checkpoints:
     name: docs_check_report_and_coordination
     status: in_progress_until_final_commit
     commit: pending
+module_name: ForPrint Library
+module_status: active
+priority: p0
+last_report_id: 2026-06-09__forprint_library__report__shared-operational-dictionary-v0-1
+last_commit: 5c7c230
+branch: main
+checks:
+  lint: ok
+  tests: ok_76_passed
+  check_report: ok
+  dictionary_preview: ok
+  coordination_check: pending_blueprint_recheck
+boundary:
+  no_foreign_ownership: true
+  no_production_api: true
+  no_live_write: true
+  no_real_integrations: true
+validation:
+  make_check: ok
+  make_check_report: ok
+  dictionary_preview: ok
+  coordination_metadata: pending_blueprint_recheck
+boundaries:
+  operational_orders_added: false
+  real_clients_added: false
+  real_payments_added: false
+  real_material_stock_added: false
+  real_product_catalog_added: false
+  real_1c_sync_added: false
+  calculator_formulas_added: false
+  telegram_runtime_added: false
+  crm_dashboard_added: false
+  warehouse_stock_truth_added: false
+recommended_next_step:
+- Pass shared operational dictionary v0.1 to Blueprint for review.
+- 'Recommended next candidate: Operational Registry mapping from local draft statuses/types
+  to Library canonical dictionary IDs.'
