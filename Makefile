@@ -5,7 +5,7 @@ BLUEPRINT_ROOT ?= /srv/software_development/forprint-project/forprint_system_blu
 .PHONY: install run lint lint-fix test check check-report 
 		blueprint-pull blueprint-check blueprint-sync-directives 
 		coordination-check coordination-fix module-policy-check format clean
-		dictionary-preview status-report
+		dictionary-preview status-report governance-check
 
 install:
 	$(PIP) install -e ".[dev]"
@@ -77,3 +77,12 @@ dictionary-preview:
 
 status-report:
 	$(MAKE) check-report
+
+governance-check:
+	@echo "== ForPrint Library governance check =="
+	$(MAKE) blueprint-pull
+	$(MAKE) blueprint-check
+	$(MAKE) blueprint-sync-directives
+	$(MAKE) module-policy-check
+	$(MAKE) coordination-check
+	$(MAKE) status-report
