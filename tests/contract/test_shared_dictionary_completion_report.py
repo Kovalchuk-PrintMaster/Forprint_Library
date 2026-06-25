@@ -48,16 +48,21 @@ def test_reports_index_references_shared_dictionary_completion_report() -> None:
     assert REPORT_ID in report_ids
 
 
-def test_current_status_marks_shared_dictionary_ready() -> None:
+def test_current_status_keeps_shared_dictionary_completion_record() -> None:
     data = yaml.safe_load(
         (ROOT / "coordination" / "status" / "current_status.yaml").read_text(
             encoding="utf-8"
         )
     )
 
-    assert data["current_phase"] == "shared_operational_dictionary_v0_1"
-    assert data["last_completed_step"] == "shared_operational_dictionary_ready"
+    assert data["module_id"] == "forprint_library"
+    assert data["owner_module"] == "forprint_library"
+
+    shared_dictionary = data["shared_operational_dictionary_v0_1"]
+
     assert (
-        data["status"]
-        == "shared_operational_dictionary_v0_1_ready_pending_blueprint_review"
+        shared_dictionary["dictionary_status"]
+        == "draft_shared_operational_dictionary_v0_1"
     )
+    assert shared_dictionary["coordination_report"] == "done"
+    assert shared_dictionary["check_report_extension"] == "done"

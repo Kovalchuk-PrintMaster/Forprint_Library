@@ -12,6 +12,15 @@ completion_reports:
   status: completed
   phase: shared_operational_dictionary_v0_1
   summary: Shared Operational Dictionary v0.1 completion report.
+- id: 2026-06-25__forprint_library__report__make-first-semantic-reference-readiness-v0-1
+  module_id: forprint_library
+  type: completion_report
+  status: completed_pending_blueprint_review
+  path: coordination/reports/completion/2026-06-25__forprint_library__report__make-first-semantic-reference-readiness-v0-1.md
+  related_prompt_id: make_first_semantic_reference_readiness_v0_1
+  blueprint_commit: 2d49d63
+  implementation_commit: 28fe2d0
+  created_at: '2026-06-25'
 commit_reports:
 - id: checkpoint_a
   commit: e2f9302
@@ -37,3 +46,11 @@ commit_reports:
   commit: pending
   message: Finalize shared operational dictionary checkpoint
   status: pending_final_commit
+- id: forprint_library_make_first_semantic_readiness_commit_28fe2d0
+  module_id: forprint_library
+  type: commit_report
+  status: pushed
+  commit: 28fe2d0
+  message: Align Library make-first semantic readiness workflow
+  related_prompt_id: make_first_semantic_reference_readiness_v0_1
+  created_at: '2026-06-25'

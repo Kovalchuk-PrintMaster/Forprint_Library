@@ -52,11 +52,12 @@ def test_current_status_keeps_known_project_phase() -> None:
         )
     )
 
-    allowed_statuses = {
+    known_statuses = {
         "bootstrap_completed_pending_blueprint_review",
         "shared_operational_dictionary_v0_1_ready_pending_blueprint_review",
+        "make_first_semantic_reference_readiness_v0_1_ready_pending_blueprint_review",
     }
 
-    assert data["status"] in allowed_statuses
+    assert data["status"] in known_statuses
     assert data["module_id"] == "forprint_library"
     assert data["owner_module"] == "forprint_library"
