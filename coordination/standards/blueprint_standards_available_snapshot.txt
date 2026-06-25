@@ -1,0 +1,27 @@
+module_id: forprint_library
+snapshot_type: blueprint_standards_available_snapshot
+blueprint_root: /srv/software_development/forprint-project/forprint_system_blueprint
+standards_files:
+  - /srv/software_development/forprint-project/forprint_system_blueprint/coordination/standards/configuration_policy.md
+  - /srv/software_development/forprint-project/forprint_system_blueprint/coordination/standards/coordination_metadata_policy.md
+  - /srv/software_development/forprint-project/forprint_system_blueprint/coordination/standards/current_status_extension_policy.md
+  - /srv/software_development/forprint-project/forprint_system_blueprint/coordination/standards/directive_index_schema.md
+  - /srv/software_development/forprint-project/forprint_system_blueprint/coordination/standards/governance/index.yaml
+  - /srv/software_development/forprint-project/forprint_system_blueprint/coordination/standards/governance/README.md
+  - /srv/software_development/forprint-project/forprint_system_blueprint/coordination/standards/governance/standards_directory_policy.md
+  - /srv/software_development/forprint-project/forprint_system_blueprint/coordination/standards/index.yaml
+  - /srv/software_development/forprint-project/forprint_system_blueprint/coordination/standards/make_command_standard.md
+  - /srv/software_development/forprint-project/forprint_system_blueprint/coordination/standards/module_alignment_policy.md
+  - /srv/software_development/forprint-project/forprint_system_blueprint/coordination/standards/module_assistant_start_protocol.md
+  - /srv/software_development/forprint-project/forprint_system_blueprint/coordination/standards/module_coordination_records_protocol.md
+  - /srv/software_development/forprint-project/forprint_system_blueprint/coordination/standards/module_governance_make_targets.md
+  - /srv/software_development/forprint-project/forprint_system_blueprint/coordination/standards/module_governance_protocol.md
+  - /srv/software_development/forprint-project/forprint_system_blueprint/coordination/standards/module_make_target_contract.md
+  - /srv/software_development/forprint-project/forprint_system_blueprint/coordination/standards/module_outgoing_prompt_pull_protocol.md
+  - /srv/software_development/forprint-project/forprint_system_blueprint/coordination/standards/module_pre_commit_protocol.md
+  - /srv/software_development/forprint-project/forprint_system_blueprint/coordination/standards/module_prompt_completion_protocol.md
+  - /srv/software_development/forprint-project/forprint_system_blueprint/coordination/standards/module_standards_awareness_protocol.md
+  - /srv/software_development/forprint-project/forprint_system_blueprint/coordination/standards/project_structure_standard.md
+  - /srv/software_development/forprint-project/forprint_system_blueprint/coordination/standards/README.md
+  - /srv/software_development/forprint-project/forprint_system_blueprint/coordination/standards/repository_structure_baseline.md
+  - /srv/software_development/forprint-project/forprint_system_blueprint/coordination/standards/testing_and_check_report_standard.md
