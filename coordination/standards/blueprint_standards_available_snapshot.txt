@@ -6,11 +6,19 @@ standards_files:
   - /srv/software_development/forprint-project/forprint_system_blueprint/coordination/standards/coordination_metadata_policy.md
   - /srv/software_development/forprint-project/forprint_system_blueprint/coordination/standards/current_status_extension_policy.md
   - /srv/software_development/forprint-project/forprint_system_blueprint/coordination/standards/directive_index_schema.md
+  - /srv/software_development/forprint-project/forprint_system_blueprint/coordination/standards/governance/folder_architecture_policy.md
   - /srv/software_development/forprint-project/forprint_system_blueprint/coordination/standards/governance/index.yaml
   - /srv/software_development/forprint-project/forprint_system_blueprint/coordination/standards/governance/README.md
   - /srv/software_development/forprint-project/forprint_system_blueprint/coordination/standards/governance/standards_directory_policy.md
   - /srv/software_development/forprint-project/forprint_system_blueprint/coordination/standards/index.yaml
   - /srv/software_development/forprint-project/forprint_system_blueprint/coordination/standards/make_command_standard.md
+  - /srv/software_development/forprint-project/forprint_system_blueprint/coordination/standards/modular_topology_and_resilience/architecture_topology_policy.md
+  - /srv/software_development/forprint-project/forprint_system_blueprint/coordination/standards/modular_topology_and_resilience/data_ownership_and_storage_policy.md
+  - /srv/software_development/forprint-project/forprint_system_blueprint/coordination/standards/modular_topology_and_resilience/gateway_responsibility_policy.md
+  - /srv/software_development/forprint-project/forprint_system_blueprint/coordination/standards/modular_topology_and_resilience/index.yaml
+  - /srv/software_development/forprint-project/forprint_system_blueprint/coordination/standards/modular_topology_and_resilience/module_global_context_policy.md
+  - /srv/software_development/forprint-project/forprint_system_blueprint/coordination/standards/modular_topology_and_resilience/module_interaction_reliability_policy.md
+  - /srv/software_development/forprint-project/forprint_system_blueprint/coordination/standards/modular_topology_and_resilience/README.md
   - /srv/software_development/forprint-project/forprint_system_blueprint/coordination/standards/module_alignment_policy.md
   - /srv/software_development/forprint-project/forprint_system_blueprint/coordination/standards/module_assistant_start_protocol.md
   - /srv/software_development/forprint-project/forprint_system_blueprint/coordination/standards/module_coordination_records_protocol.md
@@ -25,3 +33,6 @@ standards_files:
   - /srv/software_development/forprint-project/forprint_system_blueprint/coordination/standards/README.md
   - /srv/software_development/forprint-project/forprint_system_blueprint/coordination/standards/repository_structure_baseline.md
   - /srv/software_development/forprint-project/forprint_system_blueprint/coordination/standards/testing_and_check_report_standard.md
+  - /srv/software_development/forprint-project/forprint_system_blueprint/coordination/standards/third_party_reuse/index.yaml
+  - /srv/software_development/forprint-project/forprint_system_blueprint/coordination/standards/third_party_reuse/README.md
+  - /srv/software_development/forprint-project/forprint_system_blueprint/coordination/standards/third_party_reuse/third_party_reuse_policy.md
