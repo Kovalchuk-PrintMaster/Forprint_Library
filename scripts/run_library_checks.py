@@ -376,6 +376,14 @@ def collect_results(skip_external: bool = False) -> list[CheckResult]:
                 "all",
             ],
         ),
+        run_command(
+            "Library reference contract foundation",
+            "Reference contract docs, schemas and examples validate",
+            [
+                python,
+                "scripts/reference_contract/validate_library_reference_contract.py",
+            ],
+        ),
         check_architecture_docs_deferred(),
         check_yaml_file(
             "Blueprint source config",

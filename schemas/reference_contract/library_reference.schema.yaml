@@ -1,0 +1,86 @@
+$id: forprint_library.reference_contract.library_reference_v0_2
+title: ForPrint Library Reference Contract v0.2
+type: object
+description: >
+  JSON-schema-like local schema for downstream references to Library-owned
+  semantic/catalog entities.
+required:
+  - schema_version
+  - reference_type
+  - reference_id
+  - display_label
+  - resolution_status
+  - source_module
+properties:
+  schema_version:
+    type: string
+    const: library_reference_v0_2
+  reference_type:
+    type: string
+    enum:
+      - product_service
+      - material
+      - operation
+      - unit
+      - template
+      - technical_card
+  reference_id:
+    type:
+      - string
+      - "null"
+    description: >
+      Canonical Library reference id when known. Unknown references may keep
+      this field null and preserve alias_input for review.
+  display_label:
+    type: string
+  resolution_status:
+    type: string
+    enum:
+      - library_reference_confirmed
+      - library_reference_pending
+      - ambiguous_manual_review_required
+      - deprecated_reference
+      - unknown
+  source_module:
+    type: string
+    enum:
+      - calculator_engine
+      - forprint_operational_registry
+      - forprint_integration_gateway
+      - telegram_bot
+      - future_forprint_crm
+      - forprint_library
+  alias_input:
+    type:
+      - string
+      - "null"
+  deprecation:
+    type: object
+    required:
+      - is_deprecated
+      - replaced_by
+      - message
+    properties:
+      is_deprecated:
+        type: boolean
+      replaced_by:
+        type:
+          - string
+          - "null"
+      message:
+        type:
+          - string
+          - "null"
+  manual_review:
+    type: object
+    required:
+      - required
+      - reason
+    properties:
+      required:
+        type: boolean
+      reason:
+        type:
+          - string
+          - "null"
+additionalProperties: false

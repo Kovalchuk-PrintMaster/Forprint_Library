@@ -1,0 +1,223 @@
+schema_version: library_reference_examples_v0_2
+contract_id: library_reference_contract_foundation_v0_2
+owner_module: forprint_library
+description: >
+  Local non-production examples for safe downstream references to
+  Library-owned semantic/catalog entities.
+
+library_reference_contract:
+  schema_version: library_reference_v0_2
+  allowed_reference_types:
+    - product_service
+    - material
+    - operation
+    - unit
+    - template
+    - technical_card
+  allowed_resolution_statuses:
+    - library_reference_confirmed
+    - library_reference_pending
+    - ambiguous_manual_review_required
+    - deprecated_reference
+    - unknown
+  allowed_source_modules:
+    - calculator_engine
+    - forprint_operational_registry
+    - forprint_integration_gateway
+    - telegram_bot
+    - future_forprint_crm
+    - forprint_library
+
+examples:
+  - id: product_service_confirmed
+    description: Confirmed product/service reference from Calculator input.
+    downstream_payload:
+      library_reference:
+        schema_version: library_reference_v0_2
+        reference_type: product_service
+        reference_id: product_service.business_card.standard
+        display_label: Business card / standard
+        resolution_status: library_reference_confirmed
+        source_module: calculator_engine
+        alias_input: "візитки стандарт"
+        deprecation:
+          is_deprecated: false
+          replaced_by:
+          message:
+        manual_review:
+          required: false
+          reason:
+
+  - id: material_confirmed
+    description: Confirmed material reference for operational projection.
+    downstream_payload:
+      library_reference:
+        schema_version: library_reference_v0_2
+        reference_type: material
+        reference_id: material.paper.mondi_color_copy_300gsm
+        display_label: Mondi Color Copy 300 gsm
+        resolution_status: library_reference_confirmed
+        source_module: forprint_operational_registry
+        alias_input: "папір 300"
+        deprecation:
+          is_deprecated: false
+          replaced_by:
+          message:
+        manual_review:
+          required: false
+          reason:
+
+  - id: operation_confirmed
+    description: Confirmed operation reference from Integration Gateway intake.
+    downstream_payload:
+      library_reference:
+        schema_version: library_reference_v0_2
+        reference_type: operation
+        reference_id: operation.print.digital_color
+        display_label: Digital color print
+        resolution_status: library_reference_confirmed
+        source_module: forprint_integration_gateway
+        alias_input: "кольоровий друк"
+        deprecation:
+          is_deprecated: false
+          replaced_by:
+          message:
+        manual_review:
+          required: false
+          reason:
+
+  - id: unit_confirmed
+    description: Confirmed unit reference.
+    downstream_payload:
+      library_reference:
+        schema_version: library_reference_v0_2
+        reference_type: unit
+        reference_id: unit.piece
+        display_label: Piece
+        resolution_status: library_reference_confirmed
+        source_module: calculator_engine
+        alias_input: "шт"
+        deprecation:
+          is_deprecated: false
+          replaced_by:
+          message:
+        manual_review:
+          required: false
+          reason:
+
+  - id: template_confirmed
+    description: Confirmed template reference.
+    downstream_payload:
+      library_reference:
+        schema_version: library_reference_v0_2
+        reference_type: template
+        reference_id: template.business_card.90x50
+        display_label: Business card template 90x50
+        resolution_status: library_reference_confirmed
+        source_module: telegram_bot
+        alias_input: "візитка 90 на 50"
+        deprecation:
+          is_deprecated: false
+          replaced_by:
+          message:
+        manual_review:
+          required: false
+          reason:
+
+  - id: technical_card_confirmed
+    description: Confirmed technical card reference.
+    downstream_payload:
+      library_reference:
+        schema_version: library_reference_v0_2
+        reference_type: technical_card
+        reference_id: technical_card.business_card.standard_v1
+        display_label: Business card standard technical card v1
+        resolution_status: library_reference_confirmed
+        source_module: future_forprint_crm
+        alias_input: "стандартна техкарта візитки"
+        deprecation:
+          is_deprecated: false
+          replaced_by:
+          message:
+        manual_review:
+          required: false
+          reason:
+
+  - id: product_service_pending
+    description: Pending product/service reference from unconfirmed alias.
+    downstream_payload:
+      library_reference:
+        schema_version: library_reference_v0_2
+        reference_type: product_service
+        reference_id: product_service.flyer.pending
+        display_label: Flyer / pending Library confirmation
+        resolution_status: library_reference_pending
+        source_module: telegram_bot
+        alias_input: "флаєри прості"
+        deprecation:
+          is_deprecated: false
+          replaced_by:
+          message:
+        manual_review:
+          required: false
+          reason:
+
+  - id: ambiguous_material_manual_review
+    description: Ambiguous material reference that must be reviewed manually.
+    downstream_payload:
+      library_reference:
+        schema_version: library_reference_v0_2
+        reference_type: material
+        reference_id: material.paper.ambiguous
+        display_label: Paper / ambiguous
+        resolution_status: ambiguous_manual_review_required
+        source_module: forprint_integration_gateway
+        alias_input: "крейда 300"
+        deprecation:
+          is_deprecated: false
+          replaced_by:
+          message:
+        manual_review:
+          required: true
+          reason: >
+            Alias may refer to multiple coated paper references and requires
+            Library/operator review.
+
+  - id: deprecated_template_reference
+    description: Deprecated template reference with replacement direction.
+    downstream_payload:
+      library_reference:
+        schema_version: library_reference_v0_2
+        reference_type: template
+        reference_id: template.business_card.old_90x50
+        display_label: Business card old 90x50 template
+        resolution_status: deprecated_reference
+        source_module: forprint_operational_registry
+        alias_input: "старий шаблон візитки"
+        deprecation:
+          is_deprecated: true
+          replaced_by: template.business_card.90x50
+          message: Use the current 90x50 business card template reference.
+        manual_review:
+          required: false
+          reason:
+
+  - id: unknown_operation_reference
+    description: Unknown operation reference that must not become a local id.
+    downstream_payload:
+      library_reference:
+        schema_version: library_reference_v0_2
+        reference_type: operation
+        reference_id:
+        display_label: Unknown operation
+        resolution_status: unknown
+        source_module: telegram_bot
+        alias_input: "зробити красиво"
+        deprecation:
+          is_deprecated: false
+          replaced_by:
+          message:
+        manual_review:
+          required: true
+          reason: >
+            Input cannot be resolved to a known Library operation reference.
