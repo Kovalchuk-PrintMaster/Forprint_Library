@@ -2,102 +2,92 @@
 
 ## Status
 
-`make_first_semantic_reference_readiness_v0_1_ready_pending_blueprint_review`
+`reference_contract_foundation_v0_2_ready_pending_blueprint_review`
 
 ## Current phase
 
-`make_first_semantic_reference_readiness_v0_1`
+`reference_contract_foundation_v0_2`
 
 ## Last completed step
 
-`make_first_semantic_reference_ready`
+`library_reference_contract_foundation_ready`
 
 ## Blueprint prompt
 
-Prompt ID: `make_first_semantic_reference_readiness_v0_1`
+Prompt ID: `reference_contract_foundation_v0_2`
 
 Prompt path:
 
 ```text
-/srv/software_development/forprint-project/forprint_system_blueprint/coordination/outgoing_prompts/forprint_library/approved/2026-06-23__library__make_first_semantic_reference_readiness_v0_1.md
-```
-
-Blueprint commit:
-
-```text
-2d49d63 Add Library make-first semantic readiness prompt
+/srv/software_development/forprint-project/forprint_system_blueprint/coordination/outgoing_prompts/forprint_library/approved/2026-06-29__library__reference_contract_foundation_v0_2.md
 ```
 
 ## Implementation commit
 
 ```text
-28fe2d0 Align Library make-first semantic readiness workflow
+78bd7e1 Add Library reference contract foundation
 ```
 
 ## Completed
 
-- Blueprint Make Command Standard v0.2 alignment.
-- `make module-start`.
-- `make module-validate`.
-- `make prompt-read`.
-- `make blueprint-sync`.
-- `make report-clean`.
-- Minimal semantic/reference readiness examples.
-- Architecture docs for semantic readiness.
-- Downstream reference handoff notes.
-- Check-report visibility for semantic readiness.
-- Tests for Makefile targets and semantic readiness.
+- Library reference contract foundation v0.2.
+- Reference contract architecture document.
+- Downstream Library reference YAML examples.
+- Local schema for Library reference payloads.
+- Reference contract validator script.
+- Focused content tests.
+- Check-report row for Library reference contract foundation.
 
 ## Validation result
 
 ```text
+reference contract validator: OK
 ruff: OK
-semantic validator: OK
-semantic tests: 4 passed
-make test: 83 passed
+make test: 94 passed
 check-report: OK
+governance-check: OK
 module-validate: OK
-report-clean: OK
 ```
+
+## Makefile policy
+
+Makefile was intentionally not changed.
+
+Blueprint communication is temporarily handled manually through chat
+while the workflow policy is being adjusted.
 
 ## Completion packet automation
 
-Completion packet automation is deferred-safe.
+Completion packet automation remains deferred-safe.
 
 It is not faked.
-
-Current targets:
-
-```text
-completion-packet-validate
-completion-packet-apply
-completion-packet-check
-```
 
 ## Boundaries
 
 Library remains the canonical semantic/catalog authority.
 
-Library does not own:
+This checkpoint does not implement:
 
 ```text
-operational order registry
-client database
-payment/accounting truth
-warehouse stock truth
-CRM workflow engine
-Telegram runtime adapter
-Calculator pricing engine
-production runtime controller
+production catalog database
+live API
+CRM integration
+Telegram integration
+Operational Registry write
+Calculator pricing logic
+warehouse stock logic
+accounting/payment logic
 1C sync/write
+automatic posting
+production runtime service
 ```
 
 ## Completion report
 
 ```text
-coordination/reports/completion/2026-06-25__forprint_library__report__make-first-semantic-reference-readiness-v0-1.md
+coordination/reports/completion/2026-06-29__forprint_library__report__reference-contract-foundation-v0-2.md
 ```
 
 ## Next recommended step
 
-Wait for Blueprint review and downstream alignment decision.
+Wait for Blueprint review and downstream alignment guidance.

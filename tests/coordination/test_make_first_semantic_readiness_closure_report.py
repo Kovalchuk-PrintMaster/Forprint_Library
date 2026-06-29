@@ -29,19 +29,15 @@ def test_make_first_semantic_readiness_completion_report_exists() -> None:
         assert expected in text
 
 
-def test_current_status_marks_make_first_semantic_readiness_complete() -> None:
+def test_current_status_keeps_make_first_semantic_readiness_record() -> None:
     data = yaml.safe_load(
         (ROOT / "coordination" / "status" / "current_status.yaml").read_text(
             encoding="utf-8"
         )
     )
 
-    assert (
-        data["status"]
-        == "make_first_semantic_reference_readiness_v0_1_ready_pending_blueprint_review"
-    )
-    assert data["current_phase"] == "make_first_semantic_reference_readiness_v0_1"
-    assert data["last_completed_step"] == "make_first_semantic_reference_ready"
+    assert data["module_id"] == "forprint_library"
+    assert data["owner_module"] == "forprint_library"
 
     readiness = data["make_first_semantic_reference_readiness_v0_1"]
 
@@ -66,10 +62,8 @@ def test_reports_index_references_make_first_semantic_readiness_report() -> None
     assert REPORT_ID in completion_ids
 
 
-def test_current_status_md_mentions_blueprint_review() -> None:
-    text = (
-        ROOT / "coordination" / "status" / "current_status.md"
-    ).read_text(encoding="utf-8")
+def test_make_first_completion_report_mentions_blueprint_review() -> None:
+    text = REPORT_PATH.read_text(encoding="utf-8")
 
     assert "make_first_semantic_reference_readiness_v0_1" in text
-    assert "Wait for Blueprint review" in text
+    assert "Blueprint review" in text
