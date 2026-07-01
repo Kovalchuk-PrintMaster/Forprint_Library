@@ -73,9 +73,9 @@ reviewed_documents:
     validator, tests, check-report and module validation.'
 - document_id: outgoing_prompts.forprint_library.index
   path: coordination/outgoing_prompts/forprint_library/index.yaml
-  content_hash: sha256:efb55864802dec4a79bad56a2fdddbd89eee53d55a4ba4a443000239db973bc7
+  content_hash: sha256:45ad4f594aabea6592a93940f69238348b42daf73746901980ea8e43de63af58
   module_review_status: acknowledged
-  reviewed_at: '2026-07-01T12:21:54+00:00'
-  module_commit: b401557
-  notes: Library prompt queue index reviewed before Reference Contract Foundation
-    v0.2 work.
+  reviewed_at: '2026-07-01T14:48:46+00:00'
+  module_commit: d2e1834
+  notes: Library prompt queue index refreshed after Blueprint accepted Reference Contract
+    Foundation v0.2.
