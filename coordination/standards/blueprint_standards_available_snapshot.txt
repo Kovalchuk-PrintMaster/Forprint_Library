@@ -6,8 +6,10 @@ standards_files:
   - /srv/software_development/forprint-project/forprint_system_blueprint/coordination/standards/coordination_metadata_policy.md
   - /srv/software_development/forprint-project/forprint_system_blueprint/coordination/standards/current_status_extension_policy.md
   - /srv/software_development/forprint-project/forprint_system_blueprint/coordination/standards/directive_index_schema.md
+  - /srv/software_development/forprint-project/forprint_system_blueprint/coordination/standards/governance/coordination_document_awareness_policy.md
   - /srv/software_development/forprint-project/forprint_system_blueprint/coordination/standards/governance/folder_architecture_policy.md
   - /srv/software_development/forprint-project/forprint_system_blueprint/coordination/standards/governance/index.yaml
+  - /srv/software_development/forprint-project/forprint_system_blueprint/coordination/standards/governance/prompt_queue_navigation_policy.md
   - /srv/software_development/forprint-project/forprint_system_blueprint/coordination/standards/governance/README.md
   - /srv/software_development/forprint-project/forprint_system_blueprint/coordination/standards/governance/standards_directory_policy.md
   - /srv/software_development/forprint-project/forprint_system_blueprint/coordination/standards/index.yaml
