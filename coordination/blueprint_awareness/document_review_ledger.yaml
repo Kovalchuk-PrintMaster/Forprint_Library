@@ -1,4 +1,11 @@
 schema_version: module_document_awareness_ledger_v0_1
 module: forprint_library
-
-reviewed_documents: []
+reviewed_documents:
+- document_id: global_policy.forprint_project_doctrine
+  path: coordination/global_policy/forprint_project_doctrine.md
+  content_hash: sha256:c1b74e2fb9528477e6d50f7200b5b97a9df0bf05b941321b3a72aa9b585ab2a3
+  module_review_status: acknowledged
+  reviewed_at: '2026-07-01T12:09:27+00:00'
+  module_commit: 3f69d57
+  notes: Baseline acknowledged after Library Makefile, Prompt Queue, and document
+    awareness alignment.
