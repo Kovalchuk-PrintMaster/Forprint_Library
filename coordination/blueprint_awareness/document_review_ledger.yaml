@@ -1,11 +1,51 @@
 schema_version: module_document_awareness_ledger_v0_1
 module: forprint_library
 reviewed_documents:
+- document_id: global_policy.readme
+  path: coordination/global_policy/README.md
+  content_hash: sha256:fb331a112cc3f6c5fe4e731b2d78bdc6a108f2e399d5837c492cf0732f235c18
+  module_review_status: acknowledged
+  reviewed_at: '2026-07-01T12:17:30+00:00'
+  module_commit: 03aaba7
+  notes: Critical global policy baseline acknowledged before Library reference contract
+    v0.2 work.
+- document_id: global_policy.current_execution_focus
+  path: coordination/global_policy/current_execution_focus.md
+  content_hash: sha256:0cd73a28e0af34d896c1e8353988faa72da6733316ffeb0eba6608f5658bfb19
+  module_review_status: acknowledged
+  reviewed_at: '2026-07-01T12:17:30+00:00'
+  module_commit: 03aaba7
+  notes: Critical global policy baseline acknowledged before Library reference contract
+    v0.2 work.
+- document_id: global_policy.ecosystem_module_map
+  path: coordination/global_policy/ecosystem_module_map.md
+  content_hash: sha256:622a5d9e0a378f42a14d1ac217ae359aa5b93b21b22cbc7a35fa237bb0b412c9
+  module_review_status: acknowledged
+  reviewed_at: '2026-07-01T12:17:30+00:00'
+  module_commit: 03aaba7
+  notes: Critical global policy baseline acknowledged before Library reference contract
+    v0.2 work.
 - document_id: global_policy.forprint_project_doctrine
   path: coordination/global_policy/forprint_project_doctrine.md
   content_hash: sha256:c1b74e2fb9528477e6d50f7200b5b97a9df0bf05b941321b3a72aa9b585ab2a3
   module_review_status: acknowledged
-  reviewed_at: '2026-07-01T12:09:27+00:00'
-  module_commit: 3f69d57
-  notes: Baseline acknowledged after Library Makefile, Prompt Queue, and document
-    awareness alignment.
+  reviewed_at: '2026-07-01T12:17:30+00:00'
+  module_commit: 03aaba7
+  notes: Critical global policy baseline acknowledged before Library reference contract
+    v0.2 work.
+- document_id: global_policy.forprint_strategic_control_plane_policy
+  path: coordination/global_policy/forprint_strategic_control_plane_policy.md
+  content_hash: sha256:a8529c57f059ea57b25cbb1fa833ea5bdd8725ecf1bbd6fcd2ba9a4acc615376
+  module_review_status: acknowledged
+  reviewed_at: '2026-07-01T12:17:30+00:00'
+  module_commit: 03aaba7
+  notes: Critical global policy baseline acknowledged before Library reference contract
+    v0.2 work.
+- document_id: module_policy.forprint_library.module_policy
+  path: coordination/module_policy/forprint_library/module_policy.md
+  content_hash: sha256:aeb5b2ba25a09025f102ded77d5e096f8e991955320e4ff4853ef20f33ad7024
+  module_review_status: acknowledged
+  reviewed_at: '2026-07-01T12:17:30+00:00'
+  module_commit: 03aaba7
+  notes: Library module policy baseline acknowledged before Library reference contract
+    v0.2 work.
