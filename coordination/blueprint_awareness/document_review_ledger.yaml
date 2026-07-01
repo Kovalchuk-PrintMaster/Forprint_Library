@@ -49,3 +49,33 @@ reviewed_documents:
   module_commit: 03aaba7
   notes: Library module policy baseline acknowledged before Library reference contract
     v0.2 work.
+- document_id: outgoing_prompts.forprint_library.approved.2026_05_22_align_library_with_blueprint
+  path: coordination/outgoing_prompts/forprint_library/approved/2026-05-22-align-library-with-blueprint.md
+  content_hash: sha256:e6532245a564e9544bd244429294d0a9b909101ed5f6c3fdf704c0a98501bbf5
+  module_review_status: applied
+  reviewed_at: '2026-07-01T12:21:54+00:00'
+  module_commit: b401557
+  notes: Historical Library alignment prompt applied in previous checkpoints.
+- document_id: outgoing_prompts.forprint_library.approved.2026_06_23_library_make_first_semantic_reference_readiness_v0_1
+  path: coordination/outgoing_prompts/forprint_library/approved/2026-06-23__library__make_first_semantic_reference_readiness_v0_1.md
+  content_hash: sha256:623f96540b9a7b909bb30002cdaf7a53cef8dfb8358ad82fcdb1ed783e93582d
+  module_review_status: applied
+  reviewed_at: '2026-07-01T12:21:54+00:00'
+  module_commit: b401557
+  notes: Make-first semantic reference readiness prompt already completed and accepted.
+- document_id: outgoing_prompts.forprint_library.approved.2026_06_29_library_reference_contract_foundation_v0_2
+  path: coordination/outgoing_prompts/forprint_library/approved/2026-06-29__library__reference_contract_foundation_v0_2.md
+  content_hash: sha256:5e12b9d5e937c942f5d448e0773335cb385c9d91ef48ac31c964f596f161cc44
+  module_review_status: in_progress
+  reviewed_at: '2026-07-01T12:21:54+00:00'
+  module_commit: b401557
+  notes: Current Library Reference Contract Foundation v0.2 prompt selected for active
+    module work.
+- document_id: outgoing_prompts.forprint_library.index
+  path: coordination/outgoing_prompts/forprint_library/index.yaml
+  content_hash: sha256:efb55864802dec4a79bad56a2fdddbd89eee53d55a4ba4a443000239db973bc7
+  module_review_status: acknowledged
+  reviewed_at: '2026-07-01T12:21:54+00:00'
+  module_commit: b401557
+  notes: Library prompt queue index reviewed before Reference Contract Foundation
+    v0.2 work.
