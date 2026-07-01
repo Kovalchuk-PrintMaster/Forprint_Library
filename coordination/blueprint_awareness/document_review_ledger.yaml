@@ -66,11 +66,11 @@ reviewed_documents:
 - document_id: outgoing_prompts.forprint_library.approved.2026_06_29_library_reference_contract_foundation_v0_2
   path: coordination/outgoing_prompts/forprint_library/approved/2026-06-29__library__reference_contract_foundation_v0_2.md
   content_hash: sha256:5e12b9d5e937c942f5d448e0773335cb385c9d91ef48ac31c964f596f161cc44
-  module_review_status: in_progress
-  reviewed_at: '2026-07-01T12:21:54+00:00'
-  module_commit: b401557
-  notes: Current Library Reference Contract Foundation v0.2 prompt selected for active
-    module work.
+  module_review_status: applied
+  reviewed_at: '2026-07-01T13:05:25+00:00'
+  module_commit: '3428289'
+  notes: 'Reference Contract Foundation v0.2 artifacts verified: docs, examples, schema,
+    validator, tests, check-report and module validation.'
 - document_id: outgoing_prompts.forprint_library.index
   path: coordination/outgoing_prompts/forprint_library/index.yaml
   content_hash: sha256:efb55864802dec4a79bad56a2fdddbd89eee53d55a4ba4a443000239db973bc7
