@@ -67,6 +67,16 @@ BLUEPRINT_NEXT_PROMPT_RESOLVER := $(BLUEPRINT_ROOT)/scripts/coordination/resolve
 BLUEPRINT_DOCUMENT_MANIFEST_BUILDER := $(BLUEPRINT_ROOT)/scripts/coordination/build_document_manifest.py
 BLUEPRINT_DOCUMENT_AWARENESS_DASHBOARD := $(BLUEPRINT_ROOT)/scripts/coordination/render_document_awareness_dashboard.py
 BLUEPRINT_CONTEXT_BUNDLE_BUILDER := $(BLUEPRINT_ROOT)/scripts/coordination/build_context_bundle.py
+BLUEPRINT_DOCUMENT_AWARENESS_LEDGER_UPDATER := $(BLUEPRINT_ROOT)/scripts/coordination/update_document_awareness_ledger.py
+
+# Purpose: define document ledger update controls.
+# Result: operator can preview/apply review status without manually copying hashes.
+STATUS ?= acknowledged
+DOCUMENT ?=
+SOURCE ?=
+PRIORITY ?=
+NOTES ?=
+MODULE_COMMIT ?=
 
 # Purpose: define module-local awareness ledger path.
 # Result: this module owns its own review/adoption status for Blueprint documents.
@@ -119,6 +129,8 @@ help:
 	@echo "  make context-bundle SCOPE=bootstrap LIMIT=10"
 	@echo "  make context-bundle-print SCOPE=bootstrap LIMIT=10"
 	@echo "  make context-bundle-write SCOPE=bootstrap LIMIT=10"
+	@echo "  make document-ledger-preview DOCUMENT=coordination/global_policy/forprint_project_doctrine.md"
+	@echo "  make document-ledger-update DOCUMENT=coordination/global_policy/forprint_project_doctrine.md STATUS=acknowledged"
 	@echo ""
 	@echo "Governance / workflow:"
 	@echo "  make coordination-check"
@@ -491,6 +503,47 @@ context-bundle-write:
 .PHONY: context-bundle-print
 context-bundle-print:
 	"$(BLUEPRINT_PYTHON)" "$(BLUEPRINT_CONTEXT_BUNDLE_BUILDER)" --root "$(BLUEPRINT_ROOT)" --module "$(MODULE_ID)" --ledger "$(MODULE_DOCUMENT_AWARENESS_LEDGER)" --scope "$(SCOPE)" --limit "$(LIMIT)" --print
+
+# Purpose: preview an update to the module-local document awareness ledger.
+# Result: selected documents and hashes are shown, but the ledger file is not changed.
+.PHONY: document-ledger-preview
+document-ledger-preview:
+	@if [ -x "$(BLUEPRINT_PYTHON)" ] && [ -f "$(BLUEPRINT_DOCUMENT_AWARENESS_LEDGER_UPDATER)" ]; then \
+		if [ -z "$(DOCUMENT)$(SOURCE)$(PRIORITY)" ]; then \
+			echo "FAILED: provide DOCUMENT=..., SOURCE=..., or PRIORITY=..."; \
+			exit 1; \
+		fi; \
+		set -- --root "$(BLUEPRINT_ROOT)" --module "$(MODULE_ID)" --ledger "$(MODULE_DOCUMENT_AWARENESS_LEDGER)" --status "$(STATUS)"; \
+		if [ -n "$(DOCUMENT)" ]; then set -- "$$@" --document "$(DOCUMENT)"; fi; \
+		if [ -n "$(SOURCE)" ]; then set -- "$$@" --source "$(SOURCE)"; fi; \
+		if [ -n "$(PRIORITY)" ]; then set -- "$$@" --priority "$(PRIORITY)"; fi; \
+		if [ -n "$(NOTES)" ]; then set -- "$$@" --notes "$(NOTES)"; fi; \
+		if [ -n "$(MODULE_COMMIT)" ]; then set -- "$$@" --module-commit "$(MODULE_COMMIT)"; fi; \
+		set -- "$$@" --no-write; \
+		"$(BLUEPRINT_PYTHON)" "$(BLUEPRINT_DOCUMENT_AWARENESS_LEDGER_UPDATER)" "$$@"; \
+	else \
+		echo "WARN: Blueprint document awareness ledger updater is not available yet."; \
+	fi
+
+# Purpose: update the module-local document awareness ledger with current Blueprint document hashes.
+# Result: selected documents are written to the local ledger with the requested review status.
+.PHONY: document-ledger-update
+document-ledger-update:
+	@if [ -x "$(BLUEPRINT_PYTHON)" ] && [ -f "$(BLUEPRINT_DOCUMENT_AWARENESS_LEDGER_UPDATER)" ]; then \
+		if [ -z "$(DOCUMENT)$(SOURCE)$(PRIORITY)" ]; then \
+			echo "FAILED: provide DOCUMENT=..., SOURCE=..., or PRIORITY=..."; \
+			exit 1; \
+		fi; \
+		set -- --root "$(BLUEPRINT_ROOT)" --module "$(MODULE_ID)" --ledger "$(MODULE_DOCUMENT_AWARENESS_LEDGER)" --status "$(STATUS)"; \
+		if [ -n "$(DOCUMENT)" ]; then set -- "$$@" --document "$(DOCUMENT)"; fi; \
+		if [ -n "$(SOURCE)" ]; then set -- "$$@" --source "$(SOURCE)"; fi; \
+		if [ -n "$(PRIORITY)" ]; then set -- "$$@" --priority "$(PRIORITY)"; fi; \
+		if [ -n "$(NOTES)" ]; then set -- "$$@" --notes "$(NOTES)"; fi; \
+		if [ -n "$(MODULE_COMMIT)" ]; then set -- "$$@" --module-commit "$(MODULE_COMMIT)"; fi; \
+		"$(BLUEPRINT_PYTHON)" "$(BLUEPRINT_DOCUMENT_AWARENESS_LEDGER_UPDATER)" "$$@"; \
+	else \
+		echo "WARN: Blueprint document awareness ledger updater is not available yet."; \
+	fi
 
 # =============================================================================
 # 14 Coordination document awareness FINISH
