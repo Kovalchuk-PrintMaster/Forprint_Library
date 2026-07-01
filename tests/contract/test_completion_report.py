@@ -62,6 +62,7 @@ def test_current_status_keeps_known_project_phase() -> None:
         "shared_operational_dictionary_v0_1_ready_pending_blueprint_review",
         "make_first_semantic_reference_readiness_v0_1_ready_pending_blueprint_review",
         "reference_contract_foundation_v0_2_ready_pending_blueprint_review",
+        "reference_contract_foundation_v0_2_accepted_by_blueprint",
     }
 
     assert data["status"] in known_statuses

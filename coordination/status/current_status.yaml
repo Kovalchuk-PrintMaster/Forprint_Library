@@ -1,5 +1,5 @@
 module_id: forprint_library
-status: reference_contract_foundation_v0_2_ready_pending_blueprint_review
+status: reference_contract_foundation_v0_2_accepted_by_blueprint
 stage: reference_contract_foundation_v0_2_completion
 updated_at: '2026-06-29'
 owner_module: forprint_library
@@ -56,12 +56,12 @@ checkpoint_c:
   architecture_tests: done
   commit: 967d74a
 checkpoint_d:
-  final_report_and_status: in_progress
+  final_report_and_status: done
   reports_index: in_progress
   final_check: pending
   commit: pending
 next_recommended_step:
-  status: wait_for_blueprint_review
+  status: accepted_by_blueprint
   recommended_action: Ask Blueprint to review Library reference contract foundation
     v0.2 and decide downstream alignment expectations.
   candidate_followups:
@@ -169,7 +169,7 @@ reference_contract_foundation_v0_2:
   implementation_commit_message: Add Library reference contract foundation
   completion_report_id: 2026-06-29__forprint_library__report__reference-contract-foundation-v0-2
   completion_report_path: coordination/reports/completion/2026-06-29__forprint_library__report__reference-contract-foundation-v0-2.md
-  status: completed_pending_blueprint_review
+  status: accepted_by_blueprint
   docs: done
   examples: done
   schemas: done

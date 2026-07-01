@@ -2,7 +2,7 @@
 
 ## Status
 
-`reference_contract_foundation_v0_2_ready_pending_blueprint_review`
+`reference_contract_foundation_v0_2_accepted_by_blueprint`
 
 ## Current phase
 
@@ -21,6 +21,8 @@ Prompt path:
 ```text
 /srv/software_development/forprint-project/forprint_system_blueprint/coordination/outgoing_prompts/forprint_library/approved/2026-06-29__library__reference_contract_foundation_v0_2.md
 ```
+
+Blueprint acceptance commit: `f2adce7`
 
 ## Implementation commit
 

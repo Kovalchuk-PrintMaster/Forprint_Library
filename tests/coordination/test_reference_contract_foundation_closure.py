@@ -37,7 +37,7 @@ def test_current_status_marks_reference_contract_foundation_complete() -> None:
 
     assert (
         data["status"]
-        == "reference_contract_foundation_v0_2_ready_pending_blueprint_review"
+        == "reference_contract_foundation_v0_2_accepted_by_blueprint"
     )
     assert data["current_phase"] == "reference_contract_foundation_v0_2"
     assert (
@@ -50,7 +50,7 @@ def test_current_status_marks_reference_contract_foundation_complete() -> None:
     assert checkpoint["implementation_commit"] == "78bd7e1"
     assert checkpoint["check_report_visibility"] == "done"
     assert checkpoint["makefile_changes"] == "not_changed_manual_blueprint_mode"
-    assert checkpoint["status"] == "completed_pending_blueprint_review"
+    assert checkpoint["status"] == "accepted_by_blueprint"
 
 
 def test_reports_index_references_reference_contract_foundation_report() -> None:
