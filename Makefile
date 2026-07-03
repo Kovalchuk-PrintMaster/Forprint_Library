@@ -47,7 +47,7 @@ BLUEPRINT_MODULE_POLICY := $(BLUEPRINT_ROOT)/coordination/module_policy/$(MODULE
 
 # Purpose: keep a legacy/static active prompt fallback during transition.
 # Result: old prompt-read workflows still have a safe fallback, but Prompt Queue is preferred.
-ACTIVE_BLUEPRINT_PROMPT ?= $(BLUEPRINT_OUTGOING_PROMPTS_DIR)/approved/2026-06-29__library__reference_contract_foundation_v0_2.md
+ACTIVE_BLUEPRINT_PROMPT ?= $(BLUEPRINT_OUTGOING_PROMPTS_DIR)/approved/2026-07-03__library__coordination_foundation_alignment_v0_1.md
 LOCAL_ACTIVE_PROMPT_DIR := coordination/prompts/active
 LOCAL_ACTIVE_PROMPT := $(LOCAL_ACTIVE_PROMPT_DIR)/$(notdir $(ACTIVE_BLUEPRINT_PROMPT))
 
@@ -119,13 +119,13 @@ help:
 	@echo ""
 	@echo "Prompt Queue:"
 	@echo "  make prompt-queue-validate"
-	@echo "  make prompt-dashboard NO_COLOR=1"
+	@echo "  make prompt-dashboard"
 	@echo "  make prompt-next"
 	@echo "  make prompt-read-next"
 	@echo ""
 	@echo "Coordination document awareness:"
 	@echo "  make document-manifest"
-	@echo "  make document-awareness NO_COLOR=1 LIMIT=20"
+	@echo "  make document-awareness LIMIT=20"
 	@echo "  make context-bundle SCOPE=bootstrap LIMIT=10"
 	@echo "  make context-bundle-print SCOPE=bootstrap LIMIT=10"
 	@echo "  make context-bundle-write SCOPE=bootstrap LIMIT=10"
