@@ -45,11 +45,11 @@ LOCAL_STANDARDS_SNAPSHOT := $(LOCAL_STANDARDS_DIR)/blueprint_standards_available
 BLUEPRINT_OUTGOING_PROMPTS_DIR := $(BLUEPRINT_ROOT)/coordination/outgoing_prompts/$(MODULE_ID)
 BLUEPRINT_MODULE_POLICY := $(BLUEPRINT_ROOT)/coordination/module_policy/$(MODULE_ID)/module_policy.md
 
-# Purpose: keep a legacy/static active prompt fallback during transition.
-# Result: old prompt-read workflows still have a safe fallback, but Prompt Queue is preferred.
-ACTIVE_BLUEPRINT_PROMPT ?= $(BLUEPRINT_OUTGOING_PROMPTS_DIR)/approved/2026-07-03__library__coordination_foundation_alignment_v0_1.md
+# Purpose: allow optional manual active prompt override during transition.
+# Result: Prompt Queue remains preferred; this value is used only as fallback.
+ACTIVE_BLUEPRINT_PROMPT ?=
 LOCAL_ACTIVE_PROMPT_DIR := coordination/prompts/active
-LOCAL_ACTIVE_PROMPT := $(LOCAL_ACTIVE_PROMPT_DIR)/$(notdir $(ACTIVE_BLUEPRINT_PROMPT))
+LOCAL_ACTIVE_PROMPT := $(LOCAL_ACTIVE_PROMPT_DIR)/current_blueprint_prompt.md
 
 # Purpose: define Blueprint coordination metadata scripts.
 # Result: local coordination metadata can be checked/fixed through Blueprint tools.
@@ -325,10 +325,13 @@ blueprint-sync:
 # Result: operator can inspect available Blueprint prompt files.
 .PHONY: blueprint-instruction-list
 blueprint-instruction-list:
-	@echo "== Blueprint instruction list for $(MODULE_ID) =="
+	@echo "== Blueprint instruction check for $(MODULE_ID) =="
 	@echo "Blueprint root: $(BLUEPRINT_ROOT)"
-	@echo "Legacy active prompt fallback: $(ACTIVE_BLUEPRINT_PROMPT)"
+	@echo "Prompt Queue next prompt:"
+	@"$(BLUEPRINT_PYTHON)" "$(BLUEPRINT_NEXT_PROMPT_RESOLVER)" --root "$(BLUEPRINT_ROOT)" --module "$(MODULE_ID)" || true
+	@if [ -n "$(ACTIVE_BLUEPRINT_PROMPT)" ]; then echo "Manual active prompt override: $(ACTIVE_BLUEPRINT_PROMPT)"; else echo "Manual active prompt override: not set"; fi
 	@if [ -d "$(BLUEPRINT_OUTGOING_PROMPTS_DIR)" ]; then find "$(BLUEPRINT_OUTGOING_PROMPTS_DIR)" -type f -name "*.md" | sort; else echo "WARN: no outgoing prompt directory for $(MODULE_ID)"; fi
+
 
 # Purpose: verify Blueprint prompt queue and legacy prompt fallback readability.
 # Result: prompt queue index is required; legacy fallback prompt is advisory.
@@ -337,7 +340,15 @@ blueprint-instruction-check:
 	@echo "== Blueprint instruction check for $(MODULE_ID) =="
 	@[ -d "$(BLUEPRINT_ROOT)" ] && echo "OK: Blueprint root is readable: $(BLUEPRINT_ROOT)" || { echo "FAILED: Blueprint root is missing: $(BLUEPRINT_ROOT)"; exit 1; }
 	@[ -r "$(BLUEPRINT_OUTGOING_PROMPTS_DIR)/index.yaml" ] && echo "OK: Blueprint prompt queue index is readable." || { echo "FAILED: Blueprint prompt queue index is missing or unreadable."; exit 1; }
-	@[ -r "$(ACTIVE_BLUEPRINT_PROMPT)" ] && echo "OK: legacy active Blueprint prompt fallback is readable." || echo "WARN: legacy active Blueprint prompt fallback is missing; prompt-read-next remains preferred."
+	@ next_prompt_path="$$("$(BLUEPRINT_PYTHON)" "$(BLUEPRINT_NEXT_PROMPT_RESOLVER)" --root "$(BLUEPRINT_ROOT)" --module "$(MODULE_ID)" 2>/dev/null | awk -F': ' '/^Path: / { print $$2; exit }')"; \
+	if [ -n "$$next_prompt_path" ] && [ -r "$(BLUEPRINT_ROOT)/$$next_prompt_path" ]; then \
+			echo "OK: Prompt Queue next prompt is readable: $(BLUEPRINT_ROOT)/$$next_prompt_path"; \
+	elif [ -n "$(ACTIVE_BLUEPRINT_PROMPT)" ] && [ -r "$(ACTIVE_BLUEPRINT_PROMPT)" ]; then \
+			echo "OK: manual active prompt override is readable: $(ACTIVE_BLUEPRINT_PROMPT)"; \
+	else \
+			echo "FAILED: no readable Prompt Queue next prompt or manual active prompt override found."; \
+			exit 1; \
+	fi
 
 # Purpose: sync legacy/static fallback prompt into local coordination.
 # Result: local fallback prompt is copied if available.
@@ -345,12 +356,41 @@ blueprint-instruction-check:
 blueprint-instruction-sync: blueprint-instruction-check
 	@echo "== Blueprint instruction sync for $(MODULE_ID) =="
 	@mkdir -p "$(LOCAL_ACTIVE_PROMPT_DIR)"
-	@if [ -r "$(ACTIVE_BLUEPRINT_PROMPT)" ]; then cp "$(ACTIVE_BLUEPRINT_PROMPT)" "$(LOCAL_ACTIVE_PROMPT)"; echo "OK: synced legacy active prompt fallback to $(LOCAL_ACTIVE_PROMPT)"; else echo "WARN: legacy active prompt fallback was not synced."; fi
+	@next_prompt_path="$$("$(BLUEPRINT_PYTHON)" "$(BLUEPRINT_NEXT_PROMPT_RESOLVER)" --root "$(BLUEPRINT_ROOT)" --module "$(MODULE_ID)" 2>/dev/null | awk -F': ' '/^Path: / { print $$2; exit }')"; \
+	if [ -n "$$next_prompt_path" ] && [ -r "$(BLUEPRINT_ROOT)/$$next_prompt_path" ]; then \
+		cp "$(BLUEPRINT_ROOT)/$$next_prompt_path" "$(LOCAL_ACTIVE_PROMPT)"; \
+		echo "OK: synced Prompt Queue next prompt to $(LOCAL_ACTIVE_PROMPT)"; \
+		echo "Source: $(BLUEPRINT_ROOT)/$$next_prompt_path"; \
+	elif [ -n "$(ACTIVE_BLUEPRINT_PROMPT)" ] && [ -r "$(ACTIVE_BLUEPRINT_PROMPT)" ]; then \
+		cp "$(ACTIVE_BLUEPRINT_PROMPT)" "$(LOCAL_ACTIVE_PROMPT)"; \
+		echo "OK: synced manual active prompt override to $(LOCAL_ACTIVE_PROMPT)"; \
+		echo "Source: $(ACTIVE_BLUEPRINT_PROMPT)"; \
+	else \
+		echo "FAILED: active prompt was not synced."; \
+		exit 1; \
+	fi
+
+
 
 # Purpose: run complete Blueprint instruction intake workflow.
 # Result: instruction sources are listed, checked and synced.
 .PHONY: blueprint-instruction
 blueprint-instruction: blueprint-instruction-list blueprint-instruction-check blueprint-instruction-sync
+	@echo "== Blueprint instruction sync for $(MODULE_ID) =="
+	@mkdir -p "$(LOCAL_ACTIVE_PROMPT_DIR)"
+	@next_prompt_path="$$("$(BLUEPRINT_PYTHON)" "$(BLUEPRINT_NEXT_PROMPT_RESOLVER)" --root "$(BLUEPRINT_ROOT)" --module "$(MODULE_ID)" 2>/dev/null | awk -F': ' '/^Path: / { print $$2; exit }')"; \
+	if [ -n "$$next_prompt_path" ] && [ -r "$(BLUEPRINT_ROOT)/$$next_prompt_path" ]; then \
+			cp "$(BLUEPRINT_ROOT)/$$next_prompt_path" "$(LOCAL_ACTIVE_PROMPT)"; \
+			echo "OK: synced Prompt Queue next prompt to $(LOCAL_ACTIVE_PROMPT)"; \
+			echo "Source: $(BLUEPRINT_ROOT)/$$next_prompt_path"; \
+	elif [ -n "$(ACTIVE_BLUEPRINT_PROMPT)" ] && [ -r "$(ACTIVE_BLUEPRINT_PROMPT)" ]; then \
+			cp "$(ACTIVE_BLUEPRINT_PROMPT)" "$(LOCAL_ACTIVE_PROMPT)"; \
+			echo "OK: synced manual active prompt override to $(LOCAL_ACTIVE_PROMPT)"; \
+			echo "Source: $(ACTIVE_BLUEPRINT_PROMPT)"; \
+	else \
+			echo "FAILED: active prompt was not synced."; \
+			exit 1; \
+	fi
 
 # =============================================================================
 # 11 Blueprint instruction intake FINISH
