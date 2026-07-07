@@ -1,0 +1,96 @@
+schema_version: library_coordination_foundation_alignment_v0_1
+module_id: forprint_library
+prompt_id: library_coordination_foundation_alignment_v0_1
+status: implementation_ready_for_validation
+blueprint_prompt_path: /srv/software_development/forprint-project/forprint_system_blueprint/coordination/outgoing_prompts/forprint_library/approved/2026-07-03__library__coordination_foundation_alignment_v0_1.md
+
+inspection_summary:
+  git_pull_ff_only: confirmed
+  prompt_read_next: confirmed
+  document_awareness: confirmed
+  document_awareness_warnings: 0
+  context_bundle_no_write: confirmed
+  module_validate: confirmed
+  prompt_queue_validate: confirmed
+  document_manifest_no_write: confirmed
+
+operator_workflow:
+  makefile_rewrite: false
+  destructive_makefile_rewrite: false
+  confirmed_targets:
+    - blueprint-pull
+    - prompt-read-next
+    - document-awareness
+    - context-bundle
+    - module-validate
+    - prompt-queue-validate
+    - document-manifest
+    - check
+    - check-report
+    - governance-check
+  deferred_targets: []
+  notes:
+    - Existing operator workflow is sufficient for this checkpoint.
+    - No broad Makefile rewrite is needed.
+
+coordination_structure:
+  required_paths:
+    coordination/blueprint_source.yaml: present
+    coordination/prompts/index.yaml: present
+    coordination/reports/index.yaml: present
+    coordination/reports/completion: present
+    coordination/status/current_status.yaml: present
+    coordination/status/current_status.md: present
+    coordination/status/next_questions_for_blueprint.md: present
+    coordination/blueprint_awareness/document_review_ledger.yaml: present
+  controlled_backlog:
+    unseen_instruction_intake_documents: acknowledged
+    unseen_standards_documents: acknowledged
+    unseen_templates_documents: acknowledged
+    changed_outgoing_prompts_index: acknowledged
+  backlog_is_blocker: false
+
+configuration_alignment:
+  config_directory_required_now: false
+  env_example_required_now: false
+  production_runtime_config_added: false
+  future_config_directory: deferred_until_runtime_or_workbench_need
+  notes:
+    - Library does not need new runtime configuration for this checkpoint.
+    - Product Workbench configuration must be introduced only by its own prompt.
+
+secrets_alignment:
+  secrets_required_now: false
+  secrets_check: not_applicable
+  env_check: not_applicable
+  real_secrets_committed: false
+  production_credentials_added: false
+  notes:
+    - No real secrets are required or committed.
+    - .env.example is deferred because no new environment variables are introduced.
+
+project_tree_alignment:
+  project_tree_notes_documented: true
+  large_refactor: false
+  application_code_moved: false
+  deep_nesting_added: false
+  workbench_directories_created: false
+  production_runtime_directories_created: false
+
+non_goals:
+  workbench_started: false
+  configurable_product_workbench_started: false
+  business_card_product_skeleton_started: false
+  product_modeling_started: false
+  one_c_import_started: false
+  calculator_integration_started: false
+  production_catalog_database_started: false
+  live_api_started: false
+  production_runtime_changes: false
+  production_writes_added: false
+  runtime_integrations_added: false
+
+readiness:
+  coordination_ready_for_next_prompt: true
+  product_ready: false
+  recommended_next_prompt: Library Configurable Product Workbench v0.1 — Business Card Skeleton

@@ -384,6 +384,14 @@ def collect_results(skip_external: bool = False) -> list[CheckResult]:
                 "scripts/reference_contract/validate_library_reference_contract.py",
             ],
         ),
+        run_command(
+            "Library coordination foundation alignment",
+            "Coordination workflow, document awareness and alignment notes validate",
+            [
+                python,
+                "scripts/coordination/validate_coordination_foundation_alignment.py",
+            ],
+        ),
         check_architecture_docs_deferred(),
         check_yaml_file(
             "Blueprint source config",
