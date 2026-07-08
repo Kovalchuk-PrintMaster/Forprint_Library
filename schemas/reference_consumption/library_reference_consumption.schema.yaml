@@ -1,0 +1,86 @@
+$id: forprint_library.reference_consumption.library_reference_consumption_v0_3
+title: ForPrint Library Reference Consumption Pilot v0.3
+type: object
+description: >
+  Local schema for example downstream consumer payloads that consume
+  Library-owned reference contract identifiers without redefining Library
+  semantics or adding runtime ownership to Library.
+required:
+  - schema_version
+  - pilot_id
+  - owner_module
+  - reference_contract_source
+  - valid_consumer_payloads
+  - invalid_consumer_payloads
+properties:
+  schema_version:
+    type: string
+    const: library_reference_consumption_examples_v0_3
+  pilot_id:
+    type: string
+    const: library_reference_consumption_pilot_v0_3
+  owner_module:
+    type: string
+    const: forprint_library
+  description:
+    type: string
+  reference_contract_source:
+    type: object
+    required:
+      - schema_version
+      - path
+    properties:
+      schema_version:
+        type: string
+        const: library_reference_v0_2
+      path:
+        type: string
+      note:
+        type: string
+  valid_consumer_payloads:
+    type: array
+  invalid_consumer_payloads:
+    type: array
+additionalProperties: false
+
+consumer_payload_shape:
+  required:
+    - id
+    - description
+    - consumer_module
+    - consumer_payload_id
+    - library_owned_reference
+    - consumer_owned_fields
+    - foreign_module_references
+    - boundary_assertions
+  library_owned_reference_required:
+    - schema_version
+    - reference_type
+    - reference_id
+    - display_label
+    - resolution_status
+  allowed_consumer_modules:
+    - calculator_engine
+    - telegram_bot
+    - forprint_operational_registry
+    - forprint_accounting_registry_service
+    - forprint_prepress_hub
+    - forprint_integration_gateway
+  forbidden_consumer_fields:
+    - canonical_name_override
+    - semantic_definition_override
+    - library_alias_write
+    - library_reference_write
+    - final_price
+    - price_formula
+    - stock_mutation
+    - material_write_off
+    - order_creation
+    - client_creation
+    - payment_posting
+    - production_runtime_write
+    - telegram_runtime_behavior
+    - calculator_runtime_integration
+    - operational_registry_write
+    - one_c_sync
+    - one_c_import

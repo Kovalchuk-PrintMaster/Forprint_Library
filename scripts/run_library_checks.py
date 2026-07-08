@@ -385,6 +385,14 @@ def collect_results(skip_external: bool = False) -> list[CheckResult]:
             ],
         ),
         run_command(
+            "Library reference consumption pilot",
+            "Reference consumption examples, schema and validator work",
+            [
+                python,
+                "scripts/reference_consumption/validate_reference_consumption_pilot.py",
+            ],
+        ),
+        run_command(
             "Library coordination foundation alignment",
             "Coordination workflow, document awareness and alignment notes validate",
             [
