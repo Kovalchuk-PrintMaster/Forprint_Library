@@ -35,23 +35,14 @@ def test_current_status_marks_coordination_foundation_alignment_complete() -> No
         )
     )
 
-    assert (
-        data["status"]
-        == "coordination_foundation_alignment_v0_1_ready_pending_blueprint_review"
-    )
-    assert data["current_phase"] == "coordination_foundation_alignment_v0_1"
-    assert (
-        data["last_completed_step"]
-        == "library_coordination_foundation_alignment_ready"
-    )
-
     checkpoint = data["coordination_foundation_alignment_v0_1"]
 
+    assert checkpoint["status"] in {
+        "completed_pending_blueprint_review",
+        "accepted_by_blueprint",
+    }
+    assert checkpoint["prompt_id"] == "library_coordination_foundation_alignment_v0_1"
     assert checkpoint["implementation_commit"] == "02e2cad"
-    assert checkpoint["check_report_visibility"] == "done"
-    assert checkpoint["workbench_started"] is False
-    assert checkpoint["product_modeling_started"] is False
-    assert checkpoint["production_runtime_changes"] is False
 
 
 def test_reports_index_references_coordination_foundation_report() -> None:

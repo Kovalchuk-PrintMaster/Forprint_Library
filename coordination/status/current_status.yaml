@@ -1,16 +1,14 @@
 module_id: forprint_library
-status: coordination_foundation_alignment_v0_1_ready_pending_blueprint_review
+status: reference_consumption_pilot_v0_3_ready_pending_blueprint_review
 stage: coordination_foundation_alignment_v0_1_completion
-updated_at: '2026-07-03'
+updated_at: '2026-07-08'
 owner_module: forprint_library
 current_focus:
-- Library coordination foundation alignment v0.1 completed
-- prompt queue navigation confirmed
-- document awareness confirmed
-- context bundle no-write flow confirmed
-- configuration and secrets policy documented
-- project tree alignment notes documented
-- Workbench and product modeling explicitly not started
+- Reference Consumption Pilot v0.3 completed in Library repository.
+- Local read-only consumer examples demonstrate safe reference consumption.
+- Valid and invalid consumer payloads are covered by tests.
+- No downstream runtime ownership or integration was added.
+- Waiting for Blueprint review.
 boundary_confirmation:
   owns:
   - canonical catalog semantics
@@ -66,8 +64,8 @@ next_recommended_step:
     v0.1 and confirm readiness for the next prompt.
   candidate_next_prompt: Library Configurable Product Workbench v0.1 — Business Card
     Skeleton
-current_phase: coordination_foundation_alignment_v0_1
-last_completed_step: library_coordination_foundation_alignment_ready
+current_phase: reference_consumption_pilot_v0_3
+last_completed_step: library_reference_consumption_pilot_ready
 shared_operational_dictionary_v0_1:
   dictionary_status: draft_shared_operational_dictionary_v0_1
   schema_status: unstable_v0_1
@@ -198,3 +196,39 @@ coordination_foundation_alignment_v0_1:
   workbench_started: false
   product_modeling_started: false
   production_runtime_changes: false
+reference_consumption_pilot_v0_3:
+  status: completed_pending_blueprint_review
+  prompt_id: library_reference_consumption_pilot_v0_3
+  implementation_commit: 7e000cb
+  completion_report: coordination/reports/completion/2026-07-08__forprint_library__report__reference-consumption-pilot-v0-3.md
+  blueprint_prompt_path: /srv/software_development/forprint-project/forprint_system_blueprint/coordination/outgoing_prompts/forprint_library/approved/2026-07-08__library__reference_consumption_pilot_v0_3.md
+  added_artifacts:
+  - examples/reference_consumption/library_reference_consumption_examples.yaml
+  - schemas/reference_consumption/library_reference_consumption.schema.yaml
+  - scripts/reference_consumption/validate_reference_consumption_pilot.py
+  - docs/architecture/reference_consumption_pilot.md
+  - tests/coordination/test_reference_consumption_pilot.py
+  check_report_visibility: Library reference consumption pilot
+  validation:
+    focused_tests: 7 passed
+    full_tests: 115 passed
+    check_report: OK
+    make_check: OK
+    governance_check: OK
+    module_validate: OK
+    git_diff_check: OK
+  boundaries:
+    configurable_product_workbench_started: false
+    business_card_skeleton_started: false
+    product_modeling_ui_added: false
+    production_catalog_database_added: false
+    live_api_added: false
+    one_c_import_added: false
+    calculator_integration_added: false
+    telegram_integration_added: false
+    operational_registry_write_added: false
+    production_write_added: false
+    price_calculation_added: false
+    material_write_off_added: false
+    blueprint_repository_written: false
+  next_recommended_step: Blueprint review of module-side completion report.

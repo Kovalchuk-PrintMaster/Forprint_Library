@@ -59,6 +59,7 @@ def test_current_status_keeps_known_project_phase() -> None:
         "reference_contract_foundation_v0_2_ready_pending_blueprint_review",
         "reference_contract_foundation_v0_2_accepted_by_blueprint",
         "coordination_foundation_alignment_v0_1_ready_pending_blueprint_review",
+        "reference_consumption_pilot_v0_3_ready_pending_blueprint_review",
     }
 
     assert data["status"] in known_statuses

@@ -2,109 +2,85 @@
 
 ## Status
 
-`coordination_foundation_alignment_v0_1_ready_pending_blueprint_review`
+reference_consumption_pilot_v0_3_ready_pending_blueprint_review
 
 ## Current phase
 
-`coordination_foundation_alignment_v0_1`
+reference_consumption_pilot_v0_3
 
 ## Last completed step
 
-`library_coordination_foundation_alignment_ready`
+library_reference_consumption_pilot_ready
 
-## Blueprint prompt
+## Completed prompt
 
-Prompt ID: `library_coordination_foundation_alignment_v0_1`
-
-Prompt path:
-
-```text
-/srv/software_development/forprint-project/forprint_system_blueprint/coordination/outgoing_prompts/forprint_library/approved/2026-07-03__library__coordination_foundation_alignment_v0_1.md
-```
+library_reference_consumption_pilot_v0_3
 
 ## Implementation commit
 
 ```text
-02e2cad Add Library coordination foundation alignment
-```
+7e000cb Add Library reference consumption pilot
 
-## Completed
+Completion report
+coordination/reports/completion/2026-07-08__forprint_library__report__reference-consumption-pilot-v0-3.md
+Summary
 
-- Coordination foundation alignment document.
-- Local Blueprint awareness alignment YAML.
-- Coordination foundation alignment validator.
-- Focused coordination tests.
-- Check-report row for coordination foundation alignment.
-- Configuration, secrets and project-tree alignment notes.
+Library Reference Consumption Pilot v0.3 is completed in the Library repository.
 
-## Validation result
+The checkpoint adds local, read-only examples showing how downstream modules may
+consume Library-owned reference IDs without making Library responsible for
+downstream runtime behavior.
 
-```text
-coordination foundation validator: OK
+Completed artifacts
+examples/reference_consumption/library_reference_consumption_examples.yaml
+schemas/reference_consumption/library_reference_consumption.schema.yaml
+scripts/reference_consumption/validate_reference_consumption_pilot.py
+docs/architecture/reference_consumption_pilot.md
+tests/coordination/test_reference_consumption_pilot.py
+scripts/run_library_checks.py
+reports/library_check_report.json
+reports/library_check_report.md
+Validation
+reference consumption validator: OK
+reference consumption preview: OK
+focused tests: 7 passed
 make lint: OK
-make test: 104 passed
+make test: 115 passed
 make check-report: OK
 make check: OK
 make governance-check: OK
 make module-validate: OK
-```
+git diff --check: OK
+Boundaries preserved
+No Configurable Product Workbench
+No Business Card Skeleton
+No product modeling UI
+No production catalog database
+No live API
+No 1C import
+No 1C synchronization
+No Calculator integration
+No Telegram Bot integration
+No Operational Registry write
+No production write
+No price calculation
+No material write-off logic
+No Blueprint repository writes
+No real secrets or credentials were committed
+Previous completed checkpoints
+coordination_foundation_alignment_v0_1
+- Makefile was not rewritten.
+- No real secrets or credentials were committed.
+- Coordination foundation alignment remains recorded as a historical checkpoint.
 
-## Makefile policy
+reference_contract_foundation_v0_2
+- Reference contract foundation remains recorded as a historical checkpoint.
 
-Makefile was not rewritten.
+make_first_semantic_reference_readiness_v0_1
+- Make-first semantic reference readiness remains recorded as a historical checkpoint.
+Next step
 
-Existing operator targets were confirmed sufficient for this checkpoint.
+Waiting for Blueprint review.
 
-## Manual Blueprint mode
-
-Blueprint communication is temporarily handled through chat.
-
-The active prompt was handled through `prompt-read-next` and manual
-operator coordination.
-
-## Configuration and secrets
-
-No production config was added.
-
-No `.env` file was added.
-
-No real secrets or credentials were committed.
-
-Secrets checks are not applicable for the current Library scope.
-
-## Non-goals preserved
-
-This checkpoint did not implement:
-
-```text
-Configurable Product Workbench
-business_card product skeleton
-new product catalog generation
-1C import
-1C database parsing
-Calculator Engine integration
-production write
-price calculation
-material write-off logic
-CRM/client/carrier entities
-large repository refactor
-production catalog database
-live API
-runtime integration
-```
-
-## Completion report
-
-```text
-coordination/reports/completion/2026-07-03__forprint_library__report__coordination-foundation-alignment-v0-1.md
-```
-
-## Next recommended step
-
-Wait for Blueprint review.
-
-Candidate next prompt:
-
-```text
-Library Configurable Product Workbench v0.1 — Business Card Skeleton
-```
+Blueprint should read the module-side completion report and decide whether to
+accept library_reference_consumption_pilot_v0_3 or return it for fixes.
