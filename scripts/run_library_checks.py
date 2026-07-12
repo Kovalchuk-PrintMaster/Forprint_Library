@@ -400,6 +400,22 @@ def collect_results(skip_external: bool = False) -> list[CheckResult]:
                 "scripts/coordination/validate_coordination_foundation_alignment.py",
             ],
         ),
+        run_command(
+            "Business card product skeleton",
+            "Business card configurable product card validates",
+            [
+                python,
+                "scripts/product_workbench/validate_business_card_product.py",
+            ],
+        ),
+        run_command(
+            "Business card product preview",
+            "Business card product card preview renders",
+            [
+                python,
+                "scripts/product_workbench/preview_business_card_product.py",
+            ],
+        ),
         check_architecture_docs_deferred(),
         check_yaml_file(
             "Blueprint source config",
