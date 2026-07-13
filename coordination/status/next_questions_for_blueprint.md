@@ -1,27 +1,15 @@
-# Next Questions for Blueprint
-
-    Current module
-
-    forprint_library
+# Next questions for Blueprint
 
     Current checkpoint
+    library_configurable_product_workbench_business_card_skeleton_v0_1
+    Open questions
 
-    library_reference_consumption_pilot_v0_3
+    No open questions.
 
-    Status
+    Review request
 
-    completed_pending_blueprint_review
+    Please review the Library-side completion report:
 
-    Question
+    coordination/reports/completion/2026-07-11__forprint_library__report__business-card-skeleton-v0-1.md
 
-    Please review the module-side completion report:
-
-    coordination/reports/completion/2026-07-08__forprint_library__report__reference-consumption-pilot-v0-3.md
-
-    Should Library proceed to the next approved prompt after Blueprint acceptance?
-
-    Boundary note
-
-    Library did not start Configurable Product Workbench, Business Card Skeleton,
-    runtime integrations, production writes, 1C import, Calculator integration,
-    Telegram integration or Operational Registry writes.
+    The module is waiting for Blueprint acceptance or requested fixes.

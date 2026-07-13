@@ -1,13 +1,16 @@
 module_id: forprint_library
-status: reference_consumption_pilot_v0_3_ready_pending_blueprint_review
+status: business_card_skeleton_v0_1_ready_pending_blueprint_review
 stage: coordination_foundation_alignment_v0_1_completion
-updated_at: '2026-07-08'
+updated_at: '2026-07-11'
 owner_module: forprint_library
 current_focus:
-- Reference Consumption Pilot v0.3 completed in Library repository.
-- Local read-only consumer examples demonstrate safe reference consumption.
-- Valid and invalid consumer payloads are covered by tests.
-- No downstream runtime ownership or integration was added.
+- Configurable Product Workbench v0.1 Business Card Skeleton completed in Library
+  repository.
+- product.business_card is available as the first controlled configurable product
+  reference.
+- Business card product card includes aliases, constructor parameters, Library references
+  and consumer usage notes.
+- No pricing, order, production, stock, 1C or downstream runtime integration was added.
 - Waiting for Blueprint review.
 boundary_confirmation:
   owns:
@@ -64,8 +67,8 @@ next_recommended_step:
     v0.1 and confirm readiness for the next prompt.
   candidate_next_prompt: Library Configurable Product Workbench v0.1 — Business Card
     Skeleton
-current_phase: reference_consumption_pilot_v0_3
-last_completed_step: library_reference_consumption_pilot_ready
+current_phase: business_card_skeleton_v0_1
+last_completed_step: library_business_card_skeleton_ready
 shared_operational_dictionary_v0_1:
   dictionary_status: draft_shared_operational_dictionary_v0_1
   schema_status: unstable_v0_1
@@ -230,5 +233,56 @@ reference_consumption_pilot_v0_3:
     production_write_added: false
     price_calculation_added: false
     material_write_off_added: false
+    blueprint_repository_written: false
+  next_recommended_step: Blueprint review of module-side completion report.
+configurable_product_workbench_business_card_skeleton_v0_1:
+  status: completed_pending_blueprint_review
+  prompt_id: library_configurable_product_workbench_business_card_skeleton_v0_1
+  title: Library Configurable Product Workbench v0.1 — Business Card Skeleton
+  implementation_commit: b8eb062
+  completion_report: coordination/reports/completion/2026-07-11__forprint_library__report__business-card-skeleton-v0-1.md
+  blueprint_prompt_path: coordination/outgoing_prompts/forprint_library/approved/2026-07-11__library__configurable_product_workbench_business_card_skeleton_v0_1.md
+  product_id: product.business_card
+  added_artifacts:
+  - catalog/configurable_products/business_card.yaml
+  - schemas/configurable_product.schema.yaml
+  - examples/product_cards/business_card_product_card.yaml
+  - docs/architecture/configurable_product_workbench.md
+  - docs/architecture/business_card_skeleton.md
+  - scripts/product_workbench/validate_business_card_product.py
+  - scripts/product_workbench/preview_business_card_product.py
+  - tests/content/test_business_card_product_card.py
+  check_report_visibility:
+  - Business card product skeleton
+  - Business card product preview
+  validation:
+    business_card_validator: OK
+    business_card_preview: OK
+    focused_tests: 8 passed
+    full_tests: 129 passed
+    check_report: OK
+    make_check: OK
+    governance_check: OK
+    module_validate: OK
+    git_diff_check: OK
+  boundaries:
+    full_product_catalog_added: false
+    product_modeling_ui_added: false
+    production_catalog_database_added: false
+    live_api_added: false
+    one_c_import_added: false
+    one_c_synchronization_added: false
+    calculator_integration_added: false
+    telegram_bot_integration_added: false
+    operational_registry_write_added: false
+    crm_write_added: false
+    website_write_added: false
+    price_calculation_added: false
+    final_price_formula_added: false
+    material_write_off_added: false
+    warehouse_stock_truth_added: false
+    production_task_creation_added: false
+    real_client_order_data_added: false
+    production_runtime_added: false
     blueprint_repository_written: false
   next_recommended_step: Blueprint review of module-side completion report.
