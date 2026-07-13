@@ -162,7 +162,7 @@ git diff --check: OK
 Known warnings
 Blueprint module directives index is missing/deferred for forprint_library.
 This warning existed in the governance flow and did not block Library validation.
-Document awareness still reports unseen Blueprint documents; 
+Document awareness still reports unseen Blueprint documents;
 This is advisory and outside this checkpoint's implementation scope.
 Completion packet automation
 
@@ -447,7 +447,7 @@ def write_current_status_md() -> None:
     No real client or order data
     No production runtime
     No Blueprint repository writes
-    
+
     Previous completed checkpoints
     make_first_semantic_reference_readiness_v0_1
     - Accepted by Blueprint before the business card skeleton checkpoint.
@@ -463,7 +463,7 @@ def write_current_status_md() -> None:
     reference_consumption_pilot_v0_3
     - Reference consumption pilot remains recorded as a historical checkpoint.
     - Previous rolling status: reference_consumption_pilot_v0_3_ready_pending_blueprint_review
-    
+
     Next step
 
     Waiting for Blueprint review.

@@ -1,7 +1,7 @@
 {
   "module_id": "forprint_library",
   "report": "library_check_report",
-  "generated_at": "2026-07-13T16:08:00",
+  "generated_at": "2026-07-13T18:13:24",
   "summary": {
     "ok": 33,
     "warn": 0,
@@ -12,231 +12,231 @@
       "name": "Ruff lint",
       "expected": "No lint errors",
       "status": "OK",
-      "seconds": 0.040983419050462544,
+      "seconds": 0.04307990905363113,
       "details": "All checks passed!"
     },
     {
       "name": "Pytest",
       "expected": "All tests pass",
       "status": "OK",
-      "seconds": 4.302365783951245,
-      "details": "........................................................................ [ 52%]\n.................................................................        [100%]\n137 passed in 3.98s"
+      "seconds": 4.335022890940309,
+      "details": "........................................................................ [ 52%]\n.................................................................        [100%]\n137 passed in 4.01s"
     },
     {
       "name": "Catalog seed validation",
       "expected": "Seed is valid",
       "status": "OK",
-      "seconds": 0.21143933990970254,
+      "seconds": 0.21424433193169534,
       "details": "OK: catalog validation check 'seed' passed."
     },
     {
       "name": "Schema files validation",
       "expected": "Schemas are valid",
       "status": "OK",
-      "seconds": 0.24080891103949398,
+      "seconds": 0.23950521496590227,
       "details": "OK: catalog validation check 'schemas' passed."
     },
     {
       "name": "Component catalog files",
       "expected": "Component catalogs validate",
       "status": "OK",
-      "seconds": 0.2835313139948994,
+      "seconds": 0.28106789907906204,
       "details": "OK: catalog validation check 'files' passed."
     },
     {
       "name": "Catalog uniqueness validation",
       "expected": "Catalog item IDs are unique",
       "status": "OK",
-      "seconds": 0.15881570207420737,
+      "seconds": 0.15775630192365497,
       "details": "OK: catalog validation check 'uniqueness' passed."
     },
     {
       "name": "Alias sanity validation",
       "expected": "Aliases are lists and non-conflicting",
       "status": "OK",
-      "seconds": 0.15977103996556252,
+      "seconds": 0.15873214602470398,
       "details": "OK: catalog validation check 'aliases' passed."
     },
     {
       "name": "Example catalog seed",
       "expected": "Example seed validates",
       "status": "OK",
-      "seconds": 0.1651730079902336,
+      "seconds": 0.16147241997532547,
       "details": "OK: catalog validation check 'example' passed."
     },
     {
       "name": "Shared dictionary files",
       "expected": "Shared operational dictionary validates",
       "status": "OK",
-      "seconds": 0.491986807086505,
+      "seconds": 0.48466095607727766,
       "details": "OK: shared dictionary check 'shared' passed."
     },
     {
       "name": "Dictionary schemas",
       "expected": "Dictionary schemas are valid",
       "status": "OK",
-      "seconds": 0.18116559891495854,
+      "seconds": 0.18118778697680682,
       "details": "OK: shared dictionary check 'schemas' passed."
     },
     {
       "name": "Dictionary group files",
       "expected": "Dictionary group files validate",
       "status": "OK",
-      "seconds": 0.2916820989921689,
+      "seconds": 0.2898361129919067,
       "details": "OK: shared dictionary check 'groups' passed."
     },
     {
       "name": "Dictionary required values",
       "expected": "Required shared dictionary values exist",
       "status": "OK",
-      "seconds": 0.2784120369469747,
+      "seconds": 0.27894385007675737,
       "details": "OK: shared dictionary check 'required-values' passed."
     },
     {
       "name": "Dictionary resolver/examples",
       "expected": "Resolver and dictionary examples work",
       "status": "OK",
-      "seconds": 0.6690836530178785,
+      "seconds": 0.6837747569661587,
       "details": ".........                                                                [100%]\n9 passed in 0.37s"
     },
     {
       "name": "Dictionary preview",
       "expected": "Terminal dictionary preview renders",
       "status": "OK",
-      "seconds": 0.28568764799274504,
+      "seconds": 0.27293868304695934,
       "details": "ForPrint Library — Shared Operational Dictionary v0.1 Preview\n\nDICTIONARY GROUPS\n=================\n- source_system\n- entity_type\n- order_status\n- order_line_status\n- payment_status\n- production_status\n- workflow_status\n- workflow_stage_status\n- material_requirement_status\n- reference_resolution_status\n- product_service_reference_status\n- contractor_reference_status\n- deadline_type\n- alert_rule_type\n- alert_severity\n- alert_event_status\n- notification_status\n- unit\n\nSOURCE SYSTEMS\n==============\nsource_system (16 values)\n------------------------------------------------------------------------\nID                                 STATUS       LABEL\n------------------------------------------------------------------------\nforprint_operational_registry      active       Forprint Operational Registry\nforprint_library                   active       Forprint Library\ncalculator_engine                  active       Calculator Engine\naccounting_registry_service        active       Accounting Registry Service\ntelegram_bot                       active       Telegram Bot\nforprint_crm                       active       Forprint Crm\nforprint_integration_gateway       active       Forprint Integration Gateway\nforprint_prepress_hub              active       Forprint Prepress Hub\n... 8 more\n\nENTITY TYPES\n============\nentity_type (23 values)\n------------------------------------------------------------------------\nID                                 STATUS       LABEL\n------------------------------------------------------------------------\nclient_account                     active       Client Account\nclient_group                       active       Client Group\ncontact_person                     active       Contact Person\ncontact_method                     active       Contact Method\nclient_address                     active       Client Address\nlegal_entity_profile               active       Legal Entity Profile\nexternal_reference                 active       External Reference\norder                              active       Order\n... 15 more\n\nORDER / WORKFLOW STATUSES\n=========================\norder_status (10 values)\n------------------------------------------------------------------------\nID                                 STATUS       LABEL\n------------------------------------------------------------------------\ndraft                              active       Draft\nneeds_review                       active       Needs Review\nconfirmed                          active       Confirmed\nin_progress                        active       In Progress\ncompleted                          active       Completed\ncancelled                          active       Cancelled\n... 4 more\n\norder_line_status (8 values)\n------------------------------------------------------------------------\nID                                 STATUS       LABEL\n------------------------------------------------------------------------\ndraft                              active       Draft\npending_reference_resolution       active       Pending Reference Resolution\nready                              active       Ready\nin_progress                        active       In Progress\ncompleted                          active       Completed\ncancelled                          active       Cancelled\n... 2 more\n\nworkflow_status (7 values)\n------------------------------------------------------------------------\nID                                 STATUS       LABEL\n------------------------------------------------------------------------\nnot_started                        active       Not Started\nactive                             active       Active\nblocked                            active       Blocked\ncompleted                          active       Completed\ncancelled                          active       Cancelled\nmanual_review_required             active       Manual Review Required\n... 1 more\n\nworkflow_stage_status (10 values)\n------------------------------------------------------------------------\nID                                 STATUS       LABEL\n------------------------------------------------------------------------\nnot_started                        active       Not Started\nready                              active       Ready\nin_progress                        active       In Progress\nblocked                            active       Blocked\nwaiting_external_contractor        active       Waiting External Contractor\ncompleted                          active       Completed\n... 4 more\n\nproduction_status (8 values)\n------------------------------------------------------------------------\nID                                 STATUS       LABEL\n------------------------------------------------------------------------\nnot_started                        active       Not Started\nready                              active       Ready\nin_progress                        active       In Progress\nwaiting_external_contractor        active       Waiting External Contractor\nblocked                            active       Blocked\ncompleted                          active       Completed\n... 2 more\n\n\nPAYMENT / MATERIAL STATUSES\n===========================\npayment_status (8 values)\n------------------------------------------------------------------------\nID                                 STATUS       LABEL\n------------------------------------------------------------------------\nnot_invoiced                       active       Not Invoiced\ninvoice_reference_pending          active       Invoice Reference Pending\nunpaid                             active       Unpaid\npartially_paid                     active       Partially Paid\npaid_reference_confirmed           active       Paid Reference Confirmed\noverdue                            active       Overdue\n... 2 more\n\nmaterial_requirement_status (8 values)\n------------------------------------------------------------------------\nID                                 STATUS       LABEL\n------------------------------------------------------------------------\nplanned                            active       Planned\nlibrary_reference_pending          active       Library Reference Pending\nwarehouse_reference_pending        active       Warehouse Reference Pending\nreserved_reference_pending         active       Reserved Reference Pending\nconfirmed                          active       Confirmed\nfulfilled                          active       Fulfilled\n... 2 more\n\nreference_resolution_status (6 values)\n------------------------------------------------------------------------\nID                                 STATUS       LABEL\n------------------------------------------------------------------------\ndraft_display_only                 active       Draft Display Only\nreference_pending                  active       Reference Pending\nreference_confirmed                active       Reference Confirmed\nambiguous_manual_review_required   active       Ambiguous Manual Review Required\ndeprecated_reference               deprecated   Deprecated Reference\nunknown                            active       Unknown\n\nproduct_service_reference_status (6 values)\n------------------------------------------------------------------------\nID                                 STATUS       LABEL\n------------------------------------------------------------------------\ndraft_display_only                 active       Draft Display Only\nlibrary_reference_pending          active       Library Reference Pending\nlibrary_reference_confirmed        active       Library Reference Confirmed\nambiguous_manual_review_required   active       Ambiguous Manual Review Required\ndeprecated_reference               deprecated   Deprecated Reference\nunknown                            active       Unknown\n\n\nALERT STATUSES\n==============\nalert_rule_type (7 values)\n------------------------------------------------------------------------\nID                                 STATUS       LABEL\n------------------------------------------------------------------------\nworkflow_stage_late                active       Workflow Stage Late\norder_deadline_near                active       Order Deadline Near\npayment_overdue                    active       Payment Overdue\nmaterial_requirement_unresolved    active       Material Requirement Unresolved\nmanual_review_stale                active       Manual Review Stale\ncontractor_stage_blocked           active       Contractor Stage Blocked\n... 1 more\n\nalert_severity (5 values)\n------------------------------------------------------------------------\nID                                 STATUS       LABEL\n------------------------------------------------------------------------\ninfo                               active       Info\nwarning                            active       Warning\nhigh                               active       High\ncritical                           active       Critical\nunknown                            active       Unknown\n\nalert_event_status (6 values)\n------------------------------------------------------------------------\nID                                 STATUS       LABEL\n------------------------------------------------------------------------\nopen                               active       Open\nacknowledged                       active       Acknowledged\nresolved                           active       Resolved\nignored                            active       Ignored\nfailed_to_notify                   active       Failed To Notify\nunknown                            active       Unknown\n\nnotification_status (6 values)\n------------------------------------------------------------------------\nID                                 STATUS       LABEL\n------------------------------------------------------------------------\nnot_sent                           active       Not Sent\nqueued                             active       Queued\nsent                               active       Sent\nfailed                             active       Failed\ndisabled                           active       Disabled\nunknown                            active       Unknown\n\n\nUNITS\n=====\nunit (12 values)\n------------------------------------------------------------------------\nID                                 STATUS       LABEL\n------------------------------------------------------------------------\npcs                                active       Pcs\nset                                active       Set\nm                                  active       M\nm2                                 active       M2\nkg                                 active       Kg\ng                                  active       G\nl                                  active       L\nml                                 active       Ml\nhour                               active       Hour\nminute                             active       Minute\nservice                            active       Service\nunknown                            active       Unknown\n\nRESOLUTION EXAMPLES\n===================\nsource_system                    input=calculator_engine            status=confirmed                          matched=calculator_engine\nsource_system                    input=calculator                   status=confirmed_with_alias               matched=calculator_engine\nsource_system                    input=not_existing_source          status=unresolved                         matched=None\nreference_resolution_status      input=deprecated_reference         status=deprecated_reference               matched=deprecated_reference\nunit                             input=шт                           status=confirmed_with_alias               matched=pcs\nalert_severity                   input=crit                         status=confirmed_with_alias               matched=critical"
     },
     {
       "name": "Make-first workflow alignment",
       "expected": "Make-first workflow targets and visibility are ready",
       "status": "OK",
-      "seconds": 0.05843278707470745,
+      "seconds": 0.04903796699363738,
       "details": "OK: semantic reference readiness check 'make-first' passed."
     },
     {
       "name": "Blueprint prompt visibility",
       "expected": "Active Blueprint prompt is synced locally",
       "status": "OK",
-      "seconds": 0.056629869039170444,
+      "seconds": 0.058346264995634556,
       "details": "OK: semantic reference readiness check 'blueprint-visibility' passed."
     },
     {
       "name": "Blueprint standards visibility",
       "expected": "Blueprint standards snapshot is available locally",
       "status": "OK",
-      "seconds": 0.05671793001238257,
+      "seconds": 0.057985997991636395,
       "details": "OK: semantic reference readiness check 'blueprint-visibility' passed."
     },
     {
       "name": "Semantic reference readiness",
       "expected": "Semantic reference readiness examples and docs validate",
       "status": "OK",
-      "seconds": 0.05853074695914984,
+      "seconds": 0.06585727306082845,
       "details": "OK: semantic reference readiness check 'all' passed."
     },
     {
       "name": "Library reference contract foundation",
       "expected": "Reference contract docs, schemas and examples validate",
       "status": "OK",
-      "seconds": 0.07481956493575126,
+      "seconds": 0.07514689594972879,
       "details": "OK: Library reference contract foundation validates"
     },
     {
       "name": "Library reference consumption pilot",
       "expected": "Reference consumption examples, schema and validator work",
       "status": "OK",
-      "seconds": 0.09413314308039844,
+      "seconds": 0.08544511802028865,
       "details": "OK: Library reference consumption pilot validates"
     },
     {
       "name": "Library coordination foundation alignment",
       "expected": "Coordination workflow, document awareness and alignment notes validate",
       "status": "OK",
-      "seconds": 0.05965399998240173,
+      "seconds": 0.05106234108097851,
       "details": "OK: Library coordination foundation alignment validates"
     },
     {
       "name": "Business card product skeleton",
       "expected": "Business card configurable product card validates",
       "status": "OK",
-      "seconds": 0.09675708296708763,
+      "seconds": 0.099160265061073,
       "details": "OK: Business card configurable product card validates"
     },
     {
       "name": "Business card product preview",
       "expected": "Business card product card preview renders",
       "status": "OK",
-      "seconds": 0.06542615196667612,
+      "seconds": 0.06594497198238969,
       "details": "Product card: Візитки\nProduct ID: product.business_card\nKind: configurable_product\nStatus: draft_reference\n\nConstructor parameters:\n- size\n- sides\n- material_ref\n- print_mode_ref\n- quantity\n- finishing_refs\n- artwork_source\n\nConsumer notes:\n- Telegram Bot: May use product.business_card and aliases as route hints only.\n- Calculator Engine: May later use constructor parameters as pricing input context.\n- Operational Registry: May store product.business_card as foreign-domain metadata."
     },
     {
       "name": "Required architecture docs",
       "expected": "Docs exist or are deferred to Checkpoint C",
       "status": "OK",
-      "seconds": 0.00020053994376212358,
+      "seconds": 0.00021795695647597313,
       "details": "Required architecture docs exist."
     },
     {
       "name": "Blueprint source config",
       "expected": "blueprint_source.yaml is valid",
       "status": "OK",
-      "seconds": 0.002432868001051247,
+      "seconds": 0.002410875982604921,
       "details": "coordination/blueprint_source.yaml"
     },
     {
       "name": "Prompts index",
       "expected": "coordination/prompts/index.yaml is valid",
       "status": "OK",
-      "seconds": 0.0009883729508146644,
+      "seconds": 0.0009924860205501318,
       "details": "coordination/prompts/index.yaml"
     },
     {
       "name": "Reports index",
       "expected": "coordination/reports/index.yaml is valid",
       "status": "OK",
-      "seconds": 0.0300820890115574,
+      "seconds": 0.029993986012414098,
       "details": "coordination/reports/index.yaml"
     },
     {
       "name": "Coordination status YAML",
       "expected": "current_status.yaml exists",
       "status": "OK",
-      "seconds": 2.729694824665785e-05,
+      "seconds": 2.8249109163880348e-05,
       "details": "coordination/status/current_status.yaml"
     },
     {
       "name": "Coordination status MD",
       "expected": "current_status.md exists",
       "status": "OK",
-      "seconds": 1.9475002773106098e-05,
+      "seconds": 2.1115061827003956e-05,
       "details": "coordination/status/current_status.md"
     },
     {
       "name": "Next questions",
       "expected": "next_questions_for_blueprint.md exists",
       "status": "OK",
-      "seconds": 1.7595011740922928e-05,
+      "seconds": 1.8712016753852367e-05,
       "details": "coordination/status/next_questions_for_blueprint.md"
     },
     {
       "name": "Module manifest boundary",
       "expected": "Manifest exists and forbids operational ownership",
       "status": "OK",
-      "seconds": 0.009098164038732648,
+      "seconds": 0.00911994802299887,
       "details": "Boundary exclusions are present."
     },
     {
       "name": "Makefile standard targets",
       "expected": "Required targets exist",
       "status": "OK",
-      "seconds": 0.0006207760889083147,
+      "seconds": 0.0006198439514264464,
       "details": "All required targets found."
     },
     {
       "name": "Blueprint policy check",
       "expected": "Blueprint paths readable; module directives may be deferred",
       "status": "OK",
-      "seconds": 0.05036686093080789,
+      "seconds": 0.06081326608546078,
       "details": "OK: Blueprint root: /srv/software_development/forprint-project/forprint_system_blueprint\nOK: Global policy: /srv/software_development/forprint-project/forprint_system_blueprint/coordination/global_policy\nOK: Standards: /srv/software_development/forprint-project/forprint_system_blueprint/coordination/standards\nOK: Module policy: /srv/software_development/forprint-project/forprint_system_blueprint/coordination/module_policy/forprint_library/module_policy.md\nOK: Global directives index: /srv/software_development/forprint-project/forprint_system_blueprint/coordination/directives/global/index.yaml\nWARN: Module directives index missing/deferred: /srv/software_development/forprint-project/forprint_system_blueprint/coordination/directives/modules/forprint_library/index.yaml"
     }
   ]
