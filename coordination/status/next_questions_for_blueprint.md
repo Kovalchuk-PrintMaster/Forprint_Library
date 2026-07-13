@@ -1,15 +1,29 @@
 # Next questions for Blueprint
 
-    Current checkpoint
-    library_configurable_product_workbench_business_card_skeleton_v0_1
-    Open questions
+## Current checkpoint
 
-    No open questions.
+`library_configurable_product_workbench_business_card_skeleton_v0_1`
 
-    Review request
+## Status
 
-    Please review the Library-side completion report:
+`completed_pending_blueprint_review`
 
-    coordination/reports/completion/2026-07-11__forprint_library__report__business-card-skeleton-v0-1.md
+## Product ID
 
-    The module is waiting for Blueprint acceptance or requested fixes.
+`product.business_card`
+
+## Open questions
+
+No open questions.
+
+## Review request
+
+Please review the Library-side completion report:
+
+`coordination/reports/completion/2026-07-11__forprint_library__report__business-card-skeleton-v0-1.md`
+
+The module is waiting for Blueprint acceptance or requested fixes.
+
+## Blueprint repository writes
+
+No files were written directly into the Blueprint repository.

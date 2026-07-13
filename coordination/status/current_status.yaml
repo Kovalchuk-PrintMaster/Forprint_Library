@@ -1,17 +1,13 @@
 module_id: forprint_library
-status: business_card_skeleton_v0_1_ready_pending_blueprint_review
+status: completed_pending_blueprint_review
 stage: coordination_foundation_alignment_v0_1_completion
-updated_at: '2026-07-11'
+updated_at: '2026-07-13'
 owner_module: forprint_library
 current_focus:
-- Configurable Product Workbench v0.1 Business Card Skeleton completed in Library
-  repository.
-- product.business_card is available as the first controlled configurable product
-  reference.
-- Business card product card includes aliases, constructor parameters, Library references
-  and consumer usage notes.
-- No pricing, order, production, stock, 1C or downstream runtime integration was added.
-- Waiting for Blueprint review.
+- Business Card Skeleton completed and ready for Blueprint review.
+- product.business_card is available as a controlled Library reference object.
+- Implementation and closure metadata are recorded in Library repository.
+- No Blueprint repository writes were performed.
 boundary_confirmation:
   owns:
   - canonical catalog semantics
@@ -239,32 +235,26 @@ configurable_product_workbench_business_card_skeleton_v0_1:
   status: completed_pending_blueprint_review
   prompt_id: library_configurable_product_workbench_business_card_skeleton_v0_1
   title: Library Configurable Product Workbench v0.1 — Business Card Skeleton
+  product_id: product.business_card
   implementation_commit: b8eb062
+  completion_commits:
+  - 7a7cb85
+  - ad99e0a
+  final_cleanup_commit: reported_after_push
   completion_report: coordination/reports/completion/2026-07-11__forprint_library__report__business-card-skeleton-v0-1.md
   blueprint_prompt_path: coordination/outgoing_prompts/forprint_library/approved/2026-07-11__library__configurable_product_workbench_business_card_skeleton_v0_1.md
-  product_id: product.business_card
-  added_artifacts:
-  - catalog/configurable_products/business_card.yaml
-  - schemas/configurable_product.schema.yaml
-  - examples/product_cards/business_card_product_card.yaml
-  - docs/architecture/configurable_product_workbench.md
-  - docs/architecture/business_card_skeleton.md
-  - scripts/product_workbench/validate_business_card_product.py
-  - scripts/product_workbench/preview_business_card_product.py
-  - tests/content/test_business_card_product_card.py
-  check_report_visibility:
-  - Business card product skeleton
-  - Business card product preview
-  validation:
+  checks_passed:
     business_card_validator: OK
     business_card_preview: OK
-    focused_tests: 8 passed
-    full_tests: 129 passed
+    focused_business_card_tests: 8 passed
+    full_tests: 137 passed
+    ruff_lint: OK
     check_report: OK
     make_check: OK
     governance_check: OK
     module_validate: OK
     git_diff_check: OK
+  blueprint_repository_written: false
   boundaries:
     full_product_catalog_added: false
     product_modeling_ui_added: false
@@ -285,4 +275,8 @@ configurable_product_workbench_business_card_skeleton_v0_1:
     real_client_order_data_added: false
     production_runtime_added: false
     blueprint_repository_written: false
-  next_recommended_step: Blueprint review of module-side completion report.
+  notes:
+  - Final cleanup commit hash is reported after push because a Git commit cannot contain
+    its own final hash.
+  legacy_status_aliases:
+  - business_card_skeleton_v0_1_ready_pending_blueprint_review

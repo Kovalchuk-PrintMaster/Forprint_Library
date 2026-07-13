@@ -91,6 +91,7 @@ def test_reference_consumption_current_status_updated() -> None:
     assert data["status"] in {
         "reference_consumption_pilot_v0_3_ready_pending_blueprint_review",
         "business_card_skeleton_v0_1_ready_pending_blueprint_review",
+        "completed_pending_blueprint_review",
     }
 
 

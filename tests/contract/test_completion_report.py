@@ -53,6 +53,7 @@ def test_current_status_keeps_known_project_phase() -> None:
     )
 
     known_statuses = {
+        "completed_pending_blueprint_review",
         "bootstrap_completed_pending_blueprint_review",
         "shared_operational_dictionary_v0_1_ready_pending_blueprint_review",
         "make_first_semantic_reference_readiness_v0_1_ready_pending_blueprint_review",

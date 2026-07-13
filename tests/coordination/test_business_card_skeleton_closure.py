@@ -77,7 +77,7 @@ def test_reports_index_contains_business_card_completion_report() -> None:
 def test_current_status_yaml_tracks_business_card_checkpoint() -> None:
     data = load_yaml(CURRENT_STATUS_YAML)
 
-    assert data["status"] == "business_card_skeleton_v0_1_ready_pending_blueprint_review"
+    assert data["status"] == "completed_pending_blueprint_review"
     assert data["current_phase"] == "business_card_skeleton_v0_1"
     assert data["last_completed_step"] == "library_business_card_skeleton_ready"
 

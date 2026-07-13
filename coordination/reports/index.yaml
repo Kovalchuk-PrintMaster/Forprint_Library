@@ -140,8 +140,21 @@ reports:
   prompt_id: library_configurable_product_workbench_business_card_skeleton_v0_1
   title: Library Configurable Product Workbench v0.1 — Business Card Skeleton
   status: completed_pending_blueprint_review
+  product_id: product.business_card
   path: coordination/reports/completion/2026-07-11__forprint_library__report__business-card-skeleton-v0-1.md
   report_file: coordination/reports/completion/2026-07-11__forprint_library__report__business-card-skeleton-v0-1.md
   implementation_commit: b8eb062
+  completion_commits:
+  - 7a7cb85
+  - ad99e0a
+  final_cleanup_commit: reported_after_push
   blueprint_prompt_path: coordination/outgoing_prompts/forprint_library/approved/2026-07-11__library__configurable_product_workbench_business_card_skeleton_v0_1.md
+  blueprint_repository_written: false
+  checks_passed:
+  - make governance-check
+  - make check
+  - make check-report
+  - make module-validate
+  - git diff --check
   created_at: '2026-07-11'
+  updated_at: '2026-07-13'
