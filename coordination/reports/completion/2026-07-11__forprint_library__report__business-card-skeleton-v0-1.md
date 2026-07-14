@@ -14,12 +14,9 @@
 - Initial completion/closure commit: `7a7cb85` — Record Library business card skeleton completion.
 - Cleanup closure commit before this reporting cleanup: `ad99e0a` — Clean business card closure exporter whitespace.
 - Latest module commit before this cleanup pass: `ad99e0a`.
-- Final reporting cleanup commit: `reported_after_push`.
+- Final reporting cleanup commit before Blueprint acceptance verification: `1694215` — Finalize Library business card completion metadata.
 
-The exact final reporting cleanup commit hash cannot be embedded inside the same
-Git commit that creates it, because Git commit hashes depend on tracked file
-content. The final cleanup commit hash must be read from `git log -1 --oneline`
-after commit and push, then reported back to Blueprint.
+The final reporting cleanup commit before this verification pass is `1694215`. If this metadata-only patch creates another cleanup commit, that new commit is reported in chat after push rather than embedded inside its own tracked content.
 
 ## Summary
 

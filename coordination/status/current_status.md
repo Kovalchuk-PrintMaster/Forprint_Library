@@ -18,7 +18,7 @@ Previous rolling status alias: `business_card_skeleton_v0_1_ready_pending_bluepr
 - Completion commits before this cleanup:
   - `7a7cb85`
   - `ad99e0a`
-- Final cleanup commit: `reported_after_push`
+- Final cleanup commit before Blueprint acceptance verification: `1694215`
 
 The exact final cleanup commit hash must be reported after `git push`.
 
