@@ -130,6 +130,12 @@ No files were written directly into the Blueprint repository.
 All completion metadata in this cleanup pass is stored inside the Library
 repository.
 
+
+## Governance closeout documentation
+
+- `docs/operations/business_card_skeleton_runbook.md`
+- `docs/operations/business_card_skeleton_recovery.md`
+
 ## Open questions
 
 No open questions.
