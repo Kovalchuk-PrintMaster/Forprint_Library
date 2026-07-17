@@ -340,7 +340,7 @@ blueprint-instruction-check:
 	@echo "== Blueprint instruction check for $(MODULE_ID) =="
 	@[ -d "$(BLUEPRINT_ROOT)" ] && echo "OK: Blueprint root is readable: $(BLUEPRINT_ROOT)" || { echo "FAILED: Blueprint root is missing: $(BLUEPRINT_ROOT)"; exit 1; }
 	@[ -r "$(BLUEPRINT_OUTGOING_PROMPTS_DIR)/index.yaml" ] && echo "OK: Blueprint prompt queue index is readable." || { echo "FAILED: Blueprint prompt queue index is missing or unreadable."; exit 1; }
-	@ next_prompt_path="$$("$(BLUEPRINT_PYTHON)" "$(BLUEPRINT_NEXT_PROMPT_RESOLVER)" --root "$(BLUEPRINT_ROOT)" --module "$(MODULE_ID)" 2>/dev/null | awk -F': ' '/^Path: / { print $$2; exit }')"; \
+	@ next_prompt_path="$$("$(BLUEPRINT_PYTHON)" "$(BLUEPRINT_NEXT_PROMPT_RESOLVER)" --root "$(BLUEPRINT_ROOT)" --module "$(MODULE_ID)" --path-only 2>/dev/null)"; \
 	if [ -n "$$next_prompt_path" ] && [ -r "$(BLUEPRINT_ROOT)/$$next_prompt_path" ]; then \
 			echo "OK: Prompt Queue next prompt is readable: $(BLUEPRINT_ROOT)/$$next_prompt_path"; \
 	elif [ -n "$(ACTIVE_BLUEPRINT_PROMPT)" ] && [ -r "$(ACTIVE_BLUEPRINT_PROMPT)" ]; then \
@@ -356,7 +356,7 @@ blueprint-instruction-check:
 blueprint-instruction-sync: blueprint-instruction-check
 	@echo "== Blueprint instruction sync for $(MODULE_ID) =="
 	@mkdir -p "$(LOCAL_ACTIVE_PROMPT_DIR)"
-	@next_prompt_path="$$("$(BLUEPRINT_PYTHON)" "$(BLUEPRINT_NEXT_PROMPT_RESOLVER)" --root "$(BLUEPRINT_ROOT)" --module "$(MODULE_ID)" 2>/dev/null | awk -F': ' '/^Path: / { print $$2; exit }')"; \
+	@next_prompt_path="$$("$(BLUEPRINT_PYTHON)" "$(BLUEPRINT_NEXT_PROMPT_RESOLVER)" --root "$(BLUEPRINT_ROOT)" --module "$(MODULE_ID)" --path-only 2>/dev/null)"; \
 	if [ -n "$$next_prompt_path" ] && [ -r "$(BLUEPRINT_ROOT)/$$next_prompt_path" ]; then \
 		cp "$(BLUEPRINT_ROOT)/$$next_prompt_path" "$(LOCAL_ACTIVE_PROMPT)"; \
 		echo "OK: synced Prompt Queue next prompt to $(LOCAL_ACTIVE_PROMPT)"; \
@@ -378,7 +378,7 @@ blueprint-instruction-sync: blueprint-instruction-check
 blueprint-instruction: blueprint-instruction-list blueprint-instruction-check blueprint-instruction-sync
 	@echo "== Blueprint instruction sync for $(MODULE_ID) =="
 	@mkdir -p "$(LOCAL_ACTIVE_PROMPT_DIR)"
-	@next_prompt_path="$$("$(BLUEPRINT_PYTHON)" "$(BLUEPRINT_NEXT_PROMPT_RESOLVER)" --root "$(BLUEPRINT_ROOT)" --module "$(MODULE_ID)" 2>/dev/null | awk -F': ' '/^Path: / { print $$2; exit }')"; \
+	@next_prompt_path="$$("$(BLUEPRINT_PYTHON)" "$(BLUEPRINT_NEXT_PROMPT_RESOLVER)" --root "$(BLUEPRINT_ROOT)" --module "$(MODULE_ID)" --path-only 2>/dev/null)"; \
 	if [ -n "$$next_prompt_path" ] && [ -r "$(BLUEPRINT_ROOT)/$$next_prompt_path" ]; then \
 			cp "$(BLUEPRINT_ROOT)/$$next_prompt_path" "$(LOCAL_ACTIVE_PROMPT)"; \
 			echo "OK: synced Prompt Queue next prompt to $(LOCAL_ACTIVE_PROMPT)"; \

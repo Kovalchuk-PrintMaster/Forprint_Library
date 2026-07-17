@@ -1,261 +1,294 @@
-# Prompt: Library Coordination Foundation Alignment v0.1
+# ForPrint Library Calculator Input Contract v0.1
 
-## Target module
+## Coordination metadata
 
-`forprint_library`
-
-## Purpose
-
-This prompt aligns ForPrint Library with the current ForPrint System Blueprint coordination foundation before the next product-modeling milestone.
-
-The goal is to make Library ready for structured Blueprint-driven work using the latest standards for:
-
-```text
-Makefile operator workflow;
-Prompt Queue navigation;
-coordination document awareness;
-module roadmap visibility;
-configuration architecture;
-secrets and .env policy;
-project directory skeleton;
-completion reporting.
+```yaml
+prompt_id: forprint_library_calculator_input_contract_v0_1
+module: forprint_library
+status: ready
+priority: critical
+issued_by: forprint_system_blueprint
+issued_date: 2026-07-17
+previous_front: configurable_product_workbench_business_card_skeleton_v0_1
+target_branch: feature/library-calculator-input-contract-v01
+scope_class: library_read_contract
+pricing_formula_scope_allowed: false
+integration_write_scope_allowed: false
 ```
 
-This is a structural and coordination-readiness milestone.
+## 1. Purpose
 
-It must not implement new product catalog logic yet.
+Create a stable, deterministic, versioned, read-only Library contract that converts a validated configurable product selection into Calculator-ready reference input.
 
-## Strategic reason
-
-ForPrint Library is the canonical semantic/catalog authority for product and service meaning.
-
-Before introducing the Configurable Product Workbench, Library should first be structurally aligned with Blueprint so future work can be exchanged, inspected and reported through the newest coordination mechanism.
-
-This prompt is also a controlled pilot for applying the latest Blueprint standards to an existing active module.
-
-## Blueprint source standards
-
-Use the current Blueprint standards and templates as references:
+The first covered product is:
 
 ```text
-coordination/standards/make_command_standard.md
-coordination/templates/module_makefile_standard.template.mk
-
-coordination/standards/configuration_policy.md
-coordination/templates/config/
-
-coordination/standards/secrets_and_env_policy.md
-coordination/templates/secrets/dotenv.example.template
-
-coordination/standards/repository_structure_baseline.md
-coordination/standards/project_structure_standard.md
-coordination/templates/project_tree.template.md
-
-coordination/standards/governance/prompt_queue_navigation_policy.md
-coordination/templates/prompt_queue_v0_2.template.yaml
+product.business_card
 ```
 
-Do not copy blindly.
+This front unblocks the Library → Calculator critical path. It does not implement prices, production formulas, order creation, Telegram behavior, Logistics behavior, or external writes.
 
-Apply only what is safe and useful for the current Library repository.
+## 2. Preconditions
 
-## Scope
-
-This milestone may update Library coordination and operator structure.
-
-Allowed work:
+Start only after the previous business-card skeleton front is fully accepted and merged, including:
 
 ```text
-inspect current Library repository structure;
-compare it with Blueprint target structure;
-update or add safe Makefile targets for Blueprint-first workflow;
-ensure prompt intake/status/report directories are understandable;
-ensure completion reports and current status are discoverable;
-add or update config/ structure only if safe;
-add .env.example only if Library needs local environment variables;
-add secrets documentation if needed;
-add project tree / structure notes if useful;
-add lightweight validators or checks for coordination readiness;
-add tests for new validators/checks;
-add completion report for this milestone.
+docs/operations/business_card_skeleton_runbook.md
+docs/operations/business_card_skeleton_recovery.md
 ```
 
-## Makefile alignment
+Record:
 
-Align the Library Makefile gradually with the Blueprint Makefile standard.
+- Library `main` commit;
+- Blueprint `main` commit;
+- active prompt ID;
+- clean working tree;
+- previous completion report path;
+- previous recovery evidence.
 
-Preferred capabilities, if not already present:
+## 3. Ownership boundary
 
-```text
-help;
-check;
-lint;
-test;
-check-report;
+Library owns:
 
-blueprint-pull;
-blueprint-check;
-blueprint-sync-directives;
+- product identity;
+- configurable parameter definitions;
+- validation and normalization rules;
+- reference identifiers;
+- deterministic product-configuration projection;
+- schema/version metadata.
 
-coordination-status;
-coordination-report;
-completion-report-check;
+Calculator owns:
 
-prompt-queue-validate or equivalent;
-prompt-next or equivalent;
-prompt-read-next or equivalent;
+- price formulas;
+- pricing policy;
+- numerical calculations;
+- costs and margins;
+- quote totals.
 
-config-check;
-env-check;
-secrets-check, if applicable.
+The Library contract must not contain monetary values, pricing coefficients, hidden formulas, vendor prices, production costs, discounts, taxes, or delivery prices.
+
+## 4. Required public contract
+
+Provide a typed, versioned contract equivalent in meaning to:
+
+```python
+CalculatorInputEnvelope(
+    schema_version: str,
+    product_id: str,
+    configuration_id: str,
+    normalized_parameters: Mapping[str, object],
+    reference_ids: CalculatorReferenceIds,
+    validation_snapshot: ValidationSnapshot,
+)
 ```
 
-Do not perform a large destructive Makefile rewrite.
+Exact Python names may follow existing Library conventions, but semantics must remain stable and documented.
 
-Do not change working commands without tests.
-
-Do not introduce `.RECIPEPREFIX` changes unless already part of the module's working style and explicitly safe.
-
-## Coordination structure alignment
-
-Library should gradually expose or document:
+Required business-card projection:
 
 ```text
-coordination/README.md
-coordination/blueprint_source.yaml
-coordination/prompts/index.yaml
-coordination/prompts/received/
-coordination/reports/index.yaml
-coordination/reports/completion/
-coordination/reports/commits/
-coordination/status/current_status.yaml
-coordination/status/current_status.md
-coordination/status/next_questions_for_blueprint.md
+product_id
+size
+sides
+material_ref
+print_mode_ref
+quantity
+finishing_refs
+artwork_source when supplied
 ```
 
-If some areas already exist under different names, do not move them destructively.
+Requirements:
 
-Document deviations and safe next steps.
+- deterministic field ordering in serialized artifacts;
+- stable normalization;
+- no locale-dependent values;
+- no database-object leakage;
+- no mutable internal-model leakage;
+- no implicit defaults hidden from Calculator;
+- explicit schema version;
+- explicit validation result;
+- explicit error taxonomy.
 
-## Configuration and secrets alignment
+## 5. Error taxonomy
 
-Review whether Library has or needs:
+At minimum distinguish:
 
 ```text
-config/
-.env.example
-secrets documentation
-env-check
-config-check
-secrets-check
+unknown_product
+invalid_configuration
+missing_required_parameter
+invalid_reference
+unsupported_projection_version
+internal_contract_error
+```
+
+Errors must be typed or structurally stable and safe for Calculator consumption.
+
+Do not expose stack traces or internal persistence details as public contract data.
+
+## 6. API behavior
+
+Provide a read-only entry point equivalent in meaning to:
+
+```python
+build_calculator_input(
+    product_id: str,
+    configuration: Mapping[str, object],
+    *,
+    schema_version: str | None = None,
+) -> CalculatorInputEnvelope
 ```
 
 Rules:
 
+- the same valid input produces semantically identical output;
+- input mappings are not mutated;
+- finishing references are normalized deterministically;
+- quantity validation remains owned by Library;
+- references remain identifiers, not expanded pricing records;
+- unsupported products fail explicitly;
+- no network calls;
+- no writes;
+- no Calculator import dependency inside Library.
+
+## 7. Serialization fixtures
+
+Add canonical fixtures for:
+
+- minimal valid business card;
+- business card with finishing;
+- business card with artwork source;
+- invalid missing material;
+- invalid print-mode reference;
+- invalid quantity.
+
+Machine-readable fixture output must have a documented stable path.
+
+## 8. Compatibility
+
+Preserve:
+
+- existing `product.business_card` behavior;
+- current configurable-product workbench API;
+- current validation behavior unless a documented defect is found;
+- all existing public imports;
+- current tests and fixtures;
+- module policy and reporting contracts.
+
+Any unavoidable public change requires:
+
+- compatibility adapter;
+- migration note;
+- contract test;
+- Blueprint review before merge.
+
+## 9. Documentation and recovery gate
+
+Create or update:
+
 ```text
-do not commit real secrets;
-do not introduce production credentials;
-do not invent unnecessary config files;
-do not force config/ migration if Library does not need it yet;
-prefer small safe placeholders and documentation.
+docs/architecture/library_calculator_input_contract.md
+docs/operations/library_calculator_input_contract_runbook.md
+docs/operations/library_calculator_input_contract_recovery.md
+coordination/reports/completion/forprint_library_calculator_input_contract_v0_1_completion.md
 ```
 
-If Library currently does not need secrets, `secrets-check` may report:
+Documentation must explain:
 
-```text
-not_applicable
-```
+- ownership boundary;
+- schema versioning;
+- normalization;
+- deterministic serialization;
+- error taxonomy;
+- Calculator consumption example;
+- verification commands;
+- rollback;
+- recovery from incompatible schema or fixture regressions.
 
-or remain deferred with clear documentation.
+## 10. Required tests
 
-## Project tree alignment
+Add focused tests for:
 
-Compare the current Library tree with the Blueprint project structure standards.
+1. valid minimal business-card projection;
+2. valid full business-card projection;
+3. deterministic output for semantically equal input;
+4. input mapping is not mutated;
+5. finishing references normalize deterministically;
+6. optional artwork-source behavior;
+7. missing required parameter;
+8. invalid material reference;
+9. invalid print-mode reference;
+10. invalid quantity;
+11. unknown product;
+12. unsupported schema version;
+13. stable serialized fixture;
+14. no monetary fields in contract output;
+15. no network or write side effects;
+16. backward compatibility with existing business-card tests.
 
-The output should identify:
+Preserve the complete existing Library test suite.
 
-```text
-what already matches;
-what was safely aligned now;
-what remains deferred;
-what should not be changed yet;
-what requires Blueprint decision.
-```
-
-This is not a demand to move application code.
-
-## Non-goals
+## 11. Forbidden scope
 
 Do not implement:
 
-```text
-Configurable Product Workbench;
-business_card product skeleton;
-new product catalog generation;
-1C import;
-1C database parsing;
-Calculator Engine integration;
-production write;
-price calculation;
-material write-off logic;
-CRM/client/carrier entities;
-large repository refactor.
-```
+- price formulas;
+- quote totals;
+- cost, margin, discount, tax, or currency calculations;
+- Calculator internals;
+- canonical-order creation;
+- Telegram Bot changes;
+- Logistics changes;
+- CRM, Gateway, 1C, payment, stock, or production writes;
+- production deployment.
 
-This prompt prepares the module for that future work but does not start it.
+Do not merge to `main` before Blueprint acceptance.
 
-## Validation requirements
+## 12. Required validation
 
-The module should remain green.
+Run and report exact exit codes and counts:
 
-Run or provide equivalent checks:
-
-```text
+```bash
 make lint
-make test
+make format-check
 make check
+make governance-check
+make module-validate
 make check-report
+make check-report-full
+git diff --check
+git status -sb
 ```
 
-If exact target names differ in Library, use the current Library equivalents and document them.
+Also run focused Calculator-input contract tests separately.
 
-Add tests for any new scripts/checks.
+Human-facing reports must be colored by default. Use `NO_COLOR=1` only for machine-readable evidence.
 
-## Completion report requirements
+## 13. Completion response
 
-Prepare a completion report under Library coordination reports.
+Return:
 
-The report should state:
+- repository;
+- branch;
+- base commit;
+- final commit;
+- Blueprint commit consumed;
+- changed files grouped by area;
+- public contract summary;
+- schema version;
+- fixture paths;
+- focused test counts;
+- full-suite count;
+- governance/report results;
+- docs/runbook/recovery paths;
+- compatibility confirmation;
+- forbidden-scope confirmation;
+- blockers and deferred work;
+- clean `git status -sb`;
+- readiness for Blueprint review.
 
-```text
-what structural/coordination files changed;
-which Blueprint standards were applied;
-which Makefile targets were added or confirmed;
-which config/secrets/tree rules were applied;
-what checks were run;
-what remains deferred;
-whether the module is ready for Configurable Product Workbench v0.1.
-```
-
-## Acceptance criteria
-
-This prompt is complete when:
-
-```text
-Library can be inspected through current Blueprint coordination expectations;
-Makefile/operator workflow is safer and clearer;
-coordination status and reports are discoverable;
-config/secrets/tree alignment is documented or minimally implemented;
-checks pass;
-no product-modeling work is mixed into this milestone;
-completion report is prepared;
-next prompt can safely be Configurable Product Workbench v0.1.
-```
-
-## Recommended next prompt after acceptance
-
-After this prompt is completed and accepted by Blueprint, the next Library prompt should be:
+Final line:
 
 ```text
-Library Configurable Product Workbench v0.1 — Business Card Skeleton
+RESULT: READY_FOR_BLUEPRINT_REVIEW | BLOCKED | INCOMPLETE
 ```
