@@ -40,3 +40,5 @@ tests.backup_before_stage2/
 Thumbs.db
 .vscode/
 .idea/
+# Local operator scratch files
+tmp.py
