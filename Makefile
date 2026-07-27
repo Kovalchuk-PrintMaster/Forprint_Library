@@ -103,9 +103,11 @@ help:
 	@echo "  make lint"
 	@echo "  make lint-fix"
 	@echo "  make format"
+	@echo "  make format-check"
 	@echo "  make test"
 	@echo "  make check"
 	@echo "  make check-report"
+	@echo "  make check-report-full"
 	@echo "  make clean"
 	@echo ""
 	@echo "Blueprint sync:"
@@ -199,6 +201,23 @@ lint-fix:
 format:
 	PYTHONPATH=app $(PYTHON) -m ruff format app scripts tests
 
+
+# Purpose: verify formatting only for Python files changed by the active branch or working tree.
+# Result: avoids rewriting the historical repo-wide ruff-format baseline while still checking new work.
+.PHONY: format-check
+format-check:
+	@changed_files="$$( { \
+		git diff --name-only --diff-filter=ACMRTUXB origin/main...HEAD -- app scripts tests 2>/dev/null; \
+		git diff --name-only --diff-filter=ACMRTUXB -- app scripts tests 2>/dev/null; \
+		git diff --cached --name-only --diff-filter=ACMRTUXB -- app scripts tests 2>/dev/null; \
+		git ls-files --others --exclude-standard -- app scripts tests 2>/dev/null; \
+	} | grep -E '\\.py$$' | sort -u )"; \
+	if [ -n "$$changed_files" ]; then \
+		PYTHONPATH=app $(PYTHON) -m ruff format --check $$changed_files; \
+	else \
+		echo "OK: no changed Python files require format check."; \
+	fi
+
 # =============================================================================
 # 06 Syntax / formatting / lint FINISH
 # =============================================================================
@@ -240,6 +259,12 @@ check:
 .PHONY: check-report
 check-report:
 	PYTHONPATH=app $(PYTHON) scripts/run_library_checks.py
+
+
+# Purpose: run the full Library check report surface expected by Blueprint prompts.
+# Result: aliases the current complete Library check report until a wider report mode exists.
+.PHONY: check-report-full
+check-report-full: check-report
 
 # =============================================================================
 # 08 Validation / check reports FINISH

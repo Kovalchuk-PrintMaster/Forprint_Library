@@ -42,3 +42,6 @@ Thumbs.db
 .idea/
 # Local operator scratch files
 tmp.py
+
+# Local operator archives and scratch outputs
+tmp/
