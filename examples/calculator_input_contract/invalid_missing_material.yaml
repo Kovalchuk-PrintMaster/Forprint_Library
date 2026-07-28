@@ -1,0 +1,19 @@
+schema_version: calculator_input_error_fixture_v0_1
+case_id: invalid_missing_material
+description: Invalid business card projection without material_ref.
+product_id: product.business_card
+input_configuration:
+  size: size_90x50_mm
+  sides: one_sided
+  print_mode_ref:
+    catalog: print_modes
+    id: color_4_0
+  quantity: 100
+expected_error:
+  schema_version: calculator_input_error_v0_1
+  error_type: missing_required_parameter
+  message: Missing required Calculator input parameter.
+  field_path: material_ref
+  details:
+    missing_parameters:
+    - material_ref

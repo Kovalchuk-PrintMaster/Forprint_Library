@@ -1,0 +1,22 @@
+schema_version: calculator_input_error_fixture_v0_1
+case_id: invalid_quantity
+description: Invalid business card projection with zero quantity.
+product_id: product.business_card
+input_configuration:
+  size: size_90x50_mm
+  sides: one_sided
+  material_ref:
+    catalog: materials
+    id: paper_300g_matte
+  print_mode_ref:
+    catalog: print_modes
+    id: color_4_0
+  quantity: 0
+expected_error:
+  schema_version: calculator_input_error_v0_1
+  error_type: invalid_configuration
+  message: Quantity must be greater than or equal to 1.
+  field_path: quantity
+  details:
+    minimum: 1
+    value: 0

@@ -1,0 +1,49 @@
+$schema: https://json-schema.org/draft/2020-12/schema
+title: ForPrint Library Calculator Input Envelope
+type: object
+required:
+  - schema_version
+  - product_id
+  - configuration_id
+  - normalized_parameters
+  - reference_ids
+  - validation_snapshot
+properties:
+  schema_version:
+    const: calculator_input_envelope_v0_1
+  product_id:
+    const: product.business_card
+  configuration_id:
+    type: string
+    pattern: ^calc_input_[a-f0-9]{16}$
+  normalized_parameters:
+    type: object
+    required:
+      - size
+      - sides
+      - material_ref
+      - print_mode_ref
+      - quantity
+      - finishing_refs
+    additionalProperties: true
+  reference_ids:
+    type: object
+    required:
+      - product_id
+      - size_id
+      - sides_id
+      - material_ref
+      - print_mode_ref
+      - finishing_refs
+    additionalProperties: true
+  validation_snapshot:
+    type: object
+    required:
+      - schema_version
+      - valid
+      - errors
+      - warnings
+      - required_parameters
+      - normalization_notes
+    additionalProperties: true
+additionalProperties: false

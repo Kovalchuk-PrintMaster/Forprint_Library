@@ -1,0 +1,24 @@
+schema_version: calculator_input_error_fixture_v0_1
+case_id: invalid_print_mode_reference
+description: Invalid business card projection with unknown print mode reference.
+product_id: product.business_card
+input_configuration:
+  size: size_90x50_mm
+  sides: one_sided
+  material_ref:
+    catalog: materials
+    id: paper_300g_matte
+  print_mode_ref:
+    catalog: print_modes
+    id: unknown_print_mode
+  quantity: 100
+expected_error:
+  schema_version: calculator_input_error_v0_1
+  error_type: invalid_reference
+  message: Reference parameter id is not allowed for this product.
+  field_path: print_mode_ref
+  details:
+    reference_id: unknown_print_mode
+    allowed_refs:
+    - color_4_0
+    - color_4_4
