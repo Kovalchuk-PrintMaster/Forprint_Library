@@ -666,17 +666,15 @@ governance-check:
 .PHONY: completion-packet-validate
 completion-packet-validate:
 	@echo "== Completion packet validate =="
-	@if [ -d "coordination/completion_packet" ] || [ -d "coordination/completion_packets" ]; then echo "OK: completion packet directory exists"; else echo "DEFERRED: completion packet automation is not configured in Library yet."; echo "Missing: coordination/completion_packet or coordination/completion_packets"; fi
-
-# Purpose: apply completion packet if automation exists.
-# Result: current deferred-safe behavior makes no changes when automation is not configured.
+	@if [ -z "$(PACKET)" ]; then echo "ERROR: PACKET is required"; exit 2; fi
+	PYTHONPATH=app .venv_forprint_library/bin/python scripts/coordination/validate_completion_packet.py "$(PACKET)"
 .PHONY: completion-packet-apply
 completion-packet-apply:
 	@echo "== Completion packet apply =="
-	@if [ -d "coordination/completion_packet" ] || [ -d "coordination/completion_packets" ]; then echo "DEFERRED: apply logic requires an approved Blueprint completion packet contract."; echo "No files were changed."; else echo "DEFERRED: no completion packet automation exists, nothing to apply."; echo "No files were changed."; fi
-
-# Purpose: run completion packet validation/apply sequence.
-# Result: deferred-safe completion packet check completes.
+	@if [ -z "$(PACKET)" ]; then echo "ERROR: PACKET is required"; exit 2; fi
+	PYTHONPATH=app .venv_forprint_library/bin/python scripts/coordination/validate_completion_packet.py "$(PACKET)"
+	@echo "DEFERRED: apply logic requires an approved Blueprint completion packet contract."
+	@echo "No files were changed."
 .PHONY: completion-packet-check
 completion-packet-check:
 	$(MAKE) completion-packet-validate
