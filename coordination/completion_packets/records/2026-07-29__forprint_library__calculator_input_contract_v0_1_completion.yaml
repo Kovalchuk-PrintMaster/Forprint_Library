@@ -1,0 +1,115 @@
+schema_version: forprint_completion_packet_v0_1
+packet_id: 2026-07-29__forprint_library__calculator_input_contract_v0_1_completion
+module_id: forprint_library
+prompt_id: forprint_library_calculator_input_contract_v0_1
+phase: calculator_input_contract_v0_1
+created_at: '2026-07-29'
+status: ready_for_blueprint_review
+branch: feature/library-calculator-input-contract-v01
+accepted_review_candidate: d094851
+accepted_review_candidate_full: d0948515b23b68146135a099d29ffa042d62bf12
+upstream_divergence:
+  command: git rev-list --left-right --count HEAD...@{upstream}
+  result: "0\t0"
+report_path: coordination/reports/completion/forprint_library_calculator_input_contract_v0_1_completion.md
+target_authority:
+  makefile: Makefile
+  validate_target: completion-packet-validate
+  apply_target: completion-packet-apply
+  validator_script: null
+  validator_contract: deferred_directory_presence_only
+  packet_argument_observed: PACKET accepted by make invocation but not read by current
+    target body
+  apply_behavior_observed: deferred_no_files_changed
+  make_targets_changed: false
+evidence:
+  focused_tests:
+    command: PYTHONPATH=app .venv_forprint_library/bin/python -m pytest tests/content/test_calculator_input_contract.py
+      tests/content/test_business_card_product_card.py
+    exit_code: 0
+    passed: 25
+    result: 25 passed
+  completion_report_tests:
+    command: PYTHONPATH=app .venv_forprint_library/bin/python -m pytest tests/coordination/test_calculator_input_contract_completion.py
+    exit_code: 0
+    passed: 5
+    result: 5 passed
+  full_suite:
+    command: make check
+    exit_code: 0
+    passed: 160
+    result: 160 passed
+  lint:
+    command: make lint
+    exit_code: 0
+  format_check:
+    command: make format-check
+    exit_code: 0
+  governance_check:
+    command: make governance-check
+    exit_code: 0
+  module_validate:
+    command: make module-validate
+    exit_code: 0
+  check_report:
+    command: make check-report
+    exit_code: 0
+    totals:
+      total_checks: 33
+      ok: 33
+      failed: 0
+      other: 0
+  check_report_full:
+    command: make check-report-full
+    exit_code: 0
+    totals:
+      total_checks: 33
+      ok: 33
+      failed: 0
+      other: 0
+  git_diff_check:
+    command: git diff --check
+    exit_code: 0
+boundary_confirmation:
+  no_production_api: true
+  no_live_external_integrations: true
+  no_production_write: true
+  no_automatic_posting: true
+  no_calculator_final_price_ownership: true
+  no_order_creation: true
+  no_telegram_runtime_ui: true
+  no_logistics_ownership: true
+  no_crm_or_gateway_write: true
+  no_accounting_or_payment_write: true
+  no_stock_or_production_write: true
+  no_blueprint_repository_write: true
+changed_files:
+  implementation_commit: 0b8cbce
+  completion_report_commit: d094851
+  packet_commit: pending
+  records:
+  - app/forprint_library/calculator_input/__init__.py
+  - app/forprint_library/calculator_input/contract.py
+  - schemas/calculator_input/calculator_input_envelope.schema.yaml
+  - examples/calculator_input_contract/minimal_valid_business_card.yaml
+  - examples/calculator_input_contract/business_card_with_finishing.yaml
+  - examples/calculator_input_contract/business_card_with_artwork_source.yaml
+  - examples/calculator_input_contract/invalid_missing_material.yaml
+  - examples/calculator_input_contract/invalid_print_mode_reference.yaml
+  - examples/calculator_input_contract/invalid_quantity.yaml
+  - scripts/calculator_input/validate_calculator_input_contract.py
+  - tests/content/test_calculator_input_contract.py
+  - docs/architecture/library_calculator_input_contract.md
+  - docs/operations/library_calculator_input_contract_runbook.md
+  - docs/operations/library_calculator_input_contract_recovery.md
+  - coordination/reports/completion/forprint_library_calculator_input_contract_v0_1_completion.md
+  - tests/coordination/test_calculator_input_contract_completion.py
+idempotency_expectation:
+  completion_packet_apply_supported: false
+  apply_is_deferred: true
+  expected_repeated_apply_result: no new changes, no duplicated records, no timestamp-only
+    rewrites, no completion evidence rewrite
+merge_status:
+  feature_branch_merged: false
+  branch_deleted: false
+  branch_renamed: false
