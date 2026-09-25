@@ -1,0 +1,27 @@
+schema_version: forprint_library_l4_packet_run_report_v0_1
+result: PASS
+module_id: forprint_library
+stage: L4_DOCUMENT_ARTIFACT_AUTHORITY
+library_branch: feature/library-calculator-input-contract-v01
+library_head: bba52bf6001f256a5c13ea7dbe175336b431754c
+blueprint_branch: audit/blueprint-inventory-refresh-2026-07-29
+blueprint_head: b6ab9b65a2c27b70a574468caa8e3de4c3b454c5
+library_authority_candidate_count: 73
+blueprint_authority_file_count: 7
+blueprint_subset_count: 2
+non_tmp_git_status_unchanged: true
+mutation_performed_outside_tmp: false
+tests_run: false
+make_run: false
+exporters_run: false
+generators_run: false
+outputs:
+  packet_dir: tmp/module_knowledge_analysis/forprint_library/authority_registry/l4_packet
+  packet_markdown: tmp/module_knowledge_analysis/forprint_library/authority_registry/l4_authority_evidence_packet.md
+  packet_tar_gz: tmp/module_knowledge_analysis/forprint_library/authority_registry/l4_authority_evidence_packet.tar.gz
+  run_report: tmp/module_knowledge_analysis/forprint_library/authority_registry/l4_packet_run_report.yaml
+sha256:
+  packet_markdown: 5a4f5dcd6f4ff1b8fb6de89f4230f51c4a38aa0fb414844d73570443a7e3a9b1
+  packet_tar_gz: 7e7a9490ec9601133f89ed3a89be6aaa365b9dd8642535dd570203610f8dcf19
+  packet_manifest: 51275f91a9504dba3202799e4b3cea1a63c71a9b662a1be16d290348d06d539b
+next_action: produce L4 document/artifact authority registry and analysis report

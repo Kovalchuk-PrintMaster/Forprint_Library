@@ -1,0 +1,1531 @@
+schema_version: forprint_library_l4_authority_registry_v0_1
+module_id: forprint_library
+stage: L4_DOCUMENT_ARTIFACT_AUTHORITY
+source_state:
+  library_branch: feature/library-calculator-input-contract-v01
+  library_head: bba52bf6001f256a5c13ea7dbe175336b431754c
+  blueprint_branch: audit/blueprint-inventory-refresh-2026-07-29
+  blueprint_head: b6ab9b65a2c27b70a574468caa8e3de4c3b454c5
+  source_packet: l4_authority_evidence_packet.md
+  library_candidate_count: 73
+  blueprint_context_surface_count: 9
+  registry_record_count: 82
+analysis_authority:
+  source_mutation: false
+  document_rewrite: false
+  coordination_repair: false
+  artifact_regeneration: false
+  cleanup_authority: false
+  migration_authority: false
+  roadmap_mutation: false
+  blueprint_write: false
+  implementation_authority: false
+authority_precedence:
+- rank: 1
+  rule: current Blueprint global/module policy governs Library role, ownership and non-ownership
+- rank: 2
+  rule: current executable/data implementation sources govern what is actually implemented inside that approved boundary
+- rank: 3
+  rule: manually authored current machine schemas constrain their bounded surface, but code-vs-schema precedence remains explicit
+    where unresolved
+- rank: 4
+  rule: generated projections/artifacts inherit meaning from their generator/source and never outrank it
+- rank: 5
+  rule: supporting docs/runbooks/fixtures explain or validate current surfaces but do not become canonical truth
+- rank: 6
+  rule: completion reports and ADRs are provenance/evidence, not rolling current-state authority
+- rank: 7
+  rule: Human Intent and roadmap are planning context and do not grant release/execution authority
+- rank: 8
+  rule: stale/superseded surfaces are blocked from current-state claims
+mechanically_resolved_generation_relationships:
+- source: catalog/seeds/catalog_seed_v0_1.yaml
+  generator: scripts/export_component_catalogs.py
+  outputs:
+  - catalog/materials.yaml
+  - catalog/product_families.yaml
+  - catalog/operations.yaml
+  - catalog/print_modes.yaml
+  - catalog/finishing_options.yaml
+  result: SEED_TO_COMPONENT_PROJECTION_DIRECTION_RESOLVED
+- source: scripts/export_catalog_schema_artifacts.py
+  inputs:
+  - catalog/seeds/catalog_seed_v0_1.yaml
+  outputs:
+  - schemas/catalog_seed.schema.yaml
+  - schemas/material.schema.yaml
+  - schemas/product_family.schema.yaml
+  - schemas/operation.schema.yaml
+  - schemas/print_mode.schema.yaml
+  - schemas/finishing_option.schema.yaml
+  - examples/catalog_seed_v0_1.example.yaml
+  result: GENERATOR_TO_SCHEMA_AND_EXAMPLE_DIRECTION_RESOLVED
+- source: scripts/export_shared_operational_dictionaries.py
+  embedded_sources:
+  - DICTIONARY_VALUES
+  - ALIASES
+  - DEPRECATED_VALUES
+  - METADATA
+  outputs:
+  - dictionaries/shared_operational_dictionary_v0_1.yaml
+  - dictionaries/<group>.yaml
+  - schemas/dictionary_entry.schema.yaml
+  - schemas/shared_operational_dictionary.schema.yaml
+  result: GENERATOR_AS_CURRENT_DICTIONARY_DATA_SCHEMA_SOURCE_RESOLVED
+- source: scripts/export_dictionary_policy_docs.py
+  embedded_sources:
+  - DOCS policy strings
+  outputs:
+  - docs/architecture/shared_operational_dictionary_policy.md
+  - docs/architecture/status_dictionary_policy.md
+  - docs/architecture/dictionary_consumption_policy.md
+  - docs/architecture/dictionary_versioning_policy.md
+  result: GENERATION_DIRECTION_RESOLVED_SEMANTIC_POLICY_AUTHORITY_OPEN
+blocked_current_truth_surfaces:
+- README.md
+- coordination/prompts/index.yaml
+- coordination/reports/index.yaml
+- coordination/status/current_status.md
+- coordination/status/current_status.yaml
+- coordination/status/next_questions_for_blueprint.md
+- docs/architecture/README.md
+- docs/operations/business_card_skeleton_recovery.md
+- examples/semantic_reference_preview.yaml
+l5_required_decisions:
+- calculator_contract_runtime_vs_schema_normative_precedence
+- calculator_input_vs_generic_library_reference_contract_relationship
+- contract_version_models_vs_forprint_contract_registry_boundary
+- dictionary_policy_generator_semantic_authority
+- foreign_domain_status_dictionary_ownership_and_mapping
+- resolution_status_vocabularies_mapping
+- reference_example_ids_vs_current_catalog_ids
+- current_prompt_mirror_and_prompt_queue_lifecycle_normalization
+- current_status_and_reports_index_derivation
+- blueprint_acceptance_event_representation
+- generated_artifact_drift_gates
+- catalog_and_dictionary_source_edit_workflows
+authority_class_counts:
+  CONFLICT_REQUIRES_DECISION: 3
+  CURRENT_AUTHORITY: 4
+  CURRENT_IMPLEMENTATION_SOURCE: 11
+  GENERATED_ARTIFACT: 14
+  GENERATED_PROJECTION: 5
+  HISTORICAL_PROVENANCE: 8
+  PLANNING_CONTEXT: 5
+  STALE: 5
+  SUPERSEDED_CANDIDATE: 3
+  SUPPORTING: 24
+assistant_visibility_counts:
+  ALLOW_CURRENT_TRUTH: 15
+  ALLOW_PROVENANCE_ONLY: 9
+  ALLOW_SUPPORTING_ONLY: 41
+  BLOCK_CURRENT_STATE_CLAIMS: 9
+  VERIFY_HIGHER_AUTHORITY_FIRST: 8
+records:
+- path_or_surface: Makefile
+  repository: forprint_library
+  evidence_sha256: 1dbb9d37aada8b97fc82bdead4205a9eec877d08d62939b47e518329591faa22
+  role: operator_facing_functional_map
+  architecture_generation: CURRENT_BLUEPRINT_ALIGNED
+  authority_class: CURRENT_IMPLEMENTATION_SOURCE
+  lifecycle: CURRENT
+  source_mode: manual_operator_surface
+  generator_if_any: null
+  governing_higher_authority: Blueprint standards / module policy
+  freshness_evidence: CURRENT_AT_EVIDENCE_HEAD
+  supersession_relation: NONE
+  mutation_risk: MEDIUM
+  consumer_scope: operator_and_module_workflow
+  assistant_visibility: ALLOW_CURRENT_TRUTH
+  confidence: HIGH
+  notes: Current operator surface; not semantic/business truth. Some composite targets mutate reports/sync state.
+- path_or_surface: README.md
+  repository: forprint_library
+  evidence_sha256: 9e071dc15b5ee6860fd84afa3ab9c5610fc9e4b460c8d9af971f2f0b686f70f8
+  role: project_overview_and_startup
+  architecture_generation: GENERATION_1_STANDALONE
+  authority_class: SUPERSEDED_CANDIDATE
+  lifecycle: STALE_CURRENTNESS
+  source_mode: manual_document
+  generator_if_any: null
+  governing_higher_authority: Blueprint module policy + current implementation
+  freshness_evidence: CONTRADICTS_CURRENT_IMPLEMENTATION_TOPOLOGY
+  supersession_relation: CURRENT_BLUEPRINT_AND_CURRENT_REPOSITORY_STATE_STRONGER
+  mutation_risk: LOW
+  consumer_scope: human_entrypoint
+  assistant_visibility: BLOCK_CURRENT_STATE_CLAIMS
+  confidence: HIGH
+  notes: Describes old FastAPI/ChangeManifest/MigrationGraph/service layout not established at current HEAD.
+- path_or_surface: app/forprint_library/calculator_input/contract.py
+  repository: forprint_library
+  evidence_sha256: c3467f38d1747ce17cfeab77f3b32faf7cecf4a031eb14c692ca1c73b3adedd8
+  role: calculator_input_runtime_contract
+  architecture_generation: GENERATION_4_BLUEPRINT_ALIGNED_CURRENT
+  authority_class: CURRENT_IMPLEMENTATION_SOURCE
+  lifecycle: CURRENT
+  source_mode: executable_source
+  generator_if_any: null
+  governing_higher_authority: Blueprint module policy + Calculator prompt boundary
+  freshness_evidence: CURRENT_AT_EVIDENCE_HEAD
+  supersession_relation: NONE
+  mutation_risk: HIGH
+  consumer_scope: calculator_engine_contract
+  assistant_visibility: ALLOW_CURRENT_TRUTH
+  confidence: HIGH
+  notes: Runtime behavior source for deterministic Calculator projection; normative schema-vs-code precedence remains an L5
+    question.
+- path_or_surface: app/forprint_library/contracts/models.py
+  repository: forprint_library
+  evidence_sha256: e0c46c169100c7216028668291abb5db8862021a81e9629a8a66a5a021cf518a
+  role: generic_contract_lifecycle_models
+  architecture_generation: GENERATION_1_STANDALONE
+  authority_class: CONFLICT_REQUIRES_DECISION
+  lifecycle: CURRENT_CODE_WITH_ARCHITECTURE_OVERLAP
+  source_mode: executable_source
+  generator_if_any: null
+  governing_higher_authority: Blueprint module policy + forprint_contract_registry ownership
+  freshness_evidence: CURRENT_FILE_BUT_ROLE_NOT_RECONCILED
+  supersession_relation: PARTIAL_ROLE_MAY_MOVE_OR_BE_BOUNDED_BY_CONTRACT_REGISTRY
+  mutation_risk: HIGH
+  consumer_scope: library_internal_contract_model
+  assistant_visibility: VERIFY_HIGHER_AUTHORITY_FIRST
+  confidence: HIGH
+  notes: Contract/ContractVersion lifecycle overlaps the Contract Registry direction.
+- path_or_surface: catalog/configurable_products/business_card.yaml
+  repository: forprint_library
+  evidence_sha256: 461ec437136b09218c3c9e1dfce9ca7a8bb4582600736a5fabae128d5e0de912
+  role: configurable_product_semantic_source
+  architecture_generation: GENERATION_3_PRODUCT_PILOT
+  authority_class: CURRENT_IMPLEMENTATION_SOURCE
+  lifecycle: CURRENT_DRAFT_REFERENCE
+  source_mode: human_editable_semantic_source
+  generator_if_any: null
+  governing_higher_authority: Blueprint module policy
+  freshness_evidence: CURRENT_AT_EVIDENCE_HEAD
+  supersession_relation: NONE
+  mutation_risk: HIGH
+  consumer_scope: library_and_calculator_reference
+  assistant_visibility: ALLOW_CURRENT_TRUTH
+  confidence: HIGH
+  notes: Current semantic source for product.business_card; Calculator contract loads this file directly.
+- path_or_surface: catalog/finishing_options.yaml
+  repository: forprint_library
+  evidence_sha256: 85b6dd494d15f87bd7271204eddcb15d21211c0c0cdc83723f19749985f13736
+  role: component_catalog_projection
+  architecture_generation: GENERATION_2_SEMANTIC_LAYER
+  authority_class: GENERATED_PROJECTION
+  lifecycle: CURRENT_GENERATED_DRAFT
+  source_mode: generated_projection
+  generator_if_any: scripts/export_component_catalogs.py
+  governing_higher_authority: catalog/seeds/catalog_seed_v0_1.yaml
+  freshness_evidence: CURRENT_AT_EVIDENCE_HEAD
+  supersession_relation: NONE
+  mutation_risk: MEDIUM
+  consumer_scope: read_only_projection_consumers
+  assistant_visibility: ALLOW_SUPPORTING_ONLY
+  confidence: HIGH
+  notes: Generated from catalog seed; not independent edit authority.
+- path_or_surface: catalog/materials.yaml
+  repository: forprint_library
+  evidence_sha256: 8d113c1b375965bfbb2efef3de9c4dce45b867d31cb1d8cf33d56feb903215ad
+  role: component_catalog_projection
+  architecture_generation: GENERATION_2_SEMANTIC_LAYER
+  authority_class: GENERATED_PROJECTION
+  lifecycle: CURRENT_GENERATED_DRAFT
+  source_mode: generated_projection
+  generator_if_any: scripts/export_component_catalogs.py
+  governing_higher_authority: catalog/seeds/catalog_seed_v0_1.yaml
+  freshness_evidence: CURRENT_AT_EVIDENCE_HEAD
+  supersession_relation: NONE
+  mutation_risk: MEDIUM
+  consumer_scope: read_only_projection_consumers
+  assistant_visibility: ALLOW_SUPPORTING_ONLY
+  confidence: HIGH
+  notes: Generated from catalog seed; not independent edit authority.
+- path_or_surface: catalog/operations.yaml
+  repository: forprint_library
+  evidence_sha256: 8fdeccc5de0742ce02d5191eab27f4b855628b8c5a50a5794c5e8c213d843cd5
+  role: component_catalog_projection
+  architecture_generation: GENERATION_2_SEMANTIC_LAYER
+  authority_class: GENERATED_PROJECTION
+  lifecycle: CURRENT_GENERATED_DRAFT
+  source_mode: generated_projection
+  generator_if_any: scripts/export_component_catalogs.py
+  governing_higher_authority: catalog/seeds/catalog_seed_v0_1.yaml
+  freshness_evidence: CURRENT_AT_EVIDENCE_HEAD
+  supersession_relation: NONE
+  mutation_risk: MEDIUM
+  consumer_scope: read_only_projection_consumers
+  assistant_visibility: ALLOW_SUPPORTING_ONLY
+  confidence: HIGH
+  notes: Generated from catalog seed; not independent edit authority.
+- path_or_surface: catalog/print_modes.yaml
+  repository: forprint_library
+  evidence_sha256: 4a0e5466a206a117ab0d094eb8fbb719302a6955410d4536066d25fc271f757e
+  role: component_catalog_projection
+  architecture_generation: GENERATION_2_SEMANTIC_LAYER
+  authority_class: GENERATED_PROJECTION
+  lifecycle: CURRENT_GENERATED_DRAFT
+  source_mode: generated_projection
+  generator_if_any: scripts/export_component_catalogs.py
+  governing_higher_authority: catalog/seeds/catalog_seed_v0_1.yaml
+  freshness_evidence: CURRENT_AT_EVIDENCE_HEAD
+  supersession_relation: NONE
+  mutation_risk: MEDIUM
+  consumer_scope: read_only_projection_consumers
+  assistant_visibility: ALLOW_SUPPORTING_ONLY
+  confidence: HIGH
+  notes: Generated from catalog seed; not independent edit authority.
+- path_or_surface: catalog/product_families.yaml
+  repository: forprint_library
+  evidence_sha256: 525b3c1ab5b7446dce72484078970b27e737ad533cb1a9c55eb681a78bd6a85e
+  role: component_catalog_projection
+  architecture_generation: GENERATION_2_SEMANTIC_LAYER
+  authority_class: GENERATED_PROJECTION
+  lifecycle: CURRENT_GENERATED_DRAFT
+  source_mode: generated_projection
+  generator_if_any: scripts/export_component_catalogs.py
+  governing_higher_authority: catalog/seeds/catalog_seed_v0_1.yaml
+  freshness_evidence: CURRENT_AT_EVIDENCE_HEAD
+  supersession_relation: NONE
+  mutation_risk: MEDIUM
+  consumer_scope: read_only_projection_consumers
+  assistant_visibility: ALLOW_SUPPORTING_ONLY
+  confidence: HIGH
+  notes: Generated from catalog seed; not independent edit authority.
+- path_or_surface: catalog/seeds/catalog_seed_v0_1.yaml
+  repository: forprint_library
+  evidence_sha256: 25654e306bacaee4c5350b83f9343a000075c1a242e8f02b7984ed6c3c019da7
+  role: draft_canonical_catalog_seed
+  architecture_generation: GENERATION_2_SEMANTIC_LAYER
+  authority_class: CURRENT_IMPLEMENTATION_SOURCE
+  lifecycle: CURRENT_DRAFT_CANONICAL_SEED
+  source_mode: human_editable_semantic_source
+  generator_if_any: null
+  governing_higher_authority: Blueprint module policy
+  freshness_evidence: CURRENT_AT_EVIDENCE_HEAD
+  supersession_relation: NONE
+  mutation_risk: HIGH
+  consumer_scope: library_semantic_catalog_and_projection_generators
+  assistant_visibility: ALLOW_CURRENT_TRUTH
+  confidence: HIGH
+  notes: Primary semantic data source for component catalog projections; explicitly not final production contract.
+- path_or_surface: coordination/blueprint_awareness/document_review_ledger.yaml
+  repository: forprint_library
+  evidence_sha256: 85b0c4f1a4302dfbb2df357e2d20b89d57ebca810fb631866863a2eefe3354fc
+  role: blueprint_document_review_provenance
+  architecture_generation: CURRENT_GOVERNANCE
+  authority_class: SUPPORTING
+  lifecycle: CURRENT_PROVENANCE_LEDGER
+  source_mode: review_ledger
+  generator_if_any: null
+  governing_higher_authority: Blueprint source documents
+  freshness_evidence: POINT_IN_TIME_REVIEW_HASHES_MUST_BE_RECHECKED
+  supersession_relation: NONE
+  mutation_risk: MEDIUM
+  consumer_scope: assistant_and_operator_governance
+  assistant_visibility: ALLOW_PROVENANCE_ONLY
+  confidence: HIGH
+  notes: Proves prior acknowledgement/application, not current source authority or freshness.
+- path_or_surface: coordination/prompts/active/2026-06-23__library__make_first_semantic_reference_readiness_v0_1.md
+  repository: forprint_library
+  evidence_sha256: 623f96540b9a7b909bb30002cdaf7a53cef8dfb8358ad82fcdb1ed783e93582d
+  role: historical_blueprint_prompt_copy
+  architecture_generation: CURRENT_GOVERNANCE_TRANSITION
+  authority_class: HISTORICAL_PROVENANCE
+  lifecycle: COMPLETED_HISTORICAL_PROMPT
+  source_mode: synchronized_prompt_copy
+  generator_if_any: null
+  governing_higher_authority: Blueprint Prompt Queue
+  freshness_evidence: HISTORICAL_COMPLETED_PROMPT
+  supersession_relation: SUPERSEDED_BY_LATER_PROMPTS_FOR_CURRENT_WORK
+  mutation_risk: LOW
+  consumer_scope: provenance_only
+  assistant_visibility: ALLOW_PROVENANCE_ONLY
+  confidence: HIGH
+  notes: Presence under active/ does not make it the current prompt.
+- path_or_surface: coordination/prompts/active/2026-06-29__library__reference_contract_foundation_v0_2.md
+  repository: forprint_library
+  evidence_sha256: 5e12b9d5e937c942f5d448e0773335cb385c9d91ef48ac31c964f596f161cc44
+  role: historical_blueprint_prompt_copy
+  architecture_generation: CURRENT_GOVERNANCE_TRANSITION
+  authority_class: HISTORICAL_PROVENANCE
+  lifecycle: COMPLETED_HISTORICAL_PROMPT
+  source_mode: synchronized_prompt_copy
+  generator_if_any: null
+  governing_higher_authority: Blueprint Prompt Queue
+  freshness_evidence: HISTORICAL_COMPLETED_PROMPT
+  supersession_relation: SUPERSEDED_BY_LATER_PROMPTS_FOR_CURRENT_WORK
+  mutation_risk: LOW
+  consumer_scope: provenance_only
+  assistant_visibility: ALLOW_PROVENANCE_ONLY
+  confidence: HIGH
+  notes: Presence under active/ does not make it the current prompt.
+- path_or_surface: coordination/prompts/active/current_blueprint_prompt.md
+  repository: forprint_library
+  evidence_sha256: 4a1e689270407aea87418b450cab99ad366868dcd042e61c38c12cd5978352ab
+  role: current_prompt_local_mirror
+  architecture_generation: CURRENT_GOVERNANCE
+  authority_class: SUPPORTING
+  lifecycle: CURRENT_LOCAL_MIRROR
+  source_mode: synchronized_prompt_copy
+  generator_if_any: null
+  governing_higher_authority: Blueprint Prompt Queue
+  freshness_evidence: CURRENT_AT_EVIDENCE_HEAD
+  supersession_relation: NONE
+  mutation_risk: MEDIUM
+  consumer_scope: operator_and_assistant_prompt_context
+  assistant_visibility: VERIFY_HIGHER_AUTHORITY_FIRST
+  confidence: HIGH
+  notes: Current local Calculator prompt mirror; sequencing authority remains Blueprint Prompt Queue.
+- path_or_surface: coordination/prompts/index.yaml
+  repository: forprint_library
+  evidence_sha256: c4e1d697446581ed7018e7f6e2ea27674526c9c04f3bbfb1b06c95f2debc6d15
+  role: local_received_prompt_index
+  architecture_generation: CURRENT_GOVERNANCE_TRANSITION
+  authority_class: STALE
+  lifecycle: STALE_TRANSITIONAL_INDEX
+  source_mode: coordination_index
+  generator_if_any: null
+  governing_higher_authority: Blueprint Prompt Queue
+  freshness_evidence: UPDATED_2026_06_05_EMPTY_ITEMS_WHILE_LATER_PROMPTS_EXIST
+  supersession_relation: PROMPT_QUEUE_AND_CURRENT_LOCAL_MIRROR_STRONGER
+  mutation_risk: MEDIUM
+  consumer_scope: assistant_and_operator_governance
+  assistant_visibility: BLOCK_CURRENT_STATE_CLAIMS
+  confidence: HIGH
+  notes: Must not be used to infer that no prompts exist or to identify current work.
+- path_or_surface: coordination/reports/completion/2026-06-29__forprint_library__report__reference-contract-foundation-v0-2.md
+  repository: forprint_library
+  evidence_sha256: 5be21bcfbc5320badce7bd15489e2ada24d4033e75fcbe87abd5f35c5a720576
+  role: module_completion_evidence
+  architecture_generation: CHECKPOINT_PROVENANCE
+  authority_class: HISTORICAL_PROVENANCE
+  lifecycle: POINT_IN_TIME_COMPLETION_EVIDENCE
+  source_mode: completion_report
+  generator_if_any: null
+  governing_higher_authority: Blueprint acceptance record for lifecycle state
+  freshness_evidence: VALID_FOR_RECORDED_CHECKPOINT_NOT_CURRENT_MODULE_STATE
+  supersession_relation: NONE
+  mutation_risk: LOW
+  consumer_scope: governance_provenance
+  assistant_visibility: ALLOW_PROVENANCE_ONLY
+  confidence: HIGH
+  notes: Useful checkpoint evidence; module-side completion does not by itself prove current Blueprint acceptance.
+- path_or_surface: coordination/reports/completion/2026-07-08__forprint_library__report__reference-consumption-pilot-v0-3.md
+  repository: forprint_library
+  evidence_sha256: 1baee0bc5830ef808d1db04918a184c4b1d93a79cf25474b71c8c94bd217bde2
+  role: module_completion_evidence
+  architecture_generation: CHECKPOINT_PROVENANCE
+  authority_class: HISTORICAL_PROVENANCE
+  lifecycle: POINT_IN_TIME_COMPLETION_EVIDENCE
+  source_mode: completion_report
+  generator_if_any: null
+  governing_higher_authority: Blueprint acceptance record for lifecycle state
+  freshness_evidence: VALID_FOR_RECORDED_CHECKPOINT_NOT_CURRENT_MODULE_STATE
+  supersession_relation: NONE
+  mutation_risk: LOW
+  consumer_scope: governance_provenance
+  assistant_visibility: ALLOW_PROVENANCE_ONLY
+  confidence: HIGH
+  notes: Useful checkpoint evidence; module-side completion does not by itself prove current Blueprint acceptance.
+- path_or_surface: coordination/reports/completion/2026-07-11__forprint_library__report__business-card-skeleton-v0-1.md
+  repository: forprint_library
+  evidence_sha256: 8ce090e65bee5106a99de46a0ffef5cf78b65dd6037faf098452dac6f8376958
+  role: module_completion_evidence
+  architecture_generation: CHECKPOINT_PROVENANCE
+  authority_class: HISTORICAL_PROVENANCE
+  lifecycle: POINT_IN_TIME_COMPLETION_EVIDENCE
+  source_mode: completion_report
+  generator_if_any: null
+  governing_higher_authority: Blueprint acceptance record for lifecycle state
+  freshness_evidence: VALID_FOR_RECORDED_CHECKPOINT_NOT_CURRENT_MODULE_STATE
+  supersession_relation: NONE
+  mutation_risk: LOW
+  consumer_scope: governance_provenance
+  assistant_visibility: ALLOW_PROVENANCE_ONLY
+  confidence: HIGH
+  notes: Useful checkpoint evidence; module-side completion does not by itself prove current Blueprint acceptance.
+- path_or_surface: coordination/reports/completion/forprint_library_calculator_input_contract_v0_1_completion.md
+  repository: forprint_library
+  evidence_sha256: 8b2ef36caf5227fbc6f3c76d4f4e285ca864ed2bcd2c5e7ffc1cf10590d68cf4
+  role: latest_module_completion_evidence
+  architecture_generation: CURRENT_CHECKPOINT
+  authority_class: SUPPORTING
+  lifecycle: CURRENT_MODULE_SIDE_COMPLETION_EVIDENCE
+  source_mode: completion_report
+  generator_if_any: null
+  governing_higher_authority: Blueprint acceptance record for final lifecycle
+  freshness_evidence: LATEST_MODULE_SIDE_COMPLETION_AT_LIBRARY_HEAD_LINEAGE
+  supersession_relation: NONE
+  mutation_risk: LOW
+  consumer_scope: governance_and_contract_provenance
+  assistant_visibility: ALLOW_SUPPORTING_ONLY
+  confidence: HIGH
+  notes: Proves module-side READY_FOR_BLUEPRINT_REVIEW, not Blueprint acceptance.
+- path_or_surface: coordination/reports/index.yaml
+  repository: forprint_library
+  evidence_sha256: 599f84cf2459181a8da8deeb8d159c817a76bb524b5793172a9e315fc976d393
+  role: coordination_reports_index
+  architecture_generation: CURRENT_GOVERNANCE_TRANSITION
+  authority_class: CONFLICT_REQUIRES_DECISION
+  lifecycle: MIXED_SCHEMA_STALE_INDEX
+  source_mode: mixed_coordination_index
+  generator_if_any: null
+  governing_higher_authority: Git/completion evidence + Blueprint lifecycle authority
+  freshness_evidence: MIXED_GENERATIONS_AND_NOT_CURRENT_FOR_CALCULATOR_FRONT
+  supersession_relation: NEEDS_NORMALIZED_DERIVATION
+  mutation_risk: HIGH
+  consumer_scope: assistant_and_operator_governance
+  assistant_visibility: BLOCK_CURRENT_STATE_CLAIMS
+  confidence: HIGH
+  notes: Contains multiple index generations and cannot be trusted as normalized current state.
+- path_or_surface: coordination/standards/blueprint_standards_available_snapshot.txt
+  repository: forprint_library
+  evidence_sha256: 7ef37f3a7ced6efd379176078a0dc0533ecfcaa79828d5c301f22977c348891f
+  role: blueprint_standards_snapshot
+  architecture_generation: CURRENT_GOVERNANCE
+  authority_class: SUPPORTING
+  lifecycle: POINT_IN_TIME_SNAPSHOT
+  source_mode: generated_or_synced_snapshot
+  generator_if_any: null
+  governing_higher_authority: Blueprint coordination/standards
+  freshness_evidence: CURRENTNESS_NOT_PROVEN_AGAINST_BLUEPRINT_HEAD
+  supersession_relation: NONE
+  mutation_risk: LOW
+  consumer_scope: assistant_and_operator_awareness
+  assistant_visibility: VERIFY_HIGHER_AUTHORITY_FIRST
+  confidence: HIGH
+  notes: Use for provenance/awareness only; live Blueprint standards are authoritative.
+- path_or_surface: coordination/status/current_status.md
+  repository: forprint_library
+  evidence_sha256: f5e4ae8e88aa5983f02cbba017bba96d941258022253881fd57f98bda5d422b7
+  role: rolling_current_state_projection
+  architecture_generation: CURRENT_GOVERNANCE_TRANSITION
+  authority_class: STALE
+  lifecycle: STALE_CURRENT_STATE_PROJECTION
+  source_mode: generated_or_manually_updated_projection
+  generator_if_any: null
+  governing_higher_authority: Git state + completion evidence + Blueprint Prompt Queue/lifecycle
+  freshness_evidence: STOPS_AT_BUSINESS_CARD_OR_EARLIER_WHILE_CALCULATOR_FRONT_EXISTS
+  supersession_relation: CURRENT_GIT_AND_LATEST_COMPLETION_EVIDENCE_STRONGER
+  mutation_risk: HIGH
+  consumer_scope: assistant_and_operator_current_context
+  assistant_visibility: BLOCK_CURRENT_STATE_CLAIMS
+  confidence: HIGH
+  notes: Must not be used as current module truth until derivation/freshness is normalized.
+- path_or_surface: coordination/status/current_status.yaml
+  repository: forprint_library
+  evidence_sha256: 261bd7797a1d1f39b0349bf65a7d889f59c59083e1fcd5d0b63379ba59821695
+  role: rolling_current_state_projection
+  architecture_generation: CURRENT_GOVERNANCE_TRANSITION
+  authority_class: STALE
+  lifecycle: STALE_CURRENT_STATE_PROJECTION
+  source_mode: generated_or_manually_updated_projection
+  generator_if_any: null
+  governing_higher_authority: Git state + completion evidence + Blueprint Prompt Queue/lifecycle
+  freshness_evidence: STOPS_AT_BUSINESS_CARD_OR_EARLIER_WHILE_CALCULATOR_FRONT_EXISTS
+  supersession_relation: CURRENT_GIT_AND_LATEST_COMPLETION_EVIDENCE_STRONGER
+  mutation_risk: HIGH
+  consumer_scope: assistant_and_operator_current_context
+  assistant_visibility: BLOCK_CURRENT_STATE_CLAIMS
+  confidence: HIGH
+  notes: Must not be used as current module truth until derivation/freshness is normalized.
+- path_or_surface: coordination/status/next_questions_for_blueprint.md
+  repository: forprint_library
+  evidence_sha256: b0cf6706707fdd910d1a9631b5b2bec6084130e6776cbbd14d99affe747f048b
+  role: rolling_current_state_projection
+  architecture_generation: CURRENT_GOVERNANCE_TRANSITION
+  authority_class: STALE
+  lifecycle: STALE_CURRENT_STATE_PROJECTION
+  source_mode: generated_or_manually_updated_projection
+  generator_if_any: null
+  governing_higher_authority: Git state + completion evidence + Blueprint Prompt Queue/lifecycle
+  freshness_evidence: STOPS_AT_BUSINESS_CARD_OR_EARLIER_WHILE_CALCULATOR_FRONT_EXISTS
+  supersession_relation: CURRENT_GIT_AND_LATEST_COMPLETION_EVIDENCE_STRONGER
+  mutation_risk: HIGH
+  consumer_scope: assistant_and_operator_current_context
+  assistant_visibility: BLOCK_CURRENT_STATE_CLAIMS
+  confidence: HIGH
+  notes: Must not be used as current module truth until derivation/freshness is normalized.
+- path_or_surface: dictionaries/shared_operational_dictionary_v0_1.yaml
+  repository: forprint_library
+  evidence_sha256: 3610bb44537903fa66fdd7be02deacabcd6b073e69d2a44c80a8a8c075056d26
+  role: shared_operational_dictionary_generated_output
+  architecture_generation: GENERATION_2_SEMANTIC_LAYER
+  authority_class: GENERATED_ARTIFACT
+  lifecycle: CURRENT_GENERATED_DRAFT
+  source_mode: generated_artifact
+  generator_if_any: scripts/export_shared_operational_dictionaries.py
+  governing_higher_authority: scripts/export_shared_operational_dictionaries.py + Blueprint module policy
+  freshness_evidence: CURRENT_AT_EVIDENCE_HEAD
+  supersession_relation: NONE
+  mutation_risk: MEDIUM
+  consumer_scope: semantic_dictionary_consumers
+  assistant_visibility: ALLOW_SUPPORTING_ONLY
+  confidence: HIGH
+  notes: Generated from DICTIONARY_VALUES/METADATA embedded in exporter; not independent edit authority.
+- path_or_surface: docs/architecture/README.md
+  repository: forprint_library
+  evidence_sha256: 00f426b9e45d999fee3a1564e123ea3251b76d9d7bc9accc54f397cee2ceb706
+  role: architecture_overview
+  architecture_generation: GENERATION_1_STANDALONE
+  authority_class: SUPERSEDED_CANDIDATE
+  lifecycle: HISTORICAL_ARCHITECTURE_GENERATION
+  source_mode: manual_document
+  generator_if_any: null
+  governing_higher_authority: Blueprint module policy + current implementation
+  freshness_evidence: CONTRADICTS_CURRENT_MODULE_TOPOLOGY_AND_PORTFOLIO_ROLES
+  supersession_relation: CURRENT_BLUEPRINT_AND_L3_MODEL_STRONGER
+  mutation_risk: LOW
+  consumer_scope: human_architecture_context
+  assistant_visibility: BLOCK_CURRENT_STATE_CLAIMS
+  confidence: HIGH
+  notes: Old standalone contract/migration architecture; preserve as lineage until explicit supersession action.
+- path_or_surface: docs/architecture/alias_policy.md
+  repository: forprint_library
+  evidence_sha256: af0ef87976844483623d1af974129dd3e9e6db5ba1bded4ab768e649e69ece0b
+  role: semantic_policy_supporting_doc
+  architecture_generation: GENERATION_2_SEMANTIC_LAYER
+  authority_class: SUPPORTING
+  lifecycle: CURRENT_SUPPORTING_DRAFT
+  source_mode: manual_document
+  generator_if_any: null
+  governing_higher_authority: Blueprint module policy + current implementation
+  freshness_evidence: CURRENT_AT_EVIDENCE_HEAD
+  supersession_relation: NONE
+  mutation_risk: LOW
+  consumer_scope: semantic_guidance
+  assistant_visibility: ALLOW_SUPPORTING_ONLY
+  confidence: HIGH
+  notes: Useful explanatory policy aligned with current core; does not outrank Blueprint or implementation/data sources.
+- path_or_surface: docs/architecture/canonical_id_policy.md
+  repository: forprint_library
+  evidence_sha256: 4e4f3807ca1ae08aed9554ebdb89418990e75255955ec8fa2d14b1d678ceac80
+  role: semantic_policy_supporting_doc
+  architecture_generation: GENERATION_2_SEMANTIC_LAYER
+  authority_class: SUPPORTING
+  lifecycle: CURRENT_SUPPORTING_DRAFT
+  source_mode: manual_document
+  generator_if_any: null
+  governing_higher_authority: Blueprint module policy + current implementation
+  freshness_evidence: CURRENT_AT_EVIDENCE_HEAD
+  supersession_relation: NONE
+  mutation_risk: LOW
+  consumer_scope: semantic_guidance
+  assistant_visibility: ALLOW_SUPPORTING_ONLY
+  confidence: HIGH
+  notes: Useful explanatory policy aligned with current core; does not outrank Blueprint or implementation/data sources.
+- path_or_surface: docs/architecture/catalog_seed_policy.md
+  repository: forprint_library
+  evidence_sha256: 1331b4a43fe9cfd50ccb80f9594e7701cae60c72e589f4de2b8c1e475f8ad769
+  role: semantic_policy_supporting_doc
+  architecture_generation: GENERATION_2_SEMANTIC_LAYER
+  authority_class: SUPPORTING
+  lifecycle: CURRENT_SUPPORTING_DRAFT
+  source_mode: manual_document
+  generator_if_any: null
+  governing_higher_authority: Blueprint module policy + current implementation
+  freshness_evidence: CURRENT_AT_EVIDENCE_HEAD
+  supersession_relation: NONE
+  mutation_risk: LOW
+  consumer_scope: semantic_guidance
+  assistant_visibility: ALLOW_SUPPORTING_ONLY
+  confidence: HIGH
+  notes: Useful explanatory policy aligned with current core; does not outrank Blueprint or implementation/data sources.
+- path_or_surface: docs/architecture/library_boundaries.md
+  repository: forprint_library
+  evidence_sha256: d8d40ec4624584b375514bceedc5d9a2ac0b514c3319429a60908d19be35dd2d
+  role: semantic_policy_supporting_doc
+  architecture_generation: GENERATION_2_SEMANTIC_LAYER
+  authority_class: SUPPORTING
+  lifecycle: CURRENT_SUPPORTING_DRAFT
+  source_mode: manual_document
+  generator_if_any: null
+  governing_higher_authority: Blueprint module policy + current implementation
+  freshness_evidence: CURRENT_AT_EVIDENCE_HEAD
+  supersession_relation: NONE
+  mutation_risk: LOW
+  consumer_scope: semantic_guidance
+  assistant_visibility: ALLOW_SUPPORTING_ONLY
+  confidence: HIGH
+  notes: Useful explanatory policy aligned with current core; does not outrank Blueprint or implementation/data sources.
+- path_or_surface: docs/architecture/dictionary_consumption_policy.md
+  repository: forprint_library
+  evidence_sha256: 790a352c98ab614865bd24fa27966fc720090cac814a3e410f00cdd6d811730c
+  role: generated_dictionary_policy_document
+  architecture_generation: GENERATION_2_SEMANTIC_LAYER
+  authority_class: GENERATED_ARTIFACT
+  lifecycle: CURRENT_GENERATED_DRAFT_POLICY
+  source_mode: generated_document
+  generator_if_any: scripts/export_dictionary_policy_docs.py
+  governing_higher_authority: Blueprint module policy; generator policy semantics unresolved
+  freshness_evidence: CURRENT_AT_EVIDENCE_HEAD
+  supersession_relation: NONE
+  mutation_risk: MEDIUM
+  consumer_scope: semantic_guidance
+  assistant_visibility: VERIFY_HIGHER_AUTHORITY_FIRST
+  confidence: HIGH
+  notes: Mechanically generated from embedded policy strings. Generated role is resolved; normative policy authority remains
+    L5 decision.
+- path_or_surface: docs/architecture/dictionary_versioning_policy.md
+  repository: forprint_library
+  evidence_sha256: 6219b3484fca51b031dec00a3472ce07f71850cf189d4cc97a2cc20857e30b55
+  role: generated_dictionary_policy_document
+  architecture_generation: GENERATION_2_SEMANTIC_LAYER
+  authority_class: GENERATED_ARTIFACT
+  lifecycle: CURRENT_GENERATED_DRAFT_POLICY
+  source_mode: generated_document
+  generator_if_any: scripts/export_dictionary_policy_docs.py
+  governing_higher_authority: Blueprint module policy; generator policy semantics unresolved
+  freshness_evidence: CURRENT_AT_EVIDENCE_HEAD
+  supersession_relation: NONE
+  mutation_risk: MEDIUM
+  consumer_scope: semantic_guidance
+  assistant_visibility: VERIFY_HIGHER_AUTHORITY_FIRST
+  confidence: HIGH
+  notes: Mechanically generated from embedded policy strings. Generated role is resolved; normative policy authority remains
+    L5 decision.
+- path_or_surface: docs/architecture/shared_operational_dictionary_policy.md
+  repository: forprint_library
+  evidence_sha256: ebec7c0a6034fa87dea85931c77826d21f7bcb235529f8a7563552dc4ba8dd01
+  role: generated_dictionary_policy_document
+  architecture_generation: GENERATION_2_SEMANTIC_LAYER
+  authority_class: GENERATED_ARTIFACT
+  lifecycle: CURRENT_GENERATED_DRAFT_POLICY
+  source_mode: generated_document
+  generator_if_any: scripts/export_dictionary_policy_docs.py
+  governing_higher_authority: Blueprint module policy; generator policy semantics unresolved
+  freshness_evidence: CURRENT_AT_EVIDENCE_HEAD
+  supersession_relation: NONE
+  mutation_risk: MEDIUM
+  consumer_scope: semantic_guidance
+  assistant_visibility: VERIFY_HIGHER_AUTHORITY_FIRST
+  confidence: HIGH
+  notes: Mechanically generated from embedded policy strings. Generated role is resolved; normative policy authority remains
+    L5 decision.
+- path_or_surface: docs/architecture/status_dictionary_policy.md
+  repository: forprint_library
+  evidence_sha256: 0d82c7d987eb19b8cf696e2a850d30b45cae3792cd12bda765fda544dbb43c38
+  role: generated_dictionary_policy_document
+  architecture_generation: GENERATION_2_SEMANTIC_LAYER
+  authority_class: GENERATED_ARTIFACT
+  lifecycle: CURRENT_GENERATED_DRAFT_POLICY
+  source_mode: generated_document
+  generator_if_any: scripts/export_dictionary_policy_docs.py
+  governing_higher_authority: Blueprint module policy; generator policy semantics unresolved
+  freshness_evidence: CURRENT_AT_EVIDENCE_HEAD
+  supersession_relation: NONE
+  mutation_risk: MEDIUM
+  consumer_scope: semantic_guidance
+  assistant_visibility: VERIFY_HIGHER_AUTHORITY_FIRST
+  confidence: HIGH
+  notes: Mechanically generated from embedded policy strings. Generated role is resolved; normative policy authority remains
+    L5 decision.
+- path_or_surface: docs/architecture/library_calculator_input_contract.md
+  repository: forprint_library
+  evidence_sha256: bb89a0f089a3253ddb1fa912b4aa0fd08d8ce748314bf46e5cb7839ce7431a59
+  role: calculator_contract_architecture_document
+  architecture_generation: GENERATION_4_BLUEPRINT_ALIGNED_CURRENT
+  authority_class: SUPPORTING
+  lifecycle: CURRENT_SUPPORTING_IMPLEMENTATION_DOC
+  source_mode: manual_document
+  generator_if_any: null
+  governing_higher_authority: app/forprint_library/calculator_input/contract.py + Blueprint boundary
+  freshness_evidence: CURRENT_AT_EVIDENCE_HEAD
+  supersession_relation: NONE
+  mutation_risk: LOW
+  consumer_scope: calculator_contract_humans
+  assistant_visibility: ALLOW_SUPPORTING_ONLY
+  confidence: HIGH
+  notes: Current explanatory documentation; implementation/schema/tests remain stronger behavior evidence.
+- path_or_surface: docs/architecture/reference_consumption_pilot.md
+  repository: forprint_library
+  evidence_sha256: db89be548a69a25f9afd7415f8a6c7a796d3c7023ec98f97570e866c8647c181
+  role: reference_contract_supporting_document
+  architecture_generation: GENERATION_3_REFERENCE_PILOT
+  authority_class: SUPPORTING
+  lifecycle: CURRENT_SUPPORTING_FOUNDATION_OR_PILOT
+  source_mode: manual_document
+  generator_if_any: null
+  governing_higher_authority: current schema/validator + Blueprint module policy
+  freshness_evidence: CURRENT_AT_EVIDENCE_HEAD
+  supersession_relation: NONE
+  mutation_risk: LOW
+  consumer_scope: reference_contract_consumers
+  assistant_visibility: ALLOW_SUPPORTING_ONLY
+  confidence: HIGH
+  notes: Bounded foundation/pilot documentation, not production adoption authority.
+- path_or_surface: docs/architecture/reference_contract_foundation.md
+  repository: forprint_library
+  evidence_sha256: 2ff2544795deebf35d5b5247c1196fbbc6419818fc45e9b01cf64dc9ce77f190
+  role: reference_contract_supporting_document
+  architecture_generation: GENERATION_3_REFERENCE_PILOT
+  authority_class: SUPPORTING
+  lifecycle: CURRENT_SUPPORTING_FOUNDATION_OR_PILOT
+  source_mode: manual_document
+  generator_if_any: null
+  governing_higher_authority: current schema/validator + Blueprint module policy
+  freshness_evidence: CURRENT_AT_EVIDENCE_HEAD
+  supersession_relation: NONE
+  mutation_risk: LOW
+  consumer_scope: reference_contract_consumers
+  assistant_visibility: ALLOW_SUPPORTING_ONLY
+  confidence: HIGH
+  notes: Bounded foundation/pilot documentation, not production adoption authority.
+- path_or_surface: docs/architecture/semantic_reference_readiness.md
+  repository: forprint_library
+  evidence_sha256: 7a90b6878b87963788e3d56329313c9f8d1c7eb909a82e8f01e420bbe3958c7b
+  role: semantic_readiness_checkpoint_document
+  architecture_generation: GENERATION_2_EARLY_REFERENCE
+  authority_class: HISTORICAL_PROVENANCE
+  lifecycle: HISTORICAL_CHECKPOINT_SUPPORTING
+  source_mode: manual_document
+  generator_if_any: null
+  governing_higher_authority: current implementation + later contract docs + Blueprint module policy
+  freshness_evidence: EARLIER_CHECKPOINT
+  supersession_relation: LATER_REFERENCE_CONTRACT_AND_CALCULATOR_LAYERS_STRONGER
+  mutation_risk: LOW
+  consumer_scope: historical_readiness_context
+  assistant_visibility: ALLOW_PROVENANCE_ONLY
+  confidence: HIGH
+  notes: Useful bounded checkpoint evidence; not full current semantic architecture.
+- path_or_surface: docs/decisions/ADR-0001-forprint-library-boundary.md
+  repository: forprint_library
+  evidence_sha256: 17a2d6e85189b3e2c417744ed54b21110d71c4108a4465f08ed2f5fbd9ab38d1
+  role: local_architecture_decision_record
+  architecture_generation: GENERATION_1_STANDALONE
+  authority_class: HISTORICAL_PROVENANCE
+  lifecycle: ACCEPTED_LOCAL_HISTORICAL_DECISION
+  source_mode: manual_adr
+  generator_if_any: null
+  governing_higher_authority: current Blueprint module/global policy
+  freshness_evidence: LOCAL_ACCEPTANCE_PREDATES_CURRENT_PORTFOLIO_ARCHITECTURE
+  supersession_relation: CURRENT_APPLICABILITY_REQUIRES_MAPPING
+  mutation_risk: LOW
+  consumer_scope: architecture_lineage
+  assistant_visibility: ALLOW_PROVENANCE_ONLY
+  confidence: HIGH
+  notes: Accepted local decision evidence; not sufficient current global authority.
+- path_or_surface: docs/decisions/ADR-0002-historical-compatibility.md
+  repository: forprint_library
+  evidence_sha256: 2db94f249420c4855554de1a9275886ec8637818f1c471ee9638048fe5140354
+  role: local_architecture_decision_record
+  architecture_generation: GENERATION_1_STANDALONE
+  authority_class: HISTORICAL_PROVENANCE
+  lifecycle: ACCEPTED_LOCAL_HISTORICAL_DECISION
+  source_mode: manual_adr
+  generator_if_any: null
+  governing_higher_authority: current Blueprint module/global policy
+  freshness_evidence: LOCAL_ACCEPTANCE_PREDATES_CURRENT_PORTFOLIO_ARCHITECTURE
+  supersession_relation: CURRENT_APPLICABILITY_REQUIRES_MAPPING
+  mutation_risk: LOW
+  consumer_scope: architecture_lineage
+  assistant_visibility: ALLOW_PROVENANCE_ONLY
+  confidence: HIGH
+  notes: Accepted local decision evidence; not sufficient current global authority.
+- path_or_surface: docs/operations/business_card_skeleton_recovery.md
+  repository: forprint_library
+  evidence_sha256: d4bdf1f72c67d3e8a2e9853dc95e0f1c121f9de897b118a46b0fb599de57fd53
+  role: business_card_recovery_procedure
+  architecture_generation: GENERATION_3_PRODUCT_PILOT
+  authority_class: STALE
+  lifecycle: SUPPORTING_WITH_STALE_BRANCH_ASSUMPTION
+  source_mode: manual_runbook
+  generator_if_any: null
+  governing_higher_authority: current Git branch/workflow + current Makefile
+  freshness_evidence: HARDCODES_MAIN_AS_HEALTHY_STATE
+  supersession_relation: CURRENT_BRANCH_AND_WORKFLOW_STRONGER
+  mutation_risk: MEDIUM
+  consumer_scope: operator_recovery
+  assistant_visibility: BLOCK_CURRENT_STATE_CLAIMS
+  confidence: HIGH
+  notes: Procedure may contain useful steps but its branch assumption is stale.
+- path_or_surface: docs/operations/business_card_skeleton_runbook.md
+  repository: forprint_library
+  evidence_sha256: c05da4141aac7d9caf6c40361f6fb631f742a329c9efd589bede122b50127e41
+  role: business_card_operator_runbook
+  architecture_generation: GENERATION_3_PRODUCT_PILOT
+  authority_class: SUPPORTING
+  lifecycle: CHECKPOINT_RUNBOOK_WITH_STALE_STATUS_REFERENCES
+  source_mode: manual_runbook
+  generator_if_any: null
+  governing_higher_authority: current Makefile + current lifecycle authority
+  freshness_evidence: CAPABILITY_VALID_STATUS_REFERENCES_STALE
+  supersession_relation: NONE
+  mutation_risk: MEDIUM
+  consumer_scope: operator_checkpoint_workflow
+  assistant_visibility: ALLOW_SUPPORTING_ONLY
+  confidence: HIGH
+  notes: Use capability procedure cautiously; do not treat referenced current_status surfaces as current truth.
+- path_or_surface: docs/operations/library_calculator_input_contract_recovery.md
+  repository: forprint_library
+  evidence_sha256: 82e4112b6195fdf622dd42f8d62553e2255023ebc4402368e4d600d6ee551c9f
+  role: calculator_contract_operator_document
+  architecture_generation: GENERATION_4_BLUEPRINT_ALIGNED_CURRENT
+  authority_class: SUPPORTING
+  lifecycle: CURRENT_SUPPORTING_OPERATIONAL_DOC
+  source_mode: manual_runbook
+  generator_if_any: null
+  governing_higher_authority: current contract.py/schema/tests + Makefile
+  freshness_evidence: CURRENT_AT_EVIDENCE_HEAD
+  supersession_relation: NONE
+  mutation_risk: MEDIUM
+  consumer_scope: operator_calculator_contract_workflow
+  assistant_visibility: ALLOW_SUPPORTING_ONLY
+  confidence: HIGH
+  notes: Operational procedure only; must track current executable contract and supported Make targets.
+- path_or_surface: docs/operations/library_calculator_input_contract_runbook.md
+  repository: forprint_library
+  evidence_sha256: 95973032ebe86ff69faab529404a4c0bcd807720d249412a8dff88c831d183ab
+  role: calculator_contract_operator_document
+  architecture_generation: GENERATION_4_BLUEPRINT_ALIGNED_CURRENT
+  authority_class: SUPPORTING
+  lifecycle: CURRENT_SUPPORTING_OPERATIONAL_DOC
+  source_mode: manual_runbook
+  generator_if_any: null
+  governing_higher_authority: current contract.py/schema/tests + Makefile
+  freshness_evidence: CURRENT_AT_EVIDENCE_HEAD
+  supersession_relation: NONE
+  mutation_risk: MEDIUM
+  consumer_scope: operator_calculator_contract_workflow
+  assistant_visibility: ALLOW_SUPPORTING_ONLY
+  confidence: HIGH
+  notes: Operational procedure only; must track current executable contract and supported Make targets.
+- path_or_surface: examples/calculator_input_contract/business_card_with_artwork_source.yaml
+  repository: forprint_library
+  evidence_sha256: 0cd3b15949f4020ed31e2680abd430f01ce3a9905776188b9136074f5ac5cb36
+  role: calculator_contract_fixture
+  architecture_generation: GENERATION_4_BLUEPRINT_ALIGNED_CURRENT
+  authority_class: SUPPORTING
+  lifecycle: CURRENT_DETERMINISTIC_FIXTURE
+  source_mode: validated_fixture
+  generator_if_any: null
+  governing_higher_authority: calculator contract.py + calculator schema
+  freshness_evidence: CURRENT_AT_EVIDENCE_HEAD
+  supersession_relation: NONE
+  mutation_risk: MEDIUM
+  consumer_scope: tests_and_contract_examples
+  assistant_visibility: ALLOW_SUPPORTING_ONLY
+  confidence: HIGH
+  notes: Current deterministic/negative fixture; not semantic source of product truth.
+- path_or_surface: examples/calculator_input_contract/business_card_with_finishing.yaml
+  repository: forprint_library
+  evidence_sha256: ef1506d91eb039b959f3f9942da1fe95fd549b9dd1cf667ee682242855a1b923
+  role: calculator_contract_fixture
+  architecture_generation: GENERATION_4_BLUEPRINT_ALIGNED_CURRENT
+  authority_class: SUPPORTING
+  lifecycle: CURRENT_DETERMINISTIC_FIXTURE
+  source_mode: validated_fixture
+  generator_if_any: null
+  governing_higher_authority: calculator contract.py + calculator schema
+  freshness_evidence: CURRENT_AT_EVIDENCE_HEAD
+  supersession_relation: NONE
+  mutation_risk: MEDIUM
+  consumer_scope: tests_and_contract_examples
+  assistant_visibility: ALLOW_SUPPORTING_ONLY
+  confidence: HIGH
+  notes: Current deterministic/negative fixture; not semantic source of product truth.
+- path_or_surface: examples/calculator_input_contract/invalid_missing_material.yaml
+  repository: forprint_library
+  evidence_sha256: 230e96f0b82ba81f3a8afe79d5b5f9c55460527aae1ded5f07897e37fdbfffaa
+  role: calculator_contract_fixture
+  architecture_generation: GENERATION_4_BLUEPRINT_ALIGNED_CURRENT
+  authority_class: SUPPORTING
+  lifecycle: CURRENT_DETERMINISTIC_FIXTURE
+  source_mode: validated_fixture
+  generator_if_any: null
+  governing_higher_authority: calculator contract.py + calculator schema
+  freshness_evidence: CURRENT_AT_EVIDENCE_HEAD
+  supersession_relation: NONE
+  mutation_risk: MEDIUM
+  consumer_scope: tests_and_contract_examples
+  assistant_visibility: ALLOW_SUPPORTING_ONLY
+  confidence: HIGH
+  notes: Current deterministic/negative fixture; not semantic source of product truth.
+- path_or_surface: examples/calculator_input_contract/invalid_print_mode_reference.yaml
+  repository: forprint_library
+  evidence_sha256: 2d9dd38ecab4f1281b917f787d5215b93303bcbe6a8db570270e1a3cfee3d6fb
+  role: calculator_contract_fixture
+  architecture_generation: GENERATION_4_BLUEPRINT_ALIGNED_CURRENT
+  authority_class: SUPPORTING
+  lifecycle: CURRENT_DETERMINISTIC_FIXTURE
+  source_mode: validated_fixture
+  generator_if_any: null
+  governing_higher_authority: calculator contract.py + calculator schema
+  freshness_evidence: CURRENT_AT_EVIDENCE_HEAD
+  supersession_relation: NONE
+  mutation_risk: MEDIUM
+  consumer_scope: tests_and_contract_examples
+  assistant_visibility: ALLOW_SUPPORTING_ONLY
+  confidence: HIGH
+  notes: Current deterministic/negative fixture; not semantic source of product truth.
+- path_or_surface: examples/calculator_input_contract/invalid_quantity.yaml
+  repository: forprint_library
+  evidence_sha256: 4dcfd185cb7591e9d175e3e4955fe77055006fc6955c03f956b3a737d30a90d3
+  role: calculator_contract_fixture
+  architecture_generation: GENERATION_4_BLUEPRINT_ALIGNED_CURRENT
+  authority_class: SUPPORTING
+  lifecycle: CURRENT_DETERMINISTIC_FIXTURE
+  source_mode: validated_fixture
+  generator_if_any: null
+  governing_higher_authority: calculator contract.py + calculator schema
+  freshness_evidence: CURRENT_AT_EVIDENCE_HEAD
+  supersession_relation: NONE
+  mutation_risk: MEDIUM
+  consumer_scope: tests_and_contract_examples
+  assistant_visibility: ALLOW_SUPPORTING_ONLY
+  confidence: HIGH
+  notes: Current deterministic/negative fixture; not semantic source of product truth.
+- path_or_surface: examples/calculator_input_contract/minimal_valid_business_card.yaml
+  repository: forprint_library
+  evidence_sha256: 2a72eb680edcbe9284f5106ee64ab7cf6da6266599083edd64d42b22dcd86d3b
+  role: calculator_contract_fixture
+  architecture_generation: GENERATION_4_BLUEPRINT_ALIGNED_CURRENT
+  authority_class: SUPPORTING
+  lifecycle: CURRENT_DETERMINISTIC_FIXTURE
+  source_mode: validated_fixture
+  generator_if_any: null
+  governing_higher_authority: calculator contract.py + calculator schema
+  freshness_evidence: CURRENT_AT_EVIDENCE_HEAD
+  supersession_relation: NONE
+  mutation_risk: MEDIUM
+  consumer_scope: tests_and_contract_examples
+  assistant_visibility: ALLOW_SUPPORTING_ONLY
+  confidence: HIGH
+  notes: Current deterministic/negative fixture; not semantic source of product truth.
+- path_or_surface: examples/catalog_seed_v0_1.example.yaml
+  repository: forprint_library
+  evidence_sha256: 3b28e14cf85af6a9ba1815e0041fd7de917d6d26fbfd9105bb9fa9dd8bc66746
+  role: catalog_seed_generated_example
+  architecture_generation: GENERATION_2_SEMANTIC_LAYER
+  authority_class: GENERATED_ARTIFACT
+  lifecycle: CURRENT_GENERATED_EXAMPLE
+  source_mode: generated_example
+  generator_if_any: scripts/export_catalog_schema_artifacts.py
+  governing_higher_authority: catalog/seeds/catalog_seed_v0_1.yaml
+  freshness_evidence: CURRENT_AT_EVIDENCE_HEAD
+  supersession_relation: NONE
+  mutation_risk: LOW
+  consumer_scope: examples_and_validation
+  assistant_visibility: ALLOW_SUPPORTING_ONLY
+  confidence: HIGH
+  notes: Generated from seed; never canonical catalog truth.
+- path_or_surface: examples/reference_consumption/library_reference_consumption_examples.yaml
+  repository: forprint_library
+  evidence_sha256: f35d68cb5389737d48c893ca2d8c76f6e8e631c7edbff791fe0109730b606089
+  role: reference_consumption_validation_fixture
+  architecture_generation: GENERATION_3_REFERENCE_PILOT
+  authority_class: SUPPORTING
+  lifecycle: CURRENT_PILOT_FIXTURE
+  source_mode: validation_fixture
+  generator_if_any: null
+  governing_higher_authority: reference consumption schema + generic reference examples
+  freshness_evidence: CURRENT_AT_EVIDENCE_HEAD
+  supersession_relation: NONE
+  mutation_risk: LOW
+  consumer_scope: pilot_validation
+  assistant_visibility: ALLOW_SUPPORTING_ONLY
+  confidence: HIGH
+  notes: Pilot examples only; do not infer live downstream adoption.
+- path_or_surface: examples/reference_contract/library_reference_examples.yaml
+  repository: forprint_library
+  evidence_sha256: 5b8d17be4e4869d646f48848f6b94f15cb033f8150df24efec6ca74e9cf5d8d2
+  role: generic_reference_contract_examples
+  architecture_generation: GENERATION_3_REFERENCE_PILOT
+  authority_class: SUPPORTING
+  lifecycle: CURRENT_CONTROLLED_NONPRODUCTION_EXAMPLES
+  source_mode: validation_fixture
+  generator_if_any: null
+  governing_higher_authority: schemas/reference_contract/library_reference.schema.yaml
+  freshness_evidence: CURRENT_AT_EVIDENCE_HEAD
+  supersession_relation: NONE
+  mutation_risk: MEDIUM
+  consumer_scope: reference_contract_examples_and_pilot
+  assistant_visibility: ALLOW_SUPPORTING_ONLY
+  confidence: HIGH
+  notes: Controlled non-production contract examples; IDs may differ from current catalog IDs.
+- path_or_surface: examples/semantic_reference_preview.yaml
+  repository: forprint_library
+  evidence_sha256: dbd51fa3eda8fb28c8e3f4b81b5441968443c339e6f631c1480534549d9edb14
+  role: early_semantic_reference_demo
+  architecture_generation: GENERATION_2_EARLY_REFERENCE
+  authority_class: SUPERSEDED_CANDIDATE
+  lifecycle: EARLY_DEMO_PREVIEW
+  source_mode: demo_fixture
+  generator_if_any: null
+  governing_higher_authority: current catalog + generic reference contract + Calculator contract
+  freshness_evidence: EARLY_CHECKPOINT_WITH_OLDER_REFERENCE_SEMANTICS
+  supersession_relation: LATER_REFERENCE_AND_CATALOG_SURFACES_STRONGER
+  mutation_risk: LOW
+  consumer_scope: demo_only
+  assistant_visibility: BLOCK_CURRENT_STATE_CLAIMS
+  confidence: HIGH
+  notes: Do not use as canonical semantic/reference truth.
+- path_or_surface: pyproject.toml
+  repository: forprint_library
+  evidence_sha256: b495cd39f3cb7f711dc15c2cb2d0c5a7e1d97c77ae6c7b81ef8a00166faff36c
+  role: python_package_and_quality_configuration
+  architecture_generation: CURRENT_PROJECT_CONFIG
+  authority_class: CURRENT_IMPLEMENTATION_SOURCE
+  lifecycle: CURRENT
+  source_mode: manual_configuration
+  generator_if_any: null
+  governing_higher_authority: null
+  freshness_evidence: CURRENT_AT_EVIDENCE_HEAD
+  supersession_relation: NONE
+  mutation_risk: HIGH
+  consumer_scope: build_test_lint_typecheck
+  assistant_visibility: ALLOW_CURRENT_TRUTH
+  confidence: HIGH
+  notes: Current project/tool configuration authority for configured Python tooling.
+- path_or_surface: schemas/calculator_input/calculator_input_envelope.schema.yaml
+  repository: forprint_library
+  evidence_sha256: 26146654e9a3317d1792c51ef1cd32d8e1b4d41de160e421b3c1a3b1074e64c8
+  role: calculator_input_machine_schema
+  architecture_generation: GENERATION_4_BLUEPRINT_ALIGNED_CURRENT
+  authority_class: SUPPORTING
+  lifecycle: CURRENT_MACHINE_CONTRACT_SCHEMA
+  source_mode: manual_schema
+  generator_if_any: null
+  governing_higher_authority: Calculator contract implementation + Blueprint prompt boundary
+  freshness_evidence: CURRENT_AT_EVIDENCE_HEAD
+  supersession_relation: NONE
+  mutation_risk: HIGH
+  consumer_scope: calculator_contract_validation
+  assistant_visibility: ALLOW_SUPPORTING_ONLY
+  confidence: HIGH
+  notes: Current machine-readable envelope constraint; schema-vs-runtime normative precedence remains L5 decision.
+- path_or_surface: schemas/catalog_seed.schema.yaml
+  repository: forprint_library
+  evidence_sha256: 7369da57d72df233a1432ba86ba68c72a40ca1a89e0f4b6fb7e5f766a7a0acdb
+  role: generated_catalog_schema
+  architecture_generation: GENERATION_2_SEMANTIC_LAYER
+  authority_class: GENERATED_ARTIFACT
+  lifecycle: CURRENT_GENERATED_SCHEMA
+  source_mode: generated_schema
+  generator_if_any: scripts/export_catalog_schema_artifacts.py
+  governing_higher_authority: scripts/export_catalog_schema_artifacts.py + Blueprint semantic boundary
+  freshness_evidence: CURRENT_AT_EVIDENCE_HEAD
+  supersession_relation: NONE
+  mutation_risk: MEDIUM
+  consumer_scope: catalog_validation
+  assistant_visibility: ALLOW_SUPPORTING_ONLY
+  confidence: HIGH
+  notes: Generated from Python schema functions; not independent edit authority.
+- path_or_surface: schemas/finishing_option.schema.yaml
+  repository: forprint_library
+  evidence_sha256: ad22428258457bd45347fe97ce8b0a7665ed5c5798619c81558f948012a00505
+  role: generated_catalog_schema
+  architecture_generation: GENERATION_2_SEMANTIC_LAYER
+  authority_class: GENERATED_ARTIFACT
+  lifecycle: CURRENT_GENERATED_SCHEMA
+  source_mode: generated_schema
+  generator_if_any: scripts/export_catalog_schema_artifacts.py
+  governing_higher_authority: scripts/export_catalog_schema_artifacts.py + Blueprint semantic boundary
+  freshness_evidence: CURRENT_AT_EVIDENCE_HEAD
+  supersession_relation: NONE
+  mutation_risk: MEDIUM
+  consumer_scope: catalog_validation
+  assistant_visibility: ALLOW_SUPPORTING_ONLY
+  confidence: HIGH
+  notes: Generated from Python schema functions; not independent edit authority.
+- path_or_surface: schemas/material.schema.yaml
+  repository: forprint_library
+  evidence_sha256: f363b1a32fe60f275282427068444576a024a6dc519265e44f8a1ca74526486e
+  role: generated_catalog_schema
+  architecture_generation: GENERATION_2_SEMANTIC_LAYER
+  authority_class: GENERATED_ARTIFACT
+  lifecycle: CURRENT_GENERATED_SCHEMA
+  source_mode: generated_schema
+  generator_if_any: scripts/export_catalog_schema_artifacts.py
+  governing_higher_authority: scripts/export_catalog_schema_artifacts.py + Blueprint semantic boundary
+  freshness_evidence: CURRENT_AT_EVIDENCE_HEAD
+  supersession_relation: NONE
+  mutation_risk: MEDIUM
+  consumer_scope: catalog_validation
+  assistant_visibility: ALLOW_SUPPORTING_ONLY
+  confidence: HIGH
+  notes: Generated from Python schema functions; not independent edit authority.
+- path_or_surface: schemas/operation.schema.yaml
+  repository: forprint_library
+  evidence_sha256: b6b7f80b7fbfb016d6599502b1bc39aa2311b6bb701ced1f3194bbe53b9c288d
+  role: generated_catalog_schema
+  architecture_generation: GENERATION_2_SEMANTIC_LAYER
+  authority_class: GENERATED_ARTIFACT
+  lifecycle: CURRENT_GENERATED_SCHEMA
+  source_mode: generated_schema
+  generator_if_any: scripts/export_catalog_schema_artifacts.py
+  governing_higher_authority: scripts/export_catalog_schema_artifacts.py + Blueprint semantic boundary
+  freshness_evidence: CURRENT_AT_EVIDENCE_HEAD
+  supersession_relation: NONE
+  mutation_risk: MEDIUM
+  consumer_scope: catalog_validation
+  assistant_visibility: ALLOW_SUPPORTING_ONLY
+  confidence: HIGH
+  notes: Generated from Python schema functions; not independent edit authority.
+- path_or_surface: schemas/print_mode.schema.yaml
+  repository: forprint_library
+  evidence_sha256: a73dad6ae5d41b5b8be7275a2cd39792ce9192addfdfb65ceebf6cc153844e0f
+  role: generated_catalog_schema
+  architecture_generation: GENERATION_2_SEMANTIC_LAYER
+  authority_class: GENERATED_ARTIFACT
+  lifecycle: CURRENT_GENERATED_SCHEMA
+  source_mode: generated_schema
+  generator_if_any: scripts/export_catalog_schema_artifacts.py
+  governing_higher_authority: scripts/export_catalog_schema_artifacts.py + Blueprint semantic boundary
+  freshness_evidence: CURRENT_AT_EVIDENCE_HEAD
+  supersession_relation: NONE
+  mutation_risk: MEDIUM
+  consumer_scope: catalog_validation
+  assistant_visibility: ALLOW_SUPPORTING_ONLY
+  confidence: HIGH
+  notes: Generated from Python schema functions; not independent edit authority.
+- path_or_surface: schemas/product_family.schema.yaml
+  repository: forprint_library
+  evidence_sha256: 6544b3cc1c7fc267a477544fa39847236e63454a1698aad659f7b687b57bbaab
+  role: generated_catalog_schema
+  architecture_generation: GENERATION_2_SEMANTIC_LAYER
+  authority_class: GENERATED_ARTIFACT
+  lifecycle: CURRENT_GENERATED_SCHEMA
+  source_mode: generated_schema
+  generator_if_any: scripts/export_catalog_schema_artifacts.py
+  governing_higher_authority: scripts/export_catalog_schema_artifacts.py + Blueprint semantic boundary
+  freshness_evidence: CURRENT_AT_EVIDENCE_HEAD
+  supersession_relation: NONE
+  mutation_risk: MEDIUM
+  consumer_scope: catalog_validation
+  assistant_visibility: ALLOW_SUPPORTING_ONLY
+  confidence: HIGH
+  notes: Generated from Python schema functions; not independent edit authority.
+- path_or_surface: schemas/configurable_product.schema.yaml
+  repository: forprint_library
+  evidence_sha256: ba6c6941e13f047a6d7b198b0c8164a366ad180c615b1b7e0540014229b41ddc
+  role: configurable_product_machine_schema
+  architecture_generation: GENERATION_3_PRODUCT_PILOT
+  authority_class: CURRENT_IMPLEMENTATION_SOURCE
+  lifecycle: CURRENT_MACHINE_SCHEMA
+  source_mode: manual_schema
+  generator_if_any: null
+  governing_higher_authority: Blueprint module policy + product card semantics
+  freshness_evidence: CURRENT_AT_EVIDENCE_HEAD
+  supersession_relation: NONE
+  mutation_risk: HIGH
+  consumer_scope: configurable_product_validation
+  assistant_visibility: ALLOW_CURRENT_TRUTH
+  confidence: HIGH
+  notes: Current machine-readable validation source for configurable product cards.
+- path_or_surface: schemas/dictionary_entry.schema.yaml
+  repository: forprint_library
+  evidence_sha256: ce8d1fa752b0e29b55dc053012f1ddd6c6b64219d55be02147b8985b345cee16
+  role: generated_dictionary_schema
+  architecture_generation: GENERATION_2_SEMANTIC_LAYER
+  authority_class: GENERATED_ARTIFACT
+  lifecycle: CURRENT_GENERATED_SCHEMA
+  source_mode: generated_schema
+  generator_if_any: scripts/export_shared_operational_dictionaries.py
+  governing_higher_authority: scripts/export_shared_operational_dictionaries.py
+  freshness_evidence: CURRENT_AT_EVIDENCE_HEAD
+  supersession_relation: NONE
+  mutation_risk: MEDIUM
+  consumer_scope: dictionary_validation
+  assistant_visibility: ALLOW_SUPPORTING_ONLY
+  confidence: HIGH
+  notes: Generated from dictionary exporter code; not independent schema edit authority.
+- path_or_surface: schemas/shared_operational_dictionary.schema.yaml
+  repository: forprint_library
+  evidence_sha256: 385e35f4b33d6e41ad6452ccc23e3d7db8ca9b9afa805614b571b049d354d02b
+  role: generated_dictionary_schema
+  architecture_generation: GENERATION_2_SEMANTIC_LAYER
+  authority_class: GENERATED_ARTIFACT
+  lifecycle: CURRENT_GENERATED_SCHEMA
+  source_mode: generated_schema
+  generator_if_any: scripts/export_shared_operational_dictionaries.py
+  governing_higher_authority: scripts/export_shared_operational_dictionaries.py
+  freshness_evidence: CURRENT_AT_EVIDENCE_HEAD
+  supersession_relation: NONE
+  mutation_risk: MEDIUM
+  consumer_scope: dictionary_validation
+  assistant_visibility: ALLOW_SUPPORTING_ONLY
+  confidence: HIGH
+  notes: Generated from dictionary exporter code; not independent schema edit authority.
+- path_or_surface: schemas/reference_consumption/library_reference_consumption.schema.yaml
+  repository: forprint_library
+  evidence_sha256: eb6dde5077a4712f77a992245afdee46159074398ede7fe3bba4001ef71d90f8
+  role: reference_consumption_pilot_schema
+  architecture_generation: GENERATION_3_REFERENCE_PILOT
+  authority_class: CURRENT_IMPLEMENTATION_SOURCE
+  lifecycle: CURRENT_PILOT_SCHEMA
+  source_mode: manual_schema
+  generator_if_any: null
+  governing_higher_authority: Blueprint module policy + generic reference contract
+  freshness_evidence: CURRENT_AT_EVIDENCE_HEAD
+  supersession_relation: NONE
+  mutation_risk: HIGH
+  consumer_scope: pilot_validation
+  assistant_visibility: ALLOW_CURRENT_TRUTH
+  confidence: HIGH
+  notes: Current schema for bounded local pilot only; not live integration authority.
+- path_or_surface: schemas/reference_contract/library_reference.schema.yaml
+  repository: forprint_library
+  evidence_sha256: 06124b7a5d378a4068a5c7d0b41cb9dcd24c249c50a313bf5b8c46906f2165a9
+  role: generic_library_reference_contract_schema
+  architecture_generation: GENERATION_3_REFERENCE_PILOT
+  authority_class: CURRENT_IMPLEMENTATION_SOURCE
+  lifecycle: CURRENT_FOUNDATION_SCHEMA
+  source_mode: manual_schema
+  generator_if_any: null
+  governing_higher_authority: Blueprint module policy; Contract Registry relationship unresolved
+  freshness_evidence: CURRENT_AT_EVIDENCE_HEAD
+  supersession_relation: NONE
+  mutation_risk: HIGH
+  consumer_scope: generic_reference_contract
+  assistant_visibility: ALLOW_CURRENT_TRUTH
+  confidence: HIGH
+  notes: Current source for generic reference payload shape; adoption/version authority beyond Library remains unresolved.
+- path_or_surface: scripts/calculator_input/validate_calculator_input_contract.py
+  repository: forprint_library
+  evidence_sha256: 2443f2342b9552f871b0ebb64ae51e9f04b1e82686d16493a922334ef335c8b0
+  role: calculator_contract_validator
+  architecture_generation: GENERATION_4_BLUEPRINT_ALIGNED_CURRENT
+  authority_class: SUPPORTING
+  lifecycle: CURRENT_VALIDATION_TOOL
+  source_mode: executable_validator
+  generator_if_any: null
+  governing_higher_authority: contract.py + schema + fixtures
+  freshness_evidence: CURRENT_AT_EVIDENCE_HEAD
+  supersession_relation: NONE
+  mutation_risk: LOW
+  consumer_scope: operator_and_ci_validation
+  assistant_visibility: ALLOW_SUPPORTING_ONLY
+  confidence: HIGH
+  notes: Validation tool, not semantic or contract lifecycle authority.
+- path_or_surface: scripts/export_catalog_schema_artifacts.py
+  repository: forprint_library
+  evidence_sha256: 4375b2bf7dd82e1d386bac858c3d21f5f28526bbad3193dd883b9f54cb23c0d5
+  role: catalog_schema_and_example_generator
+  architecture_generation: GENERATION_2_SEMANTIC_LAYER
+  authority_class: CURRENT_IMPLEMENTATION_SOURCE
+  lifecycle: CURRENT_GENERATOR
+  source_mode: executable_generator
+  generator_if_any: null
+  governing_higher_authority: Blueprint module policy for semantic boundary
+  freshness_evidence: CURRENT_AT_EVIDENCE_HEAD
+  supersession_relation: NONE
+  mutation_risk: HIGH
+  consumer_scope: schema_and_example_generation
+  assistant_visibility: ALLOW_CURRENT_TRUTH
+  confidence: HIGH
+  notes: Generation implementation for catalog schemas and catalog-seed example.
+- path_or_surface: scripts/export_component_catalogs.py
+  repository: forprint_library
+  evidence_sha256: c718d6af6d580148138e42c354ee2143bf7c3b8eeb9de3b452dc109880408b65
+  role: component_catalog_generator
+  architecture_generation: GENERATION_2_SEMANTIC_LAYER
+  authority_class: CURRENT_IMPLEMENTATION_SOURCE
+  lifecycle: CURRENT_GENERATOR
+  source_mode: executable_generator
+  generator_if_any: null
+  governing_higher_authority: catalog/seeds/catalog_seed_v0_1.yaml
+  freshness_evidence: CURRENT_AT_EVIDENCE_HEAD
+  supersession_relation: NONE
+  mutation_risk: HIGH
+  consumer_scope: component_catalog_generation
+  assistant_visibility: ALLOW_CURRENT_TRUTH
+  confidence: HIGH
+  notes: Defines seed -> component catalog projection; component YAML files are outputs.
+- path_or_surface: scripts/export_dictionary_policy_docs.py
+  repository: forprint_library
+  evidence_sha256: 53a87594cc61cf44667c22a5fe0795c1ef3bd70d9a4aa4f980b2e1fbdd8bd93f
+  role: dictionary_policy_document_generator
+  architecture_generation: GENERATION_2_SEMANTIC_LAYER
+  authority_class: CONFLICT_REQUIRES_DECISION
+  lifecycle: CURRENT_GENERATOR_WITH_EMBEDDED_POLICY_AUTHORITY_CONFLICT
+  source_mode: executable_generator_with_embedded_policy_text
+  generator_if_any: null
+  governing_higher_authority: Blueprint module policy + future L5 policy decision
+  freshness_evidence: CURRENT_FILE_BUT_POLICY_NORMATIVITY_UNRESOLVED
+  supersession_relation: NONE
+  mutation_risk: HIGH
+  consumer_scope: dictionary_policy_doc_generation
+  assistant_visibility: VERIFY_HIGHER_AUTHORITY_FIRST
+  confidence: HIGH
+  notes: Mechanically authoritative for overwriting generated docs, but not established as canonical semantic-policy authority.
+    Do not run casually before L5.
+- path_or_surface: scripts/export_shared_operational_dictionaries.py
+  repository: forprint_library
+  evidence_sha256: 1452c1e03b008d503db3bcf3aae322b8e546e93cfb455e73c91e315a31cf0f6e
+  role: shared_dictionary_data_schema_generator
+  architecture_generation: GENERATION_2_SEMANTIC_LAYER
+  authority_class: CURRENT_IMPLEMENTATION_SOURCE
+  lifecycle: CURRENT_GENERATOR_AND_EMBEDDED_DATA_SOURCE
+  source_mode: executable_generator_with_embedded_dictionary_values
+  generator_if_any: null
+  governing_higher_authority: Blueprint module policy; foreign-domain ownership constraints
+  freshness_evidence: CURRENT_AT_EVIDENCE_HEAD
+  supersession_relation: NONE
+  mutation_risk: HIGH
+  consumer_scope: dictionary_data_and_schema_generation
+  assistant_visibility: ALLOW_CURRENT_TRUTH
+  confidence: HIGH
+  notes: Contains DICTIONARY_VALUES/METADATA/aliases and generates shared/group dictionaries and dictionary schemas.
+- path_or_surface: forprint_system_blueprint/coordination/module_policy/forprint_library/module_policy.md
+  repository: forprint_system_blueprint
+  evidence_sha256: 60010ad1b6ae83a18ee0828139708a4523d01c67a424143b7c427b70c3c5414c
+  role: library_module_role_and_boundary_policy
+  architecture_generation: CURRENT_BLUEPRINT
+  authority_class: CURRENT_AUTHORITY
+  lifecycle: CURRENT_ACTIVE_POLICY
+  source_mode: manual_policy
+  generator_if_any: null
+  governing_higher_authority: ForPrint System Blueprint governance
+  freshness_evidence: CURRENT_AT_EVIDENCE_HEAD
+  supersession_relation: NONE
+  mutation_risk: HIGH
+  consumer_scope: all_library_work_and_cross_module_role
+  assistant_visibility: ALLOW_CURRENT_TRUTH
+  confidence: HIGH
+  notes: Primary current strategic authority for Library ownership/non-ownership; not blanket refactor authorization.
+- path_or_surface: forprint_system_blueprint/coordination/human_intent/modules/forprint_library.yaml
+  repository: forprint_system_blueprint
+  evidence_sha256: 920d0f2d76b0d4af1667aef8514fc9c790c875ff8e6bfb8c045686be60eaf248
+  role: library_human_intent_ledger
+  architecture_generation: CURRENT_BLUEPRINT
+  authority_class: PLANNING_CONTEXT
+  lifecycle: ACTIVE_APPEND_ONLY_PLANNING_CONTEXT
+  source_mode: append_only_intent_ledger
+  generator_if_any: null
+  governing_higher_authority: human owner + Blueprint governance
+  freshness_evidence: CURRENT_AT_EVIDENCE_HEAD
+  supersession_relation: NONE
+  mutation_risk: HIGH
+  consumer_scope: roadmap_and_future_direction
+  assistant_visibility: ALLOW_SUPPORTING_ONLY
+  confidence: HIGH
+  notes: Explicit planning_context_not_release_authority.
+- path_or_surface: forprint_system_blueprint/coordination/global_policy/forprint_project_doctrine.md
+  repository: forprint_system_blueprint
+  evidence_sha256: 204ffe57264b7a188bff86a09088766a788c67adc02695e38ccce46086c6be58
+  role: global_project_doctrine
+  architecture_generation: CURRENT_BLUEPRINT
+  authority_class: CURRENT_AUTHORITY
+  lifecycle: ACTIVE_GLOBAL_POLICY
+  source_mode: manual_global_policy
+  generator_if_any: null
+  governing_higher_authority: human owner + Blueprint governance
+  freshness_evidence: CURRENT_AT_EVIDENCE_HEAD
+  supersession_relation: NONE
+  mutation_risk: HIGH
+  consumer_scope: ecosystem_wide
+  assistant_visibility: ALLOW_CURRENT_TRUTH
+  confidence: HIGH
+  notes: Global doctrine and module-boundary context.
+- path_or_surface: forprint_system_blueprint/coordination/global_policy/ecosystem_module_map.md
+  repository: forprint_system_blueprint
+  evidence_sha256: a90c3d6ac4ab0af17af9c1ea83e1ebb595eb9333fcfcdd9f162c49aec85ab51c
+  role: ecosystem_module_role_map
+  architecture_generation: CURRENT_BLUEPRINT
+  authority_class: CURRENT_AUTHORITY
+  lifecycle: ACTIVE_GLOBAL_POLICY
+  source_mode: manual_global_policy
+  generator_if_any: null
+  governing_higher_authority: Blueprint governance
+  freshness_evidence: CURRENT_AT_EVIDENCE_HEAD
+  supersession_relation: NONE
+  mutation_risk: HIGH
+  consumer_scope: ecosystem_ownership_and_topology
+  assistant_visibility: ALLOW_CURRENT_TRUTH
+  confidence: HIGH
+  notes: Use for module-role/topology context; does not prove implementation.
+- path_or_surface: forprint_system_blueprint/coordination/global_policy/current_execution_focus.md
+  repository: forprint_system_blueprint
+  evidence_sha256: 909c49f4bc961a1bfb27676240cffc92bcd8c26049ae14a3caa767864fae5ac3
+  role: blueprint_current_execution_focus
+  architecture_generation: CURRENT_BLUEPRINT
+  authority_class: CURRENT_AUTHORITY
+  lifecycle: CURRENT_EXECUTION_FOCUS
+  source_mode: rolling_global_authority
+  generator_if_any: null
+  governing_higher_authority: Blueprint continuity/execution governance
+  freshness_evidence: CURRENT_AT_EVIDENCE_HEAD
+  supersession_relation: NONE
+  mutation_risk: HIGH
+  consumer_scope: blueprint_execution_scheduling
+  assistant_visibility: ALLOW_CURRENT_TRUTH
+  confidence: HIGH
+  notes: Authority for Blueprint execution focus, not Library semantic implementation truth.
+- path_or_surface: forprint_system_blueprint/coordination/global_policy/deterministic_worker_promotion_policy_v0_1.md
+  repository: forprint_system_blueprint
+  evidence_sha256: ecb2f4ebca65016d7c346fddd905dff016d51c325fb42586afc00bca303da2ac
+  role: deterministic_worker_promotion_policy
+  architecture_generation: CURRENT_BLUEPRINT
+  authority_class: PLANNING_CONTEXT
+  lifecycle: CANONICAL_PLANNING_POLICY_NO_EXECUTION_AUTHORITY
+  source_mode: planning_policy
+  generator_if_any: null
+  governing_higher_authority: Blueprint governance
+  freshness_evidence: CURRENT_AT_EVIDENCE_HEAD
+  supersession_relation: NONE
+  mutation_risk: MEDIUM
+  consumer_scope: ecosystem_architecture_planning
+  assistant_visibility: ALLOW_SUPPORTING_ONLY
+  confidence: HIGH
+  notes: Canonical planning policy; execution_authority=false.
+- path_or_surface: forprint_system_blueprint/coordination/global_policy/deterministic_worker_promotion_policy_v0_1.yaml
+  repository: forprint_system_blueprint
+  evidence_sha256: 3c8f952ff229504945d550bbeafe695a25dc2f4bfb734d2a4a996b64eae269d1
+  role: deterministic_worker_promotion_policy
+  architecture_generation: CURRENT_BLUEPRINT
+  authority_class: PLANNING_CONTEXT
+  lifecycle: CANONICAL_PLANNING_POLICY_NO_EXECUTION_AUTHORITY
+  source_mode: planning_policy
+  generator_if_any: null
+  governing_higher_authority: Blueprint governance
+  freshness_evidence: CURRENT_AT_EVIDENCE_HEAD
+  supersession_relation: NONE
+  mutation_risk: MEDIUM
+  consumer_scope: ecosystem_architecture_planning
+  assistant_visibility: ALLOW_SUPPORTING_ONLY
+  confidence: HIGH
+  notes: Canonical planning policy; execution_authority=false.
+- path_or_surface: 03_blueprint_authority/subsets/portfolio_full_horizon_target_states_v0_1__forprint_library.yaml
+  repository: forprint_system_blueprint
+  evidence_sha256: d3b050beda76ecd4bcc9f4fe1b6e557a455afadd91c7195059b6dc396d28685d
+  role: library_portfolio_roadmap_subset
+  architecture_generation: CURRENT_BLUEPRINT
+  authority_class: PLANNING_CONTEXT
+  lifecycle: CURRENT_PLANNING_ONLY_ROADMAP
+  source_mode: generated_analysis_subset
+  generator_if_any: null
+  governing_higher_authority: Blueprint canonical portfolio roadmap source
+  freshness_evidence: CURRENT_AT_EVIDENCE_HEAD
+  supersession_relation: NONE
+  mutation_risk: LOW
+  consumer_scope: library_target_state_and_roadmap
+  assistant_visibility: ALLOW_SUPPORTING_ONLY
+  confidence: HIGH
+  notes: Planning-only; execution_authority=false and portfolio HOLD/readiness gates apply.
+- path_or_surface: 03_blueprint_authority/subsets/portfolio_module_roadmap_approval_matrix_v0_1__forprint_library.yaml
+  repository: forprint_system_blueprint
+  evidence_sha256: 1929d992815865b4f0d5caf588521dc4c37094cc8f17e8205b2bb78475eb8e81
+  role: library_portfolio_roadmap_subset
+  architecture_generation: CURRENT_BLUEPRINT
+  authority_class: PLANNING_CONTEXT
+  lifecycle: CURRENT_PLANNING_ONLY_ROADMAP
+  source_mode: generated_analysis_subset
+  generator_if_any: null
+  governing_higher_authority: Blueprint canonical portfolio roadmap source
+  freshness_evidence: CURRENT_AT_EVIDENCE_HEAD
+  supersession_relation: NONE
+  mutation_risk: LOW
+  consumer_scope: library_target_state_and_roadmap
+  assistant_visibility: ALLOW_SUPPORTING_ONLY
+  confidence: HIGH
+  notes: Planning-only; execution_authority=false and portfolio HOLD/readiness gates apply.
+stage_disposition:
+  result: PASS_FOR_DOCUMENT_ARTIFACT_AUTHORITY_REGISTRY_WITH_L5_DECISIONS_READY
+  l4_complete: true
+  source_mutation_performed: false
+  broad_rewrite_authorized: false
+  cleanup_authorized: false
+  next_stage: L5_CAPABILITY_RECONCILIATION

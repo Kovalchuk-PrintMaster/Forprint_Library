@@ -1,0 +1,41 @@
+result: PASS_CORRECTED_AFTER_HUMAN_REVIEW
+module_id: forprint_library
+branch: feature/library-calculator-input-contract-v01
+head: bba52bf6001f256a5c13ea7dbe175336b431754c
+upstream: bba52bf6001f256a5c13ea7dbe175336b431754c
+selected_file_count: 178
+created_blocks:
+- 01_domain_semantics_catalog
+- 02_dictionaries_resolution_profiles
+- 03_contracts_cross_module_consumption
+- 04_exports_previews_examples
+- 05_validation_tests_quality
+- 06_coordination_governance_intake
+- 07_documentation_architecture
+- 10_legacy_unknown_unclassified
+block_counts:
+  01_domain_semantics_catalog: 20
+  02_dictionaries_resolution_profiles: 36
+  03_contracts_cross_module_consumption: 16
+  04_exports_previews_examples: 15
+  05_validation_tests_quality: 32
+  06_coordination_governance_intake: 30
+  07_documentation_architecture: 28
+  10_legacy_unknown_unclassified: 1
+low_confidence_count: 0
+untracked_selected_count: 0
+source_non_tmp_git_status_unchanged: true
+mutation_performed_outside_tmp: false
+manual_review_correction:
+  version: v0_1
+  excluded_paths:
+    tmp.py: local L1 audit-script copy; not module capability evidence
+    .gitignore: Git housekeeping metadata; excluded from capability inventory
+    contracts/placeholders/.gitkeep: empty directory placeholder; excluded from capability inventory
+  reassigned_path_count: 11
+  ui_design_system_current_implementation_proven: false
+  sop_media_current_implementation_proven: false
+outputs:
+  inventory_yaml: tmp/module_knowledge_analysis/forprint_library/l1_inventory/module_inventory.yaml
+  inventory_tsv: tmp/module_knowledge_analysis/forprint_library/l1_inventory/module_inventory.tsv
+  summary: tmp/module_knowledge_analysis/forprint_library/l1_inventory/segmentation_summary.md
