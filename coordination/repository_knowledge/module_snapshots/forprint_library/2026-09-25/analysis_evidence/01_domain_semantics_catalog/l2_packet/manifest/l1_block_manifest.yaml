@@ -1,0 +1,45 @@
+schema_version: forprint_module_knowledge_analysis_block_manifest_v0_1
+module_id: forprint_library
+stage: L1_INVENTORY_AND_SEGMENTATION
+block_id: 01_domain_semantics_catalog
+title: Domain semantics and catalog
+purpose: Products, services, materials, operations, print modes, finishing options, configurable-product semantics, canonical
+  IDs and aliases.
+mutation_performed: false
+selection_method: L1 deterministic classification plus bounded human review correction v0.1; classification remains preliminary
+  until L2 analysis
+file_count: 20
+source_paths:
+- app/forprint_library/catalog/__init__.py
+- app/forprint_library/catalog/loader.py
+- app/forprint_library/catalog/models.py
+- app/forprint_library/catalog/validation.py
+- catalog/configurable_products/business_card.yaml
+- catalog/finishing_options.yaml
+- catalog/materials.yaml
+- catalog/operations.yaml
+- catalog/print_modes.yaml
+- catalog/product_families.yaml
+- catalog/seeds/catalog_seed_v0_1.yaml
+- schemas/catalog_seed.schema.yaml
+- schemas/configurable_product.schema.yaml
+- schemas/finishing_option.schema.yaml
+- schemas/material.schema.yaml
+- schemas/operation.schema.yaml
+- schemas/print_mode.schema.yaml
+- schemas/product_family.schema.yaml
+- scripts/coordination/export_coordination_foundation_alignment_closure.py
+- scripts/coordination/validate_coordination_foundation_alignment.py
+primary_capability_hypotheses:
+- canonical catalog semantics
+- product/material/operation reference definitions
+- configurable product semantics
+cross_block_dependencies:
+- block_id: 05_validation_tests_quality
+  linked_file_count: 1
+documents_present: []
+tests_present: []
+generated_outputs_present: []
+legacy_candidates_present: []
+unknowns: []
+confidence: medium

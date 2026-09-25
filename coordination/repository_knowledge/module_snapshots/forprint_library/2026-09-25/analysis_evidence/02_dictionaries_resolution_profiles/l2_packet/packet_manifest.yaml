@@ -1,0 +1,477 @@
+schema_version: forprint_library_l2_analysis_packet_v0_1
+module_id: forprint_library
+block_id: 02_dictionaries_resolution_profiles
+purpose: Bounded evidence packet for sequential L2 analysis of Library dictionaries, resolution and naming/profile semantics.
+authority_statement: Analysis evidence only; no implementation/document/roadmap authority is granted by packet inclusion.
+selection_authority:
+  primary_population: tmp/module_knowledge_analysis/forprint_library/02_dictionaries_resolution_profiles/manifest.yaml
+  primary_population_count: 36
+  related_test_rule: L1 inventory rows with file_kind=test and secondary_blocks containing 02_dictionaries_resolution_profiles
+  related_test_count: 0
+  prior_block_analysis: tmp/module_knowledge_analysis/forprint_library/01_domain_semantics_catalog/analysis_report.md
+library_snapshot:
+  module_id: forprint_library
+  block_id: 02_dictionaries_resolution_profiles
+  branch: feature/library-calculator-input-contract-v01
+  head: bba52bf6001f256a5c13ea7dbe175336b431754c
+  upstream: bba52bf6001f256a5c13ea7dbe175336b431754c
+  head_matches_upstream: true
+  non_tmp_status_before: []
+  source_population_count: 36
+  related_test_count: 0
+blueprint_snapshot:
+  repository: forprint_system_blueprint
+  root: /srv/software_development/forprint-project/forprint_system_blueprint
+  branch: audit/blueprint-inventory-refresh-2026-07-29
+  head: fa14c0e7e845c02e0619ec1ea57c992d9684ff87
+  upstream: fa14c0e7e845c02e0619ec1ea57c992d9684ff87
+  status_short:
+  - M AGENTS.md
+  - ' M README.md'
+  - ' M coordination/bootstrap/START_HERE.md'
+  - ' M coordination/global_policy/current_execution_focus.md'
+  - ' M coordination/standards/automation/index.yaml'
+  - ' M indexes/README.md'
+  - ' M indexes/authorities.yaml'
+  - ' M indexes/contracts.yaml'
+  - ' M indexes/dependencies.json'
+  - ' M indexes/derivations.yaml'
+  - ' M indexes/document_catalog.yaml'
+  - ' M indexes/documents.yaml'
+  - ' M indexes/files.json'
+  - ' M indexes/governance.yaml'
+  - ' M indexes/incoming_requests.yaml'
+  - ' M indexes/index.yaml'
+  - ' M indexes/knowledge_summary.yaml'
+  - ' M indexes/legacy.yaml'
+  - ' M indexes/modules.yaml'
+  - ' M indexes/prompts.yaml'
+  - ' M indexes/references.json'
+  - ' M indexes/review_candidates.yaml'
+  - ' M indexes/roadmaps.yaml'
+  - ' M indexes/source_coverage.yaml'
+  - ' M machine/contracts.yaml'
+  - ' M machine/data_flows.yaml'
+  - ' M machine/data_objects.yaml'
+  - ' M machine/domains.yaml'
+  - ' M machine/future_channel_readiness.yaml'
+  - ' M machine/impact_rules.yaml'
+  - ' M machine/module_identity_registry.yaml'
+  - ' M machine/module_manifest_schema.yaml'
+  - ' M machine/module_status_report_schema.yaml'
+  - ' M machine/modules.yaml'
+  - ' M machine/ownership.yaml'
+  - ' M machine/system_control_flows.yaml'
+  - ' M machine/system_layers.yaml'
+  - ?? coordination/bootstrap/ACTIVE_RECONCILIATION_QUESTIONS.yaml
+  - ?? coordination/bootstrap/assistant_context_system_specs_v0_1.yaml
+  - ?? coordination/bootstrap/index_v0_1.yaml
+  - ?? coordination/bootstrap/parallel_workstream_current_snapshot_v0_1.yaml
+  - ?? coordination/continuity/events/000066__evt-u180j-plan-20260921t102727249527__4dd85ce6ef7f.yaml
+  - ?? coordination/continuity/events/000067__evt-u180j-activate-20260921t102955259861__ad000c7b9af2.yaml
+  - ?? coordination/continuity/execution_attempts/cf10-u180j-a003__1c8b6804277a.yaml
+  - ?? coordination/continuity/execution_attempts/cf10-u180j-a003__571944de6a4e.yaml
+  - ?? coordination/continuity/execution_attempts/cf10-u180j-a004__bc64bdd79056.yaml
+  - ?? coordination/continuity/execution_attempts/cf10-u180j-a004__be56313f5c2f.yaml
+  - ?? coordination/continuity/projections/BLOCKERS.yaml
+  - ?? coordination/continuity/projections/CURRENT_WORKFRONT.yaml
+  - ?? coordination/continuity/projections/DECISIONS.yaml
+  - ?? coordination/continuity/projections/NEXT_HORIZON.yaml
+  - ?? coordination/continuity/projections/RECENT_ACTIVITY.yaml
+  - ?? coordination/continuity/projections/SOURCE_STATE.yaml
+  - ?? coordination/continuity/projections/UNRECONCILED_CURRENT_DELTA.yaml
+  - ?? coordination/continuity/projections/WORKER_PORTFOLIO.yaml
+  - ?? coordination/internal_work/blueprint/worker_tasks/cf10_zero_stage_dispatch_boundary_regression_v0_1.yaml
+  - ?? coordination/roadmap_execution/
+  - ?? coordination/roadmaps/details/forprint_system_blueprint/control_foundation_near_horizon_program_v0_1.yaml
+  - ?? coordination/standards/automation/control_plane/bootstrap_task_context_mode_v0_1.yaml
+  - ?? coordination/standards/automation/control_plane/bootstrap_worker_runtime_profile_v0_1.yaml
+  - ?? coordination/standards/automation/control_plane/module_bootstrap_execution_policy_v0_1.yaml
+  - ?? coordination/standards/automation/control_plane/module_bootstrap_prompt_requirements_v0_1.yaml
+  - ?? coordination/standards/automation/worker_candidate_promotion_contract_v0_1.yaml
+  - ?? coordination/standards/automation/worker_runtime_adapter_registry_contract_v0_1.yaml
+  - ?? coordination/standards/automation/worker_runtime_benchmark_contract_v0_1.yaml
+  - ?? coordination/standards/automation/worker_task_envelope_contract_v0_1.yaml
+  - ?? coordination/work_fronts/cf10_internal_dispatch_exception_real_workspace_v0_1.yaml
+  - ?? coordination/work_fronts/cf10_internal_task_context_adapter_v0_1.yaml
+  - ?? coordination/work_fronts/cf10_isolated_workspace_dispatch_preflight_v0_1.yaml
+  - ?? coordination/work_fronts/cf10_multi_provider_runtime_registry_v0_1.yaml
+  - ?? coordination/work_fronts/cf10_runtime_standards_index_convergence_v0_1.yaml
+  - ?? coordination/work_fronts/cf10_worker_runtime_foundation_v0_1.yaml
+  - ?? coordination/work_fronts/cf10_zero_stage_dispatch_boundary_regression_v0_1.yaml
+  - ?? indexes/execution_dependency_graph.yaml
+  - ?? indexes/generator_inventory.yaml
+  - ?? scripts/coordination/build_worker_invocation.py
+  - ?? scripts/coordination/control_plane/context/
+  - ?? scripts/coordination/control_plane/tasking/
+  - ?? scripts/coordination/roadmap_execution_reconciliation.py
+  - ?? scripts/validation/control_plane/context/
+  - ?? scripts/validation/control_plane/worker_runtime/
+  - ?? scripts/validation/validate_cf10_internal_dispatch_exception_real_workspace_v0_1.py
+  - ?? scripts/validation/validate_cf10_internal_task_context_adapter_v0_1.py
+  - ?? scripts/validation/validate_cf10_multi_provider_runtime_registry_v0_1.py
+  - ?? scripts/validation/validate_console_worker_adapter_v0_1.py
+  - ?? scripts/validation/validate_roadmap_execution_reconciliation_v0_1.py
+  - ?? scripts/validation/validate_worker_runtime_foundation_v0_1.py
+  - ?? tests/coordination/control_plane/context/
+  - ?? tests/coordination/control_plane/tasking/
+  - ?? tests/coordination/control_plane/test_cf09_dispatcher_assistant_ack_gate_v0_1.py
+  - ?? tests/coordination/test_console_worker_adapter_v0_1.py
+  - ?? tests/validation/test_cf10_multi_provider_runtime_registry_contract_v0_1.py
+  - ?? tests/validation/test_roadmap_execution_dependency_registration_v0_1.py
+  - ?? tests/validation/test_roadmap_execution_reconciliation_v0_1.py
+  note: Blueprint status is captured as read-only context. No Blueprint mutation is performed.
+primary_source_paths:
+- app/forprint_library/catalog/registry.py
+- app/forprint_library/dictionaries/__init__.py
+- app/forprint_library/dictionaries/loader.py
+- app/forprint_library/dictionaries/models.py
+- app/forprint_library/dictionaries/resolver.py
+- app/forprint_library/dictionaries/validation.py
+- app/forprint_library/semantic/__init__.py
+- app/forprint_library/semantic/aliases.py
+- app/forprint_library/semantic/resolver.py
+- dictionaries/alert_event_status.yaml
+- dictionaries/alert_rule_type.yaml
+- dictionaries/alert_severity.yaml
+- dictionaries/contractor_reference_status.yaml
+- dictionaries/deadline_type.yaml
+- dictionaries/entity_type.yaml
+- dictionaries/material_requirement_status.yaml
+- dictionaries/notification_status.yaml
+- dictionaries/order_line_status.yaml
+- dictionaries/order_status.yaml
+- dictionaries/payment_status.yaml
+- dictionaries/product_service_reference_status.yaml
+- dictionaries/production_status.yaml
+- dictionaries/reference_resolution_status.yaml
+- dictionaries/shared_operational_dictionary_v0_1.yaml
+- dictionaries/source_system.yaml
+- dictionaries/unit.yaml
+- dictionaries/workflow_stage_status.yaml
+- dictionaries/workflow_status.yaml
+- schemas/dictionary_entry.schema.yaml
+- schemas/shared_operational_dictionary.schema.yaml
+- scripts/export_dictionary_policy_docs.py
+- scripts/export_shared_dictionary_coordination_artifacts.py
+- scripts/export_shared_operational_dictionaries.py
+- scripts/preview_shared_operational_dictionaries.py
+- scripts/reference_contract/validate_library_reference_contract.py
+- scripts/validate_shared_operational_dictionaries.py
+related_test_paths: []
+provenance_item_count: 52
+provenance:
+- role: l1_block_manifest
+  source_repo: forprint_library
+  source_path: /srv/software_development/forprint-project/forprint_library/tmp/module_knowledge_analysis/forprint_library/02_dictionaries_resolution_profiles/manifest.yaml
+  packet_path: /srv/software_development/forprint-project/forprint_library/tmp/module_knowledge_analysis/forprint_library/02_dictionaries_resolution_profiles/l2_packet/manifest/l1_block_manifest.yaml
+  size_bytes: 2466
+  sha256: bc7588a41fccaacb8e375ff2a067b7ebd396bc1a1c3def68bcfb2c8307abfbbe
+- role: primary_block_source
+  source_repo: forprint_library
+  source_path: /srv/software_development/forprint-project/forprint_library/app/forprint_library/catalog/registry.py
+  packet_path: /srv/software_development/forprint-project/forprint_library/tmp/module_knowledge_analysis/forprint_library/02_dictionaries_resolution_profiles/l2_packet/primary_source/app/forprint_library/catalog/registry.py
+  size_bytes: 1889
+  sha256: 4accda5226cfcb36b5479dd867e70bff4e3a42ae3acc0200f9a88c78ca924122
+- role: primary_block_source
+  source_repo: forprint_library
+  source_path: /srv/software_development/forprint-project/forprint_library/app/forprint_library/dictionaries/__init__.py
+  packet_path: /srv/software_development/forprint-project/forprint_library/tmp/module_knowledge_analysis/forprint_library/02_dictionaries_resolution_profiles/l2_packet/primary_source/app/forprint_library/dictionaries/__init__.py
+  size_bytes: 625
+  sha256: 7f569dd948289aa54125ed16a669a409c1b8946a642f6ec471aa4ddbecb9f968
+- role: primary_block_source
+  source_repo: forprint_library
+  source_path: /srv/software_development/forprint-project/forprint_library/app/forprint_library/dictionaries/loader.py
+  packet_path: /srv/software_development/forprint-project/forprint_library/tmp/module_knowledge_analysis/forprint_library/02_dictionaries_resolution_profiles/l2_packet/primary_source/app/forprint_library/dictionaries/loader.py
+  size_bytes: 1441
+  sha256: b7ae36524531b2a3a12fd5ca7797655654a0265d409b3855d437fe4c853fe970
+- role: primary_block_source
+  source_repo: forprint_library
+  source_path: /srv/software_development/forprint-project/forprint_library/app/forprint_library/dictionaries/models.py
+  packet_path: /srv/software_development/forprint-project/forprint_library/tmp/module_knowledge_analysis/forprint_library/02_dictionaries_resolution_profiles/l2_packet/primary_source/app/forprint_library/dictionaries/models.py
+  size_bytes: 2330
+  sha256: e2cca60a2b9188438bbf518ceb677071124629b306c7703742c76fb60392ee59
+- role: primary_block_source
+  source_repo: forprint_library
+  source_path: /srv/software_development/forprint-project/forprint_library/app/forprint_library/dictionaries/resolver.py
+  packet_path: /srv/software_development/forprint-project/forprint_library/tmp/module_knowledge_analysis/forprint_library/02_dictionaries_resolution_profiles/l2_packet/primary_source/app/forprint_library/dictionaries/resolver.py
+  size_bytes: 3717
+  sha256: 189e7c59f1317fa52cece0c9e82bc629781507160c655024d77270cac534d386
+- role: primary_block_source
+  source_repo: forprint_library
+  source_path: /srv/software_development/forprint-project/forprint_library/app/forprint_library/dictionaries/validation.py
+  packet_path: /srv/software_development/forprint-project/forprint_library/tmp/module_knowledge_analysis/forprint_library/02_dictionaries_resolution_profiles/l2_packet/primary_source/app/forprint_library/dictionaries/validation.py
+  size_bytes: 6380
+  sha256: 484a9539f2970a4c97c08ff9e8dcf1ffe8b13df701898991325da806f4cd9a70
+- role: primary_block_source
+  source_repo: forprint_library
+  source_path: /srv/software_development/forprint-project/forprint_library/app/forprint_library/semantic/__init__.py
+  packet_path: /srv/software_development/forprint-project/forprint_library/tmp/module_knowledge_analysis/forprint_library/02_dictionaries_resolution_profiles/l2_packet/primary_source/app/forprint_library/semantic/__init__.py
+  size_bytes: 146
+  sha256: 6e5931da8e86c5ab2005f59adbf92ceb08ab443b22a4bc0b9faca2e59cb6ce9e
+- role: primary_block_source
+  source_repo: forprint_library
+  source_path: /srv/software_development/forprint-project/forprint_library/app/forprint_library/semantic/aliases.py
+  packet_path: /srv/software_development/forprint-project/forprint_library/tmp/module_knowledge_analysis/forprint_library/02_dictionaries_resolution_profiles/l2_packet/primary_source/app/forprint_library/semantic/aliases.py
+  size_bytes: 139
+  sha256: 1011b9cec07be2a87eab3975a88d1620f0e643e1c3776933c8bd3f9dcf51b4ec
+- role: primary_block_source
+  source_repo: forprint_library
+  source_path: /srv/software_development/forprint-project/forprint_library/app/forprint_library/semantic/resolver.py
+  packet_path: /srv/software_development/forprint-project/forprint_library/tmp/module_knowledge_analysis/forprint_library/02_dictionaries_resolution_profiles/l2_packet/primary_source/app/forprint_library/semantic/resolver.py
+  size_bytes: 370
+  sha256: ca3c504ec1773b0f160ea2fb77c6c10f18fd81bf8c86fec26cb28d3fdc121e76
+- role: primary_block_source
+  source_repo: forprint_library
+  source_path: /srv/software_development/forprint-project/forprint_library/dictionaries/alert_event_status.yaml
+  packet_path: /srv/software_development/forprint-project/forprint_library/tmp/module_knowledge_analysis/forprint_library/02_dictionaries_resolution_profiles/l2_packet/primary_source/dictionaries/alert_event_status.yaml
+  size_bytes: 2626
+  sha256: a23bb774b111f59466aae469e088dc7d63cb57748f09a5467bb6c08510f6f11c
+- role: primary_block_source
+  source_repo: forprint_library
+  source_path: /srv/software_development/forprint-project/forprint_library/dictionaries/alert_rule_type.yaml
+  packet_path: /srv/software_development/forprint-project/forprint_library/tmp/module_knowledge_analysis/forprint_library/02_dictionaries_resolution_profiles/l2_packet/primary_source/dictionaries/alert_rule_type.yaml
+  size_bytes: 3145
+  sha256: 14d8dd7a8c4213f3f362f74dc68f00398f6de43acf12754b111ca7ea52358793
+- role: primary_block_source
+  source_repo: forprint_library
+  source_path: /srv/software_development/forprint-project/forprint_library/dictionaries/alert_severity.yaml
+  packet_path: /srv/software_development/forprint-project/forprint_library/tmp/module_knowledge_analysis/forprint_library/02_dictionaries_resolution_profiles/l2_packet/primary_source/dictionaries/alert_severity.yaml
+  size_bytes: 2167
+  sha256: c8ba973ece4ba1d75f6844807094552a410cb17923baff3e72030c9611f58f8f
+- role: primary_block_source
+  source_repo: forprint_library
+  source_path: /srv/software_development/forprint-project/forprint_library/dictionaries/contractor_reference_status.yaml
+  packet_path: /srv/software_development/forprint-project/forprint_library/tmp/module_knowledge_analysis/forprint_library/02_dictionaries_resolution_profiles/l2_packet/primary_source/dictionaries/contractor_reference_status.yaml
+  size_bytes: 3060
+  sha256: 825161ec4fa623013d6ff096e5a1ed8eb98262cd8297bbc0b013af19fcd2d5a0
+- role: primary_block_source
+  source_repo: forprint_library
+  source_path: /srv/software_development/forprint-project/forprint_library/dictionaries/deadline_type.yaml
+  packet_path: /srv/software_development/forprint-project/forprint_library/tmp/module_knowledge_analysis/forprint_library/02_dictionaries_resolution_profiles/l2_packet/primary_source/dictionaries/deadline_type.yaml
+  size_bytes: 2565
+  sha256: 7d395319aef94d965d85a2206d40a1ca7566088862e634562500f0d35058d288
+- role: primary_block_source
+  source_repo: forprint_library
+  source_path: /srv/software_development/forprint-project/forprint_library/dictionaries/entity_type.yaml
+  packet_path: /srv/software_development/forprint-project/forprint_library/tmp/module_knowledge_analysis/forprint_library/02_dictionaries_resolution_profiles/l2_packet/primary_source/dictionaries/entity_type.yaml
+  size_bytes: 8801
+  sha256: 2337bdaee655906f5aae179c63d3051c278a3808d8a75b4e840a0449b11d9165
+- role: primary_block_source
+  source_repo: forprint_library
+  source_path: /srv/software_development/forprint-project/forprint_library/dictionaries/material_requirement_status.yaml
+  packet_path: /srv/software_development/forprint-project/forprint_library/tmp/module_knowledge_analysis/forprint_library/02_dictionaries_resolution_profiles/l2_packet/primary_source/dictionaries/material_requirement_status.yaml
+  size_bytes: 3710
+  sha256: 68c49b1fd2ea2977fd5fec9d14d29ab8daf4552c0f5269928d623e76d2f39115
+- role: primary_block_source
+  source_repo: forprint_library
+  source_path: /srv/software_development/forprint-project/forprint_library/dictionaries/notification_status.yaml
+  packet_path: /srv/software_development/forprint-project/forprint_library/tmp/module_knowledge_analysis/forprint_library/02_dictionaries_resolution_profiles/l2_packet/primary_source/dictionaries/notification_status.yaml
+  size_bytes: 2559
+  sha256: 6136157eb6d835ef4431a0e93dd1f24d6487bd8cba766485797d21e5699297fc
+- role: primary_block_source
+  source_repo: forprint_library
+  source_path: /srv/software_development/forprint-project/forprint_library/dictionaries/order_line_status.yaml
+  packet_path: /srv/software_development/forprint-project/forprint_library/tmp/module_knowledge_analysis/forprint_library/02_dictionaries_resolution_profiles/l2_packet/primary_source/dictionaries/order_line_status.yaml
+  size_bytes: 3525
+  sha256: 97c12139af6050761ae34773888e48e997c4af033c0786342393edd5544b9e03
+- role: primary_block_source
+  source_repo: forprint_library
+  source_path: /srv/software_development/forprint-project/forprint_library/dictionaries/order_status.yaml
+  packet_path: /srv/software_development/forprint-project/forprint_library/tmp/module_knowledge_analysis/forprint_library/02_dictionaries_resolution_profiles/l2_packet/primary_source/dictionaries/order_status.yaml
+  size_bytes: 4144
+  sha256: 8dd44cd6067cf0aa612b38664edb3f491bd2a41ede53be2ace7fecc5f02e00a7
+- role: primary_block_source
+  source_repo: forprint_library
+  source_path: /srv/software_development/forprint-project/forprint_library/dictionaries/payment_status.yaml
+  packet_path: /srv/software_development/forprint-project/forprint_library/tmp/module_knowledge_analysis/forprint_library/02_dictionaries_resolution_profiles/l2_packet/primary_source/dictionaries/payment_status.yaml
+  size_bytes: 3518
+  sha256: daf7c804d1362d54c83a464cd949615e5f640848147cdfbf8200c135e576df3c
+- role: primary_block_source
+  source_repo: forprint_library
+  source_path: /srv/software_development/forprint-project/forprint_library/dictionaries/product_service_reference_status.yaml
+  packet_path: /srv/software_development/forprint-project/forprint_library/tmp/module_knowledge_analysis/forprint_library/02_dictionaries_resolution_profiles/l2_packet/primary_source/dictionaries/product_service_reference_status.yaml
+  size_bytes: 3040
+  sha256: f3206fe457cfad223b804ccbb3ed6822e38c8d57acf33e039902b84015a3f1e3
+- role: primary_block_source
+  source_repo: forprint_library
+  source_path: /srv/software_development/forprint-project/forprint_library/dictionaries/production_status.yaml
+  packet_path: /srv/software_development/forprint-project/forprint_library/tmp/module_knowledge_analysis/forprint_library/02_dictionaries_resolution_profiles/l2_packet/primary_source/dictionaries/production_status.yaml
+  size_bytes: 3473
+  sha256: 68dc2e2dd1e2e54be8f49514c95258f6d6012f166d6d0683ba9cc7fc20dded27
+- role: primary_block_source
+  source_repo: forprint_library
+  source_path: /srv/software_development/forprint-project/forprint_library/dictionaries/reference_resolution_status.yaml
+  packet_path: /srv/software_development/forprint-project/forprint_library/tmp/module_knowledge_analysis/forprint_library/02_dictionaries_resolution_profiles/l2_packet/primary_source/dictionaries/reference_resolution_status.yaml
+  size_bytes: 2911
+  sha256: 3dc876532ae562dc9d7cf00f065f84655a6d2d66d955470bee4d5efc56d45e64
+- role: primary_block_source
+  source_repo: forprint_library
+  source_path: /srv/software_development/forprint-project/forprint_library/dictionaries/shared_operational_dictionary_v0_1.yaml
+  packet_path: /srv/software_development/forprint-project/forprint_library/tmp/module_knowledge_analysis/forprint_library/02_dictionaries_resolution_profiles/l2_packet/primary_source/dictionaries/shared_operational_dictionary_v0_1.yaml
+  size_bytes: 63700
+  sha256: 3610bb44537903fa66fdd7be02deacabcd6b073e69d2a44c80a8a8c075056d26
+- role: primary_block_source
+  source_repo: forprint_library
+  source_path: /srv/software_development/forprint-project/forprint_library/dictionaries/source_system.yaml
+  packet_path: /srv/software_development/forprint-project/forprint_library/tmp/module_knowledge_analysis/forprint_library/02_dictionaries_resolution_profiles/l2_packet/primary_source/dictionaries/source_system.yaml
+  size_bytes: 6495
+  sha256: 1773c8268f22815e8647b4d682bd1e21ba335fd826700481636d55ceecc4f039
+- role: primary_block_source
+  source_repo: forprint_library
+  source_path: /srv/software_development/forprint-project/forprint_library/dictionaries/unit.yaml
+  packet_path: /srv/software_development/forprint-project/forprint_library/tmp/module_knowledge_analysis/forprint_library/02_dictionaries_resolution_profiles/l2_packet/primary_source/dictionaries/unit.yaml
+  size_bytes: 4242
+  sha256: e221517b3fcfee9276bb1f87c2113fe713024db612bffeab2f09e70800e3f8fb
+- role: primary_block_source
+  source_repo: forprint_library
+  source_path: /srv/software_development/forprint-project/forprint_library/dictionaries/workflow_stage_status.yaml
+  packet_path: /srv/software_development/forprint-project/forprint_library/tmp/module_knowledge_analysis/forprint_library/02_dictionaries_resolution_profiles/l2_packet/primary_source/dictionaries/workflow_stage_status.yaml
+  size_bytes: 4415
+  sha256: 011f995de7b642c1c98dbfa8b1ff32d35b5cea5cf4a80ff26d52adbcf810e3df
+- role: primary_block_source
+  source_repo: forprint_library
+  source_path: /srv/software_development/forprint-project/forprint_library/dictionaries/workflow_status.yaml
+  packet_path: /srv/software_development/forprint-project/forprint_library/tmp/module_knowledge_analysis/forprint_library/02_dictionaries_resolution_profiles/l2_packet/primary_source/dictionaries/workflow_status.yaml
+  size_bytes: 3061
+  sha256: edb3c09b793a0b4bf59ccf9785cdef98ef5dd1db1df1661089dc799404e5ed8e
+- role: primary_block_source
+  source_repo: forprint_library
+  source_path: /srv/software_development/forprint-project/forprint_library/schemas/dictionary_entry.schema.yaml
+  packet_path: /srv/software_development/forprint-project/forprint_library/tmp/module_knowledge_analysis/forprint_library/02_dictionaries_resolution_profiles/l2_packet/primary_source/schemas/dictionary_entry.schema.yaml
+  size_bytes: 741
+  sha256: ce8d1fa752b0e29b55dc053012f1ddd6c6b64219d55be02147b8985b345cee16
+- role: primary_block_source
+  source_repo: forprint_library
+  source_path: /srv/software_development/forprint-project/forprint_library/schemas/shared_operational_dictionary.schema.yaml
+  packet_path: /srv/software_development/forprint-project/forprint_library/tmp/module_knowledge_analysis/forprint_library/02_dictionaries_resolution_profiles/l2_packet/primary_source/schemas/shared_operational_dictionary.schema.yaml
+  size_bytes: 4238
+  sha256: 385e35f4b33d6e41ad6452ccc23e3d7db8ca9b9afa805614b571b049d354d02b
+- role: primary_block_source
+  source_repo: forprint_library
+  source_path: /srv/software_development/forprint-project/forprint_library/scripts/export_dictionary_policy_docs.py
+  packet_path: /srv/software_development/forprint-project/forprint_library/tmp/module_knowledge_analysis/forprint_library/02_dictionaries_resolution_profiles/l2_packet/primary_source/scripts/export_dictionary_policy_docs.py
+  size_bytes: 6885
+  sha256: 53a87594cc61cf44667c22a5fe0795c1ef3bd70d9a4aa4f980b2e1fbdd8bd93f
+- role: primary_block_source
+  source_repo: forprint_library
+  source_path: /srv/software_development/forprint-project/forprint_library/scripts/export_shared_dictionary_coordination_artifacts.py
+  packet_path: /srv/software_development/forprint-project/forprint_library/tmp/module_knowledge_analysis/forprint_library/02_dictionaries_resolution_profiles/l2_packet/primary_source/scripts/export_shared_dictionary_coordination_artifacts.py
+  size_bytes: 15514
+  sha256: 528fbb920edfed9c8e9247181f0cf8a0a41e78f665b695453831a8d90411e00a
+- role: primary_block_source
+  source_repo: forprint_library
+  source_path: /srv/software_development/forprint-project/forprint_library/scripts/export_shared_operational_dictionaries.py
+  packet_path: /srv/software_development/forprint-project/forprint_library/tmp/module_knowledge_analysis/forprint_library/02_dictionaries_resolution_profiles/l2_packet/primary_source/scripts/export_shared_operational_dictionaries.py
+  size_bytes: 14278
+  sha256: 1452c1e03b008d503db3bcf3aae322b8e546e93cfb455e73c91e315a31cf0f6e
+- role: primary_block_source
+  source_repo: forprint_library
+  source_path: /srv/software_development/forprint-project/forprint_library/scripts/preview_shared_operational_dictionaries.py
+  packet_path: /srv/software_development/forprint-project/forprint_library/tmp/module_knowledge_analysis/forprint_library/02_dictionaries_resolution_profiles/l2_packet/primary_source/scripts/preview_shared_operational_dictionaries.py
+  size_bytes: 2750
+  sha256: 085cccc6240fd52f8daf0c6364202d9c0dbbdd361074503981b329ce2719a024
+- role: primary_block_source
+  source_repo: forprint_library
+  source_path: /srv/software_development/forprint-project/forprint_library/scripts/reference_contract/validate_library_reference_contract.py
+  packet_path: /srv/software_development/forprint-project/forprint_library/tmp/module_knowledge_analysis/forprint_library/02_dictionaries_resolution_profiles/l2_packet/primary_source/scripts/reference_contract/validate_library_reference_contract.py
+  size_bytes: 9144
+  sha256: e712bbf253b28f7a93ba526daab1f9fa6952f32727404fa97c851f0bbded4d4c
+- role: primary_block_source
+  source_repo: forprint_library
+  source_path: /srv/software_development/forprint-project/forprint_library/scripts/validate_shared_operational_dictionaries.py
+  packet_path: /srv/software_development/forprint-project/forprint_library/tmp/module_knowledge_analysis/forprint_library/02_dictionaries_resolution_profiles/l2_packet/primary_source/scripts/validate_shared_operational_dictionaries.py
+  size_bytes: 4533
+  sha256: b71c23a35896c8c02e25b4e1d8d9bd2d9b392c6eb8d7f6b4a263c0932cf25d40
+- role: l0_scope/authority
+  source_repo: forprint_library
+  source_path: /srv/software_development/forprint-project/forprint_library/tmp/module_knowledge_analysis/forprint_library/00_preflight/module_scope_and_authority.md
+  packet_path: /srv/software_development/forprint-project/forprint_library/tmp/module_knowledge_analysis/forprint_library/02_dictionaries_resolution_profiles/l2_packet/context/local/tmp/module_knowledge_analysis/forprint_library/00_preflight/module_scope_and_authority.md
+  size_bytes: 26848
+  sha256: 2f50ee3e571d1aa08749bef6ccc96c08b94c902a405209f6d6e44133c62f6233
+- role: l1_closeout
+  source_repo: forprint_library
+  source_path: /srv/software_development/forprint-project/forprint_library/tmp/module_knowledge_analysis/forprint_library/l1_inventory/l1_closeout.md
+  packet_path: /srv/software_development/forprint-project/forprint_library/tmp/module_knowledge_analysis/forprint_library/02_dictionaries_resolution_profiles/l2_packet/context/local/tmp/module_knowledge_analysis/forprint_library/l1_inventory/l1_closeout.md
+  size_bytes: 8043
+  sha256: e52e7ca3e2eaf27e7447d43b70bcd7582d7d896fd593a3f7cb278a8b82ec8971
+- role: l1_run_report
+  source_repo: forprint_library
+  source_path: /srv/software_development/forprint-project/forprint_library/tmp/module_knowledge_analysis/forprint_library/l1_inventory/run_report.yaml
+  packet_path: /srv/software_development/forprint-project/forprint_library/tmp/module_knowledge_analysis/forprint_library/02_dictionaries_resolution_profiles/l2_packet/context/local/tmp/module_knowledge_analysis/forprint_library/l1_inventory/run_report.yaml
+  size_bytes: 1725
+  sha256: dedb10a29bcc008ecb7f89c20faeb34bf3a2b88429477fd38164c3b3dcdcdaee
+- role: l1_segmentation_summary
+  source_repo: forprint_library
+  source_path: /srv/software_development/forprint-project/forprint_library/tmp/module_knowledge_analysis/forprint_library/l1_inventory/segmentation_summary.md
+  packet_path: /srv/software_development/forprint-project/forprint_library/tmp/module_knowledge_analysis/forprint_library/02_dictionaries_resolution_profiles/l2_packet/context/local/tmp/module_knowledge_analysis/forprint_library/l1_inventory/segmentation_summary.md
+  size_bytes: 2245
+  sha256: e5fc302c3578cb0a3f0dff2d797e38afcb0c1664f43f769bd54f4e372a90d34d
+- role: prior_l2_block_01_supporting_analysis
+  source_repo: forprint_library
+  source_path: /srv/software_development/forprint-project/forprint_library/tmp/module_knowledge_analysis/forprint_library/01_domain_semantics_catalog/analysis_report.md
+  packet_path: /srv/software_development/forprint-project/forprint_library/tmp/module_knowledge_analysis/forprint_library/02_dictionaries_resolution_profiles/l2_packet/context/local/tmp/module_knowledge_analysis/forprint_library/01_domain_semantics_catalog/analysis_report.md
+  size_bytes: 38430
+  sha256: 7124be275bed431331d250599bd11ac7ea8b7d40c3f5e8593072ec1f88dc3b67
+- role: blueprint_authority_or_provenance_context
+  source_repo: forprint_system_blueprint
+  source_path: /srv/software_development/forprint-project/forprint_system_blueprint/coordination/module_policy/forprint_library/module_policy.md
+  packet_path: /srv/software_development/forprint-project/forprint_library/tmp/module_knowledge_analysis/forprint_library/02_dictionaries_resolution_profiles/l2_packet/context/blueprint/coordination/module_policy/forprint_library/module_policy.md
+  size_bytes: 1848
+  sha256: 60010ad1b6ae83a18ee0828139708a4523d01c67a424143b7c427b70c3c5414c
+- role: blueprint_authority_or_provenance_context
+  source_repo: forprint_system_blueprint
+  source_path: /srv/software_development/forprint-project/forprint_system_blueprint/coordination/human_intent/modules/forprint_library.yaml
+  packet_path: /srv/software_development/forprint-project/forprint_library/tmp/module_knowledge_analysis/forprint_library/02_dictionaries_resolution_profiles/l2_packet/context/blueprint/coordination/human_intent/modules/forprint_library.yaml
+  size_bytes: 7366
+  sha256: 920d0f2d76b0d4af1667aef8514fc9c790c875ff8e6bfb8c045686be60eaf248
+- role: blueprint_authority_or_provenance_context
+  source_repo: forprint_system_blueprint
+  source_path: /srv/software_development/forprint-project/forprint_system_blueprint/coordination/repository_knowledge/module_knowledge_stabilization/library_pilot_execution_plan_v0_1.md
+  packet_path: /srv/software_development/forprint-project/forprint_library/tmp/module_knowledge_analysis/forprint_library/02_dictionaries_resolution_profiles/l2_packet/context/blueprint/coordination/repository_knowledge/module_knowledge_stabilization/library_pilot_execution_plan_v0_1.md
+  size_bytes: 2746
+  sha256: ebe71f6dcd1cb4fa8ea726e44d197ea5d13a6e14bae156461d102c01642b4d32
+- role: blueprint_authority_or_provenance_context
+  source_repo: forprint_system_blueprint
+  source_path: /srv/software_development/forprint-project/forprint_system_blueprint/coordination/repository_knowledge/roadmap_enrichment/current_state_reconciliation/forprint_library_reconciliation_20260923_v0_1.md
+  packet_path: /srv/software_development/forprint-project/forprint_library/tmp/module_knowledge_analysis/forprint_library/02_dictionaries_resolution_profiles/l2_packet/context/blueprint/coordination/repository_knowledge/roadmap_enrichment/current_state_reconciliation/forprint_library_reconciliation_20260923_v0_1.md
+  size_bytes: 3176
+  sha256: 30b8f3a6af8073b4f7dd1ba86e321b08ce4dac7bc3c8423229c4683f39f9142a
+- role: blueprint_authority_or_provenance_context
+  source_repo: forprint_system_blueprint
+  source_path: /srv/software_development/forprint-project/forprint_system_blueprint/coordination/repository_knowledge/roadmap_enrichment/current_state_reconciliation/forprint_library_reconciliation_20260923_v0_1.yaml
+  packet_path: /srv/software_development/forprint-project/forprint_library/tmp/module_knowledge_analysis/forprint_library/02_dictionaries_resolution_profiles/l2_packet/context/blueprint/coordination/repository_knowledge/roadmap_enrichment/current_state_reconciliation/forprint_library_reconciliation_20260923_v0_1.yaml
+  size_bytes: 3774
+  sha256: 163b241c0eb334af92df32ee2628d0a7abfa970d85980e1f36244dae5a91858c
+- role: blueprint_authority_or_provenance_context
+  source_repo: forprint_system_blueprint
+  source_path: /srv/software_development/forprint-project/forprint_system_blueprint/coordination/repository_knowledge/roadmap_enrichment/library_historical_source_enrichment_checkpoint_20260922_v0_1.yaml
+  packet_path: /srv/software_development/forprint-project/forprint_library/tmp/module_knowledge_analysis/forprint_library/02_dictionaries_resolution_profiles/l2_packet/context/blueprint/coordination/repository_knowledge/roadmap_enrichment/library_historical_source_enrichment_checkpoint_20260922_v0_1.yaml
+  size_bytes: 3565
+  sha256: f8b1013ace56fd388bf3ec7d09b731e68c01ad49eda05e3eace8bac80943a82d
+- role: blueprint_authority_or_provenance_context
+  source_repo: forprint_system_blueprint
+  source_path: /srv/software_development/forprint-project/forprint_system_blueprint/coordination/roadmaps/details/forprint_system_blueprint/portfolio_rebuild_inputs/2026-08-28__forprint_library__first_pass_owner_review_v0_2.md
+  packet_path: /srv/software_development/forprint-project/forprint_library/tmp/module_knowledge_analysis/forprint_library/02_dictionaries_resolution_profiles/l2_packet/context/blueprint/coordination/roadmaps/details/forprint_system_blueprint/portfolio_rebuild_inputs/2026-08-28__forprint_library__first_pass_owner_review_v0_2.md
+  size_bytes: 3552
+  sha256: 8d91915947cd5a0a45bde75b377a15ae9ed92fbf45ec5af739b38944a7a9f892
+- role: blueprint_authority_or_provenance_context
+  source_repo: forprint_system_blueprint
+  source_path: /srv/software_development/forprint-project/forprint_system_blueprint/coordination/roadmaps/details/forprint_system_blueprint/portfolio_rebuild_inputs/2026-08-27__cross_module_boundaries_and_open_questions_v0_1.md
+  packet_path: /srv/software_development/forprint-project/forprint_library/tmp/module_knowledge_analysis/forprint_library/02_dictionaries_resolution_profiles/l2_packet/context/blueprint/coordination/roadmaps/details/forprint_system_blueprint/portfolio_rebuild_inputs/2026-08-27__cross_module_boundaries_and_open_questions_v0_1.md
+  size_bytes: 5028
+  sha256: 266e530207af1312b9a72b27cb8fe31e0771407243afd1b01f01ed3bd852467d
+- role: blueprint_roadmap_subset
+  source_repo: forprint_system_blueprint
+  source_path: coordination/roadmaps/details/forprint_system_blueprint/portfolio_full_horizon_target_states_v0_1.yaml
+  packet_path: /srv/software_development/forprint-project/forprint_library/tmp/module_knowledge_analysis/forprint_library/02_dictionaries_resolution_profiles/l2_packet/context/blueprint_roadmap_subsets/portfolio_full_horizon_target_states_v0_1__forprint_library_subset.yaml
+  source_sha256: f19182e4af8c4e80edcfd74ce34da499989be46d18b86b856d6d210e4db7973b
+  generated_subset_sha256: fc8cfc6352faa31eae7a8892f938858abb5d909833fadfed25761ceaa4f1d62f
+  match_count: 1
+- role: blueprint_roadmap_subset
+  source_repo: forprint_system_blueprint
+  source_path: coordination/roadmaps/details/forprint_system_blueprint/portfolio_module_roadmap_approval_matrix_v0_1.yaml
+  packet_path: /srv/software_development/forprint-project/forprint_library/tmp/module_knowledge_analysis/forprint_library/02_dictionaries_resolution_profiles/l2_packet/context/blueprint_roadmap_subsets/portfolio_module_roadmap_approval_matrix_v0_1__forprint_library_subset.yaml
+  source_sha256: 5dd568a26524c8b2186556f79951662081575352d8b412026f88f5c83877736d
+  generated_subset_sha256: 952ccf44b5208c0e654ad512a3a0ec9b83bb99422bcca5d2ce548e864106d09f
+  match_count: 2

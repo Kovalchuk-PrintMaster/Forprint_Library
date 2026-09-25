@@ -1,0 +1,76 @@
+schema_version: forprint_library_l6_analysis_framework_v0_1
+module: forprint_library
+stage: L6_REALIZATION_AND_STRATEGIC_DIVERGENCE_MAPPING
+mode: snapshot_only
+action_now: none
+implementation_authority_created: false
+analysis_classes:
+  - REALIZED_AND_TRACKED
+  - PARTIALLY_REALIZED
+  - IMPLEMENTED_BUT_UNTRACKED
+  - ROADMAP_ONLY
+  - HISTORICAL_OR_SUPERSEDED
+  - STRATEGICALLY_DIVERGENT
+  - AMBIGUOUS_REQUIRES_REVIEW
+future_roadmap_actions:
+  - keep
+  - evolve
+  - migrate
+  - supersede
+  - investigate
+  - align_later
+questions:
+  - id: R01
+    group: realization
+    question: Which current Library capabilities are represented in the current roadmap and are supported by implementation/completion evidence?
+  - id: R02
+    group: realization
+    question: "Which roadmap items are only partially realized, and what exact implemented subset exists?"
+  - id: R03
+    group: realization
+    question: "Which implemented capabilities are missing from, understated by, or structurally different from the current roadmap?"
+  - id: R04
+    group: realization
+    question: Which roadmap intentions remain roadmap-only with no sufficient implementation evidence?
+  - id: D01
+    group: strategic_divergence
+    question: Which current implementation surfaces materially diverge from the modern strategic direction without requiring correction during this audit?
+  - id: D02
+    group: strategic_divergence
+    question: Which current or historical documents encode earlier architectural assumptions that must be preserved as roadmap-rebuild evidence?
+  - id: D03
+    group: strategic_divergence
+    question: "Which stale, superseded, conflicting or lagging status/coordination surfaces could misrepresent the actual module state if treated as current truth?"
+  - id: X01
+    group: cross_module
+    question: "Which Library capabilities expose cross-module contracts, reference semantics, ownership expectations or dependencies that must be reconciled at portfolio level?"
+  - id: X02
+    group: cross_module
+    question: Which future alignment or migration needs depend on other modules or portfolio-level authority and therefore must not be implemented locally yet?
+  - id: F01
+    group: future_roadmap_input
+    question: "For each material finding, should the future roadmap input be keep, evolve, migrate, supersede, investigate, or align_later?"
+  - id: F02
+    group: future_roadmap_input
+    question: What bounded alignment themes should be carried forward without converting them into immediate implementation tasks?
+required_output_fields:
+  capability_or_surface:
+    - current_state
+    - implementation_evidence
+    - roadmap_representation
+    - strategic_alignment
+    - divergence
+    - historical_context
+    - cross_module_dependency
+    - future_roadmap_input
+    - action_now
+  strategic_divergence_record:
+    - path_or_surface
+    - present_role
+    - design_era_or_context
+    - current_behavior_or_claim
+    - difference_from_modern_direction
+    - current_code_dependency
+    - authority_class
+    - future_roadmap_area
+    - action_now

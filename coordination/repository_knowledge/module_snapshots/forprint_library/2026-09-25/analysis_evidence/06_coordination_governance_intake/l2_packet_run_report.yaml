@@ -1,0 +1,26 @@
+result: PASS
+module_id: forprint_library
+block_id: 06_coordination_governance_intake
+library_branch: feature/library-calculator-input-contract-v01
+library_head: bba52bf6001f256a5c13ea7dbe175336b431754c
+library_upstream: bba52bf6001f256a5c13ea7dbe175336b431754c
+primary_source_count: 30
+related_test_count: 0
+prior_l2_context_count: 5
+blueprint_context_file_count: 8
+roadmap_subset_count: 2
+provenance_item_count: 50
+source_non_tmp_git_status_unchanged: true
+mutation_performed_outside_tmp: false
+tests_executed_by_builder: false
+make_executed_by_builder: false
+coordination_exporters_executed_by_builder: false
+status_or_index_rewritten_by_builder: false
+outputs:
+  packet_dir: tmp/module_knowledge_analysis/forprint_library/06_coordination_governance_intake/l2_packet
+  aggregate_markdown: tmp/module_knowledge_analysis/forprint_library/06_coordination_governance_intake/l2_block_06_analysis_packet.md
+  archive: tmp/module_knowledge_analysis/forprint_library/06_coordination_governance_intake/l2_block_06_analysis_packet.tar.gz
+hashes:
+  aggregate_markdown_sha256: 1505b0ff4668ae0da8e96142cf760ad79d122ee4ed7a05c5d545068a534bc79c
+  archive_sha256: b9b62461a3a5d5298e635daefa5c16c178f6d6200fff3b644ff75d6514d8d301
+  packet_manifest_sha256: cf49dfe196215903b590778dda41b913206544b2204443acbf80f6e512454eac

@@ -1,0 +1,60 @@
+metadata:
+  id: demo_shared_operational_dictionary
+  version: "0.1"
+  dictionary_status: draft_demo
+  schema_status: unstable_v0_1
+  usage: demo_only
+  contract_status: not_final_contract
+  owner_module: forprint_library
+
+demo_groups:
+  source_system:
+    - id: calculator_engine
+      label_uk: Calculator Engine
+      label_en: Calculator Engine
+      description: Demo source system value.
+      status: active
+      aliases:
+        - calculator
+      owner_module: forprint_library
+      dictionary_group: source_system
+      version: "0.1"
+      notes: Demo entry.
+
+  alert_severity:
+    - id: critical
+      label_uk: Критичний
+      label_en: Critical
+      description: Demo alert severity value.
+      status: active
+      aliases:
+        - crit
+      owner_module: forprint_library
+      dictionary_group: alert_severity
+      version: "0.1"
+      notes: Demo entry.
+
+  ambiguous_demo:
+    - id: first_demo_value
+      label_uk: Перше демо значення
+      label_en: First demo value
+      description: Demo ambiguous alias candidate.
+      status: active
+      aliases:
+        - shared_alias
+      owner_module: forprint_library
+      dictionary_group: demo_group
+      version: "0.1"
+      notes: Demo ambiguous entry.
+
+    - id: second_demo_value
+      label_uk: Друге демо значення
+      label_en: Second demo value
+      description: Demo ambiguous alias candidate.
+      status: active
+      aliases:
+        - shared_alias
+      owner_module: forprint_library
+      dictionary_group: demo_group
+      version: "0.1"
+      notes: Demo ambiguous entry.

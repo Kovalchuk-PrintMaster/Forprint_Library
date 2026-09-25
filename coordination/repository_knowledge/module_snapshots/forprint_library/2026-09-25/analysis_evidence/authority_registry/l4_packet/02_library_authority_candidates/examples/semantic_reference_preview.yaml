@@ -1,0 +1,118 @@
+metadata:
+  id: semantic_reference_preview_v0_1
+  version: "0.1"
+  owner_module: forprint_library
+  status: draft_semantic_reference_readiness_v0_1
+  usage: local_demo_and_downstream_handoff_only
+  contract_status: not_final_contract
+  production_catalog_status: not_production_catalog_database
+
+canonical_references:
+  - id: product_service.business_card.standard
+    reference_type: product_service
+    label_uk: Візитка стандартна
+    label_en: Standard business card
+    aliases:
+      - візитка
+      - визитка
+      - business card
+    readiness_status: ready_for_reference_example
+    downstream_usage:
+      calculator_engine: may_reference_id_for_pricing_input_context
+      forprint_operational_registry: may_store_reference_id_without_owning_catalog_meaning
+    forbidden_usage:
+      - pricing_formula
+      - warehouse_stock_truth
+      - operational_order_state
+
+  - id: material.paper.mondi_color_copy_300gsm
+    reference_type: material
+    label_uk: Папір Mondi Color Copy 300 г/м²
+    label_en: Mondi Color Copy 300gsm paper
+    aliases:
+      - mondi 300
+      - color copy 300
+      - папір 300
+    readiness_status: ready_for_reference_example
+    downstream_usage:
+      calculator_engine: may_reference_material_id_for_estimation_context
+      forprint_operational_registry: may_store_material_reference_projection
+    forbidden_usage:
+      - warehouse_quantity
+      - purchase_accounting_truth
+      - supplier_invoice_truth
+
+  - id: operation.print.digital_color
+    reference_type: operation
+    label_uk: Цифровий кольоровий друк
+    label_en: Digital color print
+    aliases:
+      - кольоровий друк
+      - digital color
+      - цифра колір
+    readiness_status: ready_for_reference_example
+    downstream_usage:
+      calculator_engine: may_reference_operation_id_for_rule_selection_context
+      forprint_operational_registry: may_store_operation_reference_projection
+    forbidden_usage:
+      - machine_runtime_truth
+      - operator_assignment
+      - production_execution_status
+
+  - id: template.business_card.90x50
+    reference_type: template
+    label_uk: Шаблон візитки 90x50 мм
+    label_en: Business card template 90x50 mm
+    aliases:
+      - 90x50
+      - business card 90x50
+      - візитка 90х50
+    readiness_status: ready_for_reference_example
+    downstream_usage:
+      calculator_engine: may_reference_template_id_for_size_context
+      forprint_operational_registry: may_store_template_reference_projection
+    forbidden_usage:
+      - final_layout_file_truth
+      - prepress_runtime_state
+      - production_approval_status
+
+alias_resolution_examples:
+  - input: візитка
+    expected_reference_id: product_service.business_card.standard
+    expected_resolution_status: confirmed_with_alias
+
+  - input: mondi 300
+    expected_reference_id: material.paper.mondi_color_copy_300gsm
+    expected_resolution_status: confirmed_with_alias
+
+  - input: unknown material name
+    expected_reference_id: null
+    expected_resolution_status: unresolved_manual_review_required
+
+ambiguous_naming_examples:
+  - input: банер
+    candidates:
+      - product_service.banner.indoor
+      - product_service.banner.outdoor
+    expected_resolution_status: ambiguous_manual_review_required
+    note: Library should report ambiguity instead of inventing a canonical ID.
+
+downstream_handoff_notes:
+  calculator_engine:
+    allowed:
+      - reference canonical product_service/material/operation/template IDs
+      - use aliases only for input normalization
+      - keep pricing formulas outside Library
+    forbidden:
+      - treat Library examples as final production pricing catalog
+      - write Calculator pricing logic into Library
+
+  forprint_operational_registry:
+    allowed:
+      - store canonical reference IDs as projections
+      - record unresolved or ambiguous references for review
+      - keep operational records separate from Library definitions
+    forbidden:
+      - make Library the order database
+      - store operational lifecycle truth in Library
+      - write warehouse stock or payment truth into Library

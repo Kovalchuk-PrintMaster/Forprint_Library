@@ -1,0 +1,58 @@
+schema_version: calculator_input_fixture_v0_1
+case_id: business_card_with_artwork_source
+description: Valid business card projection with optional artwork source.
+product_id: product.business_card
+input_configuration:
+  size: size_90x50_mm
+  sides: one_sided
+  material_ref:
+    catalog: materials
+    id: paper_300g_matte
+  print_mode_ref:
+    catalog: print_modes
+    id: color_4_0
+  quantity: 250
+  artwork_source: customer_needs_prepress_check
+expected_output:
+  schema_version: calculator_input_envelope_v0_1
+  product_id: product.business_card
+  configuration_id: calc_input_28601317bb609ed2
+  normalized_parameters:
+    size: size_90x50_mm
+    sides: one_sided
+    material_ref:
+      catalog: materials
+      id: paper_300g_matte
+    print_mode_ref:
+      catalog: print_modes
+      id: color_4_0
+    quantity: 250
+    finishing_refs: []
+    artwork_source: customer_needs_prepress_check
+  reference_ids:
+    product_id: product.business_card
+    size_id: size_90x50_mm
+    sides_id: one_sided
+    material_ref:
+      catalog: materials
+      id: paper_300g_matte
+    print_mode_ref:
+      catalog: print_modes
+      id: color_4_0
+    finishing_refs: []
+  validation_snapshot:
+    schema_version: calculator_input_validation_snapshot_v0_1
+    valid: true
+    errors: []
+    warnings: []
+    required_parameters:
+    - size
+    - sides
+    - material_ref
+    - print_mode_ref
+    - quantity
+    normalization_notes:
+    - Output field order is stable.
+    - finishing_refs are sorted by catalog and id.
+    - Optional artwork_source is included only when supplied.
+    - No monetary, pricing, stock, production or runtime fields are projected.

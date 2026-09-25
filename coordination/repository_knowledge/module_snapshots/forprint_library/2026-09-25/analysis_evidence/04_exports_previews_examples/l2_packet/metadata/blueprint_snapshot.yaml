@@ -1,0 +1,101 @@
+repository: forprint_system_blueprint
+root: /srv/software_development/forprint-project/forprint_system_blueprint
+branch: audit/blueprint-inventory-refresh-2026-07-29
+head: f3811072006f9a4cc9ae0446492523a8f87c313d
+upstream: f3811072006f9a4cc9ae0446492523a8f87c313d
+status_short:
+- M AGENTS.md
+- ' M README.md'
+- ' M coordination/bootstrap/START_HERE.md'
+- ' M coordination/global_policy/current_execution_focus.md'
+- ' M coordination/standards/automation/index.yaml'
+- ' M indexes/README.md'
+- ' M indexes/authorities.yaml'
+- ' M indexes/contracts.yaml'
+- ' M indexes/dependencies.json'
+- ' M indexes/derivations.yaml'
+- ' M indexes/document_catalog.yaml'
+- ' M indexes/documents.yaml'
+- ' M indexes/files.json'
+- ' M indexes/governance.yaml'
+- ' M indexes/incoming_requests.yaml'
+- ' M indexes/index.yaml'
+- ' M indexes/knowledge_summary.yaml'
+- ' M indexes/legacy.yaml'
+- ' M indexes/modules.yaml'
+- ' M indexes/prompts.yaml'
+- ' M indexes/references.json'
+- ' M indexes/review_candidates.yaml'
+- ' M indexes/roadmaps.yaml'
+- ' M indexes/source_coverage.yaml'
+- ' M machine/contracts.yaml'
+- ' M machine/data_flows.yaml'
+- ' M machine/data_objects.yaml'
+- ' M machine/domains.yaml'
+- ' M machine/future_channel_readiness.yaml'
+- ' M machine/impact_rules.yaml'
+- ' M machine/module_identity_registry.yaml'
+- ' M machine/module_manifest_schema.yaml'
+- ' M machine/module_status_report_schema.yaml'
+- ' M machine/modules.yaml'
+- ' M machine/ownership.yaml'
+- ' M machine/system_control_flows.yaml'
+- ' M machine/system_layers.yaml'
+- ?? coordination/bootstrap/ACTIVE_RECONCILIATION_QUESTIONS.yaml
+- ?? coordination/bootstrap/assistant_context_system_specs_v0_1.yaml
+- ?? coordination/bootstrap/index_v0_1.yaml
+- ?? coordination/bootstrap/parallel_workstream_current_snapshot_v0_1.yaml
+- ?? coordination/continuity/events/000066__evt-u180j-plan-20260921t102727249527__4dd85ce6ef7f.yaml
+- ?? coordination/continuity/events/000067__evt-u180j-activate-20260921t102955259861__ad000c7b9af2.yaml
+- ?? coordination/continuity/execution_attempts/cf10-u180j-a003__1c8b6804277a.yaml
+- ?? coordination/continuity/execution_attempts/cf10-u180j-a003__571944de6a4e.yaml
+- ?? coordination/continuity/execution_attempts/cf10-u180j-a004__bc64bdd79056.yaml
+- ?? coordination/continuity/execution_attempts/cf10-u180j-a004__be56313f5c2f.yaml
+- ?? coordination/continuity/projections/BLOCKERS.yaml
+- ?? coordination/continuity/projections/CURRENT_WORKFRONT.yaml
+- ?? coordination/continuity/projections/DECISIONS.yaml
+- ?? coordination/continuity/projections/NEXT_HORIZON.yaml
+- ?? coordination/continuity/projections/RECENT_ACTIVITY.yaml
+- ?? coordination/continuity/projections/SOURCE_STATE.yaml
+- ?? coordination/continuity/projections/UNRECONCILED_CURRENT_DELTA.yaml
+- ?? coordination/continuity/projections/WORKER_PORTFOLIO.yaml
+- ?? coordination/internal_work/blueprint/worker_tasks/cf10_zero_stage_dispatch_boundary_regression_v0_1.yaml
+- ?? coordination/roadmap_execution/
+- ?? coordination/roadmaps/details/forprint_system_blueprint/control_foundation_near_horizon_program_v0_1.yaml
+- ?? coordination/standards/automation/control_plane/bootstrap_task_context_mode_v0_1.yaml
+- ?? coordination/standards/automation/control_plane/bootstrap_worker_runtime_profile_v0_1.yaml
+- ?? coordination/standards/automation/control_plane/module_bootstrap_execution_policy_v0_1.yaml
+- ?? coordination/standards/automation/control_plane/module_bootstrap_prompt_requirements_v0_1.yaml
+- ?? coordination/standards/automation/worker_candidate_promotion_contract_v0_1.yaml
+- ?? coordination/standards/automation/worker_runtime_adapter_registry_contract_v0_1.yaml
+- ?? coordination/standards/automation/worker_runtime_benchmark_contract_v0_1.yaml
+- ?? coordination/standards/automation/worker_task_envelope_contract_v0_1.yaml
+- ?? coordination/work_fronts/cf10_internal_dispatch_exception_real_workspace_v0_1.yaml
+- ?? coordination/work_fronts/cf10_internal_task_context_adapter_v0_1.yaml
+- ?? coordination/work_fronts/cf10_isolated_workspace_dispatch_preflight_v0_1.yaml
+- ?? coordination/work_fronts/cf10_multi_provider_runtime_registry_v0_1.yaml
+- ?? coordination/work_fronts/cf10_runtime_standards_index_convergence_v0_1.yaml
+- ?? coordination/work_fronts/cf10_worker_runtime_foundation_v0_1.yaml
+- ?? coordination/work_fronts/cf10_zero_stage_dispatch_boundary_regression_v0_1.yaml
+- ?? indexes/execution_dependency_graph.yaml
+- ?? indexes/generator_inventory.yaml
+- ?? scripts/coordination/build_worker_invocation.py
+- ?? scripts/coordination/control_plane/context/
+- ?? scripts/coordination/control_plane/tasking/
+- ?? scripts/coordination/roadmap_execution_reconciliation.py
+- ?? scripts/validation/control_plane/context/
+- ?? scripts/validation/control_plane/worker_runtime/
+- ?? scripts/validation/validate_cf10_internal_dispatch_exception_real_workspace_v0_1.py
+- ?? scripts/validation/validate_cf10_internal_task_context_adapter_v0_1.py
+- ?? scripts/validation/validate_cf10_multi_provider_runtime_registry_v0_1.py
+- ?? scripts/validation/validate_console_worker_adapter_v0_1.py
+- ?? scripts/validation/validate_roadmap_execution_reconciliation_v0_1.py
+- ?? scripts/validation/validate_worker_runtime_foundation_v0_1.py
+- ?? tests/coordination/control_plane/context/
+- ?? tests/coordination/control_plane/tasking/
+- ?? tests/coordination/control_plane/test_cf09_dispatcher_assistant_ack_gate_v0_1.py
+- ?? tests/coordination/test_console_worker_adapter_v0_1.py
+- ?? tests/validation/test_cf10_multi_provider_runtime_registry_contract_v0_1.py
+- ?? tests/validation/test_roadmap_execution_dependency_registration_v0_1.py
+- ?? tests/validation/test_roadmap_execution_reconciliation_v0_1.py
+note: Blueprint status is captured as read-only context. No Blueprint mutation is performed.

@@ -1,0 +1,22 @@
+result: PASS
+module_id: forprint_library
+block_id: 03_contracts_cross_module_consumption
+library_branch: feature/library-calculator-input-contract-v01
+library_head: bba52bf6001f256a5c13ea7dbe175336b431754c
+library_upstream: bba52bf6001f256a5c13ea7dbe175336b431754c
+primary_source_count: 16
+related_test_count: 24
+prior_l2_context_count: 2
+blueprint_context_file_count: 8
+roadmap_subset_count: 2
+provenance_item_count: 57
+source_non_tmp_git_status_unchanged: true
+mutation_performed_outside_tmp: false
+outputs:
+  packet_dir: tmp/module_knowledge_analysis/forprint_library/03_contracts_cross_module_consumption/l2_packet
+  aggregate_markdown: tmp/module_knowledge_analysis/forprint_library/03_contracts_cross_module_consumption/l2_block_03_analysis_packet.md
+  archive: tmp/module_knowledge_analysis/forprint_library/03_contracts_cross_module_consumption/l2_block_03_analysis_packet.tar.gz
+hashes:
+  aggregate_markdown_sha256: fd0c0890c8151bf902ba59616b2d9e86859aee72f8b7c75befdc5b3581cc1631
+  archive_sha256: e71a660a1a317eb7ec0d792ff1ffde9a5e7c3a24adf8e6b63df3c4645256fb2d
+  packet_manifest_sha256: f393d1af630369dfb43f06afb28255a4bd1822236bc27e66b323174ca046f70e

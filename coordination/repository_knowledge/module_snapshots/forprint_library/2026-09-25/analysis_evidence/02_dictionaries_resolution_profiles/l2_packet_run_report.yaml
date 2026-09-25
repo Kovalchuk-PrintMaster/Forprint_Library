@@ -1,0 +1,22 @@
+result: PASS
+module_id: forprint_library
+block_id: 02_dictionaries_resolution_profiles
+library_branch: feature/library-calculator-input-contract-v01
+library_head: bba52bf6001f256a5c13ea7dbe175336b431754c
+library_upstream: bba52bf6001f256a5c13ea7dbe175336b431754c
+primary_source_count: 36
+related_test_count: 0
+prior_l2_context_count: 1
+blueprint_context_file_count: 8
+roadmap_subset_count: 2
+provenance_item_count: 52
+source_non_tmp_git_status_unchanged: true
+mutation_performed_outside_tmp: false
+outputs:
+  packet_dir: tmp/module_knowledge_analysis/forprint_library/02_dictionaries_resolution_profiles/l2_packet
+  aggregate_markdown: tmp/module_knowledge_analysis/forprint_library/02_dictionaries_resolution_profiles/l2_block_02_analysis_packet.md
+  archive: tmp/module_knowledge_analysis/forprint_library/02_dictionaries_resolution_profiles/l2_block_02_analysis_packet.tar.gz
+hashes:
+  aggregate_markdown_sha256: da1369672f1585e7ae1f71de9d7fe51c6ed7dcba6cda1dfd40a0ab8b69325359
+  archive_sha256: 6ee2459e5e0396b41b4044d05449f2101c66e30f6107ea933857d38163638097
+  packet_manifest_sha256: 9366fef7d4daa9c0255c846be2dbb0555fc447663155b1c184a0cea5fa69d6dc

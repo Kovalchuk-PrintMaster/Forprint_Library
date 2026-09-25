@@ -1,0 +1,231 @@
+schema_version: forprint_library_l5_reconciliation_decisions_v0_1
+module_id: forprint_library
+source_head: bba52bf6001f256a5c13ea7dbe175336b431754c
+source_branch: feature/library-calculator-input-contract-v01
+stage: L5_capability_reconciliation
+status: CLOSED_WITH_LATER_IMPLEMENTATION_ITEMS
+decision_count: 13
+clusters: 4
+implementation_now: false
+cleanup_now: false
+roadmap_realization_now: false
+missing_candidate_note: coordination/roadmaps/forprint_contract_registry.yaml absent
+  from evidence packet; treated as unresolved external governance dependency, not
+  an L5 failure.
+next_stage: L6_ROADMAP_REALIZATION
+decisions:
+- id: A01
+  cluster: A_contract_layers
+  decision: Calculator Input is a specialized deterministic projection/composition
+    over Library-owned product semantics and references; it is not an independent
+    semantic contract authority parallel to the generic Library Reference Contract.
+  current_authority:
+  - Library canonical product/configuration semantics
+  - Library Reference Contract for generic reference identity/resolution semantics
+  - Calculator Input contract for Calculator-specific envelope shape
+  compatibility_boundary: Calculator Input may embed/project Library reference IDs
+    and validation snapshots, but must not redefine canonical reference identity,
+    aliases, resolution semantics, pricing, or Calculator runtime behavior.
+  unresolved_dependency: null
+  target_relationship: generic_reference_contract -> specialized_calculator_input_projection
+  implementation_required_later: true
+  later_work: Remove/avoid duplicated reference-field semantics inside Calculator
+    Input where a shared reference object or mapping can be reused without breaking
+    current fixtures.
+- id: A02
+  cluster: A_contract_layers
+  decision: Canonical reference identity fields belong to Library semantic/reference
+    authority. Consumer-specific contracts may carry them only as references/projections
+    plus consumer-owned context.
+  current_authority:
+  - ForPrint Library canonical IDs, aliases, deprecation and reference semantics
+  compatibility_boundary: Downstream modules may persist Library IDs and raw/alias
+    input, but may not invent or rename canonical Library IDs.
+  unresolved_dependency: null
+  target_relationship: library_reference_identity_authority -> consumer_projection_only
+  implementation_required_later: false
+  later_work: null
+- id: A03
+  cluster: A_contract_layers
+  decision: Reference Consumption is a consumer-boundary validation/demo layer, not
+    a producer-side contract authority. It consumes the generic Library Reference
+    Contract and proves that foreign runtime context can coexist without semantic
+    ownership leakage.
+  current_authority:
+  - Generic Library Reference Contract
+  - consumer-owned runtime/domain fields in downstream modules
+  compatibility_boundary: Reference Consumption must not define new canonical IDs,
+    statuses, or Library-owned runtime state.
+  unresolved_dependency: null
+  target_relationship: reference_contract -> reference_consumption_validation_profile
+  implementation_required_later: false
+  later_work: null
+- id: A04
+  cluster: A_contract_layers
+  decision: The local Contract/ContractVersion models are currently Library implementation
+    scaffolding for describing versioned contracts, not the ecosystem Contract Registry
+    authority. Expansion of lifecycle/adoption semantics must wait for or align with
+    the governed Contract Registry.
+  current_authority:
+  - Library may own contract definitions for Library semantics
+  - Blueprint governs cross-module adoption direction
+  compatibility_boundary: Existing ContractVersion can remain readable/usable locally,
+    but must not become an implicit registry of ecosystem adoption, rollout, or release
+    authority.
+  unresolved_dependency: No coordination/roadmaps/forprint_contract_registry.yaml
+    was present in the L5 evidence packet; Human Intent nevertheless requires a versioned
+    Contract Registry/adoption process.
+  target_relationship: library_contract_definition -> future_contract_registry_registration/adoption
+  implementation_required_later: true
+  later_work: Create/consume the canonical Contract Registry contract when Blueprint
+    exposes it; then map or adapt local ContractVersion without silently replacing
+    historical models.
+- id: B01
+  cluster: B_dictionary_status_semantics
+  decision: Library is the publication/reference authority for shared cross-module
+    vocabulary IDs, labels, aliases and compatibility metadata, but domain modules
+    remain owners of operational state meaning and factual lifecycle truth.
+  current_authority:
+  - Library shared dictionary publication
+  - domain modules for operational facts/business lifecycle semantics
+  compatibility_boundary: order/payment/production/etc. dictionary values may be published
+    by Library as shared vocabulary, but Library must not thereby own orders, payments,
+    production state, or domain transition rules.
+  unresolved_dependency: Some current policy text says Library 'owns canonical shared
+    operational dictionary definitions'; this must be interpreted as vocabulary publication,
+    not domain business-rule ownership.
+  target_relationship: domain_semantics + cross_module_governance -> library_published_shared_vocabulary
+  implementation_required_later: true
+  later_work: Clarify metadata/ownership fields so vocabulary publication authority
+    is distinguishable from domain semantic/state authority.
+- id: B02
+  cluster: B_dictionary_status_semantics
+  decision: reference_resolution_status is the generic canonical resolution-state
+    vocabulary. product_service_reference_status is a specialization/compatibility
+    profile and the older library_reference_* values in Reference Contract v0.2 are
+    legacy compatibility names that should converge through an explicit mapping rather
+    than remain independent truth.
+  current_authority:
+  - reference_resolution_status for generic resolution states
+  compatibility_boundary: Existing v0.2 fixtures and consumers must remain readable
+    until migration; no silent value rewrite.
+  unresolved_dependency: null
+  target_relationship: reference_resolution_status -> specialized_compatibility_profiles
+  implementation_required_later: true
+  later_work: Define alias/migration table for library_reference_pending/library_reference_confirmed
+    and product_service-specific names to generic resolution values.
+- id: B03
+  cluster: B_dictionary_status_semantics
+  decision: For the current implementation, export_shared_operational_dictionaries.py
+    constants/metadata are the implementation source; dictionary YAML and shared schema
+    are generated projections; policy docs are explanatory/supporting. This direction
+    must not be reversed by editing generated YAML as independent truth.
+  current_authority:
+  - export_shared_operational_dictionaries.py implementation definitions
+  compatibility_boundary: Generated dictionary files remain committed/readable artifacts
+    but are not independently editable semantic owners.
+  unresolved_dependency: null
+  target_relationship: current_generator_definition -> generated_dictionary_yaml/schema
+  implementation_required_later: true
+  later_work: Consider moving canonical dictionary definitions from Python constants
+    into a dedicated declarative source, with the exporter becoming a pure renderer;
+    this is a later implementation choice, not an L5 mutation.
+- id: C01
+  cluster: C_generation_authority
+  decision: catalog/seeds/catalog_seed_v0_1.yaml is the canonical draft semantic input
+    for the generated component catalogs. materials/product_families/operations/print_modes/finishing_options
+    YAML files are projections. Configurable product cards such as business_card.yaml
+    are separate hand-owned product-definition surfaces unless a future generator
+    explicitly owns them.
+  current_authority:
+  - catalog_seed_v0_1.yaml for component catalog seed semantics
+  - configurable product files for their own product definitions
+  compatibility_boundary: Generated component catalog YAML must not be edited as a
+    competing source of truth.
+  unresolved_dependency: null
+  target_relationship: catalog_seed -> component_catalog_projections; configurable_product_definition
+    = separate_authority
+  implementation_required_later: false
+  later_work: null
+- id: C02
+  cluster: C_generation_authority
+  decision: Catalog component schemas and seed example produced by export_catalog_schema_artifacts.py
+    are generated artifacts. Calculator Input, generic Reference Contract and Reference
+    Consumption schemas are independent contract surfaces and must not be classified
+    as catalog-generator outputs.
+  current_authority:
+  - generator code for generated catalog schemas/examples
+  - individual contract definitions/schemas for contract-specific shapes
+  compatibility_boundary: Do not generalize one generator authority across unrelated
+    contract schemas.
+  unresolved_dependency: null
+  target_relationship: generator_scoped_outputs_only; independent_contract_schemas_remain_independent
+  implementation_required_later: false
+  later_work: null
+- id: C03
+  cluster: C_generation_authority
+  decision: Current drift evidence is provided by seed validation, catalog projection
+    readiness tests, dictionary validation/tests and committed generated outputs.
+    The canonical future gate should compare regenerated output with committed projection
+    without granting generated files independent authority.
+  current_authority:
+  - source definitions + generator
+  - validation/tests as proof
+  compatibility_boundary: A passing generated-file test proves synchronization, not
+    ownership.
+  unresolved_dependency: null
+  target_relationship: source + generator + reproducibility_gate -> generated_projection
+  implementation_required_later: true
+  later_work: Add explicit no-diff/dry-run regeneration gates where missing and expose
+    them through Makefile as clearly mutating vs read-only workflows.
+- id: D01
+  cluster: D_coordination_lifecycle
+  decision: Blueprint Prompt Queue is the authoritative intake/order source for governed
+    work. coordination/prompts/active/current_blueprint_prompt.md is a synchronized
+    local execution copy/fallback. coordination/prompts/index.yaml is stale and cannot
+    be used as current queue truth.
+  current_authority:
+  - Blueprint Prompt Queue for task intake
+  - local active prompt only for the currently synchronized execution copy
+  compatibility_boundary: Historical local prompts remain provenance; they must not
+    override a newer Blueprint queue item.
+  unresolved_dependency: null
+  target_relationship: blueprint_prompt_queue -> local_synced_prompt -> local_execution
+  implementation_required_later: true
+  later_work: Repair/redefine the local prompt index so its semantics match actual
+    intake lifecycle or retire it from current-truth use.
+- id: D02
+  cluster: D_coordination_lifecycle
+  decision: Implementation truth and Blueprint acceptance truth are separate. Git/committed
+    code plus validated completion evidence establish what the module implemented;
+    Blueprint acceptance/release authority establishes governed adoption. reports/index.yaml
+    is supporting registry. current_status.md/yaml and next_questions_for_blueprint.md
+    are projections and are currently stale, so they must not override later git/completion
+    evidence.
+  current_authority:
+  - git + validated implementation/completion evidence for implementation state
+  - Blueprint acceptance/release surfaces for governed acceptance/adoption
+  compatibility_boundary: A completed implementation is not automatically Blueprint-accepted;
+    stale status projections do not erase later implementation.
+  unresolved_dependency: null
+  target_relationship: implementation_evidence || blueprint_acceptance -> derived_current_status_projection
+  implementation_required_later: true
+  later_work: Regenerate or replace current_status surfaces from authoritative evidence
+    and make stale-state detection part of governance checks.
+- id: D03
+  cluster: D_coordination_lifecycle
+  decision: The Makefile already exposes many operator workflows, but read-only and
+    mutating behavior is mixed inside aggregate targets. Targets such as checks/list/preview
+    are read-only; sync/fix/write/update/pull/clean and some aggregate workflows mutate
+    local or Blueprint-adjacent state. Operator safety requires this distinction to
+    be explicit and machine-checkable.
+  current_authority:
+  - Makefile as operator-facing functional map
+  compatibility_boundary: Aggregate targets like blueprint-sync, governance-check,
+    module-start/module-sync/module-validate may invoke mutating subtargets even when
+    their names sound observational.
+  unresolved_dependency: null
+  target_relationship: make_target -> declared_effect_class(read_only|local_mutation|external_repo_mutation|generated_output)
+  implementation_required_later: true
+  later_work: Add/standardize effect annotations or a target registry and validate
+    Makefile coverage during closeout.

@@ -1,0 +1,515 @@
+schema_version: forprint_library_l2_analysis_packet_v0_1
+module_id: forprint_library
+block_id: 03_contracts_cross_module_consumption
+purpose: Bounded evidence packet for sequential L2 analysis of Library contracts, cross-module reference consumption, and
+  semantic handoff boundaries.
+authority_statement: Analysis evidence only; no implementation/document/roadmap authority is granted by packet inclusion.
+selection_authority:
+  primary_population: tmp/module_knowledge_analysis/forprint_library/03_contracts_cross_module_consumption/manifest.yaml
+  primary_population_count: 16
+  related_test_rule: L1 inventory rows with file_kind=test and secondary_blocks containing 03_contracts_cross_module_consumption
+  related_test_count: 24
+  prior_l2_reports:
+  - tmp/module_knowledge_analysis/forprint_library/01_domain_semantics_catalog/analysis_report.md
+  - tmp/module_knowledge_analysis/forprint_library/02_dictionaries_resolution_profiles/analysis_report.md
+library_snapshot:
+  module_id: forprint_library
+  block_id: 03_contracts_cross_module_consumption
+  branch: feature/library-calculator-input-contract-v01
+  head: bba52bf6001f256a5c13ea7dbe175336b431754c
+  upstream: bba52bf6001f256a5c13ea7dbe175336b431754c
+  head_matches_upstream: true
+  non_tmp_status_before: []
+  source_population_count: 16
+  related_test_count: 24
+blueprint_snapshot:
+  repository: forprint_system_blueprint
+  root: /srv/software_development/forprint-project/forprint_system_blueprint
+  branch: audit/blueprint-inventory-refresh-2026-07-29
+  head: fa14c0e7e845c02e0619ec1ea57c992d9684ff87
+  upstream: fa14c0e7e845c02e0619ec1ea57c992d9684ff87
+  status_short:
+  - M AGENTS.md
+  - ' M README.md'
+  - ' M coordination/bootstrap/START_HERE.md'
+  - ' M coordination/global_policy/current_execution_focus.md'
+  - ' M coordination/standards/automation/index.yaml'
+  - ' M indexes/README.md'
+  - ' M indexes/authorities.yaml'
+  - ' M indexes/contracts.yaml'
+  - ' M indexes/dependencies.json'
+  - ' M indexes/derivations.yaml'
+  - ' M indexes/document_catalog.yaml'
+  - ' M indexes/documents.yaml'
+  - ' M indexes/files.json'
+  - ' M indexes/governance.yaml'
+  - ' M indexes/incoming_requests.yaml'
+  - ' M indexes/index.yaml'
+  - ' M indexes/knowledge_summary.yaml'
+  - ' M indexes/legacy.yaml'
+  - ' M indexes/modules.yaml'
+  - ' M indexes/prompts.yaml'
+  - ' M indexes/references.json'
+  - ' M indexes/review_candidates.yaml'
+  - ' M indexes/roadmaps.yaml'
+  - ' M indexes/source_coverage.yaml'
+  - ' M machine/contracts.yaml'
+  - ' M machine/data_flows.yaml'
+  - ' M machine/data_objects.yaml'
+  - ' M machine/domains.yaml'
+  - ' M machine/future_channel_readiness.yaml'
+  - ' M machine/impact_rules.yaml'
+  - ' M machine/module_identity_registry.yaml'
+  - ' M machine/module_manifest_schema.yaml'
+  - ' M machine/module_status_report_schema.yaml'
+  - ' M machine/modules.yaml'
+  - ' M machine/ownership.yaml'
+  - ' M machine/system_control_flows.yaml'
+  - ' M machine/system_layers.yaml'
+  - ?? coordination/bootstrap/ACTIVE_RECONCILIATION_QUESTIONS.yaml
+  - ?? coordination/bootstrap/assistant_context_system_specs_v0_1.yaml
+  - ?? coordination/bootstrap/index_v0_1.yaml
+  - ?? coordination/bootstrap/parallel_workstream_current_snapshot_v0_1.yaml
+  - ?? coordination/continuity/events/000066__evt-u180j-plan-20260921t102727249527__4dd85ce6ef7f.yaml
+  - ?? coordination/continuity/events/000067__evt-u180j-activate-20260921t102955259861__ad000c7b9af2.yaml
+  - ?? coordination/continuity/execution_attempts/cf10-u180j-a003__1c8b6804277a.yaml
+  - ?? coordination/continuity/execution_attempts/cf10-u180j-a003__571944de6a4e.yaml
+  - ?? coordination/continuity/execution_attempts/cf10-u180j-a004__bc64bdd79056.yaml
+  - ?? coordination/continuity/execution_attempts/cf10-u180j-a004__be56313f5c2f.yaml
+  - ?? coordination/continuity/execution_attempts/cf10-u180j-a009__d3d566d064ea.yaml
+  - ?? coordination/continuity/projections/BLOCKERS.yaml
+  - ?? coordination/continuity/projections/CURRENT_WORKFRONT.yaml
+  - ?? coordination/continuity/projections/DECISIONS.yaml
+  - ?? coordination/continuity/projections/NEXT_HORIZON.yaml
+  - ?? coordination/continuity/projections/RECENT_ACTIVITY.yaml
+  - ?? coordination/continuity/projections/SOURCE_STATE.yaml
+  - ?? coordination/continuity/projections/UNRECONCILED_CURRENT_DELTA.yaml
+  - ?? coordination/continuity/projections/WORKER_PORTFOLIO.yaml
+  - ?? coordination/internal_work/blueprint/worker_tasks/cf10_zero_stage_dispatch_boundary_regression_v0_1.yaml
+  - ?? coordination/roadmap_execution/
+  - ?? coordination/roadmaps/details/forprint_system_blueprint/control_foundation_near_horizon_program_v0_1.yaml
+  - ?? coordination/standards/automation/control_plane/bootstrap_task_context_mode_v0_1.yaml
+  - ?? coordination/standards/automation/control_plane/bootstrap_worker_runtime_profile_v0_1.yaml
+  - ?? coordination/standards/automation/control_plane/module_bootstrap_execution_policy_v0_1.yaml
+  - ?? coordination/standards/automation/control_plane/module_bootstrap_prompt_requirements_v0_1.yaml
+  - ?? coordination/standards/automation/worker_candidate_promotion_contract_v0_1.yaml
+  - ?? coordination/standards/automation/worker_runtime_adapter_registry_contract_v0_1.yaml
+  - ?? coordination/standards/automation/worker_runtime_benchmark_contract_v0_1.yaml
+  - ?? coordination/standards/automation/worker_task_envelope_contract_v0_1.yaml
+  - ?? coordination/work_fronts/cf10_internal_dispatch_exception_real_workspace_v0_1.yaml
+  - ?? coordination/work_fronts/cf10_internal_task_context_adapter_v0_1.yaml
+  - ?? coordination/work_fronts/cf10_isolated_workspace_dispatch_preflight_v0_1.yaml
+  - ?? coordination/work_fronts/cf10_multi_provider_runtime_registry_v0_1.yaml
+  - ?? coordination/work_fronts/cf10_runtime_standards_index_convergence_v0_1.yaml
+  - ?? coordination/work_fronts/cf10_worker_runtime_foundation_v0_1.yaml
+  - ?? coordination/work_fronts/cf10_zero_stage_dispatch_boundary_regression_v0_1.yaml
+  - ?? indexes/execution_dependency_graph.yaml
+  - ?? indexes/generator_inventory.yaml
+  - ?? scripts/coordination/build_worker_invocation.py
+  - ?? scripts/coordination/control_plane/context/
+  - ?? scripts/coordination/control_plane/tasking/
+  - ?? scripts/coordination/roadmap_execution_reconciliation.py
+  - ?? scripts/validation/control_plane/context/
+  - ?? scripts/validation/control_plane/worker_runtime/
+  - ?? scripts/validation/validate_cf10_internal_dispatch_exception_real_workspace_v0_1.py
+  - ?? scripts/validation/validate_cf10_internal_task_context_adapter_v0_1.py
+  - ?? scripts/validation/validate_cf10_multi_provider_runtime_registry_v0_1.py
+  - ?? scripts/validation/validate_console_worker_adapter_v0_1.py
+  - ?? scripts/validation/validate_roadmap_execution_reconciliation_v0_1.py
+  - ?? scripts/validation/validate_worker_runtime_foundation_v0_1.py
+  - ?? tests/coordination/control_plane/context/
+  - ?? tests/coordination/control_plane/tasking/
+  - ?? tests/coordination/control_plane/test_cf09_dispatcher_assistant_ack_gate_v0_1.py
+  - ?? tests/coordination/test_console_worker_adapter_v0_1.py
+  - ?? tests/validation/test_cf10_multi_provider_runtime_registry_contract_v0_1.py
+  - ?? tests/validation/test_roadmap_execution_dependency_registration_v0_1.py
+  - ?? tests/validation/test_roadmap_execution_reconciliation_v0_1.py
+  note: Blueprint status is captured as read-only context. No Blueprint mutation is performed.
+primary_source_paths:
+- app/forprint_library/calculator_input/__init__.py
+- app/forprint_library/calculator_input/contract.py
+- app/forprint_library/contracts/models.py
+- schemas/calculator_input/calculator_input_envelope.schema.yaml
+- schemas/reference_consumption/library_reference_consumption.schema.yaml
+- schemas/reference_contract/library_reference.schema.yaml
+- scripts/calculator_input/validate_calculator_input_contract.py
+- scripts/coordination/export_business_card_skeleton_closure.py
+- scripts/coordination/export_make_first_semantic_readiness_closure.py
+- scripts/coordination/export_reference_consumption_pilot_closure.py
+- scripts/coordination/export_reference_contract_foundation_closure.py
+- scripts/coordination/validate_completion_packet.py
+- scripts/product_workbench/preview_business_card_product.py
+- scripts/product_workbench/validate_business_card_product.py
+- scripts/reference_consumption/validate_reference_consumption_pilot.py
+- scripts/validate_semantic_reference_readiness.py
+related_test_paths:
+- tests/content/test_business_card_product_card.py
+- tests/content/test_calculator_input_contract.py
+- tests/content/test_library_reference_contract.py
+- tests/contract/test_architecture_docs.py
+- tests/contract/test_blueprint_prompt_consumer_compatibility.py
+- tests/contract/test_catalog_seed_v0_1.py
+- tests/contract/test_completion_report.py
+- tests/contract/test_dictionary_policy_docs.py
+- tests/contract/test_make_first_workflow_targets.py
+- tests/contract/test_required_validation_targets.py
+- tests/contract/test_semantic_reference_readiness.py
+- tests/contract/test_shared_dictionary_check_report_surface.py
+- tests/contract/test_shared_dictionary_completion_report.py
+- tests/contract/test_shared_operational_dictionary_v0_1.py
+- tests/coordination/test_business_card_skeleton_closure.py
+- tests/coordination/test_calculator_input_contract_completion.py
+- tests/coordination/test_completion_packet_validator.py
+- tests/coordination/test_coordination_foundation_alignment.py
+- tests/coordination/test_reference_consumption_pilot.py
+- tests/coordination/test_reference_consumption_pilot_closure.py
+- tests/coordination/test_reference_contract_foundation_closure.py
+- tests/integration/test_catalog_projection_readiness.py
+- tests/integration/test_dictionary_resolver_and_preview.py
+- tests/unit/test_checkpoint_a_standard.py
+provenance_item_count: 57
+provenance:
+- role: l1_block_manifest
+  source_repo: forprint_library
+  source_path: /srv/software_development/forprint-project/forprint_library/tmp/module_knowledge_analysis/forprint_library/03_contracts_cross_module_consumption/manifest.yaml
+  packet_path: /srv/software_development/forprint-project/forprint_library/tmp/module_knowledge_analysis/forprint_library/03_contracts_cross_module_consumption/l2_packet/manifest/l1_block_manifest.yaml
+  size_bytes: 1992
+  sha256: 742450d5f4a753a89ff65ea1005231ad6f795e03f38bfa12a1b61ae1f8dbd7aa
+- role: primary_block_source
+  source_repo: forprint_library
+  source_path: /srv/software_development/forprint-project/forprint_library/app/forprint_library/calculator_input/__init__.py
+  packet_path: /srv/software_development/forprint-project/forprint_library/tmp/module_knowledge_analysis/forprint_library/03_contracts_cross_module_consumption/l2_packet/primary_source/app/forprint_library/calculator_input/__init__.py
+  size_bytes: 662
+  sha256: a479c324f4121a01d5859ed7d18972a22eab62edf24ed3bc1c2e00898279fc58
+- role: primary_block_source
+  source_repo: forprint_library
+  source_path: /srv/software_development/forprint-project/forprint_library/app/forprint_library/calculator_input/contract.py
+  packet_path: /srv/software_development/forprint-project/forprint_library/tmp/module_knowledge_analysis/forprint_library/03_contracts_cross_module_consumption/l2_packet/primary_source/app/forprint_library/calculator_input/contract.py
+  size_bytes: 20193
+  sha256: c3467f38d1747ce17cfeab77f3b32faf7cecf4a031eb14c692ca1c73b3adedd8
+- role: primary_block_source
+  source_repo: forprint_library
+  source_path: /srv/software_development/forprint-project/forprint_library/app/forprint_library/contracts/models.py
+  packet_path: /srv/software_development/forprint-project/forprint_library/tmp/module_knowledge_analysis/forprint_library/03_contracts_cross_module_consumption/l2_packet/primary_source/app/forprint_library/contracts/models.py
+  size_bytes: 2295
+  sha256: e0c46c169100c7216028668291abb5db8862021a81e9629a8a66a5a021cf518a
+- role: primary_block_source
+  source_repo: forprint_library
+  source_path: /srv/software_development/forprint-project/forprint_library/schemas/calculator_input/calculator_input_envelope.schema.yaml
+  packet_path: /srv/software_development/forprint-project/forprint_library/tmp/module_knowledge_analysis/forprint_library/03_contracts_cross_module_consumption/l2_packet/primary_source/schemas/calculator_input/calculator_input_envelope.schema.yaml
+  size_bytes: 1079
+  sha256: 26146654e9a3317d1792c51ef1cd32d8e1b4d41de160e421b3c1a3b1074e64c8
+- role: primary_block_source
+  source_repo: forprint_library
+  source_path: /srv/software_development/forprint-project/forprint_library/schemas/reference_consumption/library_reference_consumption.schema.yaml
+  packet_path: /srv/software_development/forprint-project/forprint_library/tmp/module_knowledge_analysis/forprint_library/03_contracts_cross_module_consumption/l2_packet/primary_source/schemas/reference_consumption/library_reference_consumption.schema.yaml
+  size_bytes: 2206
+  sha256: eb6dde5077a4712f77a992245afdee46159074398ede7fe3bba4001ef71d90f8
+- role: primary_block_source
+  source_repo: forprint_library
+  source_path: /srv/software_development/forprint-project/forprint_library/schemas/reference_contract/library_reference.schema.yaml
+  packet_path: /srv/software_development/forprint-project/forprint_library/tmp/module_knowledge_analysis/forprint_library/03_contracts_cross_module_consumption/l2_packet/primary_source/schemas/reference_contract/library_reference.schema.yaml
+  size_bytes: 1856
+  sha256: 06124b7a5d378a4068a5c7d0b41cb9dcd24c249c50a313bf5b8c46906f2165a9
+- role: primary_block_source
+  source_repo: forprint_library
+  source_path: /srv/software_development/forprint-project/forprint_library/scripts/calculator_input/validate_calculator_input_contract.py
+  packet_path: /srv/software_development/forprint-project/forprint_library/tmp/module_knowledge_analysis/forprint_library/03_contracts_cross_module_consumption/l2_packet/primary_source/scripts/calculator_input/validate_calculator_input_contract.py
+  size_bytes: 4441
+  sha256: 2443f2342b9552f871b0ebb64ae51e9f04b1e82686d16493a922334ef335c8b0
+- role: primary_block_source
+  source_repo: forprint_library
+  source_path: /srv/software_development/forprint-project/forprint_library/scripts/coordination/export_business_card_skeleton_closure.py
+  packet_path: /srv/software_development/forprint-project/forprint_library/tmp/module_knowledge_analysis/forprint_library/03_contracts_cross_module_consumption/l2_packet/primary_source/scripts/coordination/export_business_card_skeleton_closure.py
+  size_bytes: 16355
+  sha256: 10a1f3feaeab8756b6805d7f1188d7cc5bb87eb2bfa3a39aeafc25c8409a1cd6
+- role: primary_block_source
+  source_repo: forprint_library
+  source_path: /srv/software_development/forprint-project/forprint_library/scripts/coordination/export_make_first_semantic_readiness_closure.py
+  packet_path: /srv/software_development/forprint-project/forprint_library/tmp/module_knowledge_analysis/forprint_library/03_contracts_cross_module_consumption/l2_packet/primary_source/scripts/coordination/export_make_first_semantic_readiness_closure.py
+  size_bytes: 16115
+  sha256: 85cc11c0f55f0128ad1de399596110d511f89e0d41777683da64f7782998aa64
+- role: primary_block_source
+  source_repo: forprint_library
+  source_path: /srv/software_development/forprint-project/forprint_library/scripts/coordination/export_reference_consumption_pilot_closure.py
+  packet_path: /srv/software_development/forprint-project/forprint_library/tmp/module_knowledge_analysis/forprint_library/03_contracts_cross_module_consumption/l2_packet/primary_source/scripts/coordination/export_reference_consumption_pilot_closure.py
+  size_bytes: 15566
+  sha256: 3a726ec6f7fd9470a5a3daa000b949e262d200418e4199c9f35df048c5023bc4
+- role: primary_block_source
+  source_repo: forprint_library
+  source_path: /srv/software_development/forprint-project/forprint_library/scripts/coordination/export_reference_contract_foundation_closure.py
+  packet_path: /srv/software_development/forprint-project/forprint_library/tmp/module_knowledge_analysis/forprint_library/03_contracts_cross_module_consumption/l2_packet/primary_source/scripts/coordination/export_reference_contract_foundation_closure.py
+  size_bytes: 14475
+  sha256: f58565b957b1379495a3d2bbbef0b6346132fd34a1596277862a691c02a4ef9d
+- role: primary_block_source
+  source_repo: forprint_library
+  source_path: /srv/software_development/forprint-project/forprint_library/scripts/coordination/validate_completion_packet.py
+  packet_path: /srv/software_development/forprint-project/forprint_library/tmp/module_knowledge_analysis/forprint_library/03_contracts_cross_module_consumption/l2_packet/primary_source/scripts/coordination/validate_completion_packet.py
+  size_bytes: 6932
+  sha256: 4b338c9859a8486ca79ff79d0a868f27fa16cda5a42df4961cb351576bde91b2
+- role: primary_block_source
+  source_repo: forprint_library
+  source_path: /srv/software_development/forprint-project/forprint_library/scripts/product_workbench/preview_business_card_product.py
+  packet_path: /srv/software_development/forprint-project/forprint_library/tmp/module_knowledge_analysis/forprint_library/03_contracts_cross_module_consumption/l2_packet/primary_source/scripts/product_workbench/preview_business_card_product.py
+  size_bytes: 1225
+  sha256: 01fe38c52f482b985452e650e5655b1119980b63bb97c51a12e68202f89e61e0
+- role: primary_block_source
+  source_repo: forprint_library
+  source_path: /srv/software_development/forprint-project/forprint_library/scripts/product_workbench/validate_business_card_product.py
+  packet_path: /srv/software_development/forprint-project/forprint_library/tmp/module_knowledge_analysis/forprint_library/03_contracts_cross_module_consumption/l2_packet/primary_source/scripts/product_workbench/validate_business_card_product.py
+  size_bytes: 6826
+  sha256: af2d9a937e3f78d88b8197a48d4e7732ee059e13b3aef03545c295fe2c82af8f
+- role: primary_block_source
+  source_repo: forprint_library
+  source_path: /srv/software_development/forprint-project/forprint_library/scripts/reference_consumption/validate_reference_consumption_pilot.py
+  packet_path: /srv/software_development/forprint-project/forprint_library/tmp/module_knowledge_analysis/forprint_library/03_contracts_cross_module_consumption/l2_packet/primary_source/scripts/reference_consumption/validate_reference_consumption_pilot.py
+  size_bytes: 13580
+  sha256: bc8b38f0e9d6476bd7f0595d4730d034410c290d2d6715e653405aebba4e03ec
+- role: primary_block_source
+  source_repo: forprint_library
+  source_path: /srv/software_development/forprint-project/forprint_library/scripts/validate_semantic_reference_readiness.py
+  packet_path: /srv/software_development/forprint-project/forprint_library/tmp/module_knowledge_analysis/forprint_library/03_contracts_cross_module_consumption/l2_packet/primary_source/scripts/validate_semantic_reference_readiness.py
+  size_bytes: 5241
+  sha256: 238ec54bf5fe4d2ada58c970d98b844afc1bdcd3d75f34d1a5f56d6cecacd566
+- role: l1_secondary_related_test
+  source_repo: forprint_library
+  source_path: /srv/software_development/forprint-project/forprint_library/tests/content/test_business_card_product_card.py
+  packet_path: /srv/software_development/forprint-project/forprint_library/tmp/module_knowledge_analysis/forprint_library/03_contracts_cross_module_consumption/l2_packet/related_tests/tests/content/test_business_card_product_card.py
+  size_bytes: 4231
+  sha256: dffe8d8f8437fe45b4b1fb1136670bf14b2dfc8a75a1206fb3c6b3fff3b7f9ca
+- role: l1_secondary_related_test
+  source_repo: forprint_library
+  source_path: /srv/software_development/forprint-project/forprint_library/tests/content/test_calculator_input_contract.py
+  packet_path: /srv/software_development/forprint-project/forprint_library/tmp/module_knowledge_analysis/forprint_library/03_contracts_cross_module_consumption/l2_packet/related_tests/tests/content/test_calculator_input_contract.py
+  size_bytes: 10079
+  sha256: 2df2de6764e6f5f3fd0924fe2ab39b986193200a12167e6264ccb850fb96fab8
+- role: l1_secondary_related_test
+  source_repo: forprint_library
+  source_path: /srv/software_development/forprint-project/forprint_library/tests/content/test_library_reference_contract.py
+  packet_path: /srv/software_development/forprint-project/forprint_library/tmp/module_knowledge_analysis/forprint_library/03_contracts_cross_module_consumption/l2_packet/related_tests/tests/content/test_library_reference_contract.py
+  size_bytes: 3721
+  sha256: 2b55b490e9a69ce04166ee99f5c820caf78c077ba4a416c6863f430fe7bb49cf
+- role: l1_secondary_related_test
+  source_repo: forprint_library
+  source_path: /srv/software_development/forprint-project/forprint_library/tests/contract/test_architecture_docs.py
+  packet_path: /srv/software_development/forprint-project/forprint_library/tmp/module_knowledge_analysis/forprint_library/03_contracts_cross_module_consumption/l2_packet/related_tests/tests/contract/test_architecture_docs.py
+  size_bytes: 2343
+  sha256: 44e43e4da7b68f58b33b201a4a7c423942d335e9a69c291daa9339528122a169
+- role: l1_secondary_related_test
+  source_repo: forprint_library
+  source_path: /srv/software_development/forprint-project/forprint_library/tests/contract/test_blueprint_prompt_consumer_compatibility.py
+  packet_path: /srv/software_development/forprint-project/forprint_library/tmp/module_knowledge_analysis/forprint_library/03_contracts_cross_module_consumption/l2_packet/related_tests/tests/contract/test_blueprint_prompt_consumer_compatibility.py
+  size_bytes: 1236
+  sha256: 689cb2a6782c561e10c6f77d7e8be6ceeee308ea024f2785cf0a1045874bb69b
+- role: l1_secondary_related_test
+  source_repo: forprint_library
+  source_path: /srv/software_development/forprint-project/forprint_library/tests/contract/test_catalog_seed_v0_1.py
+  packet_path: /srv/software_development/forprint-project/forprint_library/tmp/module_knowledge_analysis/forprint_library/03_contracts_cross_module_consumption/l2_packet/related_tests/tests/contract/test_catalog_seed_v0_1.py
+  size_bytes: 4432
+  sha256: 1d1ad2fe1fac4e3d0a51d800038e892babe3f1caac01c23fd635b6e7a9c1b945
+- role: l1_secondary_related_test
+  source_repo: forprint_library
+  source_path: /srv/software_development/forprint-project/forprint_library/tests/contract/test_completion_report.py
+  packet_path: /srv/software_development/forprint-project/forprint_library/tmp/module_knowledge_analysis/forprint_library/03_contracts_cross_module_consumption/l2_packet/related_tests/tests/contract/test_completion_report.py
+  size_bytes: 2246
+  sha256: 8aabf59cf455b05d240d64c1cbdde86ae5f600ff14c46ec9b8ecc322abdf6ccb
+- role: l1_secondary_related_test
+  source_repo: forprint_library
+  source_path: /srv/software_development/forprint-project/forprint_library/tests/contract/test_dictionary_policy_docs.py
+  packet_path: /srv/software_development/forprint-project/forprint_library/tmp/module_knowledge_analysis/forprint_library/03_contracts_cross_module_consumption/l2_packet/related_tests/tests/contract/test_dictionary_policy_docs.py
+  size_bytes: 3515
+  sha256: aecf2f0a6a518d3db80ddca1b21b33a64d2bf6df0945a4941addebf7394f8dea
+- role: l1_secondary_related_test
+  source_repo: forprint_library
+  source_path: /srv/software_development/forprint-project/forprint_library/tests/contract/test_make_first_workflow_targets.py
+  packet_path: /srv/software_development/forprint-project/forprint_library/tmp/module_knowledge_analysis/forprint_library/03_contracts_cross_module_consumption/l2_packet/related_tests/tests/contract/test_make_first_workflow_targets.py
+  size_bytes: 1564
+  sha256: 68079ca9bf1d29286ebd7c9fb8aedbd4840cd2c5fadc0d856981a544a126034a
+- role: l1_secondary_related_test
+  source_repo: forprint_library
+  source_path: /srv/software_development/forprint-project/forprint_library/tests/contract/test_required_validation_targets.py
+  packet_path: /srv/software_development/forprint-project/forprint_library/tmp/module_knowledge_analysis/forprint_library/03_contracts_cross_module_consumption/l2_packet/related_tests/tests/contract/test_required_validation_targets.py
+  size_bytes: 1016
+  sha256: 097143c7d5dc25674454a0c3ce48ddbdd27eca0b7feed44dd70261f39cc1287a
+- role: l1_secondary_related_test
+  source_repo: forprint_library
+  source_path: /srv/software_development/forprint-project/forprint_library/tests/contract/test_semantic_reference_readiness.py
+  packet_path: /srv/software_development/forprint-project/forprint_library/tmp/module_knowledge_analysis/forprint_library/03_contracts_cross_module_consumption/l2_packet/related_tests/tests/contract/test_semantic_reference_readiness.py
+  size_bytes: 2356
+  sha256: 3bacc230b727ef14de68dc11c591d4ef7ff8bbbbb840203d1f076380bad190bc
+- role: l1_secondary_related_test
+  source_repo: forprint_library
+  source_path: /srv/software_development/forprint-project/forprint_library/tests/contract/test_shared_dictionary_check_report_surface.py
+  packet_path: /srv/software_development/forprint-project/forprint_library/tmp/module_knowledge_analysis/forprint_library/03_contracts_cross_module_consumption/l2_packet/related_tests/tests/contract/test_shared_dictionary_check_report_surface.py
+  size_bytes: 750
+  sha256: c5208c62a69cb180ac9e7acb714e67ec45e0b7ede747417c44b6f3ce704961df
+- role: l1_secondary_related_test
+  source_repo: forprint_library
+  source_path: /srv/software_development/forprint-project/forprint_library/tests/contract/test_shared_dictionary_completion_report.py
+  packet_path: /srv/software_development/forprint-project/forprint_library/tmp/module_knowledge_analysis/forprint_library/03_contracts_cross_module_consumption/l2_packet/related_tests/tests/contract/test_shared_dictionary_completion_report.py
+  size_bytes: 2059
+  sha256: dfb705183e1cfb578c559e3062750a1a519d2d24e28940b803b21ca681a5f9b9
+- role: l1_secondary_related_test
+  source_repo: forprint_library
+  source_path: /srv/software_development/forprint-project/forprint_library/tests/contract/test_shared_operational_dictionary_v0_1.py
+  packet_path: /srv/software_development/forprint-project/forprint_library/tmp/module_knowledge_analysis/forprint_library/03_contracts_cross_module_consumption/l2_packet/related_tests/tests/contract/test_shared_operational_dictionary_v0_1.py
+  size_bytes: 6518
+  sha256: 84097bcc0bdd831eb721fae17c897965175760607cd6051a77dd8633d7427de8
+- role: l1_secondary_related_test
+  source_repo: forprint_library
+  source_path: /srv/software_development/forprint-project/forprint_library/tests/coordination/test_business_card_skeleton_closure.py
+  packet_path: /srv/software_development/forprint-project/forprint_library/tmp/module_knowledge_analysis/forprint_library/03_contracts_cross_module_consumption/l2_packet/related_tests/tests/coordination/test_business_card_skeleton_closure.py
+  size_bytes: 5038
+  sha256: cdcf0c853ed83f0cb509a85b5e15d92884c3e0e16df381ddd10937ca7eb2bc76
+- role: l1_secondary_related_test
+  source_repo: forprint_library
+  source_path: /srv/software_development/forprint-project/forprint_library/tests/coordination/test_calculator_input_contract_completion.py
+  packet_path: /srv/software_development/forprint-project/forprint_library/tmp/module_knowledge_analysis/forprint_library/03_contracts_cross_module_consumption/l2_packet/related_tests/tests/coordination/test_calculator_input_contract_completion.py
+  size_bytes: 2522
+  sha256: f592730268f00f0d38e9cfba8633e0c24441963787b03e9a841b0fc0c1920788
+- role: l1_secondary_related_test
+  source_repo: forprint_library
+  source_path: /srv/software_development/forprint-project/forprint_library/tests/coordination/test_completion_packet_validator.py
+  packet_path: /srv/software_development/forprint-project/forprint_library/tmp/module_knowledge_analysis/forprint_library/03_contracts_cross_module_consumption/l2_packet/related_tests/tests/coordination/test_completion_packet_validator.py
+  size_bytes: 3580
+  sha256: a558ea6cc2e133fc464e10f7aff341d947c3df1073fb5fda55f6ced49c0a5d09
+- role: l1_secondary_related_test
+  source_repo: forprint_library
+  source_path: /srv/software_development/forprint-project/forprint_library/tests/coordination/test_coordination_foundation_alignment.py
+  packet_path: /srv/software_development/forprint-project/forprint_library/tmp/module_knowledge_analysis/forprint_library/03_contracts_cross_module_consumption/l2_packet/related_tests/tests/coordination/test_coordination_foundation_alignment.py
+  size_bytes: 3273
+  sha256: df3adff50f108a2a3b5fb02efc4c3fb0420e1c616379152c8b4e1b5e32b4c8d2
+- role: l1_secondary_related_test
+  source_repo: forprint_library
+  source_path: /srv/software_development/forprint-project/forprint_library/tests/coordination/test_reference_consumption_pilot.py
+  packet_path: /srv/software_development/forprint-project/forprint_library/tmp/module_knowledge_analysis/forprint_library/03_contracts_cross_module_consumption/l2_packet/related_tests/tests/coordination/test_reference_consumption_pilot.py
+  size_bytes: 2972
+  sha256: cc3d89a283c2b175f20e8b7655bee801b4fd8564634ec7ba22a84cc010a76e71
+- role: l1_secondary_related_test
+  source_repo: forprint_library
+  source_path: /srv/software_development/forprint-project/forprint_library/tests/coordination/test_reference_consumption_pilot_closure.py
+  packet_path: /srv/software_development/forprint-project/forprint_library/tmp/module_knowledge_analysis/forprint_library/03_contracts_cross_module_consumption/l2_packet/related_tests/tests/coordination/test_reference_consumption_pilot_closure.py
+  size_bytes: 3840
+  sha256: cd0bc6992d053da4eaa677e30fdf181637d4b33f7ba155f96606cfba9a400369
+- role: l1_secondary_related_test
+  source_repo: forprint_library
+  source_path: /srv/software_development/forprint-project/forprint_library/tests/coordination/test_reference_contract_foundation_closure.py
+  packet_path: /srv/software_development/forprint-project/forprint_library/tmp/module_knowledge_analysis/forprint_library/03_contracts_cross_module_consumption/l2_packet/related_tests/tests/coordination/test_reference_contract_foundation_closure.py
+  size_bytes: 2207
+  sha256: 2d669c2d4676c1a98b7b5de0e77e0a888cc56354744aa14ea73bf52f7acc3940
+- role: l1_secondary_related_test
+  source_repo: forprint_library
+  source_path: /srv/software_development/forprint-project/forprint_library/tests/integration/test_catalog_projection_readiness.py
+  packet_path: /srv/software_development/forprint-project/forprint_library/tmp/module_knowledge_analysis/forprint_library/03_contracts_cross_module_consumption/l2_packet/related_tests/tests/integration/test_catalog_projection_readiness.py
+  size_bytes: 1343
+  sha256: fbf94f40f47a3d5fdeb4ab786c145c3ee18a8397a9aa7e37c12d7c37c49b07e3
+- role: l1_secondary_related_test
+  source_repo: forprint_library
+  source_path: /srv/software_development/forprint-project/forprint_library/tests/integration/test_dictionary_resolver_and_preview.py
+  packet_path: /srv/software_development/forprint-project/forprint_library/tmp/module_knowledge_analysis/forprint_library/03_contracts_cross_module_consumption/l2_packet/related_tests/tests/integration/test_dictionary_resolver_and_preview.py
+  size_bytes: 4426
+  sha256: 7ef53dd40ab55483ac446f8578a7e4cfbf3a33aeeeb8ea8b62abc92a6e36b5b0
+- role: l1_secondary_related_test
+  source_repo: forprint_library
+  source_path: /srv/software_development/forprint-project/forprint_library/tests/unit/test_checkpoint_a_standard.py
+  packet_path: /srv/software_development/forprint-project/forprint_library/tmp/module_knowledge_analysis/forprint_library/03_contracts_cross_module_consumption/l2_packet/related_tests/tests/unit/test_checkpoint_a_standard.py
+  size_bytes: 2367
+  sha256: 845ae07fc668470fb70a7a507a49190fd53ecb2a9f782ac20ff98a2db0734cb5
+- role: l0_scope/authority
+  source_repo: forprint_library
+  source_path: /srv/software_development/forprint-project/forprint_library/tmp/module_knowledge_analysis/forprint_library/00_preflight/module_scope_and_authority.md
+  packet_path: /srv/software_development/forprint-project/forprint_library/tmp/module_knowledge_analysis/forprint_library/03_contracts_cross_module_consumption/l2_packet/context/local/tmp/module_knowledge_analysis/forprint_library/00_preflight/module_scope_and_authority.md
+  size_bytes: 26848
+  sha256: 2f50ee3e571d1aa08749bef6ccc96c08b94c902a405209f6d6e44133c62f6233
+- role: l1_closeout
+  source_repo: forprint_library
+  source_path: /srv/software_development/forprint-project/forprint_library/tmp/module_knowledge_analysis/forprint_library/l1_inventory/l1_closeout.md
+  packet_path: /srv/software_development/forprint-project/forprint_library/tmp/module_knowledge_analysis/forprint_library/03_contracts_cross_module_consumption/l2_packet/context/local/tmp/module_knowledge_analysis/forprint_library/l1_inventory/l1_closeout.md
+  size_bytes: 8043
+  sha256: e52e7ca3e2eaf27e7447d43b70bcd7582d7d896fd593a3f7cb278a8b82ec8971
+- role: l1_run_report
+  source_repo: forprint_library
+  source_path: /srv/software_development/forprint-project/forprint_library/tmp/module_knowledge_analysis/forprint_library/l1_inventory/run_report.yaml
+  packet_path: /srv/software_development/forprint-project/forprint_library/tmp/module_knowledge_analysis/forprint_library/03_contracts_cross_module_consumption/l2_packet/context/local/tmp/module_knowledge_analysis/forprint_library/l1_inventory/run_report.yaml
+  size_bytes: 1725
+  sha256: dedb10a29bcc008ecb7f89c20faeb34bf3a2b88429477fd38164c3b3dcdcdaee
+- role: l1_segmentation_summary
+  source_repo: forprint_library
+  source_path: /srv/software_development/forprint-project/forprint_library/tmp/module_knowledge_analysis/forprint_library/l1_inventory/segmentation_summary.md
+  packet_path: /srv/software_development/forprint-project/forprint_library/tmp/module_knowledge_analysis/forprint_library/03_contracts_cross_module_consumption/l2_packet/context/local/tmp/module_knowledge_analysis/forprint_library/l1_inventory/segmentation_summary.md
+  size_bytes: 2245
+  sha256: e5fc302c3578cb0a3f0dff2d797e38afcb0c1664f43f769bd54f4e372a90d34d
+- role: prior_l2_block_01_supporting_analysis
+  source_repo: forprint_library
+  source_path: /srv/software_development/forprint-project/forprint_library/tmp/module_knowledge_analysis/forprint_library/01_domain_semantics_catalog/analysis_report.md
+  packet_path: /srv/software_development/forprint-project/forprint_library/tmp/module_knowledge_analysis/forprint_library/03_contracts_cross_module_consumption/l2_packet/context/local/tmp/module_knowledge_analysis/forprint_library/01_domain_semantics_catalog/analysis_report.md
+  size_bytes: 38430
+  sha256: 7124be275bed431331d250599bd11ac7ea8b7d40c3f5e8593072ec1f88dc3b67
+- role: prior_l2_block_02_supporting_analysis
+  source_repo: forprint_library
+  source_path: /srv/software_development/forprint-project/forprint_library/tmp/module_knowledge_analysis/forprint_library/02_dictionaries_resolution_profiles/analysis_report.md
+  packet_path: /srv/software_development/forprint-project/forprint_library/tmp/module_knowledge_analysis/forprint_library/03_contracts_cross_module_consumption/l2_packet/context/local/tmp/module_knowledge_analysis/forprint_library/02_dictionaries_resolution_profiles/analysis_report.md
+  size_bytes: 40724
+  sha256: 5ceb47259fd453982f1c722a15c250a71333591fee7a0acdbde53ce1a1dac612
+- role: blueprint_authority_or_provenance_context
+  source_repo: forprint_system_blueprint
+  source_path: /srv/software_development/forprint-project/forprint_system_blueprint/coordination/module_policy/forprint_library/module_policy.md
+  packet_path: /srv/software_development/forprint-project/forprint_library/tmp/module_knowledge_analysis/forprint_library/03_contracts_cross_module_consumption/l2_packet/context/blueprint/coordination/module_policy/forprint_library/module_policy.md
+  size_bytes: 1848
+  sha256: 60010ad1b6ae83a18ee0828139708a4523d01c67a424143b7c427b70c3c5414c
+- role: blueprint_authority_or_provenance_context
+  source_repo: forprint_system_blueprint
+  source_path: /srv/software_development/forprint-project/forprint_system_blueprint/coordination/human_intent/modules/forprint_library.yaml
+  packet_path: /srv/software_development/forprint-project/forprint_library/tmp/module_knowledge_analysis/forprint_library/03_contracts_cross_module_consumption/l2_packet/context/blueprint/coordination/human_intent/modules/forprint_library.yaml
+  size_bytes: 7366
+  sha256: 920d0f2d76b0d4af1667aef8514fc9c790c875ff8e6bfb8c045686be60eaf248
+- role: blueprint_authority_or_provenance_context
+  source_repo: forprint_system_blueprint
+  source_path: /srv/software_development/forprint-project/forprint_system_blueprint/coordination/repository_knowledge/module_knowledge_stabilization/library_pilot_execution_plan_v0_1.md
+  packet_path: /srv/software_development/forprint-project/forprint_library/tmp/module_knowledge_analysis/forprint_library/03_contracts_cross_module_consumption/l2_packet/context/blueprint/coordination/repository_knowledge/module_knowledge_stabilization/library_pilot_execution_plan_v0_1.md
+  size_bytes: 2746
+  sha256: ebe71f6dcd1cb4fa8ea726e44d197ea5d13a6e14bae156461d102c01642b4d32
+- role: blueprint_authority_or_provenance_context
+  source_repo: forprint_system_blueprint
+  source_path: /srv/software_development/forprint-project/forprint_system_blueprint/coordination/repository_knowledge/roadmap_enrichment/current_state_reconciliation/forprint_library_reconciliation_20260923_v0_1.md
+  packet_path: /srv/software_development/forprint-project/forprint_library/tmp/module_knowledge_analysis/forprint_library/03_contracts_cross_module_consumption/l2_packet/context/blueprint/coordination/repository_knowledge/roadmap_enrichment/current_state_reconciliation/forprint_library_reconciliation_20260923_v0_1.md
+  size_bytes: 3176
+  sha256: 30b8f3a6af8073b4f7dd1ba86e321b08ce4dac7bc3c8423229c4683f39f9142a
+- role: blueprint_authority_or_provenance_context
+  source_repo: forprint_system_blueprint
+  source_path: /srv/software_development/forprint-project/forprint_system_blueprint/coordination/repository_knowledge/roadmap_enrichment/current_state_reconciliation/forprint_library_reconciliation_20260923_v0_1.yaml
+  packet_path: /srv/software_development/forprint-project/forprint_library/tmp/module_knowledge_analysis/forprint_library/03_contracts_cross_module_consumption/l2_packet/context/blueprint/coordination/repository_knowledge/roadmap_enrichment/current_state_reconciliation/forprint_library_reconciliation_20260923_v0_1.yaml
+  size_bytes: 3774
+  sha256: 163b241c0eb334af92df32ee2628d0a7abfa970d85980e1f36244dae5a91858c
+- role: blueprint_authority_or_provenance_context
+  source_repo: forprint_system_blueprint
+  source_path: /srv/software_development/forprint-project/forprint_system_blueprint/coordination/repository_knowledge/roadmap_enrichment/library_historical_source_enrichment_checkpoint_20260922_v0_1.yaml
+  packet_path: /srv/software_development/forprint-project/forprint_library/tmp/module_knowledge_analysis/forprint_library/03_contracts_cross_module_consumption/l2_packet/context/blueprint/coordination/repository_knowledge/roadmap_enrichment/library_historical_source_enrichment_checkpoint_20260922_v0_1.yaml
+  size_bytes: 3565
+  sha256: f8b1013ace56fd388bf3ec7d09b731e68c01ad49eda05e3eace8bac80943a82d
+- role: blueprint_authority_or_provenance_context
+  source_repo: forprint_system_blueprint
+  source_path: /srv/software_development/forprint-project/forprint_system_blueprint/coordination/roadmaps/details/forprint_system_blueprint/portfolio_rebuild_inputs/2026-08-28__forprint_library__first_pass_owner_review_v0_2.md
+  packet_path: /srv/software_development/forprint-project/forprint_library/tmp/module_knowledge_analysis/forprint_library/03_contracts_cross_module_consumption/l2_packet/context/blueprint/coordination/roadmaps/details/forprint_system_blueprint/portfolio_rebuild_inputs/2026-08-28__forprint_library__first_pass_owner_review_v0_2.md
+  size_bytes: 3552
+  sha256: 8d91915947cd5a0a45bde75b377a15ae9ed92fbf45ec5af739b38944a7a9f892
+- role: blueprint_authority_or_provenance_context
+  source_repo: forprint_system_blueprint
+  source_path: /srv/software_development/forprint-project/forprint_system_blueprint/coordination/roadmaps/details/forprint_system_blueprint/portfolio_rebuild_inputs/2026-08-27__cross_module_boundaries_and_open_questions_v0_1.md
+  packet_path: /srv/software_development/forprint-project/forprint_library/tmp/module_knowledge_analysis/forprint_library/03_contracts_cross_module_consumption/l2_packet/context/blueprint/coordination/roadmaps/details/forprint_system_blueprint/portfolio_rebuild_inputs/2026-08-27__cross_module_boundaries_and_open_questions_v0_1.md
+  size_bytes: 5028
+  sha256: 266e530207af1312b9a72b27cb8fe31e0771407243afd1b01f01ed3bd852467d
+- role: blueprint_roadmap_subset
+  source_repo: forprint_system_blueprint
+  source_path: coordination/roadmaps/details/forprint_system_blueprint/portfolio_full_horizon_target_states_v0_1.yaml
+  packet_path: /srv/software_development/forprint-project/forprint_library/tmp/module_knowledge_analysis/forprint_library/03_contracts_cross_module_consumption/l2_packet/context/blueprint_roadmap_subsets/portfolio_full_horizon_target_states_v0_1__forprint_library_subset.yaml
+  source_sha256: f19182e4af8c4e80edcfd74ce34da499989be46d18b86b856d6d210e4db7973b
+  generated_subset_sha256: fc8cfc6352faa31eae7a8892f938858abb5d909833fadfed25761ceaa4f1d62f
+  match_count: 1
+- role: blueprint_roadmap_subset
+  source_repo: forprint_system_blueprint
+  source_path: coordination/roadmaps/details/forprint_system_blueprint/portfolio_module_roadmap_approval_matrix_v0_1.yaml
+  packet_path: /srv/software_development/forprint-project/forprint_library/tmp/module_knowledge_analysis/forprint_library/03_contracts_cross_module_consumption/l2_packet/context/blueprint_roadmap_subsets/portfolio_module_roadmap_approval_matrix_v0_1__forprint_library_subset.yaml
+  source_sha256: 5dd568a26524c8b2186556f79951662081575352d8b412026f88f5c83877736d
+  generated_subset_sha256: 952ccf44b5208c0e654ad512a3a0ec9b83bb99422bcca5d2ce548e864106d09f
+  match_count: 2

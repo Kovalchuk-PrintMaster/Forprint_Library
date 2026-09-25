@@ -1,0 +1,41 @@
+source_container_key: modules
+subset:
+  forprint_library:
+    strategic_priority: P0
+    role: Canonical semantic/catalog/reference and shared UI publication authority
+    target_state:
+      agreed_or_recovered:
+      - Canonical products/materials/services/operations/aliases/profiles; shared UI package publication.
+      - Historical/reference asset semantics use stable asset and revision references; Library may own canonical reference-media
+        metadata where applicable, while customer/order/production truth remains with its domain owners.
+      - Historical Asset Index entries are projections over authoritative sources; an index/search result never becomes canonical
+        asset, order or production truth.
+      synthetic_or_proposed:
+      - Fast capability/semantic discovery and mature version/adoption lifecycle.
+    full_horizon_steps:
+    - Reconcile current Library catalog, alias, template, naming-profile and UI publication evidence.
+    - Confirm Library ownership of product/material/service/operation semantics and shared UI publication, excluding business
+      workflows.
+    - Complete capability/self-inventory for canonical IDs, aliases, misspellings, production tokens, templates and technical
+      cards.
+    - Define versioned naming/profile/default semantics consumed by Calculator, Prepress and operations surfaces.
+    - Define material/product/service canonical identifiers and stable lookup contracts for Warehouse and other consumers.
+    - 'Define UI design-system package lifecycle: lookup, proposal, prototype, Inspector review, operator approval, publish
+      and adoption.'
+    - Add version/adoption metadata and compatibility rules without creating live global CSS or uncontrolled defaults.
+    - Plan fast capability/semantic discovery while keeping retrieval candidate-only and domain-owner truth authoritative.
+    - Define deprecation/migration paths for legacy aliases/profiles and evidence requirements for consumer adoption.
+    - Hold broader implementation until Contract Registry and consumer readiness are reconciled in the portfolio.
+    - Define stable historical/reference asset metadata semantics including asset ID, source module, entity links, revision
+      references, media type and provenance.
+    - Define the boundary between Library-owned canonical reference media and customer/order/production assets owned by operational
+      domains.
+    dependencies_or_inputs:
+    - forprint_contract_registry
+    human_control_surfaces:
+    - DEVELOPER_AUDIT
+    - ADMIN_FACING
+    inventory_state: OWNER_DIRECTION_CLEAR
+    implementation_eligible_now: false
+    portfolio_gate: HOLD_UNTIL_PORTFOLIO_READINESS_BASELINE_COMPLETE
+    module_value_test: KEEP

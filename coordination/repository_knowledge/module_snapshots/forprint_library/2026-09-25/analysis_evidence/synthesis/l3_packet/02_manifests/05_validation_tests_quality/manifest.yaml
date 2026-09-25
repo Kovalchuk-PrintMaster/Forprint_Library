@@ -1,0 +1,88 @@
+schema_version: forprint_module_knowledge_analysis_block_manifest_v0_1
+module_id: forprint_library
+stage: L1_INVENTORY_AND_SEGMENTATION
+block_id: 05_validation_tests_quality
+title: Validation, tests and quality
+purpose: Validators, pytest suites, architecture/boundary checks, check runner/reporting and validation compatibility surfaces.
+mutation_performed: false
+selection_method: L1 deterministic classification plus bounded human review correction v0.1; classification remains preliminary
+  until L2 analysis
+file_count: 32
+source_paths:
+- pyproject.toml
+- reports/library_check_report.json
+- reports/library_check_report.md
+- scripts/check_blueprint_instructions.py
+- scripts/run_library_checks.py
+- scripts/validate_catalog_seed.py
+- tests/content/test_business_card_product_card.py
+- tests/content/test_calculator_input_contract.py
+- tests/content/test_library_reference_contract.py
+- tests/contract/test_architecture_docs.py
+- tests/contract/test_blueprint_prompt_consumer_compatibility.py
+- tests/contract/test_catalog_seed_v0_1.py
+- tests/contract/test_completion_report.py
+- tests/contract/test_dictionary_policy_docs.py
+- tests/contract/test_make_first_workflow_targets.py
+- tests/contract/test_required_validation_targets.py
+- tests/contract/test_semantic_reference_readiness.py
+- tests/contract/test_shared_dictionary_check_report_surface.py
+- tests/contract/test_shared_dictionary_completion_report.py
+- tests/contract/test_shared_operational_dictionary_v0_1.py
+- tests/coordination/test_business_card_skeleton_closure.py
+- tests/coordination/test_calculator_input_contract_completion.py
+- tests/coordination/test_completion_packet_validator.py
+- tests/coordination/test_coordination_foundation_alignment.py
+- tests/coordination/test_coordination_foundation_alignment_closure.py
+- tests/coordination/test_make_first_semantic_readiness_closure_report.py
+- tests/coordination/test_reference_consumption_pilot.py
+- tests/coordination/test_reference_consumption_pilot_closure.py
+- tests/coordination/test_reference_contract_foundation_closure.py
+- tests/integration/test_catalog_projection_readiness.py
+- tests/integration/test_dictionary_resolver_and_preview.py
+- tests/unit/test_checkpoint_a_standard.py
+primary_capability_hypotheses:
+- schema/semantic validation
+- boundary and architecture tests
+- check/report quality gates
+cross_block_dependencies:
+- block_id: 01_domain_semantics_catalog
+  linked_file_count: 18
+- block_id: 03_contracts_cross_module_consumption
+  linked_file_count: 24
+documents_present:
+- reports/library_check_report.md
+tests_present:
+- tests/content/test_business_card_product_card.py
+- tests/content/test_calculator_input_contract.py
+- tests/content/test_library_reference_contract.py
+- tests/contract/test_architecture_docs.py
+- tests/contract/test_blueprint_prompt_consumer_compatibility.py
+- tests/contract/test_catalog_seed_v0_1.py
+- tests/contract/test_completion_report.py
+- tests/contract/test_dictionary_policy_docs.py
+- tests/contract/test_make_first_workflow_targets.py
+- tests/contract/test_required_validation_targets.py
+- tests/contract/test_semantic_reference_readiness.py
+- tests/contract/test_shared_dictionary_check_report_surface.py
+- tests/contract/test_shared_dictionary_completion_report.py
+- tests/contract/test_shared_operational_dictionary_v0_1.py
+- tests/coordination/test_business_card_skeleton_closure.py
+- tests/coordination/test_calculator_input_contract_completion.py
+- tests/coordination/test_completion_packet_validator.py
+- tests/coordination/test_coordination_foundation_alignment.py
+- tests/coordination/test_coordination_foundation_alignment_closure.py
+- tests/coordination/test_make_first_semantic_readiness_closure_report.py
+- tests/coordination/test_reference_consumption_pilot.py
+- tests/coordination/test_reference_consumption_pilot_closure.py
+- tests/coordination/test_reference_contract_foundation_closure.py
+- tests/integration/test_catalog_projection_readiness.py
+- tests/integration/test_dictionary_resolver_and_preview.py
+- tests/unit/test_checkpoint_a_standard.py
+generated_outputs_present:
+- reports/library_check_report.json
+- reports/library_check_report.md
+legacy_candidates_present:
+- tests/contract/test_dictionary_policy_docs.py
+unknowns: []
+confidence: medium

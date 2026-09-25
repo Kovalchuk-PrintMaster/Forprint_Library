@@ -1,0 +1,652 @@
+===== coordination/status/current_status.yaml =====
+module_id: forprint_library
+status: completed_pending_blueprint_review
+stage: coordination_foundation_alignment_v0_1_completion
+updated_at: '2026-07-13'
+owner_module: forprint_library
+current_focus:
+- Business Card Skeleton completed and ready for Blueprint review.
+- product.business_card is available as a controlled Library reference object.
+- Implementation and closure metadata are recorded in Library repository.
+- No Blueprint repository writes were performed.
+boundary_confirmation:
+  owns:
+  - canonical catalog semantics
+  - stable catalog IDs
+  - aliases
+  - contract definitions
+  does_not_own:
+  - clients
+  - orders
+  - payments
+  - warehouse stock truth
+  - production runtime
+  - 1C synchronization
+  - CRM workflow
+  - Telegram runtime
+  - Calculator logic
+catalog_seed_v0_1:
+  catalog_status: draft_canonical_seed
+  schema_status: unstable_v0_1
+  usage: allowed_for_projection_use
+  contract_status: not_final_contract
+  owner_module: forprint_library
+  projection_use_allowed_for:
+  - calculator_engine
+  - telegram_bot
+  - forprint_operational_registry
+  - forprint_accounting_registry_service
+  - forprint_prepress_hub
+checkpoint_a:
+  coordination_structure: done
+  makefile_standard: done
+  check_report: done
+  commit: e2f9302
+checkpoint_b:
+  catalog_seed: done
+  schemas: done
+  component_catalogs: done
+  validation_tests: done
+  check_report_catalog_validation: done
+  commit: bb7a317
+checkpoint_c:
+  docs_policy_pack: done
+  architecture_tests: done
+  commit: 967d74a
+checkpoint_d:
+  final_report_and_status: done
+  reports_index: in_progress
+  final_check: pending
+  commit: pending
+next_recommended_step:
+  status: wait_for_blueprint_review
+  recommended_action: Ask Blueprint to review Library coordination foundation alignment
+    v0.1 and confirm readiness for the next prompt.
+  candidate_next_prompt: Library Configurable Product Workbench v0.1 — Business Card
+    Skeleton
+current_phase: business_card_skeleton_v0_1
+last_completed_step: library_business_card_skeleton_ready
+shared_operational_dictionary_v0_1:
+  dictionary_status: draft_shared_operational_dictionary_v0_1
+  schema_status: unstable_v0_1
+  usage: allowed_for_projection_use
+  contract_status: not_final_contract
+  owner_module: forprint_library
+  unit_dictionary_status: not_final_inventory_unit_system
+  dictionary_groups_count: 18
+  dictionary_files: done
+  schemas: done
+  loader_validation: done
+  resolver: done
+  terminal_preview: done
+  examples: done
+  architecture_docs: done
+  check_report_extension: done
+  coordination_report: done
+shared_operational_dictionary_checkpoints:
+  checkpoint_a:
+    name: dictionary_files_and_schemas
+    status: done
+    commit: 18900ee
+  checkpoint_b:
+    name: resolver_examples_and_preview
+    status: done
+    commit: 2fc7694
+  checkpoint_c:
+    name: docs_check_report_and_coordination
+    status: in_progress_until_final_commit
+    commit: pending
+module_name: ForPrint Library
+module_status: active
+priority: p0
+last_report_id: 2026-06-09__forprint_library__report__shared-operational-dictionary-v0-1
+last_commit: 5c7c230
+branch: main
+checks:
+  lint: ok
+  tests: ok_76_passed
+  check_report: ok
+  dictionary_preview: ok
+  coordination_check: pending_blueprint_recheck
+boundary:
+  no_foreign_ownership: true
+  no_production_api: true
+  no_live_write: true
+  no_real_integrations: true
+validation:
+  make_check: ok
+  make_check_report: ok
+  dictionary_preview: ok
+  coordination_metadata: pending_blueprint_recheck
+boundaries:
+  operational_orders_added: false
+  real_clients_added: false
+  real_payments_added: false
+  real_material_stock_added: false
+  real_product_catalog_added: false
+  real_1c_sync_added: false
+  calculator_formulas_added: false
+  telegram_runtime_added: false
+  crm_dashboard_added: false
+  warehouse_stock_truth_added: false
+recommended_next_step:
+- Pass shared operational dictionary v0.1 to Blueprint for review.
+- 'Recommended next candidate: Operational Registry mapping from local draft statuses/types
+  to Library canonical dictionary IDs.'
+make_first_semantic_reference_readiness_v0_1:
+  prompt_id: make_first_semantic_reference_readiness_v0_1
+  blueprint_prompt_path: /srv/software_development/forprint-project/forprint_system_blueprint/coordination/outgoing_prompts/forprint_library/approved/2026-06-23__library__make_first_semantic_reference_readiness_v0_1.md
+  blueprint_commit: 2d49d63
+  implementation_commit: 28fe2d0
+  completion_report_id: 2026-06-25__forprint_library__report__make-first-semantic-reference-readiness-v0-1
+  completion_report_path: coordination/reports/completion/2026-06-25__forprint_library__report__make-first-semantic-reference-readiness-v0-1.md
+  status: completed_pending_blueprint_review
+  makefile_alignment: done
+  make_first_targets: done
+  module_start: passing
+  module_validate: passing
+  prompt_read: passing
+  report_clean: passing_without_git_or_venv_scan
+  semantic_reference_examples: done
+  semantic_reference_docs: done
+  downstream_handoff_notes: done
+  check_report_visibility: done
+  tests: 83_passed
+  completion_packet_automation: deferred_safe_not_faked
+  production_catalog_database: not_implemented
+  live_api: not_implemented
+  runtime_integrations: not_implemented
+reference_contract_foundation_v0_2:
+  prompt_id: reference_contract_foundation_v0_2
+  blueprint_prompt_path: /srv/software_development/forprint-project/forprint_system_blueprint/coordination/outgoing_prompts/forprint_library/approved/2026-06-29__library__reference_contract_foundation_v0_2.md
+  implementation_commit: 78bd7e1
+  implementation_commit_message: Add Library reference contract foundation
+  completion_report_id: 2026-06-29__forprint_library__report__reference-contract-foundation-v0-2
+  completion_report_path: coordination/reports/completion/2026-06-29__forprint_library__report__reference-contract-foundation-v0-2.md
+  status: accepted_by_blueprint
+  docs: done
+  examples: done
+  schemas: done
+  validator: done
+  tests: 94_passed
+  check_report_visibility: done
+  makefile_changes: not_changed_manual_blueprint_mode
+  completion_packet_automation: deferred_safe_not_faked
+  production_catalog_database: not_implemented
+  live_api: not_implemented
+  runtime_integrations: not_implemented
+coordination_foundation_alignment_v0_1:
+  prompt_id: library_coordination_foundation_alignment_v0_1
+  blueprint_prompt_path: /srv/software_development/forprint-project/forprint_system_blueprint/coordination/outgoing_prompts/forprint_library/approved/2026-07-03__library__coordination_foundation_alignment_v0_1.md
+  implementation_commit: 02e2cad
+  implementation_commit_message: Add Library coordination foundation alignment
+  completion_report_id: 2026-07-03__forprint_library__report__coordination-foundation-alignment-v0-1
+  completion_report_path: coordination/reports/completion/2026-07-03__forprint_library__report__coordination-foundation-alignment-v0-1.md
+  status: completed_pending_blueprint_review
+  makefile_rewrite: not_needed
+  operator_workflow: confirmed
+  prompt_queue_navigation: confirmed
+  document_awareness: confirmed
+  context_bundle_no_write: confirmed
+  configuration_policy: documented_deferred_until_needed
+  secrets_policy: not_applicable_no_secrets_added
+  project_tree_alignment: documented
+  check_report_visibility: done
+  tests: 104_passed
+  workbench_started: false
+  product_modeling_started: false
+  production_runtime_changes: false
+reference_consumption_pilot_v0_3:
+  status: completed_pending_blueprint_review
+  prompt_id: library_reference_consumption_pilot_v0_3
+  implementation_commit: 7e000cb
+  completion_report: coordination/reports/completion/2026-07-08__forprint_library__report__reference-consumption-pilot-v0-3.md
+  blueprint_prompt_path: /srv/software_development/forprint-project/forprint_system_blueprint/coordination/outgoing_prompts/forprint_library/approved/2026-07-08__library__reference_consumption_pilot_v0_3.md
+  added_artifacts:
+  - examples/reference_consumption/library_reference_consumption_examples.yaml
+  - schemas/reference_consumption/library_reference_consumption.schema.yaml
+  - scripts/reference_consumption/validate_reference_consumption_pilot.py
+  - docs/architecture/reference_consumption_pilot.md
+  - tests/coordination/test_reference_consumption_pilot.py
+  check_report_visibility: Library reference consumption pilot
+  validation:
+    focused_tests: 7 passed
+    full_tests: 115 passed
+    check_report: OK
+    make_check: OK
+    governance_check: OK
+    module_validate: OK
+    git_diff_check: OK
+  boundaries:
+    configurable_product_workbench_started: false
+    business_card_skeleton_started: false
+    product_modeling_ui_added: false
+    production_catalog_database_added: false
+    live_api_added: false
+    one_c_import_added: false
+    calculator_integration_added: false
+    telegram_integration_added: false
+    operational_registry_write_added: false
+    production_write_added: false
+    price_calculation_added: false
+    material_write_off_added: false
+    blueprint_repository_written: false
+  next_recommended_step: Blueprint review of module-side completion report.
+configurable_product_workbench_business_card_skeleton_v0_1:
+  status: completed_pending_blueprint_review
+  prompt_id: library_configurable_product_workbench_business_card_skeleton_v0_1
+  title: Library Configurable Product Workbench v0.1 — Business Card Skeleton
+  product_id: product.business_card
+  implementation_commit: b8eb062
+  completion_commits:
+  - 7a7cb85
+  - ad99e0a
+  - '1694215'
+  final_cleanup_commit: reported_after_push
+  completion_report: coordination/reports/completion/2026-07-11__forprint_library__report__business-card-skeleton-v0-1.md
+  blueprint_prompt_path: coordination/outgoing_prompts/forprint_library/approved/2026-07-11__library__configurable_product_workbench_business_card_skeleton_v0_1.md
+  checks_passed:
+    business_card_validator: OK
+    business_card_preview: OK
+    focused_business_card_tests: 8 passed
+    full_tests: 137 passed
+    ruff_lint: OK
+    check_report: OK
+    make_check: OK
+    governance_check: OK
+    module_validate: OK
+    git_diff_check: OK
+  blueprint_repository_written: false
+  boundaries:
+    full_product_catalog_added: false
+    product_modeling_ui_added: false
+    production_catalog_database_added: false
+    live_api_added: false
+    one_c_import_added: false
+    one_c_synchronization_added: false
+    calculator_integration_added: false
+    telegram_bot_integration_added: false
+    operational_registry_write_added: false
+    crm_write_added: false
+    website_write_added: false
+    price_calculation_added: false
+    final_price_formula_added: false
+    material_write_off_added: false
+    warehouse_stock_truth_added: false
+    production_task_creation_added: false
+    real_client_order_data_added: false
+    production_runtime_added: false
+    blueprint_repository_written: false
+  notes:
+  - Final cleanup commit hash is reported after push because a Git commit cannot contain
+    its own final hash.
+  legacy_status_aliases:
+  - business_card_skeleton_v0_1_ready_pending_blueprint_review
+
+===== coordination/status/current_status.md =====
+# ForPrint Library Current Status
+
+## Status
+
+`completed_pending_blueprint_review`
+
+Previous rolling status alias: `business_card_skeleton_v0_1_ready_pending_blueprint_review`.
+
+## Current phase
+
+`business_card_skeleton_v0_1`
+
+## Completed prompt
+
+- Prompt ID: `library_configurable_product_workbench_business_card_skeleton_v0_1`
+- Product ID: `product.business_card`
+- Implementation commit: `b8eb062`
+- Completion commits before this cleanup:
+  - `7a7cb85`
+  - `ad99e0a`
+- Final cleanup commit before Blueprint acceptance verification: `1694215`
+
+The exact final cleanup commit hash must be reported after `git push`.
+
+## Completion report
+
+`coordination/reports/completion/2026-07-11__forprint_library__report__business-card-skeleton-v0-1.md`
+
+## Summary
+
+Library Configurable Product Workbench v0.1 — Business Card Skeleton is
+completed and ready for Blueprint review.
+
+The Library repository contains `product.business_card` as the first controlled
+configurable product reference for business cards / візитки.
+
+## Checks passed
+
+- Business card validator: OK
+- Business card preview: OK
+- Focused business card tests: 8 passed
+- Full pytest suite: 137 passed
+- Ruff lint: OK
+- `make check-report`: OK
+- `make check`: OK
+- `make governance-check`: OK
+- `make module-validate`: OK
+- `git diff --check`: OK
+
+## Blueprint repository writes
+
+No Blueprint repository writes.
+
+No files were written directly into the Blueprint repository.
+
+## Boundaries preserved
+
+- No full product catalog.
+- No product modeling UI.
+- No production catalog database.
+- No live API.
+- No 1C import.
+- No 1C synchronization.
+- No Calculator integration.
+- No Telegram Bot integration.
+- No Operational Registry write.
+- No CRM write.
+- No Website write.
+- No price calculation.
+- No final price formula.
+- No material write-off logic.
+- No warehouse stock truth.
+- No production task creation.
+- No real client or order data.
+- No production runtime.
+
+## Previous completed checkpoints
+
+### make_first_semantic_reference_readiness_v0_1
+
+Accepted by Blueprint before the business card skeleton checkpoint.
+
+### reference_contract_foundation_v0_2
+
+Accepted by Blueprint before the business card skeleton checkpoint.
+
+### coordination_foundation_alignment_v0_1
+
+- Makefile was not rewritten.
+- No real secrets or credentials were committed.
+- Coordination foundation alignment remains recorded as a historical checkpoint.
+
+### reference_consumption_pilot_v0_3
+
+- Reference consumption pilot remains recorded as a historical checkpoint.
+- Previous rolling status: `reference_consumption_pilot_v0_3_ready_pending_blueprint_review`.
+
+## Next step
+
+Blueprint review of `library_configurable_product_workbench_business_card_skeleton_v0_1`.
+
+===== coordination/status/next_questions_for_blueprint.md =====
+# Next questions for Blueprint
+
+## Current checkpoint
+
+`library_configurable_product_workbench_business_card_skeleton_v0_1`
+
+## Status
+
+`completed_pending_blueprint_review`
+
+## Product ID
+
+`product.business_card`
+
+## Open questions
+
+No open questions.
+
+## Review request
+
+Please review the Library-side completion report:
+
+`coordination/reports/completion/2026-07-11__forprint_library__report__business-card-skeleton-v0-1.md`
+
+The module is waiting for Blueprint acceptance or requested fixes.
+
+## Blueprint repository writes
+
+No files were written directly into the Blueprint repository.
+
+## Latest cleanup commit before Blueprint acceptance verification
+
+`1694215` — Finalize Library business card completion metadata.
+
+## Boundary confirmation
+
+No Blueprint repository writes.
+
+===== coordination/prompts/index.yaml =====
+module_id: forprint_library
+index_type: received_prompts
+updated_at: "2026-06-05"
+items: []
+=== MAKEFILE OPERATOR SURFACES ===
+8:#   - Prefer Blueprint Make tooling over raw script calls where available.
+9:#   - Keep Prompt Queue and Coordination Document Awareness visible during module start.
+23:# Purpose: define Blueprint repository/runtime paths.
+24:# Result: module can call Blueprint governance, prompt queue and awareness tools.
+25:BLUEPRINT_ROOT ?= /srv/software_development/forprint-project/forprint_system_blueprint
+26:BLUEPRINT_PYTHON ?= $(BLUEPRINT_ROOT)/.venv_blueprint/bin/python
+29:# Result: Blueprint tools can filter module-specific prompts, policy and awareness docs.
+37:# Purpose: define Blueprint standards paths.
+38:# Result: standards list/snapshot targets can read Blueprint standards.
+39:BLUEPRINT_STANDARDS_DIR := $(BLUEPRINT_ROOT)/coordination/standards
+40:LOCAL_STANDARDS_DIR := coordination/standards
+41:LOCAL_STANDARDS_SNAPSHOT := $(LOCAL_STANDARDS_DIR)/blueprint_standards_available_snapshot.txt
+43:# Purpose: define Blueprint prompt and module policy paths.
+44:# Result: prompt and governance targets use module-specific Blueprint sources.
+45:BLUEPRINT_OUTGOING_PROMPTS_DIR := $(BLUEPRINT_ROOT)/coordination/outgoing_prompts/$(MODULE_ID)
+46:BLUEPRINT_MODULE_POLICY := $(BLUEPRINT_ROOT)/coordination/module_policy/$(MODULE_ID)/module_policy.md
+48:# Purpose: allow optional manual active prompt override during transition.
+49:# Result: Prompt Queue remains preferred; this value is used only as fallback.
+50:ACTIVE_BLUEPRINT_PROMPT ?=
+51:LOCAL_ACTIVE_PROMPT_DIR := coordination/prompts/active
+52:LOCAL_ACTIVE_PROMPT := $(LOCAL_ACTIVE_PROMPT_DIR)/current_blueprint_prompt.md
+54:# Purpose: define Blueprint coordination metadata scripts.
+55:# Result: local coordination metadata can be checked/fixed through Blueprint tools.
+56:BLUEPRINT_COORDINATION_CHECKER := $(BLUEPRINT_ROOT)/scripts/check_coordination_metadata.py
+57:BLUEPRINT_COORDINATION_FIXER := $(BLUEPRINT_ROOT)/scripts/fix_coordination_metadata.py
+59:# Purpose: define Blueprint Prompt Queue scripts.
+60:# Result: module can discover and read the next prompt without hardcoded prompt paths.
+61:BLUEPRINT_PROMPT_QUEUE_VALIDATOR := $(BLUEPRINT_ROOT)/scripts/coordination/validate_prompt_queue.py
+62:BLUEPRINT_PROMPT_DASHBOARD_RENDERER := $(BLUEPRINT_ROOT)/scripts/coordination/render_prompt_dashboard.py
+63:BLUEPRINT_NEXT_PROMPT_RESOLVER := $(BLUEPRINT_ROOT)/scripts/coordination/resolve_next_prompt.py
+65:# Purpose: define Blueprint Coordination Document Awareness scripts.
+66:# Result: module can see new/changed Blueprint documents and build context bundles.
+67:BLUEPRINT_DOCUMENT_MANIFEST_BUILDER := $(BLUEPRINT_ROOT)/scripts/coordination/build_document_manifest.py
+68:BLUEPRINT_DOCUMENT_AWARENESS_DASHBOARD := $(BLUEPRINT_ROOT)/scripts/coordination/render_document_awareness_dashboard.py
+69:BLUEPRINT_CONTEXT_BUNDLE_BUILDER := $(BLUEPRINT_ROOT)/scripts/coordination/build_context_bundle.py
+70:BLUEPRINT_DOCUMENT_AWARENESS_LEDGER_UPDATER := $(BLUEPRINT_ROOT)/scripts/coordination/update_document_awareness_ledger.py
+73:# Result: operator can preview/apply review status without manually copying hashes.
+74:STATUS ?= acknowledged
+82:# Result: this module owns its own review/adoption status for Blueprint documents.
+83:MODULE_DOCUMENT_AWARENESS_LEDGER := $(CURDIR)/coordination/blueprint_awareness/document_review_ledger.yaml
+106:	@echo "  make format-check"
+108:	@echo "  make check"
+109:	@echo "  make check-report"
+110:	@echo "  make check-report-full"
+113:	@echo "Blueprint sync:"
+114:	@echo "  make blueprint-pull"
+115:	@echo "  make blueprint-check"
+116:	@echo "  make blueprint-sync-directives"
+117:	@echo "  make blueprint-instruction"
+118:	@echo "  make blueprint-standards"
+119:	@echo "  make blueprint-prompts"
+120:	@echo "  make blueprint-sync"
+122:	@echo "Prompt Queue:"
+123:	@echo "  make prompt-queue-validate"
+124:	@echo "  make prompt-dashboard"
+125:	@echo "  make prompt-next"
+126:	@echo "  make prompt-read-next"
+128:	@echo "Coordination document awareness:"
+134:	@echo "  make document-ledger-preview DOCUMENT=coordination/global_policy/forprint_project_doctrine.md"
+135:	@echo "  make document-ledger-update DOCUMENT=coordination/global_policy/forprint_project_doctrine.md STATUS=acknowledged"
+137:	@echo "Governance / workflow:"
+138:	@echo "  make coordination-check"
+139:	@echo "  make coordination-fix"
+140:	@echo "  make module-policy-check"
+141:	@echo "  make governance-check"
+186:# Purpose: run ruff checks without modifying files.
+190:	PYTHONPATH=app $(PYTHON) -m ruff check app scripts tests
+196:	PYTHONPATH=app $(PYTHON) -m ruff check app scripts tests --fix
+206:# Result: avoids rewriting the historical repo-wide ruff-format baseline while still checking new work.
+207:.PHONY: format-check
+208:format-check:
+216:		PYTHONPATH=app $(PYTHON) -m ruff format --check $$changed_files; \
+218:		echo "OK: no changed Python files require format check."; \
+242:# 08 Validation / check reports START
+246:# Result: lint, tests, check report and Blueprint awareness smoke checks pass.
+247:.PHONY: check
+248:check:
+252:	$(MAKE) check-report
+253:	$(MAKE) prompt-queue-validate
+258:# Result: human/machine check reports are generated by Library check runner.
+259:.PHONY: check-report
+260:check-report:
+261:	PYTHONPATH=app $(PYTHON) scripts/run_library_checks.py
+264:# Purpose: run the full Library check report surface expected by Blueprint prompts.
+265:# Result: aliases the current complete Library check report until a wider report mode exists.
+266:.PHONY: check-report-full
+267:check-report-full: check-report
+270:# 08 Validation / check reports FINISH
+275:# 09 Status / generated reports / cleanup START
+283:# Purpose: show current module status through the Library check report.
+284:# Result: concise validation/status report is printed.
+285:.PHONY: status-report
+286:status-report:
+287:	$(MAKE) check-report
+289:# Purpose: remove local generated/cache files without touching source coordination reports.
+290:# Result: working tree remains reviewable after checks.
+301:# 09 Status / generated reports / cleanup FINISH
+306:# 10 Blueprint integration START
+309:# Purpose: update local Blueprint repository.
+310:# Result: Blueprint is pulled using ff-only.
+311:.PHONY: blueprint-pull
+312:blueprint-pull:
+313:	git -C $(BLUEPRINT_ROOT) pull --ff-only
+315:# Purpose: run Library-specific Blueprint instruction compatibility check.
+316:# Result: local script confirms required Blueprint instruction sources are readable.
+317:.PHONY: blueprint-check
+318:blueprint-check:
+319:	PYTHONPATH=app $(PYTHON) scripts/check_blueprint_instructions.py
+321:# Purpose: import active Blueprint directives into Library coordination.
+323:.PHONY: blueprint-sync-directives
+324:blueprint-sync-directives:
+325:	PYTHONPATH=app $(PYTHON) scripts/sync_blueprint_directives.py
+327:# Purpose: run all Blueprint synchronization needed before module work starts.
+328:# Result: Blueprint repo, instruction intake, standards, prompts and awareness manifest are refreshed/checked.
+329:.PHONY: blueprint-sync
+330:blueprint-sync:
+331:	$(MAKE) blueprint-pull
+332:	$(MAKE) blueprint-check
+333:	$(MAKE) blueprint-instruction
+334:	$(MAKE) blueprint-standards
+335:	$(MAKE) blueprint-prompts
+336:	$(MAKE) blueprint-sync-directives
+337:	$(MAKE) coordination-check
+341:# 10 Blueprint integration FINISH
+346:# 11 Blueprint instruction intake START
+349:# Purpose: list Blueprint instruction/prompt sources relevant to Library.
+350:# Result: operator can inspect available Blueprint prompt files.
+351:.PHONY: blueprint-instruction-list
+352:blueprint-instruction-list:
+353:	@echo "== Blueprint instruction check for $(MODULE_ID) =="
+354:	@echo "Blueprint root: $(BLUEPRINT_ROOT)"
+355:	@echo "Prompt Queue next prompt:"
+356:	@"$(BLUEPRINT_PYTHON)" "$(BLUEPRINT_NEXT_PROMPT_RESOLVER)" --root "$(BLUEPRINT_ROOT)" --module "$(MODULE_ID)" || true
+357:	@if [ -n "$(ACTIVE_BLUEPRINT_PROMPT)" ]; then echo "Manual active prompt override: $(ACTIVE_BLUEPRINT_PROMPT)"; else echo "Manual active prompt override: not set"; fi
+358:	@if [ -d "$(BLUEPRINT_OUTGOING_PROMPTS_DIR)" ]; then find "$(BLUEPRINT_OUTGOING_PROMPTS_DIR)" -type f -name "*.md" | sort; else echo "WARN: no outgoing prompt directory for $(MODULE_ID)"; fi
+361:# Purpose: verify Blueprint prompt queue and legacy prompt fallback readability.
+362:# Result: prompt queue index is required; legacy fallback prompt is advisory.
+363:.PHONY: blueprint-instruction-check
+364:blueprint-instruction-check:
+365:	@echo "== Blueprint instruction check for $(MODULE_ID) =="
+366:	@[ -d "$(BLUEPRINT_ROOT)" ] && echo "OK: Blueprint root is readable: $(BLUEPRINT_ROOT)" || { echo "FAILED: Blueprint root is missing: $(BLUEPRINT_ROOT)"; exit 1; }
+367:	@[ -r "$(BLUEPRINT_OUTGOING_PROMPTS_DIR)/index.yaml" ] && echo "OK: Blueprint prompt queue index is readable." || { echo "FAILED: Blueprint prompt queue index is missing or unreadable."; exit 1; }
+368:	@ next_prompt_path="$$("$(BLUEPRINT_PYTHON)" "$(BLUEPRINT_NEXT_PROMPT_RESOLVER)" --root "$(BLUEPRINT_ROOT)" --module "$(MODULE_ID)" --path-only 2>/dev/null)"; \
+369:	if [ -n "$$next_prompt_path" ] && [ -r "$(BLUEPRINT_ROOT)/$$next_prompt_path" ]; then \
+370:			echo "OK: Prompt Queue next prompt is readable: $(BLUEPRINT_ROOT)/$$next_prompt_path"; \
+371:	elif [ -n "$(ACTIVE_BLUEPRINT_PROMPT)" ] && [ -r "$(ACTIVE_BLUEPRINT_PROMPT)" ]; then \
+372:			echo "OK: manual active prompt override is readable: $(ACTIVE_BLUEPRINT_PROMPT)"; \
+374:			echo "FAILED: no readable Prompt Queue next prompt or manual active prompt override found."; \
+378:# Purpose: sync legacy/static fallback prompt into local coordination.
+379:# Result: local fallback prompt is copied if available.
+380:.PHONY: blueprint-instruction-sync
+381:blueprint-instruction-sync: blueprint-instruction-check
+382:	@echo "== Blueprint instruction sync for $(MODULE_ID) =="
+383:	@mkdir -p "$(LOCAL_ACTIVE_PROMPT_DIR)"
+384:	@next_prompt_path="$$("$(BLUEPRINT_PYTHON)" "$(BLUEPRINT_NEXT_PROMPT_RESOLVER)" --root "$(BLUEPRINT_ROOT)" --module "$(MODULE_ID)" --path-only 2>/dev/null)"; \
+385:	if [ -n "$$next_prompt_path" ] && [ -r "$(BLUEPRINT_ROOT)/$$next_prompt_path" ]; then \
+386:		cp "$(BLUEPRINT_ROOT)/$$next_prompt_path" "$(LOCAL_ACTIVE_PROMPT)"; \
+387:		echo "OK: synced Prompt Queue next prompt to $(LOCAL_ACTIVE_PROMPT)"; \
+388:		echo "Source: $(BLUEPRINT_ROOT)/$$next_prompt_path"; \
+389:	elif [ -n "$(ACTIVE_BLUEPRINT_PROMPT)" ] && [ -r "$(ACTIVE_BLUEPRINT_PROMPT)" ]; then \
+390:		cp "$(ACTIVE_BLUEPRINT_PROMPT)" "$(LOCAL_ACTIVE_PROMPT)"; \
+391:		echo "OK: synced manual active prompt override to $(LOCAL_ACTIVE_PROMPT)"; \
+392:		echo "Source: $(ACTIVE_BLUEPRINT_PROMPT)"; \
+394:		echo "FAILED: active prompt was not synced."; \
+400:# Purpose: run complete Blueprint instruction intake workflow.
+401:# Result: instruction sources are listed, checked and synced.
+402:.PHONY: blueprint-instruction
+403:blueprint-instruction: blueprint-instruction-list blueprint-instruction-check blueprint-instruction-sync
+404:	@echo "== Blueprint instruction sync for $(MODULE_ID) =="
+405:	@mkdir -p "$(LOCAL_ACTIVE_PROMPT_DIR)"
+406:	@next_prompt_path="$$("$(BLUEPRINT_PYTHON)" "$(BLUEPRINT_NEXT_PROMPT_RESOLVER)" --root "$(BLUEPRINT_ROOT)" --module "$(MODULE_ID)" --path-only 2>/dev/null)"; \
+407:	if [ -n "$$next_prompt_path" ] && [ -r "$(BLUEPRINT_ROOT)/$$next_prompt_path" ]; then \
+408:			cp "$(BLUEPRINT_ROOT)/$$next_prompt_path" "$(LOCAL_ACTIVE_PROMPT)"; \
+409:			echo "OK: synced Prompt Queue next prompt to $(LOCAL_ACTIVE_PROMPT)"; \
+410:			echo "Source: $(BLUEPRINT_ROOT)/$$next_prompt_path"; \
+411:	elif [ -n "$(ACTIVE_BLUEPRINT_PROMPT)" ] && [ -r "$(ACTIVE_BLUEPRINT_PROMPT)" ]; then \
+412:			cp "$(ACTIVE_BLUEPRINT_PROMPT)" "$(LOCAL_ACTIVE_PROMPT)"; \
+413:			echo "OK: synced manual active prompt override to $(LOCAL_ACTIVE_PROMPT)"; \
+414:			echo "Source: $(ACTIVE_BLUEPRINT_PROMPT)"; \
+416:			echo "FAILED: active prompt was not synced."; \
+421:# 11 Blueprint instruction intake FINISH
+426:# 12 Blueprint standards START
+429:# Purpose: list Blueprint standard files.
+430:# Result: operator can inspect available Blueprint standards.
+431:.PHONY: blueprint-standards-list
+432:blueprint-standards-list:
+433:	@echo "== Blueprint standards list =="
+434:	@[ -d "$(BLUEPRINT_STANDARDS_DIR)" ] && find "$(BLUEPRINT_STANDARDS_DIR)" -type f | sort || { echo "FAILED: Blueprint standards directory is missing: $(BLUEPRINT_STANDARDS_DIR)"; exit 1; }
+436:# Purpose: verify Blueprint standards are readable.
+438:.PHONY: blueprint-standards-check
+439:blueprint-standards-check:
+440:	@echo "== Blueprint standards check =="
+441:	@[ -d "$(BLUEPRINT_STANDARDS_DIR)" ] && echo "OK: Blueprint standards directory is readable: $(BLUEPRINT_STANDARDS_DIR)" || { echo "FAILED: Blueprint standards directory is missing: $(BLUEPRINT_STANDARDS_DIR)"; exit 1; }
+442:	@[ "$$(find "$(BLUEPRINT_STANDARDS_DIR)" -type f | wc -l)" -gt 0 ] && echo "OK: Blueprint standards files are available" || { echo "FAILED: Blueprint standards directory has no files"; exit 1; }
+444:# Purpose: write local snapshot of available Blueprint standards.
+445:# Result: coordination/standards/blueprint_standards_available_snapshot.txt is refreshed.
+446:.PHONY: blueprint-standards-sync
+447:blueprint-standards-sync: blueprint-standards-check
+448:	@echo "== Blueprint standards sync =="
+451:	@printf '%s\n' "snapshot_type: blueprint_standards_available_snapshot" >> "$(LOCAL_STANDARDS_SNAPSHOT)"
+452:	@printf '%s\n' "blueprint_root: $(BLUEPRINT_ROOT)" >> "$(LOCAL_STANDARDS_SNAPSHOT)"
+454:	@find "$(BLUEPRINT_STANDARDS_DIR)" -type f | sort | sed 's#^#  - #' >> "$(LOCAL_STANDARDS_SNAPSHOT)"
+457:# Purpose: run complete Blueprint standards workflow.
+458:# Result: standards are listed, checked and local snapshot is refreshed.
+459:.PHONY: blueprint-standards
+460:blueprint-standards: blueprint-standards-list blueprint-standards-check blueprint-standards-sync
+463:# 12 Blueprint standards FINISH
+468:# 13 Blueprint outgoing prompts / Prompt Queue START
+471:# Purpose: list Blueprint prompt files for Library.
+472:# Result: operator can inspect prompt markdown files under module outgoing prompt directory.
+473:.PHONY: blueprint-prompts-list
+474:blueprint-prompts-list:
+475:	@echo "== Blueprint prompts list for $(MODULE_ID) =="
+476:	@if [ -d "$(BLUEPRINT_OUTGOING_PROMPTS_DIR)" ]; then find "$(BLUEPRINT_OUTGOING_PROMPTS_DIR)" -type f -name "*.md" | sort; else echo "WARN: no outgoing prompt directory for $(MODULE_ID)"; fi
+478:# Purpose: verify Blueprint prompt sources.
+479:# Result: prompt queue index is readable.
+480:.PHONY: blueprint-prompts-check
+481:blueprint-prompts-check: blueprint-instruction-check
+483:# Purpose: sync legacy/static fallback prompt.
+484:# Result: fallback prompt is synced if available.

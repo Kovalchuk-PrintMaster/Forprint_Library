@@ -1,0 +1,478 @@
+schema_version: forprint_library_l2_analysis_packet_v0_1
+module_id: forprint_library
+block_id: 06_coordination_governance_intake
+purpose: Bounded evidence packet for sequential L2 analysis of Library coordination, Blueprint intake, prompt/status/report
+  surfaces, completion evidence and operator governance.
+authority_statement: Analysis evidence only; completion/status/index presence does not establish currentness or execution
+  authority.
+selection_authority:
+  primary_population: tmp/module_knowledge_analysis/forprint_library/06_coordination_governance_intake/manifest.yaml
+  primary_population_count: 30
+  related_test_rule: L1 inventory rows with file_kind=test and secondary_blocks containing 06_coordination_governance_intake
+  related_test_count: 0
+  prior_l2_reports:
+  - tmp/module_knowledge_analysis/forprint_library/01_domain_semantics_catalog/analysis_report.md
+  - tmp/module_knowledge_analysis/forprint_library/02_dictionaries_resolution_profiles/analysis_report.md
+  - tmp/module_knowledge_analysis/forprint_library/03_contracts_cross_module_consumption/analysis_report.md
+  - tmp/module_knowledge_analysis/forprint_library/04_exports_previews_examples/analysis_report.md
+  - tmp/module_knowledge_analysis/forprint_library/05_validation_tests_quality/analysis_report.md
+analysis_questions:
+- What is the formal current Blueprint prompt intake path?
+- Which local prompt/index surfaces are current, legacy, transitional, or stale?
+- Which current_status fields represent current projection vs accumulated checkpoint history?
+- Which completion reports prove module completion vs Blueprint acceptance?
+- Which coordination exporters are checkpoint-specific mutators and unsafe for casual replay?
+- Which Makefile/operator workflows are current supported governance surfaces?
+- How are prompt, report, status and completion packet authority ordered?
+- Which historical acceptance markers conflict with current Git/Blueprint evidence?
+- Which status/report surfaces should become derived rather than hand-maintained?
+library_snapshot:
+  module_id: forprint_library
+  block_id: 06_coordination_governance_intake
+  branch: feature/library-calculator-input-contract-v01
+  head: bba52bf6001f256a5c13ea7dbe175336b431754c
+  upstream: bba52bf6001f256a5c13ea7dbe175336b431754c
+  head_matches_upstream: true
+  non_tmp_status_before: []
+  source_population_count: 30
+  related_test_count: 0
+blueprint_snapshot:
+  repository: forprint_system_blueprint
+  root: /srv/software_development/forprint-project/forprint_system_blueprint
+  branch: audit/blueprint-inventory-refresh-2026-07-29
+  head: f3811072006f9a4cc9ae0446492523a8f87c313d
+  upstream: f3811072006f9a4cc9ae0446492523a8f87c313d
+  status_short:
+  - M AGENTS.md
+  - ' M README.md'
+  - ' M coordination/bootstrap/START_HERE.md'
+  - ' M coordination/global_policy/current_execution_focus.md'
+  - ' M coordination/standards/automation/index.yaml'
+  - ' M indexes/README.md'
+  - ' M indexes/authorities.yaml'
+  - ' M indexes/contracts.yaml'
+  - ' M indexes/dependencies.json'
+  - ' M indexes/derivations.yaml'
+  - ' M indexes/document_catalog.yaml'
+  - ' M indexes/documents.yaml'
+  - ' M indexes/files.json'
+  - ' M indexes/governance.yaml'
+  - ' M indexes/incoming_requests.yaml'
+  - ' M indexes/index.yaml'
+  - ' M indexes/knowledge_summary.yaml'
+  - ' M indexes/legacy.yaml'
+  - ' M indexes/modules.yaml'
+  - ' M indexes/prompts.yaml'
+  - ' M indexes/references.json'
+  - ' M indexes/review_candidates.yaml'
+  - ' M indexes/roadmaps.yaml'
+  - ' M indexes/source_coverage.yaml'
+  - ' M machine/contracts.yaml'
+  - ' M machine/data_flows.yaml'
+  - ' M machine/data_objects.yaml'
+  - ' M machine/domains.yaml'
+  - ' M machine/future_channel_readiness.yaml'
+  - ' M machine/impact_rules.yaml'
+  - ' M machine/module_identity_registry.yaml'
+  - ' M machine/module_manifest_schema.yaml'
+  - ' M machine/module_status_report_schema.yaml'
+  - ' M machine/modules.yaml'
+  - ' M machine/ownership.yaml'
+  - ' M machine/system_control_flows.yaml'
+  - ' M machine/system_layers.yaml'
+  - ?? coordination/bootstrap/ACTIVE_RECONCILIATION_QUESTIONS.yaml
+  - ?? coordination/bootstrap/assistant_context_system_specs_v0_1.yaml
+  - ?? coordination/bootstrap/index_v0_1.yaml
+  - ?? coordination/bootstrap/parallel_workstream_current_snapshot_v0_1.yaml
+  - ?? coordination/continuity/events/000066__evt-u180j-plan-20260921t102727249527__4dd85ce6ef7f.yaml
+  - ?? coordination/continuity/events/000067__evt-u180j-activate-20260921t102955259861__ad000c7b9af2.yaml
+  - ?? coordination/continuity/execution_attempts/cf10-u180j-a003__1c8b6804277a.yaml
+  - ?? coordination/continuity/execution_attempts/cf10-u180j-a003__571944de6a4e.yaml
+  - ?? coordination/continuity/execution_attempts/cf10-u180j-a004__bc64bdd79056.yaml
+  - ?? coordination/continuity/execution_attempts/cf10-u180j-a004__be56313f5c2f.yaml
+  - ?? coordination/continuity/projections/BLOCKERS.yaml
+  - ?? coordination/continuity/projections/CURRENT_WORKFRONT.yaml
+  - ?? coordination/continuity/projections/DECISIONS.yaml
+  - ?? coordination/continuity/projections/NEXT_HORIZON.yaml
+  - ?? coordination/continuity/projections/RECENT_ACTIVITY.yaml
+  - ?? coordination/continuity/projections/SOURCE_STATE.yaml
+  - ?? coordination/continuity/projections/UNRECONCILED_CURRENT_DELTA.yaml
+  - ?? coordination/continuity/projections/WORKER_PORTFOLIO.yaml
+  - ?? coordination/internal_work/blueprint/worker_tasks/cf10_local_dispatcher_telegram_operator_surface_v0_1.yaml
+  - ?? coordination/internal_work/blueprint/worker_tasks/cf10_zero_stage_dispatch_boundary_regression_v0_1.yaml
+  - ?? coordination/roadmap_execution/
+  - ?? coordination/roadmaps/details/forprint_system_blueprint/control_foundation_near_horizon_program_v0_1.yaml
+  - ?? coordination/standards/automation/control_plane/bootstrap_task_context_mode_v0_1.yaml
+  - ?? coordination/standards/automation/control_plane/bootstrap_worker_runtime_profile_v0_1.yaml
+  - ?? coordination/standards/automation/control_plane/module_bootstrap_execution_policy_v0_1.yaml
+  - ?? coordination/standards/automation/control_plane/module_bootstrap_prompt_requirements_v0_1.yaml
+  - ?? coordination/standards/automation/worker_candidate_promotion_contract_v0_1.yaml
+  - ?? coordination/standards/automation/worker_runtime_adapter_registry_contract_v0_1.yaml
+  - ?? coordination/standards/automation/worker_runtime_benchmark_contract_v0_1.yaml
+  - ?? coordination/standards/automation/worker_task_envelope_contract_v0_1.yaml
+  - ?? coordination/work_fronts/cf10_internal_dispatch_exception_real_workspace_v0_1.yaml
+  - ?? coordination/work_fronts/cf10_internal_task_context_adapter_v0_1.yaml
+  - ?? coordination/work_fronts/cf10_isolated_workspace_dispatch_preflight_v0_1.yaml
+  - ?? coordination/work_fronts/cf10_local_dispatcher_telegram_operator_surface_v0_1.yaml
+  - ?? coordination/work_fronts/cf10_multi_provider_runtime_registry_v0_1.yaml
+  - ?? coordination/work_fronts/cf10_runtime_standards_index_convergence_v0_1.yaml
+  - ?? coordination/work_fronts/cf10_worker_runtime_foundation_v0_1.yaml
+  - ?? coordination/work_fronts/cf10_zero_stage_dispatch_boundary_regression_v0_1.yaml
+  - ?? indexes/execution_dependency_graph.yaml
+  - ?? indexes/generator_inventory.yaml
+  - ?? scripts/coordination/build_worker_invocation.py
+  - ?? scripts/coordination/control_plane/context/
+  - ?? scripts/coordination/control_plane/tasking/
+  - ?? scripts/coordination/roadmap_execution_reconciliation.py
+  - ?? scripts/validation/control_plane/context/
+  - ?? scripts/validation/control_plane/worker_runtime/
+  - ?? scripts/validation/validate_cf10_internal_dispatch_exception_real_workspace_v0_1.py
+  - ?? scripts/validation/validate_cf10_internal_task_context_adapter_v0_1.py
+  - ?? scripts/validation/validate_cf10_multi_provider_runtime_registry_v0_1.py
+  - ?? scripts/validation/validate_console_worker_adapter_v0_1.py
+  - ?? scripts/validation/validate_roadmap_execution_reconciliation_v0_1.py
+  - ?? scripts/validation/validate_worker_runtime_foundation_v0_1.py
+  - ?? tests/coordination/control_plane/context/
+  - ?? tests/coordination/control_plane/tasking/
+  - ?? tests/coordination/control_plane/test_cf09_dispatcher_assistant_ack_gate_v0_1.py
+  - ?? tests/coordination/test_console_worker_adapter_v0_1.py
+  - ?? tests/validation/test_cf10_multi_provider_runtime_registry_contract_v0_1.py
+  - ?? tests/validation/test_roadmap_execution_dependency_registration_v0_1.py
+  - ?? tests/validation/test_roadmap_execution_reconciliation_v0_1.py
+  note: Blueprint status is captured as read-only context. No Blueprint mutation is performed.
+primary_source_paths:
+- Makefile
+- coordination/README.md
+- coordination/blueprint_awareness/document_review_ledger.yaml
+- coordination/blueprint_awareness/library_coordination_foundation_alignment_v0_1.yaml
+- coordination/blueprint_source.yaml
+- coordination/completion_packets/records/2026-07-29__forprint_library__calculator_input_contract_v0_1_completion.yaml
+- coordination/prompts/active/2026-06-23__library__make_first_semantic_reference_readiness_v0_1.md
+- coordination/prompts/active/2026-06-29__library__reference_contract_foundation_v0_2.md
+- coordination/prompts/active/current_blueprint_prompt.md
+- coordination/prompts/index.yaml
+- coordination/prompts/received/.gitkeep
+- coordination/reports/commits/.gitkeep
+- coordination/reports/commits/2026-07-07__forprint_library__commit-report__coordination-foundation-alignment-v0-1.md
+- coordination/reports/completion/.gitkeep
+- coordination/reports/completion/2026-06-06__forprint_library__report__catalog-seed-v0-1-and-coordination-bootstrap.md
+- coordination/reports/completion/2026-06-09__forprint_library__report__shared-operational-dictionary-v0-1.md
+- coordination/reports/completion/2026-06-25__forprint_library__report__make-first-semantic-reference-readiness-v0-1.md
+- coordination/reports/completion/2026-06-29__forprint_library__report__reference-contract-foundation-v0-2.md
+- coordination/reports/completion/2026-07-03__forprint_library__report__coordination-foundation-alignment-v0-1.md
+- coordination/reports/completion/2026-07-08__forprint_library__report__reference-consumption-pilot-v0-3.md
+- coordination/reports/completion/2026-07-11__forprint_library__report__business-card-skeleton-v0-1.md
+- coordination/reports/completion/forprint_library_calculator_input_contract_v0_1_completion.md
+- coordination/reports/index.yaml
+- coordination/standards/blueprint_standards_available_snapshot.txt
+- coordination/status/current_status.md
+- coordination/status/current_status.yaml
+- coordination/status/next_questions_for_blueprint.md
+- forprint_module_manifest.yaml
+- scripts/make_first_workflow.py
+- scripts/sync_blueprint_directives.py
+related_test_paths: []
+provenance_item_count: 50
+provenance:
+- role: l1_block_manifest
+  source_repo: forprint_library
+  source_path: /srv/software_development/forprint-project/forprint_library/tmp/module_knowledge_analysis/forprint_library/06_coordination_governance_intake/manifest.yaml
+  packet_path: /srv/software_development/forprint-project/forprint_library/tmp/module_knowledge_analysis/forprint_library/06_coordination_governance_intake/l2_packet/manifest/l1_block_manifest.yaml
+  size_bytes: 4295
+  sha256: 744c3d45c254af98b870bd64fb05f54ee381afe6c5b90a9eedeb3e2e57cb3663
+- role: primary_coordination_governance_source
+  source_repo: forprint_library
+  source_path: /srv/software_development/forprint-project/forprint_library/Makefile
+  packet_path: /srv/software_development/forprint-project/forprint_library/tmp/module_knowledge_analysis/forprint_library/06_coordination_governance_intake/l2_packet/primary_source/Makefile
+  size_bytes: 35129
+  sha256: 1dbb9d37aada8b97fc82bdead4205a9eec877d08d62939b47e518329591faa22
+- role: primary_coordination_governance_source
+  source_repo: forprint_library
+  source_path: /srv/software_development/forprint-project/forprint_library/coordination/README.md
+  packet_path: /srv/software_development/forprint-project/forprint_library/tmp/module_knowledge_analysis/forprint_library/06_coordination_governance_intake/l2_packet/primary_source/coordination/README.md
+  size_bytes: 1085
+  sha256: 097a851d8d4091089136af47c1fc85a81c8b70fafa9790e6313dd4e998c66023
+- role: primary_coordination_governance_source
+  source_repo: forprint_library
+  source_path: /srv/software_development/forprint-project/forprint_library/coordination/blueprint_awareness/document_review_ledger.yaml
+  packet_path: /srv/software_development/forprint-project/forprint_library/tmp/module_knowledge_analysis/forprint_library/06_coordination_governance_intake/l2_packet/primary_source/coordination/blueprint_awareness/document_review_ledger.yaml
+  size_bytes: 4574
+  sha256: 85b0c4f1a4302dfbb2df357e2d20b89d57ebca810fb631866863a2eefe3354fc
+- role: primary_coordination_governance_source
+  source_repo: forprint_library
+  source_path: /srv/software_development/forprint-project/forprint_library/coordination/blueprint_awareness/library_coordination_foundation_alignment_v0_1.yaml
+  packet_path: /srv/software_development/forprint-project/forprint_library/tmp/module_knowledge_analysis/forprint_library/06_coordination_governance_intake/l2_packet/primary_source/coordination/blueprint_awareness/library_coordination_foundation_alignment_v0_1.yaml
+  size_bytes: 3388
+  sha256: f981230f738761e891b95152a420c7606b89377ce1a8afbc402d00bbd54f359a
+- role: primary_coordination_governance_source
+  source_repo: forprint_library
+  source_path: /srv/software_development/forprint-project/forprint_library/coordination/blueprint_source.yaml
+  packet_path: /srv/software_development/forprint-project/forprint_library/tmp/module_knowledge_analysis/forprint_library/06_coordination_governance_intake/l2_packet/primary_source/coordination/blueprint_source.yaml
+  size_bytes: 462
+  sha256: 2dbab28b08c760d9d43c7260c4b2a887c4213dc3966cd343d2d1689edd910617
+- role: primary_coordination_governance_source
+  source_repo: forprint_library
+  source_path: /srv/software_development/forprint-project/forprint_library/coordination/completion_packets/records/2026-07-29__forprint_library__calculator_input_contract_v0_1_completion.yaml
+  packet_path: /srv/software_development/forprint-project/forprint_library/tmp/module_knowledge_analysis/forprint_library/06_coordination_governance_intake/l2_packet/primary_source/coordination/completion_packets/records/2026-07-29__forprint_library__calculator_input_contract_v0_1_completion.yaml
+  size_bytes: 4338
+  sha256: c174d31ad47d8385ee221c009d17351f7e5162f0a0cf42b529c7ba02c530d86a
+- role: primary_coordination_governance_source
+  source_repo: forprint_library
+  source_path: /srv/software_development/forprint-project/forprint_library/coordination/prompts/active/2026-06-23__library__make_first_semantic_reference_readiness_v0_1.md
+  packet_path: /srv/software_development/forprint-project/forprint_library/tmp/module_knowledge_analysis/forprint_library/06_coordination_governance_intake/l2_packet/primary_source/coordination/prompts/active/2026-06-23__library__make_first_semantic_reference_readiness_v0_1.md
+  size_bytes: 6228
+  sha256: 623f96540b9a7b909bb30002cdaf7a53cef8dfb8358ad82fcdb1ed783e93582d
+- role: primary_coordination_governance_source
+  source_repo: forprint_library
+  source_path: /srv/software_development/forprint-project/forprint_library/coordination/prompts/active/2026-06-29__library__reference_contract_foundation_v0_2.md
+  packet_path: /srv/software_development/forprint-project/forprint_library/tmp/module_knowledge_analysis/forprint_library/06_coordination_governance_intake/l2_packet/primary_source/coordination/prompts/active/2026-06-29__library__reference_contract_foundation_v0_2.md
+  size_bytes: 6410
+  sha256: 5e12b9d5e937c942f5d448e0773335cb385c9d91ef48ac31c964f596f161cc44
+- role: primary_coordination_governance_source
+  source_repo: forprint_library
+  source_path: /srv/software_development/forprint-project/forprint_library/coordination/prompts/active/current_blueprint_prompt.md
+  packet_path: /srv/software_development/forprint-project/forprint_library/tmp/module_knowledge_analysis/forprint_library/06_coordination_governance_intake/l2_packet/primary_source/coordination/prompts/active/current_blueprint_prompt.md
+  size_bytes: 7214
+  sha256: 4a1e689270407aea87418b450cab99ad366868dcd042e61c38c12cd5978352ab
+- role: primary_coordination_governance_source
+  source_repo: forprint_library
+  source_path: /srv/software_development/forprint-project/forprint_library/coordination/prompts/index.yaml
+  packet_path: /srv/software_development/forprint-project/forprint_library/tmp/module_knowledge_analysis/forprint_library/06_coordination_governance_intake/l2_packet/primary_source/coordination/prompts/index.yaml
+  size_bytes: 91
+  sha256: c4e1d697446581ed7018e7f6e2ea27674526c9c04f3bbfb1b06c95f2debc6d15
+- role: primary_coordination_governance_source
+  source_repo: forprint_library
+  source_path: /srv/software_development/forprint-project/forprint_library/coordination/prompts/received/.gitkeep
+  packet_path: /srv/software_development/forprint-project/forprint_library/tmp/module_knowledge_analysis/forprint_library/06_coordination_governance_intake/l2_packet/primary_source/coordination/prompts/received/.gitkeep
+  size_bytes: 0
+  sha256: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+- role: primary_coordination_governance_source
+  source_repo: forprint_library
+  source_path: /srv/software_development/forprint-project/forprint_library/coordination/reports/commits/.gitkeep
+  packet_path: /srv/software_development/forprint-project/forprint_library/tmp/module_knowledge_analysis/forprint_library/06_coordination_governance_intake/l2_packet/primary_source/coordination/reports/commits/.gitkeep
+  size_bytes: 0
+  sha256: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+- role: primary_coordination_governance_source
+  source_repo: forprint_library
+  source_path: /srv/software_development/forprint-project/forprint_library/coordination/reports/commits/2026-07-07__forprint_library__commit-report__coordination-foundation-alignment-v0-1.md
+  packet_path: /srv/software_development/forprint-project/forprint_library/tmp/module_knowledge_analysis/forprint_library/06_coordination_governance_intake/l2_packet/primary_source/coordination/reports/commits/2026-07-07__forprint_library__commit-report__coordination-foundation-alignment-v0-1.md
+  size_bytes: 4557
+  sha256: 3cf2023a97d077910bc979d32442c9177ac22893f9ec6b839f644b22cc569539
+- role: primary_coordination_governance_source
+  source_repo: forprint_library
+  source_path: /srv/software_development/forprint-project/forprint_library/coordination/reports/completion/.gitkeep
+  packet_path: /srv/software_development/forprint-project/forprint_library/tmp/module_knowledge_analysis/forprint_library/06_coordination_governance_intake/l2_packet/primary_source/coordination/reports/completion/.gitkeep
+  size_bytes: 0
+  sha256: e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855
+- role: primary_coordination_governance_source
+  source_repo: forprint_library
+  source_path: /srv/software_development/forprint-project/forprint_library/coordination/reports/completion/2026-06-06__forprint_library__report__catalog-seed-v0-1-and-coordination-bootstrap.md
+  packet_path: /srv/software_development/forprint-project/forprint_library/tmp/module_knowledge_analysis/forprint_library/06_coordination_governance_intake/l2_packet/primary_source/coordination/reports/completion/2026-06-06__forprint_library__report__catalog-seed-v0-1-and-coordination-bootstrap.md
+  size_bytes: 7800
+  sha256: 6ed2e7d5f4987eeefbe6cd0bbab197aad54453202e8b511d534b27720911291c
+- role: primary_coordination_governance_source
+  source_repo: forprint_library
+  source_path: /srv/software_development/forprint-project/forprint_library/coordination/reports/completion/2026-06-09__forprint_library__report__shared-operational-dictionary-v0-1.md
+  packet_path: /srv/software_development/forprint-project/forprint_library/tmp/module_knowledge_analysis/forprint_library/06_coordination_governance_intake/l2_packet/primary_source/coordination/reports/completion/2026-06-09__forprint_library__report__shared-operational-dictionary-v0-1.md
+  size_bytes: 7053
+  sha256: 023e26c7015ee458b56ed2f50d36a0ac9d22ded64321be96c95618b50e623809
+- role: primary_coordination_governance_source
+  source_repo: forprint_library
+  source_path: /srv/software_development/forprint-project/forprint_library/coordination/reports/completion/2026-06-25__forprint_library__report__make-first-semantic-reference-readiness-v0-1.md
+  packet_path: /srv/software_development/forprint-project/forprint_library/tmp/module_knowledge_analysis/forprint_library/06_coordination_governance_intake/l2_packet/primary_source/coordination/reports/completion/2026-06-25__forprint_library__report__make-first-semantic-reference-readiness-v0-1.md
+  size_bytes: 4498
+  sha256: ed7796a21325fc10e1468395f9c228a0c017b59a3f09837c5f40a4cd50ffcd9b
+- role: primary_coordination_governance_source
+  source_repo: forprint_library
+  source_path: /srv/software_development/forprint-project/forprint_library/coordination/reports/completion/2026-06-29__forprint_library__report__reference-contract-foundation-v0-2.md
+  packet_path: /srv/software_development/forprint-project/forprint_library/tmp/module_knowledge_analysis/forprint_library/06_coordination_governance_intake/l2_packet/primary_source/coordination/reports/completion/2026-06-29__forprint_library__report__reference-contract-foundation-v0-2.md
+  size_bytes: 3581
+  sha256: 5be21bcfbc5320badce7bd15489e2ada24d4033e75fcbe87abd5f35c5a720576
+- role: primary_coordination_governance_source
+  source_repo: forprint_library
+  source_path: /srv/software_development/forprint-project/forprint_library/coordination/reports/completion/2026-07-03__forprint_library__report__coordination-foundation-alignment-v0-1.md
+  packet_path: /srv/software_development/forprint-project/forprint_library/tmp/module_knowledge_analysis/forprint_library/06_coordination_governance_intake/l2_packet/primary_source/coordination/reports/completion/2026-07-03__forprint_library__report__coordination-foundation-alignment-v0-1.md
+  size_bytes: 2738
+  sha256: 64a42d4b209deafa8f7ce5130cd38b7a071e5553419d9325183b88b524daac31
+- role: primary_coordination_governance_source
+  source_repo: forprint_library
+  source_path: /srv/software_development/forprint-project/forprint_library/coordination/reports/completion/2026-07-08__forprint_library__report__reference-consumption-pilot-v0-3.md
+  packet_path: /srv/software_development/forprint-project/forprint_library/tmp/module_knowledge_analysis/forprint_library/06_coordination_governance_intake/l2_packet/primary_source/coordination/reports/completion/2026-07-08__forprint_library__report__reference-consumption-pilot-v0-3.md
+  size_bytes: 4274
+  sha256: 1baee0bc5830ef808d1db04918a184c4b1d93a79cf25474b71c8c94bd217bde2
+- role: primary_coordination_governance_source
+  source_repo: forprint_library
+  source_path: /srv/software_development/forprint-project/forprint_library/coordination/reports/completion/2026-07-11__forprint_library__report__business-card-skeleton-v0-1.md
+  packet_path: /srv/software_development/forprint-project/forprint_library/tmp/module_knowledge_analysis/forprint_library/06_coordination_governance_intake/l2_packet/primary_source/coordination/reports/completion/2026-07-11__forprint_library__report__business-card-skeleton-v0-1.md
+  size_bytes: 5021
+  sha256: 8ce090e65bee5106a99de46a0ffef5cf78b65dd6037faf098452dac6f8376958
+- role: primary_coordination_governance_source
+  source_repo: forprint_library
+  source_path: /srv/software_development/forprint-project/forprint_library/coordination/reports/completion/forprint_library_calculator_input_contract_v0_1_completion.md
+  packet_path: /srv/software_development/forprint-project/forprint_library/tmp/module_knowledge_analysis/forprint_library/06_coordination_governance_intake/l2_packet/primary_source/coordination/reports/completion/forprint_library_calculator_input_contract_v0_1_completion.md
+  size_bytes: 7485
+  sha256: 8b2ef36caf5227fbc6f3c76d4f4e285ca864ed2bcd2c5e7ffc1cf10590d68cf4
+- role: primary_coordination_governance_source
+  source_repo: forprint_library
+  source_path: /srv/software_development/forprint-project/forprint_library/coordination/reports/index.yaml
+  packet_path: /srv/software_development/forprint-project/forprint_library/tmp/module_knowledge_analysis/forprint_library/06_coordination_governance_intake/l2_packet/primary_source/coordination/reports/index.yaml
+  size_bytes: 7151
+  sha256: 599f84cf2459181a8da8deeb8d159c817a76bb524b5793172a9e315fc976d393
+- role: primary_coordination_governance_source
+  source_repo: forprint_library
+  source_path: /srv/software_development/forprint-project/forprint_library/coordination/standards/blueprint_standards_available_snapshot.txt
+  packet_path: /srv/software_development/forprint-project/forprint_library/tmp/module_knowledge_analysis/forprint_library/06_coordination_governance_intake/l2_packet/primary_source/coordination/standards/blueprint_standards_available_snapshot.txt
+  size_bytes: 4992
+  sha256: 7ef37f3a7ced6efd379176078a0dc0533ecfcaa79828d5c301f22977c348891f
+- role: primary_coordination_governance_source
+  source_repo: forprint_library
+  source_path: /srv/software_development/forprint-project/forprint_library/coordination/status/current_status.md
+  packet_path: /srv/software_development/forprint-project/forprint_library/tmp/module_knowledge_analysis/forprint_library/06_coordination_governance_intake/l2_packet/primary_source/coordination/status/current_status.md
+  size_bytes: 2722
+  sha256: f5e4ae8e88aa5983f02cbba017bba96d941258022253881fd57f98bda5d422b7
+- role: primary_coordination_governance_source
+  source_repo: forprint_library
+  source_path: /srv/software_development/forprint-project/forprint_library/coordination/status/current_status.yaml
+  packet_path: /srv/software_development/forprint-project/forprint_library/tmp/module_knowledge_analysis/forprint_library/06_coordination_governance_intake/l2_packet/primary_source/coordination/status/current_status.yaml
+  size_bytes: 11034
+  sha256: 261bd7797a1d1f39b0349bf65a7d889f59c59083e1fcd5d0b63379ba59821695
+- role: primary_coordination_governance_source
+  source_repo: forprint_library
+  source_path: /srv/software_development/forprint-project/forprint_library/coordination/status/next_questions_for_blueprint.md
+  packet_path: /srv/software_development/forprint-project/forprint_library/tmp/module_knowledge_analysis/forprint_library/06_coordination_governance_intake/l2_packet/primary_source/coordination/status/next_questions_for_blueprint.md
+  size_bytes: 782
+  sha256: b0cf6706707fdd910d1a9631b5b2bec6084130e6776cbbd14d99affe747f048b
+- role: primary_coordination_governance_source
+  source_repo: forprint_library
+  source_path: /srv/software_development/forprint-project/forprint_library/forprint_module_manifest.yaml
+  packet_path: /srv/software_development/forprint-project/forprint_library/tmp/module_knowledge_analysis/forprint_library/06_coordination_governance_intake/l2_packet/primary_source/forprint_module_manifest.yaml
+  size_bytes: 1757
+  sha256: c7229a92ad0bdf1ff5c0380f6ea0d920da9334c2fb83f84ae250dfe1a6efbe60
+- role: primary_coordination_governance_source
+  source_repo: forprint_library
+  source_path: /srv/software_development/forprint-project/forprint_library/scripts/make_first_workflow.py
+  packet_path: /srv/software_development/forprint-project/forprint_library/tmp/module_knowledge_analysis/forprint_library/06_coordination_governance_intake/l2_packet/primary_source/scripts/make_first_workflow.py
+  size_bytes: 9498
+  sha256: 9cba89c3cc4dcf242c5d20e409ac017e17463dee30f18d3fe6aad26d981b7375
+- role: primary_coordination_governance_source
+  source_repo: forprint_library
+  source_path: /srv/software_development/forprint-project/forprint_library/scripts/sync_blueprint_directives.py
+  packet_path: /srv/software_development/forprint-project/forprint_library/tmp/module_knowledge_analysis/forprint_library/06_coordination_governance_intake/l2_packet/primary_source/scripts/sync_blueprint_directives.py
+  size_bytes: 4678
+  sha256: 130b05a11b01439bdf484717d37d432b7fae784a6af79d1658d943d28ecad91d
+- role: l0_scope/authority
+  source_repo: forprint_library
+  source_path: /srv/software_development/forprint-project/forprint_library/tmp/module_knowledge_analysis/forprint_library/00_preflight/module_scope_and_authority.md
+  packet_path: /srv/software_development/forprint-project/forprint_library/tmp/module_knowledge_analysis/forprint_library/06_coordination_governance_intake/l2_packet/context/local/tmp/module_knowledge_analysis/forprint_library/00_preflight/module_scope_and_authority.md
+  size_bytes: 26848
+  sha256: 2f50ee3e571d1aa08749bef6ccc96c08b94c902a405209f6d6e44133c62f6233
+- role: l1_closeout
+  source_repo: forprint_library
+  source_path: /srv/software_development/forprint-project/forprint_library/tmp/module_knowledge_analysis/forprint_library/l1_inventory/l1_closeout.md
+  packet_path: /srv/software_development/forprint-project/forprint_library/tmp/module_knowledge_analysis/forprint_library/06_coordination_governance_intake/l2_packet/context/local/tmp/module_knowledge_analysis/forprint_library/l1_inventory/l1_closeout.md
+  size_bytes: 8043
+  sha256: e52e7ca3e2eaf27e7447d43b70bcd7582d7d896fd593a3f7cb278a8b82ec8971
+- role: l1_run_report
+  source_repo: forprint_library
+  source_path: /srv/software_development/forprint-project/forprint_library/tmp/module_knowledge_analysis/forprint_library/l1_inventory/run_report.yaml
+  packet_path: /srv/software_development/forprint-project/forprint_library/tmp/module_knowledge_analysis/forprint_library/06_coordination_governance_intake/l2_packet/context/local/tmp/module_knowledge_analysis/forprint_library/l1_inventory/run_report.yaml
+  size_bytes: 1725
+  sha256: dedb10a29bcc008ecb7f89c20faeb34bf3a2b88429477fd38164c3b3dcdcdaee
+- role: l1_segmentation_summary
+  source_repo: forprint_library
+  source_path: /srv/software_development/forprint-project/forprint_library/tmp/module_knowledge_analysis/forprint_library/l1_inventory/segmentation_summary.md
+  packet_path: /srv/software_development/forprint-project/forprint_library/tmp/module_knowledge_analysis/forprint_library/06_coordination_governance_intake/l2_packet/context/local/tmp/module_knowledge_analysis/forprint_library/l1_inventory/segmentation_summary.md
+  size_bytes: 2245
+  sha256: e5fc302c3578cb0a3f0dff2d797e38afcb0c1664f43f769bd54f4e372a90d34d
+- role: prior_l2_block_01_supporting_analysis
+  source_repo: forprint_library
+  source_path: /srv/software_development/forprint-project/forprint_library/tmp/module_knowledge_analysis/forprint_library/01_domain_semantics_catalog/analysis_report.md
+  packet_path: /srv/software_development/forprint-project/forprint_library/tmp/module_knowledge_analysis/forprint_library/06_coordination_governance_intake/l2_packet/context/local/tmp/module_knowledge_analysis/forprint_library/01_domain_semantics_catalog/analysis_report.md
+  size_bytes: 38430
+  sha256: 7124be275bed431331d250599bd11ac7ea8b7d40c3f5e8593072ec1f88dc3b67
+- role: prior_l2_block_02_supporting_analysis
+  source_repo: forprint_library
+  source_path: /srv/software_development/forprint-project/forprint_library/tmp/module_knowledge_analysis/forprint_library/02_dictionaries_resolution_profiles/analysis_report.md
+  packet_path: /srv/software_development/forprint-project/forprint_library/tmp/module_knowledge_analysis/forprint_library/06_coordination_governance_intake/l2_packet/context/local/tmp/module_knowledge_analysis/forprint_library/02_dictionaries_resolution_profiles/analysis_report.md
+  size_bytes: 40724
+  sha256: 5ceb47259fd453982f1c722a15c250a71333591fee7a0acdbde53ce1a1dac612
+- role: prior_l2_block_03_supporting_analysis
+  source_repo: forprint_library
+  source_path: /srv/software_development/forprint-project/forprint_library/tmp/module_knowledge_analysis/forprint_library/03_contracts_cross_module_consumption/analysis_report.md
+  packet_path: /srv/software_development/forprint-project/forprint_library/tmp/module_knowledge_analysis/forprint_library/06_coordination_governance_intake/l2_packet/context/local/tmp/module_knowledge_analysis/forprint_library/03_contracts_cross_module_consumption/analysis_report.md
+  size_bytes: 47445
+  sha256: 3c230f2e6bf006ac2ba5a240db0e0956bcb4770696099fbf56e130c3d72033a1
+- role: prior_l2_block_04_supporting_analysis
+  source_repo: forprint_library
+  source_path: /srv/software_development/forprint-project/forprint_library/tmp/module_knowledge_analysis/forprint_library/04_exports_previews_examples/analysis_report.md
+  packet_path: /srv/software_development/forprint-project/forprint_library/tmp/module_knowledge_analysis/forprint_library/06_coordination_governance_intake/l2_packet/context/local/tmp/module_knowledge_analysis/forprint_library/04_exports_previews_examples/analysis_report.md
+  size_bytes: 34090
+  sha256: 689ea5df27a9904234e92faeaba6a079d6d9c71f4cf0e3c0ec4f26accc64624e
+- role: prior_l2_block_05_supporting_analysis
+  source_repo: forprint_library
+  source_path: /srv/software_development/forprint-project/forprint_library/tmp/module_knowledge_analysis/forprint_library/05_validation_tests_quality/analysis_report.md
+  packet_path: /srv/software_development/forprint-project/forprint_library/tmp/module_knowledge_analysis/forprint_library/06_coordination_governance_intake/l2_packet/context/local/tmp/module_knowledge_analysis/forprint_library/05_validation_tests_quality/analysis_report.md
+  size_bytes: 44232
+  sha256: 0f12a9f7699c79273f97043cb94691c78d1c0222085cb34a7f2736dd989a9340
+- role: blueprint_authority_or_provenance_context
+  source_repo: forprint_system_blueprint
+  source_path: /srv/software_development/forprint-project/forprint_system_blueprint/coordination/module_policy/forprint_library/module_policy.md
+  packet_path: /srv/software_development/forprint-project/forprint_library/tmp/module_knowledge_analysis/forprint_library/06_coordination_governance_intake/l2_packet/context/blueprint/coordination/module_policy/forprint_library/module_policy.md
+  size_bytes: 1848
+  sha256: 60010ad1b6ae83a18ee0828139708a4523d01c67a424143b7c427b70c3c5414c
+- role: blueprint_authority_or_provenance_context
+  source_repo: forprint_system_blueprint
+  source_path: /srv/software_development/forprint-project/forprint_system_blueprint/coordination/human_intent/modules/forprint_library.yaml
+  packet_path: /srv/software_development/forprint-project/forprint_library/tmp/module_knowledge_analysis/forprint_library/06_coordination_governance_intake/l2_packet/context/blueprint/coordination/human_intent/modules/forprint_library.yaml
+  size_bytes: 7366
+  sha256: 920d0f2d76b0d4af1667aef8514fc9c790c875ff8e6bfb8c045686be60eaf248
+- role: blueprint_authority_or_provenance_context
+  source_repo: forprint_system_blueprint
+  source_path: /srv/software_development/forprint-project/forprint_system_blueprint/coordination/repository_knowledge/module_knowledge_stabilization/library_pilot_execution_plan_v0_1.md
+  packet_path: /srv/software_development/forprint-project/forprint_library/tmp/module_knowledge_analysis/forprint_library/06_coordination_governance_intake/l2_packet/context/blueprint/coordination/repository_knowledge/module_knowledge_stabilization/library_pilot_execution_plan_v0_1.md
+  size_bytes: 2746
+  sha256: ebe71f6dcd1cb4fa8ea726e44d197ea5d13a6e14bae156461d102c01642b4d32
+- role: blueprint_authority_or_provenance_context
+  source_repo: forprint_system_blueprint
+  source_path: /srv/software_development/forprint-project/forprint_system_blueprint/coordination/repository_knowledge/roadmap_enrichment/current_state_reconciliation/forprint_library_reconciliation_20260923_v0_1.md
+  packet_path: /srv/software_development/forprint-project/forprint_library/tmp/module_knowledge_analysis/forprint_library/06_coordination_governance_intake/l2_packet/context/blueprint/coordination/repository_knowledge/roadmap_enrichment/current_state_reconciliation/forprint_library_reconciliation_20260923_v0_1.md
+  size_bytes: 3176
+  sha256: 30b8f3a6af8073b4f7dd1ba86e321b08ce4dac7bc3c8423229c4683f39f9142a
+- role: blueprint_authority_or_provenance_context
+  source_repo: forprint_system_blueprint
+  source_path: /srv/software_development/forprint-project/forprint_system_blueprint/coordination/repository_knowledge/roadmap_enrichment/current_state_reconciliation/forprint_library_reconciliation_20260923_v0_1.yaml
+  packet_path: /srv/software_development/forprint-project/forprint_library/tmp/module_knowledge_analysis/forprint_library/06_coordination_governance_intake/l2_packet/context/blueprint/coordination/repository_knowledge/roadmap_enrichment/current_state_reconciliation/forprint_library_reconciliation_20260923_v0_1.yaml
+  size_bytes: 3774
+  sha256: 163b241c0eb334af92df32ee2628d0a7abfa970d85980e1f36244dae5a91858c
+- role: blueprint_authority_or_provenance_context
+  source_repo: forprint_system_blueprint
+  source_path: /srv/software_development/forprint-project/forprint_system_blueprint/coordination/repository_knowledge/roadmap_enrichment/library_historical_source_enrichment_checkpoint_20260922_v0_1.yaml
+  packet_path: /srv/software_development/forprint-project/forprint_library/tmp/module_knowledge_analysis/forprint_library/06_coordination_governance_intake/l2_packet/context/blueprint/coordination/repository_knowledge/roadmap_enrichment/library_historical_source_enrichment_checkpoint_20260922_v0_1.yaml
+  size_bytes: 3565
+  sha256: f8b1013ace56fd388bf3ec7d09b731e68c01ad49eda05e3eace8bac80943a82d
+- role: blueprint_authority_or_provenance_context
+  source_repo: forprint_system_blueprint
+  source_path: /srv/software_development/forprint-project/forprint_system_blueprint/coordination/roadmaps/details/forprint_system_blueprint/portfolio_rebuild_inputs/2026-08-28__forprint_library__first_pass_owner_review_v0_2.md
+  packet_path: /srv/software_development/forprint-project/forprint_library/tmp/module_knowledge_analysis/forprint_library/06_coordination_governance_intake/l2_packet/context/blueprint/coordination/roadmaps/details/forprint_system_blueprint/portfolio_rebuild_inputs/2026-08-28__forprint_library__first_pass_owner_review_v0_2.md
+  size_bytes: 3552
+  sha256: 8d91915947cd5a0a45bde75b377a15ae9ed92fbf45ec5af739b38944a7a9f892
+- role: blueprint_authority_or_provenance_context
+  source_repo: forprint_system_blueprint
+  source_path: /srv/software_development/forprint-project/forprint_system_blueprint/coordination/roadmaps/details/forprint_system_blueprint/portfolio_rebuild_inputs/2026-08-27__cross_module_boundaries_and_open_questions_v0_1.md
+  packet_path: /srv/software_development/forprint-project/forprint_library/tmp/module_knowledge_analysis/forprint_library/06_coordination_governance_intake/l2_packet/context/blueprint/coordination/roadmaps/details/forprint_system_blueprint/portfolio_rebuild_inputs/2026-08-27__cross_module_boundaries_and_open_questions_v0_1.md
+  size_bytes: 5028
+  sha256: 266e530207af1312b9a72b27cb8fe31e0771407243afd1b01f01ed3bd852467d
+- role: blueprint_roadmap_subset
+  source_repo: forprint_system_blueprint
+  source_path: coordination/roadmaps/details/forprint_system_blueprint/portfolio_full_horizon_target_states_v0_1.yaml
+  packet_path: /srv/software_development/forprint-project/forprint_library/tmp/module_knowledge_analysis/forprint_library/06_coordination_governance_intake/l2_packet/context/blueprint_roadmap_subsets/portfolio_full_horizon_target_states_v0_1__forprint_library_subset.yaml
+  source_sha256: f19182e4af8c4e80edcfd74ce34da499989be46d18b86b856d6d210e4db7973b
+  generated_subset_sha256: fc8cfc6352faa31eae7a8892f938858abb5d909833fadfed25761ceaa4f1d62f
+  match_count: 1
+- role: blueprint_roadmap_subset
+  source_repo: forprint_system_blueprint
+  source_path: coordination/roadmaps/details/forprint_system_blueprint/portfolio_module_roadmap_approval_matrix_v0_1.yaml
+  packet_path: /srv/software_development/forprint-project/forprint_library/tmp/module_knowledge_analysis/forprint_library/06_coordination_governance_intake/l2_packet/context/blueprint_roadmap_subsets/portfolio_module_roadmap_approval_matrix_v0_1__forprint_library_subset.yaml
+  source_sha256: 5dd568a26524c8b2186556f79951662081575352d8b412026f88f5c83877736d
+  generated_subset_sha256: 952ccf44b5208c0e654ad512a3a0ec9b83bb99422bcca5d2ce548e864106d09f
+  match_count: 2

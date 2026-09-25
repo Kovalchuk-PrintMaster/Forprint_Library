@@ -1,0 +1,143 @@
+schema_version: library_reference_consumption_examples_v0_3
+pilot_id: library_reference_consumption_pilot_v0_3
+owner_module: forprint_library
+description: >
+  Local, read-only examples showing how downstream ForPrint modules may consume
+  Library reference contract identifiers without redefining Library-owned
+  semantics or adding downstream runtime ownership to Library.
+
+reference_contract_source:
+  schema_version: library_reference_v0_2
+  path: examples/reference_contract/library_reference_examples.yaml
+  note: >
+    These examples consume the controlled Library reference contract examples.
+    They are not production catalog records and do not start Configurable Product
+    Workbench.
+
+valid_consumer_payloads:
+  - id: calculator_pricing_context_reference
+    description: Calculator Engine keeps a Library product reference as pricing context input.
+    consumer_module: calculator_engine
+    consumer_payload_id: calculator_context_demo_001
+    library_owned_reference:
+      schema_version: library_reference_v0_2
+      reference_type: product_service
+      reference_id: product_service.business_card.standard
+      display_label: Business card / standard
+      resolution_status: library_reference_confirmed
+    consumer_owned_fields:
+      pricing_context_note: Example pricing context only; no price calculation is performed.
+      requested_quantity: 500
+      requested_size_hint: 90x50
+    foreign_module_references:
+      calculator_context_reference: calculator_engine.demo.pricing_context_001
+    boundary_assertions:
+      example_only: true
+      no_library_semantic_redefinition: true
+      no_downstream_runtime_write: true
+      no_price_calculation: true
+
+  - id: telegram_channel_hint_reference
+    description: Telegram Bot keeps a Library template reference as a channel-local hint.
+    consumer_module: telegram_bot
+    consumer_payload_id: telegram_hint_demo_001
+    library_owned_reference:
+      schema_version: library_reference_v0_2
+      reference_type: template
+      reference_id: template.business_card.90x50
+      display_label: Business card template 90x50
+      resolution_status: library_reference_confirmed
+    consumer_owned_fields:
+      channel_hint: User mentioned a 90x50 business card layout.
+      message_locale: uk-UA
+    foreign_module_references:
+      telegram_message_reference: telegram_bot.demo.message_001
+    boundary_assertions:
+      example_only: true
+      no_library_semantic_redefinition: true
+      no_downstream_runtime_write: true
+      no_telegram_runtime_behavior: true
+
+  - id: operational_registry_foreign_reference
+    description: Operational Registry stores a Library material reference as foreign-domain metadata.
+    consumer_module: forprint_operational_registry
+    consumer_payload_id: operational_reference_demo_001
+    library_owned_reference:
+      schema_version: library_reference_v0_2
+      reference_type: material
+      reference_id: material.paper.mondi_color_copy_300gsm
+      display_label: Mondi Color Copy 300 gsm
+      resolution_status: library_reference_confirmed
+    consumer_owned_fields:
+      operational_note: Example foreign-domain metadata only.
+      local_task_reference: operational_registry.demo.task_001
+    foreign_module_references:
+      operational_registry_reference: forprint_operational_registry.demo.material_ref_001
+    boundary_assertions:
+      example_only: true
+      no_library_semantic_redefinition: true
+      no_downstream_runtime_write: true
+      no_stock_mutation: true
+
+invalid_consumer_payloads:
+  - id: invalid_unknown_library_reference_id
+    expected_error_contains: unknown Library reference id
+    description: Consumer payload points to a reference ID that is not present in the Library reference contract examples.
+    consumer_module: calculator_engine
+    consumer_payload_id: invalid_calculator_context_demo_001
+    library_owned_reference:
+      schema_version: library_reference_v0_2
+      reference_type: product_service
+      reference_id: product_service.unknown.not_registered
+      display_label: Unknown product/service
+      resolution_status: library_reference_confirmed
+    consumer_owned_fields:
+      pricing_context_note: Invalid example.
+    foreign_module_references:
+      calculator_context_reference: calculator_engine.demo.invalid_context_001
+    boundary_assertions:
+      example_only: true
+      no_library_semantic_redefinition: true
+      no_downstream_runtime_write: true
+
+  - id: invalid_consumer_redefines_library_semantics
+    expected_error_contains: forbidden field
+    description: Consumer tries to redefine Library-owned meaning.
+    consumer_module: telegram_bot
+    consumer_payload_id: invalid_telegram_hint_demo_001
+    library_owned_reference:
+      schema_version: library_reference_v0_2
+      reference_type: template
+      reference_id: template.business_card.90x50
+      display_label: Business card template 90x50
+      resolution_status: library_reference_confirmed
+    consumer_owned_fields:
+      channel_hint: Invalid example.
+      canonical_name_override: Consumer tries to rename a Library-owned semantic reference.
+    foreign_module_references:
+      telegram_message_reference: telegram_bot.demo.invalid_message_001
+    boundary_assertions:
+      example_only: true
+      no_library_semantic_redefinition: false
+      no_downstream_runtime_write: true
+
+  - id: invalid_consumer_runtime_ownership
+    expected_error_contains: forbidden field
+    description: Consumer payload tries to place runtime write responsibility into the Library reference consumption payload.
+    consumer_module: forprint_operational_registry
+    consumer_payload_id: invalid_operational_reference_demo_001
+    library_owned_reference:
+      schema_version: library_reference_v0_2
+      reference_type: material
+      reference_id: material.paper.mondi_color_copy_300gsm
+      display_label: Mondi Color Copy 300 gsm
+      resolution_status: library_reference_confirmed
+    consumer_owned_fields:
+      operational_note: Invalid example.
+      stock_mutation: reserve 100 sheets
+    foreign_module_references:
+      operational_registry_reference: forprint_operational_registry.demo.invalid_material_ref_001
+    boundary_assertions:
+      example_only: true
+      no_library_semantic_redefinition: true
+      no_downstream_runtime_write: false

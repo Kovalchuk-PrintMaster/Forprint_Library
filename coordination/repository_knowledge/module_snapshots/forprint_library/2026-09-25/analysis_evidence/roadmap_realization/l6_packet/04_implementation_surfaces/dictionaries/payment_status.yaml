@@ -1,0 +1,107 @@
+dictionary_group: payment_status
+metadata:
+  id: shared_operational_dictionary_v0_1
+  name: Shared Operational Dictionary v0.1
+  version: '0.1'
+  dictionary_status: draft_shared_operational_dictionary_v0_1
+  schema_status: unstable_v0_1
+  usage: allowed_for_projection_use
+  contract_status: not_final_contract
+  owner_module: forprint_library
+  unit_dictionary_status: not_final_inventory_unit_system
+entries:
+- id: not_invoiced
+  label_uk: Not Invoiced
+  label_en: Not Invoiced
+  description: Canonical shared operational dictionary value 'not_invoiced' for dictionary
+    group 'payment_status'.
+  status: active
+  aliases: []
+  owner_module: forprint_library
+  dictionary_group: payment_status
+  version: '0.1'
+  notes: Draft shared operational dictionary entry.
+- id: invoice_reference_pending
+  label_uk: Invoice Reference Pending
+  label_en: Invoice Reference Pending
+  description: Canonical shared operational dictionary value 'invoice_reference_pending'
+    for dictionary group 'payment_status'.
+  status: active
+  aliases: []
+  owner_module: forprint_library
+  dictionary_group: payment_status
+  version: '0.1'
+  notes: Draft shared operational dictionary entry.
+- id: unpaid
+  label_uk: Не оплачено
+  label_en: Unpaid
+  description: Canonical shared operational dictionary value 'unpaid' for dictionary
+    group 'payment_status'.
+  status: active
+  aliases:
+  - не оплачено
+  owner_module: forprint_library
+  dictionary_group: payment_status
+  version: '0.1'
+  notes: Draft shared operational dictionary entry.
+- id: partially_paid
+  label_uk: Частково оплачено
+  label_en: Partially Paid
+  description: Canonical shared operational dictionary value 'partially_paid' for
+    dictionary group 'payment_status'.
+  status: active
+  aliases:
+  - частково оплачено
+  owner_module: forprint_library
+  dictionary_group: payment_status
+  version: '0.1'
+  notes: Draft shared operational dictionary entry.
+- id: paid_reference_confirmed
+  label_uk: Підтверджено оплату
+  label_en: Paid Reference Confirmed
+  description: Canonical shared operational dictionary value 'paid_reference_confirmed'
+    for dictionary group 'payment_status'.
+  status: active
+  aliases:
+  - paid
+  - оплачено
+  owner_module: forprint_library
+  dictionary_group: payment_status
+  version: '0.1'
+  notes: Draft shared operational dictionary entry.
+- id: overdue
+  label_uk: Прострочено
+  label_en: Overdue
+  description: Canonical shared operational dictionary value 'overdue' for dictionary
+    group 'payment_status'.
+  status: active
+  aliases:
+  - прострочено
+  owner_module: forprint_library
+  dictionary_group: payment_status
+  version: '0.1'
+  notes: Draft shared operational dictionary entry.
+- id: cancelled
+  label_uk: Скасовано
+  label_en: Cancelled
+  description: Canonical shared operational dictionary value 'cancelled' for dictionary
+    group 'payment_status'.
+  status: active
+  aliases:
+  - скасовано
+  owner_module: forprint_library
+  dictionary_group: payment_status
+  version: '0.1'
+  notes: Draft shared operational dictionary entry.
+- id: unknown
+  label_uk: Невідомо
+  label_en: Unknown
+  description: Canonical shared operational dictionary value 'unknown' for dictionary
+    group 'payment_status'.
+  status: active
+  aliases:
+  - невідомо
+  owner_module: forprint_library
+  dictionary_group: payment_status
+  version: '0.1'
+  notes: Draft shared operational dictionary entry.

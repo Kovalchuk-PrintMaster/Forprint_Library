@@ -1,0 +1,70 @@
+dictionary_group: alert_severity
+metadata:
+  id: shared_operational_dictionary_v0_1
+  name: Shared Operational Dictionary v0.1
+  version: '0.1'
+  dictionary_status: draft_shared_operational_dictionary_v0_1
+  schema_status: unstable_v0_1
+  usage: allowed_for_projection_use
+  contract_status: not_final_contract
+  owner_module: forprint_library
+  unit_dictionary_status: not_final_inventory_unit_system
+entries:
+- id: info
+  label_uk: Інформаційно
+  label_en: Info
+  description: Canonical shared operational dictionary value 'info' for dictionary
+    group 'alert_severity'.
+  status: active
+  aliases: []
+  owner_module: forprint_library
+  dictionary_group: alert_severity
+  version: '0.1'
+  notes: Draft shared operational dictionary entry.
+- id: warning
+  label_uk: Попередження
+  label_en: Warning
+  description: Canonical shared operational dictionary value 'warning' for dictionary
+    group 'alert_severity'.
+  status: active
+  aliases:
+  - warn
+  owner_module: forprint_library
+  dictionary_group: alert_severity
+  version: '0.1'
+  notes: Draft shared operational dictionary entry.
+- id: high
+  label_uk: Високий
+  label_en: High
+  description: Canonical shared operational dictionary value 'high' for dictionary
+    group 'alert_severity'.
+  status: active
+  aliases: []
+  owner_module: forprint_library
+  dictionary_group: alert_severity
+  version: '0.1'
+  notes: Draft shared operational dictionary entry.
+- id: critical
+  label_uk: Критичний
+  label_en: Critical
+  description: Canonical shared operational dictionary value 'critical' for dictionary
+    group 'alert_severity'.
+  status: active
+  aliases:
+  - crit
+  owner_module: forprint_library
+  dictionary_group: alert_severity
+  version: '0.1'
+  notes: Draft shared operational dictionary entry.
+- id: unknown
+  label_uk: Невідомо
+  label_en: Unknown
+  description: Canonical shared operational dictionary value 'unknown' for dictionary
+    group 'alert_severity'.
+  status: active
+  aliases:
+  - невідомо
+  owner_module: forprint_library
+  dictionary_group: alert_severity
+  version: '0.1'
+  notes: Draft shared operational dictionary entry.

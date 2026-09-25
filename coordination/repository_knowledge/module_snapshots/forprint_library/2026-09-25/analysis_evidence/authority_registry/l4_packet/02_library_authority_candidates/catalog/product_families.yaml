@@ -1,0 +1,87 @@
+catalog_type: product_families
+metadata:
+  id: canonical_catalog_seed_v0_1
+  name: Canonical Catalog Seed v0.1
+  version: '0.1'
+  catalog_status: draft_canonical_seed
+  schema_status: unstable_v0_1
+  usage: allowed_for_projection_use
+  contract_status: not_final_contract
+  owner_module: forprint_library
+  notes: 'Draft canonical seed for projection use by dependent ForPrint modules. This
+    is not a final production contract.
+
+    '
+items:
+- id: business_card
+  name_uk: Візитка
+  name_en: Business card
+  aliases:
+  - візитка
+  - business card
+  - карточка
+  status: draft
+  version: '0.1'
+  owner_module: forprint_library
+  schema_status: unstable_v0_1
+  notes: Draft product family for small-format contact cards.
+- id: flyer
+  name_uk: Флаєр
+  name_en: Flyer
+  aliases:
+  - флаєр
+  - flyer
+  - рекламна листівка
+  status: draft
+  version: '0.1'
+  owner_module: forprint_library
+  schema_status: unstable_v0_1
+  notes: Draft product family for simple promotional leaflets.
+- id: leaflet
+  name_uk: Буклет
+  name_en: Leaflet
+  aliases:
+  - буклет
+  - leaflet
+  - складна листівка
+  status: draft
+  version: '0.1'
+  owner_module: forprint_library
+  schema_status: unstable_v0_1
+  notes: Draft product family for folded informational products.
+- id: poster
+  name_uk: Плакат
+  name_en: Poster
+  aliases:
+  - плакат
+  - poster
+  - афіша
+  status: draft
+  version: '0.1'
+  owner_module: forprint_library
+  schema_status: unstable_v0_1
+  notes: Draft product family for posters and display prints.
+- id: banner
+  name_uk: Банер
+  name_en: Banner
+  aliases:
+  - банер
+  - banner
+  - банерна продукція
+  status: draft
+  version: '0.1'
+  owner_module: forprint_library
+  schema_status: unstable_v0_1
+  notes: Draft product family for large-format banners.
+- id: sticker
+  name_uk: Наліпка
+  name_en: Sticker
+  aliases:
+  - наліпка
+  - sticker
+  - стікер
+  status: draft
+  version: '0.1'
+  owner_module: forprint_library
+  schema_status: unstable_v0_1
+  notes: Draft product family for adhesive labels and stickers.

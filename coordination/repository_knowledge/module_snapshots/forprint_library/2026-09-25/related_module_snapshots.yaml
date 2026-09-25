@@ -1,0 +1,62 @@
+schema_version: forprint_related_module_snapshot_registry_v0_1
+owner_module_id: forprint_library
+owner_snapshot_date: 2026-09-25
+purpose: discoverable cross_module_snapshot_links_for_historical_and_portfolio_analysis
+historical_baseline_rule: The Library closeout baseline is immutable. Later snapshot discoveries are appended here with discovery metadata and do not rewrite what was available at closeout time.
+entries:
+  - module_id: forprint_calculator_engine
+    relationship: consumer_of_library_calculator_input_and_reference_semantics
+    snapshot_status: not_yet_registered
+    snapshot_date: null
+    snapshot_root: null
+    first_registered_at: null
+    last_verified_at: null
+  - module_id: forprint_operations_control_registry
+    relationship: consumer_of_shared_reference_vocabulary_and_semantic_ids
+    snapshot_status: not_yet_registered
+    snapshot_date: null
+    snapshot_root: null
+    first_registered_at: null
+    last_verified_at: null
+  - module_id: forprint_accounting_registry_service
+    relationship: consumer_of_library_reference_semantics_without_accounting_truth_transfer
+    snapshot_status: not_yet_registered
+    snapshot_date: null
+    snapshot_root: null
+    first_registered_at: null
+    last_verified_at: null
+  - module_id: forprint_warehouse_service
+    relationship: consumer_of_material_product_and_reference_identity
+    snapshot_status: not_yet_registered
+    snapshot_date: null
+    snapshot_root: null
+    first_registered_at: null
+    last_verified_at: null
+  - module_id: forprint_prepress_hub
+    relationship: consumer_of_product_material_operation_template_and_technical_reference_semantics
+    snapshot_status: not_yet_registered
+    snapshot_date: null
+    snapshot_root: null
+    first_registered_at: null
+    last_verified_at: null
+  - module_id: forprint_website
+    relationship: consumer_of_library_semantics_and_possible_future_shared_design_system_publication
+    snapshot_status: not_yet_registered
+    snapshot_date: null
+    snapshot_root: null
+    first_registered_at: null
+    last_verified_at: null
+  - module_id: forprint_operations_assistant
+    relationship: future_consumer_of_calibration_sop_and_media_knowledge
+    snapshot_status: not_yet_registered
+    snapshot_date: null
+    snapshot_root: null
+    first_registered_at: null
+    last_verified_at: null
+  - module_id: forprint_contract_registry
+    relationship: portfolio_authority_for_cross_module_contract_adoption_and_version_rollout
+    snapshot_status: not_yet_registered
+    snapshot_date: null
+    snapshot_root: null
+    first_registered_at: null
+    last_verified_at: null

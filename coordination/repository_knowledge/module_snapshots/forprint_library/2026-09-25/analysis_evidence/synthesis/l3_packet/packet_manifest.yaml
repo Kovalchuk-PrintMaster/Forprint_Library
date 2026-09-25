@@ -1,0 +1,123 @@
+schema_version: forprint_library_l3_synthesis_packet_v0_1
+module_id: forprint_library
+stage: L3_CAPABILITY_SYNTHESIS
+authority:
+  source_mutation: false
+  coordination_mutation: false
+  roadmap_mutation: false
+  implementation_authority: false
+  cleanup_authority: false
+library_state:
+  branch: feature/library-calculator-input-contract-v01
+  head: bba52bf6001f256a5c13ea7dbe175336b431754c
+  upstream: bba52bf6001f256a5c13ea7dbe175336b431754c
+blueprint_state:
+  branch: audit/blueprint-inventory-refresh-2026-07-29
+  head: b6ab9b65a2c27b70a574468caa8e3de4c3b454c5
+counts:
+  l2_blocks: 8
+  l2_reports: 8
+  block_manifests: 8
+  l0_l1_files: 6
+  blueprint_files: 5
+  blueprint_subsets: 2
+l2_reports:
+- block: 01_domain_semantics_catalog
+  path: tmp/module_knowledge_analysis/forprint_library/01_domain_semantics_catalog/analysis_report.md
+  sha256: 7124be275bed431331d250599bd11ac7ea8b7d40c3f5e8593072ec1f88dc3b67
+  bytes: 38430
+- block: 02_dictionaries_resolution_profiles
+  path: tmp/module_knowledge_analysis/forprint_library/02_dictionaries_resolution_profiles/analysis_report.md
+  sha256: 5ceb47259fd453982f1c722a15c250a71333591fee7a0acdbde53ce1a1dac612
+  bytes: 40724
+- block: 03_contracts_cross_module_consumption
+  path: tmp/module_knowledge_analysis/forprint_library/03_contracts_cross_module_consumption/analysis_report.md
+  sha256: 3c230f2e6bf006ac2ba5a240db0e0956bcb4770696099fbf56e130c3d72033a1
+  bytes: 47445
+- block: 04_exports_previews_examples
+  path: tmp/module_knowledge_analysis/forprint_library/04_exports_previews_examples/analysis_report.md
+  sha256: 689ea5df27a9904234e92faeaba6a079d6d9c71f4cf0e3c0ec4f26accc64624e
+  bytes: 34090
+- block: 05_validation_tests_quality
+  path: tmp/module_knowledge_analysis/forprint_library/05_validation_tests_quality/analysis_report.md
+  sha256: 0f12a9f7699c79273f97043cb94691c78d1c0222085cb34a7f2736dd989a9340
+  bytes: 44232
+- block: 06_coordination_governance_intake
+  path: tmp/module_knowledge_analysis/forprint_library/06_coordination_governance_intake/analysis_report.md
+  sha256: f6a82988f4971a46c193013bb0cae4011cef78980f8ef3aac4677b6a03819cad
+  bytes: 57891
+- block: 07_documentation_architecture
+  path: tmp/module_knowledge_analysis/forprint_library/07_documentation_architecture/analysis_report.md
+  sha256: 585ad9cdad9c7eb6011f8168cb51bee34d9d4ad3c3bc014e687969346ea47905
+  bytes: 42887
+- block: 10_legacy_unknown_unclassified
+  path: tmp/module_knowledge_analysis/forprint_library/10_legacy_unknown_unclassified/analysis_report.md
+  sha256: fa4dfc2013692c688608dd1da706a8b0b8a630ae80276bc905e05a6e04a3029c
+  bytes: 8478
+block_manifests:
+- block: 01_domain_semantics_catalog
+  path: tmp/module_knowledge_analysis/forprint_library/01_domain_semantics_catalog/manifest.yaml
+  sha256: 725392a3c8b7591e2257a6aad0fde48fca60c20b1df2317688077de8bfc7b995
+- block: 02_dictionaries_resolution_profiles
+  path: tmp/module_knowledge_analysis/forprint_library/02_dictionaries_resolution_profiles/manifest.yaml
+  sha256: bc7588a41fccaacb8e375ff2a067b7ebd396bc1a1c3def68bcfb2c8307abfbbe
+- block: 03_contracts_cross_module_consumption
+  path: tmp/module_knowledge_analysis/forprint_library/03_contracts_cross_module_consumption/manifest.yaml
+  sha256: 742450d5f4a753a89ff65ea1005231ad6f795e03f38bfa12a1b61ae1f8dbd7aa
+- block: 04_exports_previews_examples
+  path: tmp/module_knowledge_analysis/forprint_library/04_exports_previews_examples/manifest.yaml
+  sha256: 872d5bc673d5c87bbe5fd249974a418a74cfda6f3f1d5273a673362a5c083439
+- block: 05_validation_tests_quality
+  path: tmp/module_knowledge_analysis/forprint_library/05_validation_tests_quality/manifest.yaml
+  sha256: d3994b31ec09efa3606fb455b55465d9b8cbb9c61aa613e9a51b6859c6842d21
+- block: 06_coordination_governance_intake
+  path: tmp/module_knowledge_analysis/forprint_library/06_coordination_governance_intake/manifest.yaml
+  sha256: 744c3d45c254af98b870bd64fb05f54ee381afe6c5b90a9eedeb3e2e57cb3663
+- block: 07_documentation_architecture
+  path: tmp/module_knowledge_analysis/forprint_library/07_documentation_architecture/manifest.yaml
+  sha256: a55b2763bf190ed5fc4bea5d3615938e0a08957b0c9a1390c1ea03b0a4c9034c
+- block: 10_legacy_unknown_unclassified
+  path: tmp/module_knowledge_analysis/forprint_library/10_legacy_unknown_unclassified/manifest.yaml
+  sha256: a60094585507314c3e43ae7f3c9b962c967d1efd186024b00badaff0e128be99
+l0_l1:
+- path: tmp/module_knowledge_analysis/forprint_library/00_preflight/module_scope_and_authority.md
+  sha256: 2f50ee3e571d1aa08749bef6ccc96c08b94c902a405209f6d6e44133c62f6233
+- path: tmp/module_knowledge_analysis/forprint_library/00_preflight/library_repository_state.txt
+  sha256: a20b5f40a2ef92fe288ba4af113b8cdda26d0ae05d3e49653e3d4da741ff6d14
+- path: tmp/module_knowledge_analysis/forprint_library/00_preflight/library_local_authority.txt
+  sha256: 9d81c595b928a1ab6a86ed2638ae6c00172eb50ceaf784d7a1057ca3e4454aed
+- path: tmp/module_knowledge_analysis/forprint_library/l1_inventory/module_inventory.yaml
+  sha256: 24560d29ed26675379cecbd4369b9be62388e3ee64967e80920bc65b8149ae89
+- path: tmp/module_knowledge_analysis/forprint_library/l1_inventory/run_report.yaml
+  sha256: dedb10a29bcc008ecb7f89c20faeb34bf3a2b88429477fd38164c3b3dcdcdaee
+- path: tmp/module_knowledge_analysis/forprint_library/l1_inventory/segmentation_summary.md
+  sha256: e5fc302c3578cb0a3f0dff2d797e38afcb0c1664f43f769bd54f4e372a90d34d
+blueprint_context:
+- path: coordination/module_policy/forprint_library/module_policy.md
+  sha256: 60010ad1b6ae83a18ee0828139708a4523d01c67a424143b7c427b70c3c5414c
+- path: coordination/human_intent/modules/forprint_library.yaml
+  sha256: 920d0f2d76b0d4af1667aef8514fc9c790c875ff8e6bfb8c045686be60eaf248
+- path: coordination/global_policy/forprint_project_doctrine.md
+  sha256: 204ffe57264b7a188bff86a09088766a788c67adc02695e38ccce46086c6be58
+- path: coordination/global_policy/ecosystem_module_map.md
+  sha256: a90c3d6ac4ab0af17af9c1ea83e1ebb595eb9333fcfcdd9f162c49aec85ab51c
+- path: coordination/global_policy/current_execution_focus.md
+  sha256: 909c49f4bc961a1bfb27676240cffc92bcd8c26049ae14a3caa767864fae5ac3
+blueprint_subsets:
+- source: coordination/roadmaps/details/forprint_system_blueprint/portfolio_full_horizon_target_states_v0_1.yaml
+  path: 04_blueprint/subsets/portfolio_full_horizon_target_states_v0_1__forprint_library.yaml
+  sha256: d3b050beda76ecd4bcc9f4fe1b6e557a455afadd91c7195059b6dc396d28685d
+- source: coordination/roadmaps/details/forprint_system_blueprint/portfolio_module_roadmap_approval_matrix_v0_1.yaml
+  path: 04_blueprint/subsets/portfolio_module_roadmap_approval_matrix_v0_1__forprint_library.yaml
+  sha256: 1929d992815865b4f0d5caf588521dc4c37094cc8f17e8205b2bb78475eb8e81
+required_l3_outputs:
+- capability_map
+- capability_maturity_summary
+- cross_block_dependency_map
+- authority_conflict_register
+- duplicate_overlap_register
+- implementation_gap_register
+- l4_document_authority_inputs
+- l5_reconciliation_inputs
+- l8_cleanup_candidates
+- explicit_uncertainties

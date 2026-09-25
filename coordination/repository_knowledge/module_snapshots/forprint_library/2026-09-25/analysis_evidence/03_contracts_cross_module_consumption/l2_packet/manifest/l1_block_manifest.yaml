@@ -1,0 +1,41 @@
+schema_version: forprint_module_knowledge_analysis_block_manifest_v0_1
+module_id: forprint_library
+stage: L1_INVENTORY_AND_SEGMENTATION
+block_id: 03_contracts_cross_module_consumption
+title: Contracts and cross-module consumption
+purpose: Library-to-consumer contracts, Calculator input, reference consumption, version/adoption semantics and cross-module
+  handoffs.
+mutation_performed: false
+selection_method: L1 deterministic classification plus bounded human review correction v0.1; classification remains preliminary
+  until L2 analysis
+file_count: 16
+source_paths:
+- app/forprint_library/calculator_input/__init__.py
+- app/forprint_library/calculator_input/contract.py
+- app/forprint_library/contracts/models.py
+- schemas/calculator_input/calculator_input_envelope.schema.yaml
+- schemas/reference_consumption/library_reference_consumption.schema.yaml
+- schemas/reference_contract/library_reference.schema.yaml
+- scripts/calculator_input/validate_calculator_input_contract.py
+- scripts/coordination/export_business_card_skeleton_closure.py
+- scripts/coordination/export_make_first_semantic_readiness_closure.py
+- scripts/coordination/export_reference_consumption_pilot_closure.py
+- scripts/coordination/export_reference_contract_foundation_closure.py
+- scripts/coordination/validate_completion_packet.py
+- scripts/product_workbench/preview_business_card_product.py
+- scripts/product_workbench/validate_business_card_product.py
+- scripts/reference_consumption/validate_reference_consumption_pilot.py
+- scripts/validate_semantic_reference_readiness.py
+primary_capability_hypotheses:
+- Library-to-Calculator reference input
+- cross-module reference consumption
+- versioned semantic contract surfaces
+cross_block_dependencies: []
+documents_present: []
+tests_present: []
+generated_outputs_present: []
+legacy_candidates_present:
+- scripts/coordination/export_business_card_skeleton_closure.py
+- scripts/coordination/export_reference_consumption_pilot_closure.py
+unknowns: []
+confidence: medium

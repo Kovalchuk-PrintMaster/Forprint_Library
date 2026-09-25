@@ -1,0 +1,44 @@
+schema_version: forprint_library_l5_reconciliation_questions_v0_1
+module: forprint_library
+decision_cluster_count: 4
+decision_question_count: 13
+questions:
+  - id: A01
+    cluster: A_contract_layers
+    question: "What is the canonical relationship between Calculator Input contract and the generic Library Reference Contract: specialization, composition, or independent parallel contracts?"
+  - id: A02
+    cluster: A_contract_layers
+    question: Which layer owns canonical reference identity fields and which layers may only consume or project them?
+  - id: A03
+    cluster: A_contract_layers
+    question: How should Reference Consumption relate to producer-side reference and Calculator Input contracts without duplicating semantic ownership?
+  - id: A04
+    cluster: A_contract_layers
+    question: "What is the current role of ContractVersion inside Library, and which version/registry concerns must move to or wait for Contract Registry?"
+  - id: B01
+    cluster: B_dictionary_status_semantics
+    question: "Which operational dictionaries are canonically owned by Library and which status vocabularies are merely shared/reference projections of another module's domain semantics?"
+  - id: B02
+    cluster: B_dictionary_status_semantics
+    question: "Is reference_resolution_status the single canonical resolution-state vocabulary, or do current contract/status surfaces contain overlapping vocabularies that require convergence?"
+  - id: B03
+    cluster: B_dictionary_status_semantics
+    question: "What is the canonical direction between dictionary policy definitions, generator constants/metadata, generated dictionary YAML, and schemas?"
+  - id: C01
+    cluster: C_generation_authority
+    question: "Is catalog_seed_v0_1.yaml the canonical semantic input for generated component catalogs, and are component catalog YAML files projections unless explicitly hand-owned?"
+  - id: C02
+    cluster: C_generation_authority
+    question: "Which schemas/examples are generated artifacts versus independent contract authorities, and what source-to-output direction is canonical?"
+  - id: C03
+    cluster: C_generation_authority
+    question: Which drift/validation gates prove generated outputs match their source authority without treating generated files as separate truth owners?
+  - id: D01
+    cluster: D_coordination_lifecycle
+    question: "What is the canonical relationship between Blueprint Prompt Queue state, Library local prompt files/index, and local execution lifecycle?"
+  - id: D02
+    cluster: D_coordination_lifecycle
+    question: "Which surfaces establish completion/current truth when git evidence, completion reports, reports/index.yaml, current_status.*, and Blueprint acceptance are not synchronized?"
+  - id: D03
+    cluster: D_coordination_lifecycle
+    question: "Which Makefile/operator commands are read-only checks versus mutating sync/export/generation actions, and is that boundary represented clearly enough for operator-safe execution?"

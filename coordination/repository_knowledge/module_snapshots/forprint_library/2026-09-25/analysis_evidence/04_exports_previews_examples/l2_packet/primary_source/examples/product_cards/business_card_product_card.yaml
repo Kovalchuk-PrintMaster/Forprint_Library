@@ -1,0 +1,41 @@
+example_type: configurable_product_card_consumption_examples_v0_1
+product_ref:
+  product_id: product.business_card
+  source_file: catalog/configurable_products/business_card.yaml
+examples:
+  - consumer_module: telegram_bot
+    example_id: telegram_business_card_route_hint
+    allowed_use: Use product.business_card and aliases as route hints only.
+    route_hints:
+      product_id: product.business_card
+      aliases:
+        - візитки
+        - візитка
+        - business cards
+        - business card
+    forbidden_runtime_behavior: true
+  - consumer_module: calculator_engine
+    example_id: calculator_business_card_input_context
+    allowed_use: Use selected constructor parameters as future pricing context.
+    input_context:
+      product_id: product.business_card
+      size: size_90x50_mm
+      sides: two_sided
+      material_ref:
+        catalog: materials
+        id: paper_300g_matte
+      print_mode_ref:
+        catalog: print_modes
+        id: color_4_4
+      quantity: 500
+      finishing_refs:
+        - catalog: finishing_options
+          id: matte_lamination
+    formula_implemented_here: false
+  - consumer_module: forprint_operational_registry
+    example_id: operational_registry_business_card_foreign_metadata
+    allowed_use: Store product.business_card as foreign-domain metadata.
+    foreign_metadata:
+      product_id: product.business_card
+      local_record_hint: demo_only_no_write
+    operational_write_implemented_here: false

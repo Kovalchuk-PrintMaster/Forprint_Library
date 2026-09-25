@@ -1,0 +1,32 @@
+schema_version: forprint_library_l2_block07_packet_run_report_v0_2
+result: PASS
+module_id: forprint_library
+block_id: 07_documentation_architecture
+branch: feature/library-calculator-input-contract-v01
+head: bba52bf6001f256a5c13ea7dbe175336b431754c
+upstream: bba52bf6001f256a5c13ea7dbe175336b431754c
+blueprint_branch: audit/blueprint-inventory-refresh-2026-07-29
+blueprint_head: b6ab9b65a2c27b70a574468caa8e3de4c3b454c5
+primary_file_count: 28
+expected_primary_file_count: 28
+related_test_count: 24
+prior_l2_report_count: 6
+blueprint_context_count: 8
+roadmap_subset_count: 2
+non_tmp_git_status_unchanged: true
+mutation_performed_outside_tmp: false
+tests_run: false
+make_run: false
+exporters_run: false
+generators_run: false
+outputs:
+  packet_directory: tmp/module_knowledge_analysis/forprint_library/07_documentation_architecture/l2_packet
+  packet_markdown: tmp/module_knowledge_analysis/forprint_library/07_documentation_architecture/l2_block_07_analysis_packet.md
+  packet_tar_gz: tmp/module_knowledge_analysis/forprint_library/07_documentation_architecture/l2_block_07_analysis_packet.tar.gz
+  run_report: tmp/module_knowledge_analysis/forprint_library/07_documentation_architecture/l2_packet_run_report.yaml
+sha256:
+  packet_markdown: 80cb2380227bc659e70b96aac02704f7425ffaeeff0ea2d36a1e3c0acc1bfb89
+  packet_tar_gz: 1d1a767fe2b07da9c8f976d174c35ab08d167cef59f01c1703943d911f3c69da
+  packet_manifest: 1c5cf2138256f087d323f71c8a8bd1d58b7a10899eab6f295b4929505ed9565b
+next_action: analyze Block 07 evidence and write analysis_report.md; do not mutate module source or canonical coordination
+  surfaces

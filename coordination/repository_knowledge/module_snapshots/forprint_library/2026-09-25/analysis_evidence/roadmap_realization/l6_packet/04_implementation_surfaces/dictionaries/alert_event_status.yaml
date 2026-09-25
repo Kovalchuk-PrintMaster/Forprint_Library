@@ -1,0 +1,79 @@
+dictionary_group: alert_event_status
+metadata:
+  id: shared_operational_dictionary_v0_1
+  name: Shared Operational Dictionary v0.1
+  version: '0.1'
+  dictionary_status: draft_shared_operational_dictionary_v0_1
+  schema_status: unstable_v0_1
+  usage: allowed_for_projection_use
+  contract_status: not_final_contract
+  owner_module: forprint_library
+  unit_dictionary_status: not_final_inventory_unit_system
+entries:
+- id: open
+  label_uk: Відкрито
+  label_en: Open
+  description: Canonical shared operational dictionary value 'open' for dictionary
+    group 'alert_event_status'.
+  status: active
+  aliases: []
+  owner_module: forprint_library
+  dictionary_group: alert_event_status
+  version: '0.1'
+  notes: Draft shared operational dictionary entry.
+- id: acknowledged
+  label_uk: Підтверджено оператором
+  label_en: Acknowledged
+  description: Canonical shared operational dictionary value 'acknowledged' for dictionary
+    group 'alert_event_status'.
+  status: active
+  aliases: []
+  owner_module: forprint_library
+  dictionary_group: alert_event_status
+  version: '0.1'
+  notes: Draft shared operational dictionary entry.
+- id: resolved
+  label_uk: Вирішено
+  label_en: Resolved
+  description: Canonical shared operational dictionary value 'resolved' for dictionary
+    group 'alert_event_status'.
+  status: active
+  aliases: []
+  owner_module: forprint_library
+  dictionary_group: alert_event_status
+  version: '0.1'
+  notes: Draft shared operational dictionary entry.
+- id: ignored
+  label_uk: Проігноровано
+  label_en: Ignored
+  description: Canonical shared operational dictionary value 'ignored' for dictionary
+    group 'alert_event_status'.
+  status: active
+  aliases: []
+  owner_module: forprint_library
+  dictionary_group: alert_event_status
+  version: '0.1'
+  notes: Draft shared operational dictionary entry.
+- id: failed_to_notify
+  label_uk: Failed To Notify
+  label_en: Failed To Notify
+  description: Canonical shared operational dictionary value 'failed_to_notify' for
+    dictionary group 'alert_event_status'.
+  status: active
+  aliases: []
+  owner_module: forprint_library
+  dictionary_group: alert_event_status
+  version: '0.1'
+  notes: Draft shared operational dictionary entry.
+- id: unknown
+  label_uk: Невідомо
+  label_en: Unknown
+  description: Canonical shared operational dictionary value 'unknown' for dictionary
+    group 'alert_event_status'.
+  status: active
+  aliases:
+  - невідомо
+  owner_module: forprint_library
+  dictionary_group: alert_event_status
+  version: '0.1'
+  notes: Draft shared operational dictionary entry.

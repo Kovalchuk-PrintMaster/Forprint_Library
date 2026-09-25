@@ -1,0 +1,381 @@
+metadata:
+  id: canonical_catalog_seed_v0_1
+  name: Canonical Catalog Seed v0.1
+  version: "0.1"
+  catalog_status: draft_canonical_seed
+  schema_status: unstable_v0_1
+  usage: allowed_for_projection_use
+  contract_status: not_final_contract
+  owner_module: forprint_library
+  notes: >
+    Draft canonical seed for projection use by dependent ForPrint modules.
+    This is not a final production contract.
+
+materials:
+  - id: paper_300g_matte
+    name_uk: Папір 300 г матовий
+    name_en: 300 gsm matte paper
+    aliases:
+      - папір 300 мат
+      - 300gsm matte
+      - матовий папір 300 г
+    status: draft
+    version: "0.1"
+    owner_module: forprint_library
+    schema_status: unstable_v0_1
+    notes: Synthetic draft material entry.
+
+  - id: paper_350g_gloss
+    name_uk: Папір 350 г глянцевий
+    name_en: 350 gsm gloss paper
+    aliases:
+      - папір 350 глянц
+      - 350gsm gloss
+      - мелований 350 г
+    status: draft
+    version: "0.1"
+    owner_module: forprint_library
+    schema_status: unstable_v0_1
+    notes: Synthetic draft material entry.
+
+  - id: paper_130g_matte
+    name_uk: Папір 130 г матовий
+    name_en: 130 gsm matte paper
+    aliases:
+      - папір 130 мат
+      - 130gsm matte
+      - матовий папір 130 г
+    status: draft
+    version: "0.1"
+    owner_module: forprint_library
+    schema_status: unstable_v0_1
+    notes: Synthetic draft material entry.
+
+  - id: banner_440g
+    name_uk: Банер 440 г
+    name_en: 440 gsm banner material
+    aliases:
+      - банер 440
+      - 440gsm banner
+      - банерна тканина 440 г
+    status: draft
+    version: "0.1"
+    owner_module: forprint_library
+    schema_status: unstable_v0_1
+    notes: Synthetic draft material entry.
+
+  - id: pvc_3mm
+    name_uk: ПВХ 3 мм
+    name_en: 3 mm PVC sheet
+    aliases:
+      - пвх 3мм
+      - pvc 3mm
+      - пластик пвх 3 мм
+    status: draft
+    version: "0.1"
+    owner_module: forprint_library
+    schema_status: unstable_v0_1
+    notes: Synthetic draft material entry.
+
+  - id: self_adhesive_vinyl
+    name_uk: Самоклеюча вінілова плівка
+    name_en: Self-adhesive vinyl
+    aliases:
+      - самоклейка вініл
+      - self adhesive vinyl
+      - вінілова плівка з клеєм
+    status: draft
+    version: "0.1"
+    owner_module: forprint_library
+    schema_status: unstable_v0_1
+    notes: Synthetic draft material entry.
+
+product_families:
+  - id: business_card
+    name_uk: Візитка
+    name_en: Business card
+    aliases:
+      - візитка
+      - business card
+      - карточка
+    status: draft
+    version: "0.1"
+    owner_module: forprint_library
+    schema_status: unstable_v0_1
+    notes: Draft product family for small-format contact cards.
+
+  - id: flyer
+    name_uk: Флаєр
+    name_en: Flyer
+    aliases:
+      - флаєр
+      - flyer
+      - рекламна листівка
+    status: draft
+    version: "0.1"
+    owner_module: forprint_library
+    schema_status: unstable_v0_1
+    notes: Draft product family for simple promotional leaflets.
+
+  - id: leaflet
+    name_uk: Буклет
+    name_en: Leaflet
+    aliases:
+      - буклет
+      - leaflet
+      - складна листівка
+    status: draft
+    version: "0.1"
+    owner_module: forprint_library
+    schema_status: unstable_v0_1
+    notes: Draft product family for folded informational products.
+
+  - id: poster
+    name_uk: Плакат
+    name_en: Poster
+    aliases:
+      - плакат
+      - poster
+      - афіша
+    status: draft
+    version: "0.1"
+    owner_module: forprint_library
+    schema_status: unstable_v0_1
+    notes: Draft product family for posters and display prints.
+
+  - id: banner
+    name_uk: Банер
+    name_en: Banner
+    aliases:
+      - банер
+      - banner
+      - банерна продукція
+    status: draft
+    version: "0.1"
+    owner_module: forprint_library
+    schema_status: unstable_v0_1
+    notes: Draft product family for large-format banners.
+
+  - id: sticker
+    name_uk: Наліпка
+    name_en: Sticker
+    aliases:
+      - наліпка
+      - sticker
+      - стікер
+    status: draft
+    version: "0.1"
+    owner_module: forprint_library
+    schema_status: unstable_v0_1
+    notes: Draft product family for adhesive labels and stickers.
+
+operations:
+  - id: digital_print
+    name_uk: Цифровий друк
+    name_en: Digital print
+    aliases:
+      - цифровий друк
+      - digital print
+      - друк цифровий
+    status: draft
+    version: "0.1"
+    owner_module: forprint_library
+    schema_status: unstable_v0_1
+    notes: Draft operation entry.
+
+  - id: large_format_print
+    name_uk: Широкоформатний друк
+    name_en: Large-format print
+    aliases:
+      - широкоформатний друк
+      - large format print
+      - друк на банері
+    status: draft
+    version: "0.1"
+    owner_module: forprint_library
+    schema_status: unstable_v0_1
+    notes: Draft operation entry.
+
+  - id: cutting
+    name_uk: Різання
+    name_en: Cutting
+    aliases:
+      - різання
+      - cutting
+      - порізка
+    status: draft
+    version: "0.1"
+    owner_module: forprint_library
+    schema_status: unstable_v0_1
+    notes: Draft operation entry.
+
+  - id: lamination
+    name_uk: Ламінування
+    name_en: Lamination
+    aliases:
+      - ламінування
+      - lamination
+      - покриття плівкою
+    status: draft
+    version: "0.1"
+    owner_module: forprint_library
+    schema_status: unstable_v0_1
+    notes: Draft operation entry.
+
+  - id: rounding
+    name_uk: Заокруглення кутів
+    name_en: Corner rounding
+    aliases:
+      - заокруглення кутів
+      - corner rounding
+      - округлення кутів
+    status: draft
+    version: "0.1"
+    owner_module: forprint_library
+    schema_status: unstable_v0_1
+    notes: Draft operation entry.
+
+  - id: folding
+    name_uk: Фальцювання
+    name_en: Folding
+    aliases:
+      - фальцювання
+      - folding operation
+      - згинання продукції
+    status: draft
+    version: "0.1"
+    owner_module: forprint_library
+    schema_status: unstable_v0_1
+    notes: Draft operation entry.
+
+  - id: scoring
+    name_uk: Бігування
+    name_en: Scoring
+    aliases:
+      - бігування
+      - scoring
+      - лінія згину
+    status: draft
+    version: "0.1"
+    owner_module: forprint_library
+    schema_status: unstable_v0_1
+    notes: Draft operation entry.
+
+print_modes:
+  - id: color_4_0
+    name_uk: 4+0
+    name_en: Full color one side
+    aliases:
+      - 4+0
+      - односторонній повноколір
+      - full color one side
+    status: draft
+    version: "0.1"
+    owner_module: forprint_library
+    schema_status: unstable_v0_1
+    notes: Draft print mode entry.
+
+  - id: color_4_4
+    name_uk: 4+4
+    name_en: Full color both sides
+    aliases:
+      - 4+4
+      - двосторонній повноколір
+      - full color both sides
+    status: draft
+    version: "0.1"
+    owner_module: forprint_library
+    schema_status: unstable_v0_1
+    notes: Draft print mode entry.
+
+  - id: color_1_0
+    name_uk: 1+0
+    name_en: One color one side
+    aliases:
+      - 1+0
+      - односторонній один колір
+      - one color one side
+    status: draft
+    version: "0.1"
+    owner_module: forprint_library
+    schema_status: unstable_v0_1
+    notes: Draft print mode entry.
+
+  - id: color_1_1
+    name_uk: 1+1
+    name_en: One color both sides
+    aliases:
+      - 1+1
+      - двосторонній один колір
+      - one color both sides
+    status: draft
+    version: "0.1"
+    owner_module: forprint_library
+    schema_status: unstable_v0_1
+    notes: Draft print mode entry.
+
+finishing_options:
+  - id: none
+    name_uk: Без постобробки
+    name_en: No finishing
+    aliases:
+      - без постобробки
+      - no finishing
+      - без додаткової обробки
+    status: draft
+    version: "0.1"
+    owner_module: forprint_library
+    schema_status: unstable_v0_1
+    notes: Draft finishing option entry.
+
+  - id: matte_lamination
+    name_uk: Матова ламінація
+    name_en: Matte lamination
+    aliases:
+      - матова ламінація
+      - matte lamination
+      - матове ламінування
+    status: draft
+    version: "0.1"
+    owner_module: forprint_library
+    schema_status: unstable_v0_1
+    notes: Draft finishing option entry.
+
+  - id: gloss_lamination
+    name_uk: Глянцева ламінація
+    name_en: Gloss lamination
+    aliases:
+      - глянцева ламінація
+      - gloss lamination
+      - глянцеве ламінування
+    status: draft
+    version: "0.1"
+    owner_module: forprint_library
+    schema_status: unstable_v0_1
+    notes: Draft finishing option entry.
+
+  - id: corner_rounding
+    name_uk: Заокруглення кутів як опція
+    name_en: Corner rounding finish
+    aliases:
+      - заокруглені кути
+      - corner rounding finish
+      - круглі кути
+    status: draft
+    version: "0.1"
+    owner_module: forprint_library
+    schema_status: unstable_v0_1
+    notes: Draft finishing option entry.
+
+  - id: finishing_folding
+    name_uk: Фальцювання як опція
+    name_en: Folding finish
+    aliases:
+      - фальцювання як опція
+      - folding finish
+      - згин як постобробка
+    status: draft
+    version: "0.1"
+    owner_module: forprint_library
+    schema_status: unstable_v0_1
+    notes: Draft finishing option entry.

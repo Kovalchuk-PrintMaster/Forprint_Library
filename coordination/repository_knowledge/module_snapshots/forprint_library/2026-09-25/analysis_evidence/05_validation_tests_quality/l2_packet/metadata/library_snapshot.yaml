@@ -1,0 +1,9 @@
+module_id: forprint_library
+block_id: 05_validation_tests_quality
+branch: feature/library-calculator-input-contract-v01
+head: bba52bf6001f256a5c13ea7dbe175336b431754c
+upstream: bba52bf6001f256a5c13ea7dbe175336b431754c
+head_matches_upstream: true
+non_tmp_status_before: []
+source_population_count: 32
+related_test_count: 0

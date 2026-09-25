@@ -1,0 +1,170 @@
+schema_version: configurable_product_card_v0_1
+product_id: product.business_card
+kind: configurable_product
+status: draft_reference
+version: "0.1"
+owner_module: forprint_library
+names:
+  uk: Візитки
+  en: Business cards
+aliases:
+  - візитки
+  - візитка
+  - business cards
+  - business card
+compatibility_aliases:
+  - product:business_cards
+product_family_ref:
+  catalog: product_families
+  id: business_card
+  label: Візитка
+description:
+  uk: Контрольна configurable product card для друкованих візиток.
+  en: Controlled configurable product card for printed business cards.
+constructor_parameters:
+  - key: size
+    label:
+      uk: Розмір
+      en: Size
+    type: choice
+    required: true
+    library_owned: true
+    allowed_values:
+      - id: size_90x50_mm
+        label: 90x50 mm
+        width_mm: 90
+        height_mm: 50
+      - id: size_85x55_mm
+        label: 85x55 mm
+        width_mm: 85
+        height_mm: 55
+  - key: sides
+    label:
+      uk: Сторони друку
+      en: Printed sides
+    type: choice
+    required: true
+    library_owned: true
+    allowed_values:
+      - id: one_sided
+        label: 4+0
+        print_mode_ref:
+          catalog: print_modes
+          id: color_4_0
+      - id: two_sided
+        label: 4+4
+        print_mode_ref:
+          catalog: print_modes
+          id: color_4_4
+  - key: material_ref
+    label:
+      uk: Матеріал
+      en: Material
+    type: reference_choice
+    required: true
+    library_owned: true
+    reference_catalog: materials
+    allowed_refs:
+      - catalog: materials
+        id: paper_300g_matte
+      - catalog: materials
+        id: paper_350g_gloss
+  - key: print_mode_ref
+    label:
+      uk: Режим друку
+      en: Print mode
+    type: reference_choice
+    required: true
+    library_owned: true
+    reference_catalog: print_modes
+    allowed_refs:
+      - catalog: print_modes
+        id: color_4_0
+      - catalog: print_modes
+        id: color_4_4
+  - key: quantity
+    label:
+      uk: Кількість
+      en: Quantity
+    type: numeric_input_context
+    required: true
+    consumer_owned_value: true
+    minimum: 1
+    example_values:
+      - 100
+      - 500
+      - 1000
+    notes: Quantity is input context only. Library does not calculate price.
+  - key: finishing_refs
+    label:
+      uk: Постобробка
+      en: Finishing
+    type: reference_list
+    required: false
+    library_owned: true
+    reference_catalog: finishing_options
+    allowed_refs:
+      - catalog: finishing_options
+        id: none
+      - catalog: finishing_options
+        id: matte_lamination
+      - catalog: finishing_options
+        id: gloss_lamination
+      - catalog: finishing_options
+        id: corner_rounding
+  - key: artwork_source
+    label:
+      uk: Джерело макета
+      en: Artwork source
+    type: choice
+    required: false
+    consumer_owned_value: true
+    allowed_values:
+      - id: customer_print_ready_file
+        label: Customer provides print-ready file
+      - id: customer_needs_design
+        label: Customer needs design
+      - id: customer_needs_prepress_check
+        label: Customer needs prepress check
+consumer_usage_notes:
+  telegram_bot:
+    allowed_use: May use product.business_card and aliases as route hints only.
+    forbidden_use: Must not treat this card as Telegram runtime behavior.
+  calculator_engine:
+    allowed_use: May later use constructor parameters as pricing input context.
+    forbidden_use: No formula or final price is implemented in Library.
+  forprint_operational_registry:
+    allowed_use: May store product.business_card as foreign-domain metadata.
+    forbidden_use: Library does not create orders or operational records.
+boundary_notes:
+  library_owned:
+    - product_id
+    - names
+    - aliases
+    - product_family_ref
+    - constructor parameter definitions
+    - references to Library catalog IDs
+  consumer_owned:
+    - selected parameter values
+    - channel routing context
+    - pricing input context
+    - operational foreign metadata
+  explicit_non_goals:
+    - No full product catalog
+    - No product modeling UI
+    - No production catalog database
+    - No live API
+    - No 1C import
+    - No 1C synchronization
+    - No Calculator integration
+    - No Telegram Bot integration
+    - No Operational Registry write
+    - No CRM write
+    - No Website write
+    - No price calculation
+    - No final price formula
+    - No material write-off logic
+    - No warehouse stock truth
+    - No production task creation
+    - No real client or order data
+    - No production runtime

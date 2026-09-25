@@ -1,0 +1,22 @@
+result: PASS
+module_id: forprint_library
+block_id: 04_exports_previews_examples
+library_branch: feature/library-calculator-input-contract-v01
+library_head: bba52bf6001f256a5c13ea7dbe175336b431754c
+library_upstream: bba52bf6001f256a5c13ea7dbe175336b431754c
+primary_source_count: 15
+related_test_count: 0
+prior_l2_context_count: 3
+blueprint_context_file_count: 8
+roadmap_subset_count: 2
+provenance_item_count: 33
+source_non_tmp_git_status_unchanged: true
+mutation_performed_outside_tmp: false
+outputs:
+  packet_dir: tmp/module_knowledge_analysis/forprint_library/04_exports_previews_examples/l2_packet
+  aggregate_markdown: tmp/module_knowledge_analysis/forprint_library/04_exports_previews_examples/l2_block_04_analysis_packet.md
+  archive: tmp/module_knowledge_analysis/forprint_library/04_exports_previews_examples/l2_block_04_analysis_packet.tar.gz
+hashes:
+  aggregate_markdown_sha256: f68b06d744b57c8264e3cd11d0a000b2123e5d5d293c89e2699a363e0f3921a6
+  archive_sha256: b035988b34e025103a64d7e4c1e55a667ec1500989c098de537412e76edf23ef
+  packet_manifest_sha256: ae7b26a538eb403e1ad3800d2264ba6c6d1c4c85bb7829427450ae420c66f843

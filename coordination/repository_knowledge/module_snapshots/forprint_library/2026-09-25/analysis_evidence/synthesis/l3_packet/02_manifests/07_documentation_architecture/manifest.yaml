@@ -1,0 +1,89 @@
+schema_version: forprint_module_knowledge_analysis_block_manifest_v0_1
+module_id: forprint_library
+stage: L1_INVENTORY_AND_SEGMENTATION
+block_id: 07_documentation_architecture
+title: Documentation and architecture
+purpose: README/docs, architecture descriptions, policy notes, integration guidance and instruction-like documentation requiring
+  later authority classification.
+mutation_performed: false
+selection_method: L1 deterministic classification plus bounded human review correction v0.1; classification remains preliminary
+  until L2 analysis
+file_count: 28
+source_paths:
+- README.md
+- docs/architecture/README.md
+- docs/architecture/alias_policy.md
+- docs/architecture/business_card_skeleton.md
+- docs/architecture/canonical_id_policy.md
+- docs/architecture/catalog_seed_policy.md
+- docs/architecture/configurable_product_workbench.md
+- docs/architecture/coordination_foundation_alignment.md
+- docs/architecture/dependent_module_usage.md
+- docs/architecture/dictionary_consumption_policy.md
+- docs/architecture/dictionary_versioning_policy.md
+- docs/architecture/downstream_reference_contract_notes.md
+- docs/architecture/entity_type_dictionary_policy.md
+- docs/architecture/library_boundaries.md
+- docs/architecture/library_calculator_input_contract.md
+- docs/architecture/reference_consumption_pilot.md
+- docs/architecture/reference_contract_foundation.md
+- docs/architecture/semantic_reference_readiness.md
+- docs/architecture/shared_operational_dictionary_policy.md
+- docs/architecture/source_system_dictionary_policy.md
+- docs/architecture/status_dictionary_policy.md
+- docs/architecture/unit_dictionary_policy.md
+- docs/decisions/ADR-0001-forprint-library-boundary.md
+- docs/decisions/ADR-0002-historical-compatibility.md
+- docs/operations/business_card_skeleton_recovery.md
+- docs/operations/business_card_skeleton_runbook.md
+- docs/operations/library_calculator_input_contract_recovery.md
+- docs/operations/library_calculator_input_contract_runbook.md
+primary_capability_hypotheses:
+- architecture documentation
+- integration guidance
+- instruction/document surfaces
+cross_block_dependencies:
+- block_id: 03_contracts_cross_module_consumption
+  linked_file_count: 20
+- block_id: 09_sop_media_reference_knowledge
+  linked_file_count: 1
+documents_present:
+- README.md
+- docs/architecture/README.md
+- docs/architecture/alias_policy.md
+- docs/architecture/business_card_skeleton.md
+- docs/architecture/canonical_id_policy.md
+- docs/architecture/catalog_seed_policy.md
+- docs/architecture/configurable_product_workbench.md
+- docs/architecture/coordination_foundation_alignment.md
+- docs/architecture/dependent_module_usage.md
+- docs/architecture/dictionary_consumption_policy.md
+- docs/architecture/dictionary_versioning_policy.md
+- docs/architecture/downstream_reference_contract_notes.md
+- docs/architecture/entity_type_dictionary_policy.md
+- docs/architecture/library_boundaries.md
+- docs/architecture/library_calculator_input_contract.md
+- docs/architecture/reference_consumption_pilot.md
+- docs/architecture/reference_contract_foundation.md
+- docs/architecture/semantic_reference_readiness.md
+- docs/architecture/shared_operational_dictionary_policy.md
+- docs/architecture/source_system_dictionary_policy.md
+- docs/architecture/status_dictionary_policy.md
+- docs/architecture/unit_dictionary_policy.md
+- docs/decisions/ADR-0001-forprint-library-boundary.md
+- docs/decisions/ADR-0002-historical-compatibility.md
+- docs/operations/business_card_skeleton_recovery.md
+- docs/operations/business_card_skeleton_runbook.md
+- docs/operations/library_calculator_input_contract_recovery.md
+- docs/operations/library_calculator_input_contract_runbook.md
+tests_present: []
+generated_outputs_present: []
+legacy_candidates_present:
+- docs/architecture/README.md
+- docs/architecture/coordination_foundation_alignment.md
+- docs/architecture/dictionary_consumption_policy.md
+- docs/architecture/dictionary_versioning_policy.md
+- docs/architecture/status_dictionary_policy.md
+- docs/decisions/ADR-0002-historical-compatibility.md
+unknowns: []
+confidence: high

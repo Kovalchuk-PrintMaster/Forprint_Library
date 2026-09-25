@@ -1,0 +1,92 @@
+$schema: https://json-schema.org/draft/2020-12/schema
+title: ForPrint Configurable Product Card
+type: object
+required:
+  - schema_version
+  - product_id
+  - kind
+  - status
+  - version
+  - owner_module
+  - names
+  - aliases
+  - constructor_parameters
+  - consumer_usage_notes
+  - boundary_notes
+properties:
+  schema_version:
+    const: configurable_product_card_v0_1
+  product_id:
+    type: string
+    pattern: ^product\.[a-z0-9_]+$
+  kind:
+    const: configurable_product
+  status:
+    enum:
+      - draft_reference
+      - active_reference
+      - deprecated_reference
+  version:
+    type: string
+  owner_module:
+    const: forprint_library
+  names:
+    type: object
+    required:
+      - uk
+      - en
+    properties:
+      uk:
+        type: string
+        minLength: 1
+      en:
+        type: string
+        minLength: 1
+    additionalProperties: true
+  aliases:
+    type: array
+    minItems: 1
+    items:
+      type: string
+      minLength: 1
+  compatibility_aliases:
+    type: array
+    items:
+      type: string
+      minLength: 1
+  product_family_ref:
+    type: object
+    required:
+      - catalog
+      - id
+    properties:
+      catalog:
+        const: product_families
+      id:
+        type: string
+    additionalProperties: true
+  constructor_parameters:
+    type: array
+    minItems: 1
+    items:
+      type: object
+      required:
+        - key
+        - type
+        - required
+      properties:
+        key:
+          type: string
+          pattern: ^[a-z0-9_]+$
+        type:
+          type: string
+        required:
+          type: boolean
+      additionalProperties: true
+  consumer_usage_notes:
+    type: object
+    additionalProperties: true
+  boundary_notes:
+    type: object
+    additionalProperties: true
+additionalProperties: true

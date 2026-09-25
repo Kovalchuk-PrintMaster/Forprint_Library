@@ -1,0 +1,81 @@
+schema_version: module_document_awareness_ledger_v0_1
+module: forprint_library
+reviewed_documents:
+- document_id: global_policy.readme
+  path: coordination/global_policy/README.md
+  content_hash: sha256:fb331a112cc3f6c5fe4e731b2d78bdc6a108f2e399d5837c492cf0732f235c18
+  module_review_status: acknowledged
+  reviewed_at: '2026-07-01T12:17:30+00:00'
+  module_commit: 03aaba7
+  notes: Critical global policy baseline acknowledged before Library reference contract
+    v0.2 work.
+- document_id: global_policy.current_execution_focus
+  path: coordination/global_policy/current_execution_focus.md
+  content_hash: sha256:0cd73a28e0af34d896c1e8353988faa72da6733316ffeb0eba6608f5658bfb19
+  module_review_status: acknowledged
+  reviewed_at: '2026-07-01T12:17:30+00:00'
+  module_commit: 03aaba7
+  notes: Critical global policy baseline acknowledged before Library reference contract
+    v0.2 work.
+- document_id: global_policy.ecosystem_module_map
+  path: coordination/global_policy/ecosystem_module_map.md
+  content_hash: sha256:622a5d9e0a378f42a14d1ac217ae359aa5b93b21b22cbc7a35fa237bb0b412c9
+  module_review_status: acknowledged
+  reviewed_at: '2026-07-01T12:17:30+00:00'
+  module_commit: 03aaba7
+  notes: Critical global policy baseline acknowledged before Library reference contract
+    v0.2 work.
+- document_id: global_policy.forprint_project_doctrine
+  path: coordination/global_policy/forprint_project_doctrine.md
+  content_hash: sha256:c1b74e2fb9528477e6d50f7200b5b97a9df0bf05b941321b3a72aa9b585ab2a3
+  module_review_status: acknowledged
+  reviewed_at: '2026-07-01T12:17:30+00:00'
+  module_commit: 03aaba7
+  notes: Critical global policy baseline acknowledged before Library reference contract
+    v0.2 work.
+- document_id: global_policy.forprint_strategic_control_plane_policy
+  path: coordination/global_policy/forprint_strategic_control_plane_policy.md
+  content_hash: sha256:a8529c57f059ea57b25cbb1fa833ea5bdd8725ecf1bbd6fcd2ba9a4acc615376
+  module_review_status: acknowledged
+  reviewed_at: '2026-07-01T12:17:30+00:00'
+  module_commit: 03aaba7
+  notes: Critical global policy baseline acknowledged before Library reference contract
+    v0.2 work.
+- document_id: module_policy.forprint_library.module_policy
+  path: coordination/module_policy/forprint_library/module_policy.md
+  content_hash: sha256:aeb5b2ba25a09025f102ded77d5e096f8e991955320e4ff4853ef20f33ad7024
+  module_review_status: acknowledged
+  reviewed_at: '2026-07-01T12:17:30+00:00'
+  module_commit: 03aaba7
+  notes: Library module policy baseline acknowledged before Library reference contract
+    v0.2 work.
+- document_id: outgoing_prompts.forprint_library.approved.2026_05_22_align_library_with_blueprint
+  path: coordination/outgoing_prompts/forprint_library/approved/2026-05-22-align-library-with-blueprint.md
+  content_hash: sha256:e6532245a564e9544bd244429294d0a9b909101ed5f6c3fdf704c0a98501bbf5
+  module_review_status: applied
+  reviewed_at: '2026-07-01T12:21:54+00:00'
+  module_commit: b401557
+  notes: Historical Library alignment prompt applied in previous checkpoints.
+- document_id: outgoing_prompts.forprint_library.approved.2026_06_23_library_make_first_semantic_reference_readiness_v0_1
+  path: coordination/outgoing_prompts/forprint_library/approved/2026-06-23__library__make_first_semantic_reference_readiness_v0_1.md
+  content_hash: sha256:623f96540b9a7b909bb30002cdaf7a53cef8dfb8358ad82fcdb1ed783e93582d
+  module_review_status: applied
+  reviewed_at: '2026-07-01T12:21:54+00:00'
+  module_commit: b401557
+  notes: Make-first semantic reference readiness prompt already completed and accepted.
+- document_id: outgoing_prompts.forprint_library.approved.2026_06_29_library_reference_contract_foundation_v0_2
+  path: coordination/outgoing_prompts/forprint_library/approved/2026-06-29__library__reference_contract_foundation_v0_2.md
+  content_hash: sha256:5e12b9d5e937c942f5d448e0773335cb385c9d91ef48ac31c964f596f161cc44
+  module_review_status: applied
+  reviewed_at: '2026-07-01T13:05:25+00:00'
+  module_commit: '3428289'
+  notes: 'Reference Contract Foundation v0.2 artifacts verified: docs, examples, schema,
+    validator, tests, check-report and module validation.'
+- document_id: outgoing_prompts.forprint_library.index
+  path: coordination/outgoing_prompts/forprint_library/index.yaml
+  content_hash: sha256:45ad4f594aabea6592a93940f69238348b42daf73746901980ea8e43de63af58
+  module_review_status: acknowledged
+  reviewed_at: '2026-07-01T14:48:46+00:00'
+  module_commit: d2e1834
+  notes: Library prompt queue index refreshed after Blueprint accepted Reference Contract
+    Foundation v0.2.

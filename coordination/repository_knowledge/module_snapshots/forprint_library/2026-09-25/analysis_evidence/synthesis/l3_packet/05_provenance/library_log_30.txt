@@ -1,0 +1,30 @@
+bba52bf (HEAD -> feature/library-calculator-input-contract-v01, origin/feature/library-calculator-input-contract-v01) fix: validate Library completion packet schema
+89c4ec6 Record Calculator input completion packet
+d094851 Record Library Calculator input contract completion
+0b8cbce Add Library Calculator input contract
+2a55286 fix: add Library validation compatibility targets
+6a60816 chore: ignore local tmp helper
+829df96 fix: align Library Blueprint prompt consumer with queue resolver
+01f78ea (origin/main, main) Add Library business card governance closeout docs
+a87d62c Finalize Library business card Blueprint acceptance metadata
+1694215 Finalize Library business card completion metadata
+ad99e0a Clean business card closure exporter whitespace
+7a7cb85 Record Library business card skeleton completion
+b8eb062 Add Library business card product skeleton
+15e1c8c Record Library reference consumption pilot completion
+7e000cb Add Library reference consumption pilot
+d5ae83d Add Library coordination alignment commit report
+8031d3e Record Library coordination foundation alignment completion
+02e2cad Add Library coordination foundation alignment
+27144f0 Resolve Library active prompt from prompt queue
+052cd5b Align Library prompt navigation defaults
+c048840 Record Blueprint acceptance in Library status
+eb4b95d Refresh Library awareness after Blueprint acceptance
+d2e1834 Verify Library reference contract foundation v0.2
+3428289 Record Library reference contract prompt pull
+007ec2f Mark Library prompt queue baseline
+b401557 Acknowledge Library critical Blueprint baseline
+03aaba7 Apply Library baseline document awareness review
+3f69d57 Expose document ledger updater in Library Makefile
+893ff2b Clean Library document awareness ledger placeholder
+8cd7c23 Add Library document awareness ledger

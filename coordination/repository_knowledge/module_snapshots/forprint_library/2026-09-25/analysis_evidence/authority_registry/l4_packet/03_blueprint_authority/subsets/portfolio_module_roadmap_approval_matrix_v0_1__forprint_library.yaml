@@ -1,0 +1,125 @@
+source_container_key: modules
+subset:
+  forprint_library:
+    identity_state: CANONICAL
+    strategic_priority: P0
+    role: Canonical semantic/catalog/reference and shared UI publication authority
+    module_value_test: KEEP
+    inventory_state: OWNER_DIRECTION_CLEAR
+    dependencies_or_inputs: &id001
+    - forprint_contract_registry
+    owns:
+    - product_catalog_semantics
+    - service_catalog_semantics
+    - material_catalog_semantics
+    - operation_catalog_semantics
+    - aliases
+    - templates
+    - technical_cards
+    - contract_definitions
+    - ui_design_system_publication
+    - shared_ui_component_catalog
+    - ui_component_version_and_adoption_metadata
+    must_not_own:
+    - operational_orders
+    - client_database
+    - accounting_truth
+    - production_runtime
+    - crm_workflow
+    - domain_business_rules_outside_library_semantics
+    target_state:
+      agreed_or_recovered:
+      - Canonical products/materials/services/operations/aliases/profiles; shared UI package publication.
+      synthetic_or_proposed:
+      - Fast capability/semantic discovery and mature version/adoption lifecycle.
+    roadmap_status: PLANNING_ONLY_NOT_DISTRIBUTED
+    steps:
+    - sequence: 1
+      step_id: FORPRINT_LIBRARY-H01
+      title: Reconcile current Library catalog, alias, template, naming-profile and UI publication evidence.
+      approval_state: AGREED_PLANNING_DIRECTION
+      source_basis: current_evidence_reconciliation
+      execution_authority: false
+      dependency_gate: []
+    - sequence: 2
+      step_id: FORPRINT_LIBRARY-H02
+      title: Confirm Library ownership of product/material/service/operation semantics and shared UI publication, excluding
+        business workflows.
+      approval_state: AGREED_PLANNING_DIRECTION
+      source_basis: ownership_and_role_boundary
+      execution_authority: false
+      dependency_gate: []
+    - sequence: 3
+      step_id: FORPRINT_LIBRARY-H03
+      title: Complete capability/self-inventory for canonical IDs, aliases, misspellings, production tokens, templates and
+        technical cards.
+      approval_state: AGREED_PLANNING_DIRECTION
+      source_basis: self_inventory_requirement
+      execution_authority: false
+      dependency_gate: []
+    - sequence: 4
+      step_id: FORPRINT_LIBRARY-H04
+      title: Define versioned naming/profile/default semantics consumed by Calculator, Prepress and operations surfaces.
+      approval_state: AGREED_PLANNING_DIRECTION
+      source_basis: dependency_and_contract_planning
+      execution_authority: false
+      dependency_gate: *id001
+    - sequence: 5
+      step_id: FORPRINT_LIBRARY-H05
+      title: Define material/product/service canonical identifiers and stable lookup contracts for Warehouse and other consumers.
+      approval_state: AGREED_OR_RECOVERED_TARGET
+      source_basis: agreed_or_recovered_target_state
+      execution_authority: false
+      dependency_gate: []
+    - sequence: 6
+      step_id: FORPRINT_LIBRARY-H06
+      title: 'Define UI design-system package lifecycle: lookup, proposal, prototype, Inspector review, operator approval,
+        publish and adoption.'
+      approval_state: AGREED_OR_RECOVERED_TARGET
+      source_basis: agreed_or_recovered_target_state
+      execution_authority: false
+      dependency_gate: []
+    - sequence: 7
+      step_id: FORPRINT_LIBRARY-H07
+      title: Add version/adoption metadata and compatibility rules without creating live global CSS or uncontrolled defaults.
+      approval_state: AGREED_OR_RECOVERED_TARGET
+      source_basis: agreed_or_recovered_target_state
+      execution_authority: false
+      dependency_gate: []
+    - sequence: 8
+      step_id: FORPRINT_LIBRARY-H08
+      title: Plan fast capability/semantic discovery while keeping retrieval candidate-only and domain-owner truth authoritative.
+      approval_state: PROPOSED_TARGET_REFINEMENT
+      source_basis: proposed_mature_target
+      execution_authority: false
+      dependency_gate: []
+    - sequence: 9
+      step_id: FORPRINT_LIBRARY-H09
+      title: Define deprecation/migration paths for legacy aliases/profiles and evidence requirements for consumer adoption.
+      approval_state: PROPOSED_TARGET_REFINEMENT
+      source_basis: proposed_mature_target
+      execution_authority: false
+      dependency_gate: []
+    - sequence: 10
+      step_id: FORPRINT_LIBRARY-H10
+      title: Hold broader implementation until Contract Registry and consumer readiness are reconciled in the portfolio.
+      approval_state: HOLD_FOR_FINAL_PORTFOLIO_APPROVAL
+      source_basis: operator_distribution_gate
+      execution_authority: false
+      dependency_gate: *id001
+    - sequence: 11
+      step_id: FORPRINT_LIBRARY-H11
+      title: Define stable historical/reference asset metadata semantics including asset ID, source module, entity links,
+        revision references, media type and provenance.
+      approval_state: AGREED_PLANNING_DIRECTION
+      source_basis: operator_confirmed_evening_architecture_20260919
+      execution_authority: false
+      dependency_gate: []
+    - sequence: 12
+      step_id: FORPRINT_LIBRARY-H12
+      title: Define the boundary between Library-owned canonical reference media and customer/order/production assets owned
+        by operational domains.
+      approval_state: AGREED_PLANNING_DIRECTION
+      source_basis: operator_confirmed_evening_architecture_20260919
+      execution_authority: false
+      dependency_gate: []

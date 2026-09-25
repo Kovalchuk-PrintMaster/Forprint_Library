@@ -1,0 +1,75 @@
+catalog_type: finishing_options
+metadata:
+  id: canonical_catalog_seed_v0_1
+  name: Canonical Catalog Seed v0.1
+  version: '0.1'
+  catalog_status: draft_canonical_seed
+  schema_status: unstable_v0_1
+  usage: allowed_for_projection_use
+  contract_status: not_final_contract
+  owner_module: forprint_library
+  notes: 'Draft canonical seed for projection use by dependent ForPrint modules. This
+    is not a final production contract.
+
+    '
+items:
+- id: none
+  name_uk: Без постобробки
+  name_en: No finishing
+  aliases:
+  - без постобробки
+  - no finishing
+  - без додаткової обробки
+  status: draft
+  version: '0.1'
+  owner_module: forprint_library
+  schema_status: unstable_v0_1
+  notes: Draft finishing option entry.
+- id: matte_lamination
+  name_uk: Матова ламінація
+  name_en: Matte lamination
+  aliases:
+  - матова ламінація
+  - matte lamination
+  - матове ламінування
+  status: draft
+  version: '0.1'
+  owner_module: forprint_library
+  schema_status: unstable_v0_1
+  notes: Draft finishing option entry.
+- id: gloss_lamination
+  name_uk: Глянцева ламінація
+  name_en: Gloss lamination
+  aliases:
+  - глянцева ламінація
+  - gloss lamination
+  - глянцеве ламінування
+  status: draft
+  version: '0.1'
+  owner_module: forprint_library
+  schema_status: unstable_v0_1
+  notes: Draft finishing option entry.
+- id: corner_rounding
+  name_uk: Заокруглення кутів як опція
+  name_en: Corner rounding finish
+  aliases:
+  - заокруглені кути
+  - corner rounding finish
+  - круглі кути
+  status: draft
+  version: '0.1'
+  owner_module: forprint_library
+  schema_status: unstable_v0_1
+  notes: Draft finishing option entry.
+- id: finishing_folding
+  name_uk: Фальцювання як опція
+  name_en: Folding finish
+  aliases:
+  - фальцювання як опція
+  - folding finish
+  - згин як постобробка
+  status: draft
+  version: '0.1'
+  owner_module: forprint_library
+  schema_status: unstable_v0_1
+  notes: Draft finishing option entry.

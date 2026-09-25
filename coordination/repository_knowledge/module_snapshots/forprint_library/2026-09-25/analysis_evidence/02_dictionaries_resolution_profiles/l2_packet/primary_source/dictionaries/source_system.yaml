@@ -1,0 +1,200 @@
+dictionary_group: source_system
+metadata:
+  id: shared_operational_dictionary_v0_1
+  name: Shared Operational Dictionary v0.1
+  version: '0.1'
+  dictionary_status: draft_shared_operational_dictionary_v0_1
+  schema_status: unstable_v0_1
+  usage: allowed_for_projection_use
+  contract_status: not_final_contract
+  owner_module: forprint_library
+  unit_dictionary_status: not_final_inventory_unit_system
+entries:
+- id: forprint_operational_registry
+  label_uk: Forprint Operational Registry
+  label_en: Forprint Operational Registry
+  description: Canonical shared operational dictionary value 'forprint_operational_registry'
+    for dictionary group 'source_system'.
+  status: active
+  aliases:
+  - operational_registry
+  - opr
+  owner_module: forprint_library
+  dictionary_group: source_system
+  version: '0.1'
+  notes: Draft shared operational dictionary entry.
+- id: forprint_library
+  label_uk: Forprint Library
+  label_en: Forprint Library
+  description: Canonical shared operational dictionary value 'forprint_library' for
+    dictionary group 'source_system'.
+  status: active
+  aliases:
+  - library
+  owner_module: forprint_library
+  dictionary_group: source_system
+  version: '0.1'
+  notes: Draft shared operational dictionary entry.
+- id: calculator_engine
+  label_uk: Calculator Engine
+  label_en: Calculator Engine
+  description: Canonical shared operational dictionary value 'calculator_engine' for
+    dictionary group 'source_system'.
+  status: active
+  aliases:
+  - calculator
+  owner_module: forprint_library
+  dictionary_group: source_system
+  version: '0.1'
+  notes: Draft shared operational dictionary entry.
+- id: accounting_registry_service
+  label_uk: Accounting Registry Service
+  label_en: Accounting Registry Service
+  description: Canonical shared operational dictionary value 'accounting_registry_service'
+    for dictionary group 'source_system'.
+  status: active
+  aliases:
+  - accounting_registry
+  owner_module: forprint_library
+  dictionary_group: source_system
+  version: '0.1'
+  notes: Draft shared operational dictionary entry.
+- id: telegram_bot
+  label_uk: Telegram Bot
+  label_en: Telegram Bot
+  description: Canonical shared operational dictionary value 'telegram_bot' for dictionary
+    group 'source_system'.
+  status: active
+  aliases:
+  - telegram
+  owner_module: forprint_library
+  dictionary_group: source_system
+  version: '0.1'
+  notes: Draft shared operational dictionary entry.
+- id: forprint_crm
+  label_uk: Forprint Crm
+  label_en: Forprint Crm
+  description: Canonical shared operational dictionary value 'forprint_crm' for dictionary
+    group 'source_system'.
+  status: active
+  aliases: []
+  owner_module: forprint_library
+  dictionary_group: source_system
+  version: '0.1'
+  notes: Draft shared operational dictionary entry.
+- id: forprint_integration_gateway
+  label_uk: Forprint Integration Gateway
+  label_en: Forprint Integration Gateway
+  description: Canonical shared operational dictionary value 'forprint_integration_gateway'
+    for dictionary group 'source_system'.
+  status: active
+  aliases: []
+  owner_module: forprint_library
+  dictionary_group: source_system
+  version: '0.1'
+  notes: Draft shared operational dictionary entry.
+- id: forprint_prepress_hub
+  label_uk: Forprint Prepress Hub
+  label_en: Forprint Prepress Hub
+  description: Canonical shared operational dictionary value 'forprint_prepress_hub'
+    for dictionary group 'source_system'.
+  status: active
+  aliases: []
+  owner_module: forprint_library
+  dictionary_group: source_system
+  version: '0.1'
+  notes: Draft shared operational dictionary entry.
+- id: warehouse_service
+  label_uk: Warehouse Service
+  label_en: Warehouse Service
+  description: Canonical shared operational dictionary value 'warehouse_service' for
+    dictionary group 'source_system'.
+  status: active
+  aliases: []
+  owner_module: forprint_library
+  dictionary_group: source_system
+  version: '0.1'
+  notes: Draft shared operational dictionary entry.
+- id: logistics_service
+  label_uk: Logistics Service
+  label_en: Logistics Service
+  description: Canonical shared operational dictionary value 'logistics_service' for
+    dictionary group 'source_system'.
+  status: active
+  aliases: []
+  owner_module: forprint_library
+  dictionary_group: source_system
+  version: '0.1'
+  notes: Draft shared operational dictionary entry.
+- id: website
+  label_uk: Website
+  label_en: Website
+  description: Canonical shared operational dictionary value 'website' for dictionary
+    group 'source_system'.
+  status: active
+  aliases: []
+  owner_module: forprint_library
+  dictionary_group: source_system
+  version: '0.1'
+  notes: Draft shared operational dictionary entry.
+- id: mobile_app
+  label_uk: Mobile App
+  label_en: Mobile App
+  description: Canonical shared operational dictionary value 'mobile_app' for dictionary
+    group 'source_system'.
+  status: active
+  aliases: []
+  owner_module: forprint_library
+  dictionary_group: source_system
+  version: '0.1'
+  notes: Draft shared operational dictionary entry.
+- id: one_c_bas
+  label_uk: 1C/BAS
+  label_en: One C Bas
+  description: Canonical shared operational dictionary value 'one_c_bas' for dictionary
+    group 'source_system'.
+  status: active
+  aliases:
+  - 1c
+  - bas
+  - 1c_bas
+  owner_module: forprint_library
+  dictionary_group: source_system
+  version: '0.1'
+  notes: Draft shared operational dictionary entry.
+- id: sanitized_demo
+  label_uk: Sanitized Demo
+  label_en: Sanitized Demo
+  description: Canonical shared operational dictionary value 'sanitized_demo' for
+    dictionary group 'source_system'.
+  status: active
+  aliases: []
+  owner_module: forprint_library
+  dictionary_group: source_system
+  version: '0.1'
+  notes: Draft shared operational dictionary entry.
+- id: manual_entry
+  label_uk: Manual Entry
+  label_en: Manual Entry
+  description: Canonical shared operational dictionary value 'manual_entry' for dictionary
+    group 'source_system'.
+  status: active
+  aliases:
+  - manual
+  - ручне введення
+  owner_module: forprint_library
+  dictionary_group: source_system
+  version: '0.1'
+  notes: Draft shared operational dictionary entry.
+- id: unknown
+  label_uk: Невідомо
+  label_en: Unknown
+  description: Canonical shared operational dictionary value 'unknown' for dictionary
+    group 'source_system'.
+  status: active
+  aliases:
+  - невідомо
+  owner_module: forprint_library
+  dictionary_group: source_system
+  version: '0.1'
+  notes: Draft shared operational dictionary entry.

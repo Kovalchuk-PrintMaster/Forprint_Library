@@ -1,0 +1,87 @@
+catalog_type: materials
+metadata:
+  id: canonical_catalog_seed_v0_1
+  name: Canonical Catalog Seed v0.1
+  version: '0.1'
+  catalog_status: draft_canonical_seed
+  schema_status: unstable_v0_1
+  usage: allowed_for_projection_use
+  contract_status: not_final_contract
+  owner_module: forprint_library
+  notes: 'Draft canonical seed for projection use by dependent ForPrint modules. This
+    is not a final production contract.
+
+    '
+items:
+- id: paper_300g_matte
+  name_uk: Папір 300 г матовий
+  name_en: 300 gsm matte paper
+  aliases:
+  - папір 300 мат
+  - 300gsm matte
+  - матовий папір 300 г
+  status: draft
+  version: '0.1'
+  owner_module: forprint_library
+  schema_status: unstable_v0_1
+  notes: Synthetic draft material entry.
+- id: paper_350g_gloss
+  name_uk: Папір 350 г глянцевий
+  name_en: 350 gsm gloss paper
+  aliases:
+  - папір 350 глянц
+  - 350gsm gloss
+  - мелований 350 г
+  status: draft
+  version: '0.1'
+  owner_module: forprint_library
+  schema_status: unstable_v0_1
+  notes: Synthetic draft material entry.
+- id: paper_130g_matte
+  name_uk: Папір 130 г матовий
+  name_en: 130 gsm matte paper
+  aliases:
+  - папір 130 мат
+  - 130gsm matte
+  - матовий папір 130 г
+  status: draft
+  version: '0.1'
+  owner_module: forprint_library
+  schema_status: unstable_v0_1
+  notes: Synthetic draft material entry.
+- id: banner_440g
+  name_uk: Банер 440 г
+  name_en: 440 gsm banner material
+  aliases:
+  - банер 440
+  - 440gsm banner
+  - банерна тканина 440 г
+  status: draft
+  version: '0.1'
+  owner_module: forprint_library
+  schema_status: unstable_v0_1
+  notes: Synthetic draft material entry.
+- id: pvc_3mm
+  name_uk: ПВХ 3 мм
+  name_en: 3 mm PVC sheet
+  aliases:
+  - пвх 3мм
+  - pvc 3mm
+  - пластик пвх 3 мм
+  status: draft
+  version: '0.1'
+  owner_module: forprint_library
+  schema_status: unstable_v0_1
+  notes: Synthetic draft material entry.
+- id: self_adhesive_vinyl
+  name_uk: Самоклеюча вінілова плівка
+  name_en: Self-adhesive vinyl
+  aliases:
+  - самоклейка вініл
+  - self adhesive vinyl
+  - вінілова плівка з клеєм
+  status: draft
+  version: '0.1'
+  owner_module: forprint_library
+  schema_status: unstable_v0_1
+  notes: Synthetic draft material entry.

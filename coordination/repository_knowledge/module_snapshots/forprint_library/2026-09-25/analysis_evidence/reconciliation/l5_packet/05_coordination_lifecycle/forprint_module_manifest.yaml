@@ -1,0 +1,75 @@
+module:
+  id: forprint_library
+  name: ForPrint Library
+  type: canonical_catalog_semantic_registry
+  status: coordination_bootstrap
+  version: 0.1.0
+  owner: ForPrint
+
+purpose:
+  summary: >
+    Canonical semantic, catalog, naming, alias and contract-definition authority
+    for the ForPrint ecosystem.
+  strategic_role:
+    - stable canonical IDs
+    - catalog seeds
+    - aliases
+    - semantic definitions
+    - contract definitions
+    - template and technical-card references
+
+boundaries:
+  owns:
+    - material catalog semantics
+    - product family catalog semantics
+    - product and service naming
+    - operation naming
+    - print mode naming
+    - finishing option naming
+    - aliases
+    - canonical IDs
+    - contract definitions
+    - template references
+    - technical card references
+  does_not_own:
+    - client registry
+    - order registry
+    - payment registry
+    - warehouse stock truth
+    - production runtime
+    - 1C synchronization
+    - CRM workflow
+    - Telegram runtime
+    - Calculator business logic
+    - external API runtime
+
+allowed_consumers:
+  - calculator_engine
+  - forprint_crm
+  - forprint_operational_registry
+  - forprint_accounting_registry_service
+  - forprint_prepress_hub
+  - telegram_bot
+  - website
+  - mobile_app
+
+coordination:
+  blueprint_source: coordination/blueprint_source.yaml
+  current_status: coordination/status/current_status.yaml
+  prompts_index: coordination/prompts/index.yaml
+  reports_index: coordination/reports/index.yaml
+
+check_surface:
+  make_targets:
+    - install
+    - lint
+    - lint-fix
+    - test
+    - check
+    - check-report
+    - blueprint-pull
+    - blueprint-check
+    - blueprint-sync-directives
+    - coordination-check
+    - coordination-fix
+    - module-policy-check

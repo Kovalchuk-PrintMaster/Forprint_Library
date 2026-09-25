@@ -1,0 +1,71 @@
+schema_version: forprint_module_knowledge_analysis_block_manifest_v0_1
+module_id: forprint_library
+stage: L1_INVENTORY_AND_SEGMENTATION
+block_id: 06_coordination_governance_intake
+title: Coordination, governance and Blueprint intake
+purpose: Blueprint sync, prompt intake, awareness, status, completion evidence, standards snapshots and operator-facing coordination
+  surfaces.
+mutation_performed: false
+selection_method: L1 deterministic classification plus bounded human review correction v0.1; classification remains preliminary
+  until L2 analysis
+file_count: 30
+source_paths:
+- Makefile
+- coordination/README.md
+- coordination/blueprint_awareness/document_review_ledger.yaml
+- coordination/blueprint_awareness/library_coordination_foundation_alignment_v0_1.yaml
+- coordination/blueprint_source.yaml
+- coordination/completion_packets/records/2026-07-29__forprint_library__calculator_input_contract_v0_1_completion.yaml
+- coordination/prompts/active/2026-06-23__library__make_first_semantic_reference_readiness_v0_1.md
+- coordination/prompts/active/2026-06-29__library__reference_contract_foundation_v0_2.md
+- coordination/prompts/active/current_blueprint_prompt.md
+- coordination/prompts/index.yaml
+- coordination/prompts/received/.gitkeep
+- coordination/reports/commits/.gitkeep
+- coordination/reports/commits/2026-07-07__forprint_library__commit-report__coordination-foundation-alignment-v0-1.md
+- coordination/reports/completion/.gitkeep
+- coordination/reports/completion/2026-06-06__forprint_library__report__catalog-seed-v0-1-and-coordination-bootstrap.md
+- coordination/reports/completion/2026-06-09__forprint_library__report__shared-operational-dictionary-v0-1.md
+- coordination/reports/completion/2026-06-25__forprint_library__report__make-first-semantic-reference-readiness-v0-1.md
+- coordination/reports/completion/2026-06-29__forprint_library__report__reference-contract-foundation-v0-2.md
+- coordination/reports/completion/2026-07-03__forprint_library__report__coordination-foundation-alignment-v0-1.md
+- coordination/reports/completion/2026-07-08__forprint_library__report__reference-consumption-pilot-v0-3.md
+- coordination/reports/completion/2026-07-11__forprint_library__report__business-card-skeleton-v0-1.md
+- coordination/reports/completion/forprint_library_calculator_input_contract_v0_1_completion.md
+- coordination/reports/index.yaml
+- coordination/standards/blueprint_standards_available_snapshot.txt
+- coordination/status/current_status.md
+- coordination/status/current_status.yaml
+- coordination/status/next_questions_for_blueprint.md
+- forprint_module_manifest.yaml
+- scripts/make_first_workflow.py
+- scripts/sync_blueprint_directives.py
+primary_capability_hypotheses:
+- Blueprint prompt/intake workflow
+- coordination/status/completion evidence
+- operator-facing Make workflow
+cross_block_dependencies:
+- block_id: 05_validation_tests_quality
+  linked_file_count: 1
+documents_present: []
+tests_present: []
+generated_outputs_present:
+- coordination/reports/commits/.gitkeep
+- coordination/reports/commits/2026-07-07__forprint_library__commit-report__coordination-foundation-alignment-v0-1.md
+- coordination/reports/completion/.gitkeep
+- coordination/reports/completion/2026-06-06__forprint_library__report__catalog-seed-v0-1-and-coordination-bootstrap.md
+- coordination/reports/completion/2026-06-09__forprint_library__report__shared-operational-dictionary-v0-1.md
+- coordination/reports/completion/2026-06-25__forprint_library__report__make-first-semantic-reference-readiness-v0-1.md
+- coordination/reports/completion/2026-06-29__forprint_library__report__reference-contract-foundation-v0-2.md
+- coordination/reports/completion/2026-07-03__forprint_library__report__coordination-foundation-alignment-v0-1.md
+- coordination/reports/completion/2026-07-08__forprint_library__report__reference-consumption-pilot-v0-3.md
+- coordination/reports/completion/2026-07-11__forprint_library__report__business-card-skeleton-v0-1.md
+- coordination/reports/completion/forprint_library_calculator_input_contract_v0_1_completion.md
+- coordination/reports/index.yaml
+legacy_candidates_present:
+- Makefile
+- coordination/blueprint_awareness/document_review_ledger.yaml
+- coordination/status/current_status.md
+- coordination/status/current_status.yaml
+unknowns: []
+confidence: medium

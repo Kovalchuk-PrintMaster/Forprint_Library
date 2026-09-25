@@ -1,0 +1,69 @@
+schema_version: calculator_input_fixture_v0_1
+case_id: business_card_with_finishing
+description: Valid business card projection with deterministic finishing refs.
+product_id: product.business_card
+input_configuration:
+  size: size_85x55_mm
+  sides: two_sided
+  material_ref:
+    catalog: materials
+    id: paper_350g_gloss
+  print_mode_ref:
+    catalog: print_modes
+    id: color_4_4
+  quantity: 500
+  finishing_refs:
+  - catalog: finishing_options
+    id: matte_lamination
+  - catalog: finishing_options
+    id: corner_rounding
+expected_output:
+  schema_version: calculator_input_envelope_v0_1
+  product_id: product.business_card
+  configuration_id: calc_input_7eb5af3a5f80d3b5
+  normalized_parameters:
+    size: size_85x55_mm
+    sides: two_sided
+    material_ref:
+      catalog: materials
+      id: paper_350g_gloss
+    print_mode_ref:
+      catalog: print_modes
+      id: color_4_4
+    quantity: 500
+    finishing_refs:
+    - catalog: finishing_options
+      id: corner_rounding
+    - catalog: finishing_options
+      id: matte_lamination
+  reference_ids:
+    product_id: product.business_card
+    size_id: size_85x55_mm
+    sides_id: two_sided
+    material_ref:
+      catalog: materials
+      id: paper_350g_gloss
+    print_mode_ref:
+      catalog: print_modes
+      id: color_4_4
+    finishing_refs:
+    - catalog: finishing_options
+      id: corner_rounding
+    - catalog: finishing_options
+      id: matte_lamination
+  validation_snapshot:
+    schema_version: calculator_input_validation_snapshot_v0_1
+    valid: true
+    errors: []
+    warnings: []
+    required_parameters:
+    - size
+    - sides
+    - material_ref
+    - print_mode_ref
+    - quantity
+    normalization_notes:
+    - Output field order is stable.
+    - finishing_refs are sorted by catalog and id.
+    - Optional artwork_source is included only when supplied.
+    - No monetary, pricing, stock, production or runtime fields are projected.

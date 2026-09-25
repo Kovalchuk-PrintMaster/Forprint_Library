@@ -1,0 +1,9 @@
+module_id: forprint_library
+block_id: 03_contracts_cross_module_consumption
+branch: feature/library-calculator-input-contract-v01
+head: bba52bf6001f256a5c13ea7dbe175336b431754c
+upstream: bba52bf6001f256a5c13ea7dbe175336b431754c
+head_matches_upstream: true
+non_tmp_status_before: []
+source_population_count: 16
+related_test_count: 24

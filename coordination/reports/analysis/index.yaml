@@ -1,0 +1,13 @@
+schema_version: forprint_module_analysis_index_v0_1
+module_id: forprint_library
+updated_at: '2026-09-25'
+snapshot_status: complete
+action_now: none
+entries:
+- id: 2026-09-25__forprint_library__module_snapshot_v0_1
+  type: module_knowledge_snapshot
+  path: coordination/reports/analysis/2026-09-25__forprint_library__module_snapshot_v0_1.md
+  machine_input: coordination/reports/analysis/2026-09-25__forprint_library__roadmap_rebuild_input_v0_1.yaml
+  evidence_root: coordination/repository_knowledge/module_snapshots/forprint_library/2026-09-25/analysis_evidence
+  status: complete
+  purpose: durable current-state and roadmap-rebuild input for later portfolio synthesis

@@ -1,0 +1,266 @@
+dictionary_group: entity_type
+metadata:
+  id: shared_operational_dictionary_v0_1
+  name: Shared Operational Dictionary v0.1
+  version: '0.1'
+  dictionary_status: draft_shared_operational_dictionary_v0_1
+  schema_status: unstable_v0_1
+  usage: allowed_for_projection_use
+  contract_status: not_final_contract
+  owner_module: forprint_library
+  unit_dictionary_status: not_final_inventory_unit_system
+entries:
+- id: client_account
+  label_uk: Client Account
+  label_en: Client Account
+  description: Canonical shared operational dictionary value 'client_account' for
+    dictionary group 'entity_type'.
+  status: active
+  aliases: []
+  owner_module: forprint_library
+  dictionary_group: entity_type
+  version: '0.1'
+  notes: Draft shared operational dictionary entry.
+- id: client_group
+  label_uk: Client Group
+  label_en: Client Group
+  description: Canonical shared operational dictionary value 'client_group' for dictionary
+    group 'entity_type'.
+  status: active
+  aliases: []
+  owner_module: forprint_library
+  dictionary_group: entity_type
+  version: '0.1'
+  notes: Draft shared operational dictionary entry.
+- id: contact_person
+  label_uk: Contact Person
+  label_en: Contact Person
+  description: Canonical shared operational dictionary value 'contact_person' for
+    dictionary group 'entity_type'.
+  status: active
+  aliases: []
+  owner_module: forprint_library
+  dictionary_group: entity_type
+  version: '0.1'
+  notes: Draft shared operational dictionary entry.
+- id: contact_method
+  label_uk: Contact Method
+  label_en: Contact Method
+  description: Canonical shared operational dictionary value 'contact_method' for
+    dictionary group 'entity_type'.
+  status: active
+  aliases: []
+  owner_module: forprint_library
+  dictionary_group: entity_type
+  version: '0.1'
+  notes: Draft shared operational dictionary entry.
+- id: client_address
+  label_uk: Client Address
+  label_en: Client Address
+  description: Canonical shared operational dictionary value 'client_address' for
+    dictionary group 'entity_type'.
+  status: active
+  aliases: []
+  owner_module: forprint_library
+  dictionary_group: entity_type
+  version: '0.1'
+  notes: Draft shared operational dictionary entry.
+- id: legal_entity_profile
+  label_uk: Legal Entity Profile
+  label_en: Legal Entity Profile
+  description: Canonical shared operational dictionary value 'legal_entity_profile'
+    for dictionary group 'entity_type'.
+  status: active
+  aliases: []
+  owner_module: forprint_library
+  dictionary_group: entity_type
+  version: '0.1'
+  notes: Draft shared operational dictionary entry.
+- id: external_reference
+  label_uk: External Reference
+  label_en: External Reference
+  description: Canonical shared operational dictionary value 'external_reference'
+    for dictionary group 'entity_type'.
+  status: active
+  aliases: []
+  owner_module: forprint_library
+  dictionary_group: entity_type
+  version: '0.1'
+  notes: Draft shared operational dictionary entry.
+- id: order
+  label_uk: Order
+  label_en: Order
+  description: Canonical shared operational dictionary value 'order' for dictionary
+    group 'entity_type'.
+  status: active
+  aliases: []
+  owner_module: forprint_library
+  dictionary_group: entity_type
+  version: '0.1'
+  notes: Draft shared operational dictionary entry.
+- id: order_line
+  label_uk: Order Line
+  label_en: Order Line
+  description: Canonical shared operational dictionary value 'order_line' for dictionary
+    group 'entity_type'.
+  status: active
+  aliases: []
+  owner_module: forprint_library
+  dictionary_group: entity_type
+  version: '0.1'
+  notes: Draft shared operational dictionary entry.
+- id: calculator_output_package
+  label_uk: Calculator Output Package
+  label_en: Calculator Output Package
+  description: Canonical shared operational dictionary value 'calculator_output_package'
+    for dictionary group 'entity_type'.
+  status: active
+  aliases: []
+  owner_module: forprint_library
+  dictionary_group: entity_type
+  version: '0.1'
+  notes: Draft shared operational dictionary entry.
+- id: product_service_reference
+  label_uk: Product Service Reference
+  label_en: Product Service Reference
+  description: Canonical shared operational dictionary value 'product_service_reference'
+    for dictionary group 'entity_type'.
+  status: active
+  aliases: []
+  owner_module: forprint_library
+  dictionary_group: entity_type
+  version: '0.1'
+  notes: Draft shared operational dictionary entry.
+- id: material_requirement
+  label_uk: Material Requirement
+  label_en: Material Requirement
+  description: Canonical shared operational dictionary value 'material_requirement'
+    for dictionary group 'entity_type'.
+  status: active
+  aliases: []
+  owner_module: forprint_library
+  dictionary_group: entity_type
+  version: '0.1'
+  notes: Draft shared operational dictionary entry.
+- id: payment_projection
+  label_uk: Payment Projection
+  label_en: Payment Projection
+  description: Canonical shared operational dictionary value 'payment_projection'
+    for dictionary group 'entity_type'.
+  status: active
+  aliases: []
+  owner_module: forprint_library
+  dictionary_group: entity_type
+  version: '0.1'
+  notes: Draft shared operational dictionary entry.
+- id: workflow_template
+  label_uk: Workflow Template
+  label_en: Workflow Template
+  description: Canonical shared operational dictionary value 'workflow_template' for
+    dictionary group 'entity_type'.
+  status: active
+  aliases: []
+  owner_module: forprint_library
+  dictionary_group: entity_type
+  version: '0.1'
+  notes: Draft shared operational dictionary entry.
+- id: workflow_stage
+  label_uk: Workflow Stage
+  label_en: Workflow Stage
+  description: Canonical shared operational dictionary value 'workflow_stage' for
+    dictionary group 'entity_type'.
+  status: active
+  aliases: []
+  owner_module: forprint_library
+  dictionary_group: entity_type
+  version: '0.1'
+  notes: Draft shared operational dictionary entry.
+- id: deadline_control
+  label_uk: Deadline Control
+  label_en: Deadline Control
+  description: Canonical shared operational dictionary value 'deadline_control' for
+    dictionary group 'entity_type'.
+  status: active
+  aliases: []
+  owner_module: forprint_library
+  dictionary_group: entity_type
+  version: '0.1'
+  notes: Draft shared operational dictionary entry.
+- id: contractor_reference
+  label_uk: Contractor Reference
+  label_en: Contractor Reference
+  description: Canonical shared operational dictionary value 'contractor_reference'
+    for dictionary group 'entity_type'.
+  status: active
+  aliases: []
+  owner_module: forprint_library
+  dictionary_group: entity_type
+  version: '0.1'
+  notes: Draft shared operational dictionary entry.
+- id: alert_rule
+  label_uk: Alert Rule
+  label_en: Alert Rule
+  description: Canonical shared operational dictionary value 'alert_rule' for dictionary
+    group 'entity_type'.
+  status: active
+  aliases: []
+  owner_module: forprint_library
+  dictionary_group: entity_type
+  version: '0.1'
+  notes: Draft shared operational dictionary entry.
+- id: alert_event
+  label_uk: Alert Event
+  label_en: Alert Event
+  description: Canonical shared operational dictionary value 'alert_event' for dictionary
+    group 'entity_type'.
+  status: active
+  aliases: []
+  owner_module: forprint_library
+  dictionary_group: entity_type
+  version: '0.1'
+  notes: Draft shared operational dictionary entry.
+- id: report_definition
+  label_uk: Report Definition
+  label_en: Report Definition
+  description: Canonical shared operational dictionary value 'report_definition' for
+    dictionary group 'entity_type'.
+  status: active
+  aliases: []
+  owner_module: forprint_library
+  dictionary_group: entity_type
+  version: '0.1'
+  notes: Draft shared operational dictionary entry.
+- id: report_projection
+  label_uk: Report Projection
+  label_en: Report Projection
+  description: Canonical shared operational dictionary value 'report_projection' for
+    dictionary group 'entity_type'.
+  status: active
+  aliases: []
+  owner_module: forprint_library
+  dictionary_group: entity_type
+  version: '0.1'
+  notes: Draft shared operational dictionary entry.
+- id: operational_event
+  label_uk: Operational Event
+  label_en: Operational Event
+  description: Canonical shared operational dictionary value 'operational_event' for
+    dictionary group 'entity_type'.
+  status: active
+  aliases: []
+  owner_module: forprint_library
+  dictionary_group: entity_type
+  version: '0.1'
+  notes: Draft shared operational dictionary entry.
+- id: unknown
+  label_uk: Невідомо
+  label_en: Unknown
+  description: Canonical shared operational dictionary value 'unknown' for dictionary
+    group 'entity_type'.
+  status: active
+  aliases:
+  - невідомо
+  owner_module: forprint_library
+  dictionary_group: entity_type
+  version: '0.1'
+  notes: Draft shared operational dictionary entry.

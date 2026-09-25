@@ -1,0 +1,124 @@
+schema_version: forprint_library_l3_capability_map_v0_1
+module_id: forprint_library
+stage: L3_CAPABILITY_SYNTHESIS
+source_state:
+  library_branch: feature/library-calculator-input-contract-v01
+  library_head: bba52bf6001f256a5c13ea7dbe175336b431754c
+  blueprint_branch: audit/blueprint-inventory-refresh-2026-07-29
+  blueprint_head: b6ab9b65a2c27b70a574468caa8e3de4c3b454c5
+  l2_blocks_synthesized: 8
+authority:
+  source_mutation: false
+  roadmap_mutation: false
+  implementation_authority: false
+  cleanup_authority: false
+module_role:
+  current: semantic_catalog_reference_and_shared_definition_authority
+  must_not_own:
+  - calculator_pricing_truth
+  - operational_orders
+  - client_database_truth
+  - accounting_truth
+  - warehouse_stock_truth
+  - production_runtime
+  - crm_workflow
+  - telegram_runtime
+  - foreign_domain_business_rules
+capability_families:
+- id: CAP-LIB-L3-01
+  name: canonical_semantic_catalog_reference_core
+  maturity: CURRENT_IMPLEMENTED_DRAFT_REFERENCE
+  confidence: HIGH
+  implemented: true
+  main_debt:
+  - lifecycle_maturity
+  - formal_generated_authority
+- id: CAP-LIB-L3-02
+  name: shared_dictionary_and_resolution_core
+  maturity: CURRENT_IMPLEMENTED_DRAFT_REFERENCE
+  confidence: HIGH
+  implemented: true
+  main_debt:
+  - resolution_status_mapping
+  - naming_profile_gap
+- id: CAP-LIB-L3-03
+  name: configurable_product_reference_model
+  maturity: CURRENT_IMPLEMENTED_DRAFT_REFERENCE
+  confidence: HIGH
+  implemented: true
+  current_products:
+  - product.business_card
+- id: CAP-LIB-L3-04
+  name: deterministic_calculator_input_projection
+  maturity: CURRENT_IMPLEMENTED_EXECUTABLE_SPECIALIZED_CONTRACT
+  confidence: HIGH
+  implemented: true
+  blueprint_acceptance: NOT_PROVEN
+- id: CAP-LIB-L3-05
+  name: generic_library_reference_contract_foundation
+  maturity: CURRENT_FOUNDATIONAL_AND_PILOT
+  confidence: HIGH_ARTIFACTS_MEDIUM_HIGH_ADOPTION
+  implemented: true
+  contract_registry_adoption: NOT_PROVEN
+- id: CAP-LIB-L3-06
+  name: generated_projection_schema_fixture_layer
+  maturity: CURRENT_SUPPORTING_GENERATED_LAYER
+  confidence: HIGH
+  implemented: true
+  generated_drift_gate: NOT_PROVEN
+- id: CAP-LIB-L3-07
+  name: validation_and_quality_surface
+  maturity: CURRENT_SUBSTANTIAL_WITH_FRESHNESS_AND_MUTATION_DEBT
+  confidence: HIGH
+  implemented: true
+  fresh_current_head_pass_asserted_by_l3: false
+- id: CAP-LIB-L3-08
+  name: blueprint_aware_governance_operator_surface
+  maturity: CURRENT_IMPLEMENTED_WITH_TRANSITIONAL_COORDINATION_STATE
+  confidence: HIGH
+  implemented: true
+  prompt_authority: BLUEPRINT_PROMPT_QUEUE
+- id: CAP-LIB-L3-09
+  name: documentation_and_architecture_knowledge_layer
+  maturity: MULTI_GENERATIONAL_SUPPORTING_WITH_AUTHORITY_DEBT
+  confidence: HIGH
+  implemented: true
+  architecture_generations: 4+
+non_capability_structures:
+- id: STRUCT-LIB-L3-01
+  path: app/forprint_library/__init__.py
+  classification: TECHNICAL_SCAFFOLDING
+  disposition: KEEP
+high_priority_reconciliation:
+- resolution_status_vocabularies
+- calculator_input_vs_library_reference_contract
+- reference_example_ids_vs_current_catalog_ids
+- contract_version_model_vs_contract_registry
+- catalog_and_schema_source_authority
+- dictionary_generator_and_policy_authority
+- generated_artifact_drift_protection
+- prompt_queue_vs_local_prompt_lifecycle
+- current_status_and_report_index_derivation
+- blueprint_acceptance_event_model
+- quality_gate_read_only_vs_report_publishing
+major_not_proven_current:
+- service_catalog_semantics
+- naming_profiles
+- production_tokens
+- profile_specific_defaults
+- external_catalog_ingestion
+- calibration_profiles
+- sop_instruction_media_knowledge
+- ui_design_system_publication
+- shared_semantic_capability_registry
+- mature_contract_registry_adoption
+- mature_migration_lifecycle
+- historical_reference_asset_index
+- broad_live_consumer_adoption
+stage_disposition:
+  result: PASS_FOR_CAPABILITY_SYNTHESIS_WITH_AUTHORITY_AND_RECONCILIATION_INPUTS_READY
+  dominant_debt: AUTHORITY_GENERATION_LIFECYCLE_AND_FRESHNESS_NORMALIZATION
+  broad_rewrite_required: false
+  broad_new_implementation_authorized: false
+  next_stage: L4_DOCUMENT_AUTHORITY_REGISTRY
+  then: L5_CAPABILITY_RECONCILIATION

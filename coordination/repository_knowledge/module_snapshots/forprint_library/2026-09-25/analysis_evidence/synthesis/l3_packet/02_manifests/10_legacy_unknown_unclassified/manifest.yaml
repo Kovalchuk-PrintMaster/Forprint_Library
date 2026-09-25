@@ -1,0 +1,21 @@
+schema_version: forprint_module_knowledge_analysis_block_manifest_v0_1
+module_id: forprint_library
+stage: L1_INVENTORY_AND_SEGMENTATION
+block_id: 10_legacy_unknown_unclassified
+title: Legacy, unknown and unclassified
+purpose: Files whose current capability/lifecycle/ownership cannot be assigned confidently during L1 without deeper L2 analysis.
+mutation_performed: false
+selection_method: L1 deterministic classification plus bounded human review correction v0.1; classification remains preliminary
+  until L2 analysis
+file_count: 1
+source_paths:
+- app/forprint_library/__init__.py
+primary_capability_hypotheses:
+- unknown/legacy candidate holding area
+cross_block_dependencies: []
+documents_present: []
+tests_present: []
+generated_outputs_present: []
+legacy_candidates_present: []
+unknowns: []
+confidence: high

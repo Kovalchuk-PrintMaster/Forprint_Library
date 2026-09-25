@@ -1,0 +1,283 @@
+module_id: forprint_library
+status: completed_pending_blueprint_review
+stage: coordination_foundation_alignment_v0_1_completion
+updated_at: '2026-07-13'
+owner_module: forprint_library
+current_focus:
+- Business Card Skeleton completed and ready for Blueprint review.
+- product.business_card is available as a controlled Library reference object.
+- Implementation and closure metadata are recorded in Library repository.
+- No Blueprint repository writes were performed.
+boundary_confirmation:
+  owns:
+  - canonical catalog semantics
+  - stable catalog IDs
+  - aliases
+  - contract definitions
+  does_not_own:
+  - clients
+  - orders
+  - payments
+  - warehouse stock truth
+  - production runtime
+  - 1C synchronization
+  - CRM workflow
+  - Telegram runtime
+  - Calculator logic
+catalog_seed_v0_1:
+  catalog_status: draft_canonical_seed
+  schema_status: unstable_v0_1
+  usage: allowed_for_projection_use
+  contract_status: not_final_contract
+  owner_module: forprint_library
+  projection_use_allowed_for:
+  - calculator_engine
+  - telegram_bot
+  - forprint_operational_registry
+  - forprint_accounting_registry_service
+  - forprint_prepress_hub
+checkpoint_a:
+  coordination_structure: done
+  makefile_standard: done
+  check_report: done
+  commit: e2f9302
+checkpoint_b:
+  catalog_seed: done
+  schemas: done
+  component_catalogs: done
+  validation_tests: done
+  check_report_catalog_validation: done
+  commit: bb7a317
+checkpoint_c:
+  docs_policy_pack: done
+  architecture_tests: done
+  commit: 967d74a
+checkpoint_d:
+  final_report_and_status: done
+  reports_index: in_progress
+  final_check: pending
+  commit: pending
+next_recommended_step:
+  status: wait_for_blueprint_review
+  recommended_action: Ask Blueprint to review Library coordination foundation alignment
+    v0.1 and confirm readiness for the next prompt.
+  candidate_next_prompt: Library Configurable Product Workbench v0.1 — Business Card
+    Skeleton
+current_phase: business_card_skeleton_v0_1
+last_completed_step: library_business_card_skeleton_ready
+shared_operational_dictionary_v0_1:
+  dictionary_status: draft_shared_operational_dictionary_v0_1
+  schema_status: unstable_v0_1
+  usage: allowed_for_projection_use
+  contract_status: not_final_contract
+  owner_module: forprint_library
+  unit_dictionary_status: not_final_inventory_unit_system
+  dictionary_groups_count: 18
+  dictionary_files: done
+  schemas: done
+  loader_validation: done
+  resolver: done
+  terminal_preview: done
+  examples: done
+  architecture_docs: done
+  check_report_extension: done
+  coordination_report: done
+shared_operational_dictionary_checkpoints:
+  checkpoint_a:
+    name: dictionary_files_and_schemas
+    status: done
+    commit: 18900ee
+  checkpoint_b:
+    name: resolver_examples_and_preview
+    status: done
+    commit: 2fc7694
+  checkpoint_c:
+    name: docs_check_report_and_coordination
+    status: in_progress_until_final_commit
+    commit: pending
+module_name: ForPrint Library
+module_status: active
+priority: p0
+last_report_id: 2026-06-09__forprint_library__report__shared-operational-dictionary-v0-1
+last_commit: 5c7c230
+branch: main
+checks:
+  lint: ok
+  tests: ok_76_passed
+  check_report: ok
+  dictionary_preview: ok
+  coordination_check: pending_blueprint_recheck
+boundary:
+  no_foreign_ownership: true
+  no_production_api: true
+  no_live_write: true
+  no_real_integrations: true
+validation:
+  make_check: ok
+  make_check_report: ok
+  dictionary_preview: ok
+  coordination_metadata: pending_blueprint_recheck
+boundaries:
+  operational_orders_added: false
+  real_clients_added: false
+  real_payments_added: false
+  real_material_stock_added: false
+  real_product_catalog_added: false
+  real_1c_sync_added: false
+  calculator_formulas_added: false
+  telegram_runtime_added: false
+  crm_dashboard_added: false
+  warehouse_stock_truth_added: false
+recommended_next_step:
+- Pass shared operational dictionary v0.1 to Blueprint for review.
+- 'Recommended next candidate: Operational Registry mapping from local draft statuses/types
+  to Library canonical dictionary IDs.'
+make_first_semantic_reference_readiness_v0_1:
+  prompt_id: make_first_semantic_reference_readiness_v0_1
+  blueprint_prompt_path: /srv/software_development/forprint-project/forprint_system_blueprint/coordination/outgoing_prompts/forprint_library/approved/2026-06-23__library__make_first_semantic_reference_readiness_v0_1.md
+  blueprint_commit: 2d49d63
+  implementation_commit: 28fe2d0
+  completion_report_id: 2026-06-25__forprint_library__report__make-first-semantic-reference-readiness-v0-1
+  completion_report_path: coordination/reports/completion/2026-06-25__forprint_library__report__make-first-semantic-reference-readiness-v0-1.md
+  status: completed_pending_blueprint_review
+  makefile_alignment: done
+  make_first_targets: done
+  module_start: passing
+  module_validate: passing
+  prompt_read: passing
+  report_clean: passing_without_git_or_venv_scan
+  semantic_reference_examples: done
+  semantic_reference_docs: done
+  downstream_handoff_notes: done
+  check_report_visibility: done
+  tests: 83_passed
+  completion_packet_automation: deferred_safe_not_faked
+  production_catalog_database: not_implemented
+  live_api: not_implemented
+  runtime_integrations: not_implemented
+reference_contract_foundation_v0_2:
+  prompt_id: reference_contract_foundation_v0_2
+  blueprint_prompt_path: /srv/software_development/forprint-project/forprint_system_blueprint/coordination/outgoing_prompts/forprint_library/approved/2026-06-29__library__reference_contract_foundation_v0_2.md
+  implementation_commit: 78bd7e1
+  implementation_commit_message: Add Library reference contract foundation
+  completion_report_id: 2026-06-29__forprint_library__report__reference-contract-foundation-v0-2
+  completion_report_path: coordination/reports/completion/2026-06-29__forprint_library__report__reference-contract-foundation-v0-2.md
+  status: accepted_by_blueprint
+  docs: done
+  examples: done
+  schemas: done
+  validator: done
+  tests: 94_passed
+  check_report_visibility: done
+  makefile_changes: not_changed_manual_blueprint_mode
+  completion_packet_automation: deferred_safe_not_faked
+  production_catalog_database: not_implemented
+  live_api: not_implemented
+  runtime_integrations: not_implemented
+coordination_foundation_alignment_v0_1:
+  prompt_id: library_coordination_foundation_alignment_v0_1
+  blueprint_prompt_path: /srv/software_development/forprint-project/forprint_system_blueprint/coordination/outgoing_prompts/forprint_library/approved/2026-07-03__library__coordination_foundation_alignment_v0_1.md
+  implementation_commit: 02e2cad
+  implementation_commit_message: Add Library coordination foundation alignment
+  completion_report_id: 2026-07-03__forprint_library__report__coordination-foundation-alignment-v0-1
+  completion_report_path: coordination/reports/completion/2026-07-03__forprint_library__report__coordination-foundation-alignment-v0-1.md
+  status: completed_pending_blueprint_review
+  makefile_rewrite: not_needed
+  operator_workflow: confirmed
+  prompt_queue_navigation: confirmed
+  document_awareness: confirmed
+  context_bundle_no_write: confirmed
+  configuration_policy: documented_deferred_until_needed
+  secrets_policy: not_applicable_no_secrets_added
+  project_tree_alignment: documented
+  check_report_visibility: done
+  tests: 104_passed
+  workbench_started: false
+  product_modeling_started: false
+  production_runtime_changes: false
+reference_consumption_pilot_v0_3:
+  status: completed_pending_blueprint_review
+  prompt_id: library_reference_consumption_pilot_v0_3
+  implementation_commit: 7e000cb
+  completion_report: coordination/reports/completion/2026-07-08__forprint_library__report__reference-consumption-pilot-v0-3.md
+  blueprint_prompt_path: /srv/software_development/forprint-project/forprint_system_blueprint/coordination/outgoing_prompts/forprint_library/approved/2026-07-08__library__reference_consumption_pilot_v0_3.md
+  added_artifacts:
+  - examples/reference_consumption/library_reference_consumption_examples.yaml
+  - schemas/reference_consumption/library_reference_consumption.schema.yaml
+  - scripts/reference_consumption/validate_reference_consumption_pilot.py
+  - docs/architecture/reference_consumption_pilot.md
+  - tests/coordination/test_reference_consumption_pilot.py
+  check_report_visibility: Library reference consumption pilot
+  validation:
+    focused_tests: 7 passed
+    full_tests: 115 passed
+    check_report: OK
+    make_check: OK
+    governance_check: OK
+    module_validate: OK
+    git_diff_check: OK
+  boundaries:
+    configurable_product_workbench_started: false
+    business_card_skeleton_started: false
+    product_modeling_ui_added: false
+    production_catalog_database_added: false
+    live_api_added: false
+    one_c_import_added: false
+    calculator_integration_added: false
+    telegram_integration_added: false
+    operational_registry_write_added: false
+    production_write_added: false
+    price_calculation_added: false
+    material_write_off_added: false
+    blueprint_repository_written: false
+  next_recommended_step: Blueprint review of module-side completion report.
+configurable_product_workbench_business_card_skeleton_v0_1:
+  status: completed_pending_blueprint_review
+  prompt_id: library_configurable_product_workbench_business_card_skeleton_v0_1
+  title: Library Configurable Product Workbench v0.1 — Business Card Skeleton
+  product_id: product.business_card
+  implementation_commit: b8eb062
+  completion_commits:
+  - 7a7cb85
+  - ad99e0a
+  - '1694215'
+  final_cleanup_commit: reported_after_push
+  completion_report: coordination/reports/completion/2026-07-11__forprint_library__report__business-card-skeleton-v0-1.md
+  blueprint_prompt_path: coordination/outgoing_prompts/forprint_library/approved/2026-07-11__library__configurable_product_workbench_business_card_skeleton_v0_1.md
+  checks_passed:
+    business_card_validator: OK
+    business_card_preview: OK
+    focused_business_card_tests: 8 passed
+    full_tests: 137 passed
+    ruff_lint: OK
+    check_report: OK
+    make_check: OK
+    governance_check: OK
+    module_validate: OK
+    git_diff_check: OK
+  blueprint_repository_written: false
+  boundaries:
+    full_product_catalog_added: false
+    product_modeling_ui_added: false
+    production_catalog_database_added: false
+    live_api_added: false
+    one_c_import_added: false
+    one_c_synchronization_added: false
+    calculator_integration_added: false
+    telegram_bot_integration_added: false
+    operational_registry_write_added: false
+    crm_write_added: false
+    website_write_added: false
+    price_calculation_added: false
+    final_price_formula_added: false
+    material_write_off_added: false
+    warehouse_stock_truth_added: false
+    production_task_creation_added: false
+    real_client_order_data_added: false
+    production_runtime_added: false
+    blueprint_repository_written: false
+  notes:
+  - Final cleanup commit hash is reported after push because a Git commit cannot contain
+    its own final hash.
+  legacy_status_aliases:
+  - business_card_skeleton_v0_1_ready_pending_blueprint_review

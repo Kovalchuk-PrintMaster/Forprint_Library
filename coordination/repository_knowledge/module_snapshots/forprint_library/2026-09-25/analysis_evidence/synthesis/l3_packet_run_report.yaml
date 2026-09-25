@@ -1,0 +1,27 @@
+schema_version: forprint_library_l3_packet_run_report_v0_1
+result: PASS
+module_id: forprint_library
+stage: L3_CAPABILITY_SYNTHESIS
+branch: feature/library-calculator-input-contract-v01
+head: bba52bf6001f256a5c13ea7dbe175336b431754c
+upstream: bba52bf6001f256a5c13ea7dbe175336b431754c
+blueprint_branch: audit/blueprint-inventory-refresh-2026-07-29
+blueprint_head: b6ab9b65a2c27b70a574468caa8e3de4c3b454c5
+l2_block_count: 8
+l2_report_count: 8
+non_tmp_git_status_unchanged: true
+mutation_performed_outside_tmp: false
+tests_run: false
+make_run: false
+exporters_run: false
+generators_run: false
+outputs:
+  packet_dir: tmp/module_knowledge_analysis/forprint_library/synthesis/l3_packet
+  packet_markdown: tmp/module_knowledge_analysis/forprint_library/synthesis/l3_capability_synthesis_packet.md
+  packet_tar_gz: tmp/module_knowledge_analysis/forprint_library/synthesis/l3_capability_synthesis_packet.tar.gz
+  run_report: tmp/module_knowledge_analysis/forprint_library/synthesis/l3_packet_run_report.yaml
+sha256:
+  packet_markdown: ff0f2082ec9c9c2ed03950463dbefe2b43a3e8e3c28406b04b14eff0fd7f8c77
+  packet_tar_gz: c041db0f3df1aa5bf5eec479c9946e8eb2b8191fef79aeda8d7307a7b72ef86a
+  packet_manifest: 62e6963453371a65062a1312aaec4a040e57f15f10f568569d1cb0e1d81602ab
+next_action: produce L3 capability synthesis report

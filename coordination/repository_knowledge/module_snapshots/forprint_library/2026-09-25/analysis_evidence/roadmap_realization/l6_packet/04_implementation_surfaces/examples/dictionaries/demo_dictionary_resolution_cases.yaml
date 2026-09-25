@@ -1,0 +1,42 @@
+examples:
+  - id: exact_id_resolution
+    group_name: source_system
+    input_value: calculator_engine
+    expected_status: confirmed
+    expected_matched_id: calculator_engine
+    description: Exact canonical ID resolution.
+
+  - id: alias_resolution
+    group_name: source_system
+    input_value: calculator
+    expected_status: confirmed_with_alias
+    expected_matched_id: calculator_engine
+    description: Alias resolves to canonical ID.
+
+  - id: unknown_value
+    group_name: source_system
+    input_value: not_existing_source
+    expected_status: unresolved
+    expected_matched_id: null
+    description: Unknown value remains unresolved.
+
+  - id: deprecated_value
+    group_name: reference_resolution_status
+    input_value: deprecated_reference
+    expected_status: deprecated_reference
+    expected_matched_id: deprecated_reference
+    description: Deprecated canonical ID remains readable but marked deprecated.
+
+  - id: display_label_usage
+    group_name: alert_severity
+    input_value: crit
+    expected_status: confirmed_with_alias
+    expected_matched_id: critical
+    description: Display-oriented alias resolves to canonical severity ID.
+
+  - id: ambiguous_alias
+    group_name: demo_group
+    input_value: shared_alias
+    expected_status: ambiguous_manual_review_required
+    expected_matched_id: null
+    description: Demonstrates ambiguous alias handling using a test fixture.

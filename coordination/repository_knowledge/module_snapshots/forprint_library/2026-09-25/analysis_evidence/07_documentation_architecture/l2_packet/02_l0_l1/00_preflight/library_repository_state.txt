@@ -1,0 +1,106 @@
+=== REPOSITORY ===
+/srv/software_development/forprint-project/forprint_library
+BRANCH=feature/library-calculator-input-contract-v01
+HEAD=bba52bf6001f256a5c13ea7dbe175336b431754c
+UPSTREAM=bba52bf6001f256a5c13ea7dbe175336b431754c
+
+=== RECENT COMMITS ===
+bba52bf fix: validate Library completion packet schema
+89c4ec6 Record Calculator input completion packet
+d094851 Record Library Calculator input contract completion
+0b8cbce Add Library Calculator input contract
+2a55286 fix: add Library validation compatibility targets
+
+=== TOP LEVEL ===
+./catalog/finishing_options.yaml
+./catalog/materials.yaml
+./catalog/operations.yaml
+./catalog/print_modes.yaml
+./catalog/product_families.yaml
+./coordination/blueprint_source.yaml
+./coordination/README.md
+./dictionaries/alert_event_status.yaml
+./dictionaries/alert_rule_type.yaml
+./dictionaries/alert_severity.yaml
+./dictionaries/contractor_reference_status.yaml
+./dictionaries/deadline_type.yaml
+./dictionaries/entity_type.yaml
+./dictionaries/material_requirement_status.yaml
+./dictionaries/notification_status.yaml
+./dictionaries/order_line_status.yaml
+./dictionaries/order_status.yaml
+./dictionaries/payment_status.yaml
+./dictionaries/production_status.yaml
+./dictionaries/product_service_reference_status.yaml
+./dictionaries/reference_resolution_status.yaml
+./dictionaries/shared_operational_dictionary_v0_1.yaml
+./dictionaries/source_system.yaml
+./dictionaries/unit.yaml
+./dictionaries/workflow_stage_status.yaml
+./dictionaries/workflow_status.yaml
+./examples/catalog_seed_v0_1.example.yaml
+./examples/semantic_reference_preview.yaml
+./forprint_module_manifest.yaml
+./.gitignore
+./Makefile
+./pyproject.toml
+./.pytest_cache/CACHEDIR.TAG
+./.pytest_cache/.gitignore
+./.pytest_cache/README.md
+./README.md
+./reports/library_check_report.json
+./reports/library_check_report.md
+./.ruff_cache/CACHEDIR.TAG
+./.ruff_cache/.gitignore
+./schemas/catalog_seed.schema.yaml
+./schemas/configurable_product.schema.yaml
+./schemas/dictionary_entry.schema.yaml
+./schemas/finishing_option.schema.yaml
+./schemas/material.schema.yaml
+./schemas/operation.schema.yaml
+./schemas/print_mode.schema.yaml
+./schemas/product_family.schema.yaml
+./schemas/shared_operational_dictionary.schema.yaml
+./scripts/check_blueprint_instructions.py
+./scripts/export_catalog_schema_artifacts.py
+./scripts/export_component_catalogs.py
+./scripts/export_dictionary_policy_docs.py
+./scripts/export_shared_dictionary_coordination_artifacts.py
+./scripts/export_shared_operational_dictionaries.py
+./scripts/make_first_workflow.py
+./scripts/preview_shared_operational_dictionaries.py
+./scripts/run_library_checks.py
+./scripts/sync_blueprint_directives.py
+./scripts/validate_catalog_seed.py
+./scripts/validate_semantic_reference_readiness.py
+./scripts/validate_shared_operational_dictionaries.py
+./tmp.py
+./.venv_forprint_library/pyvenv.cfg
+
+=== COORDINATION ===
+coordination/blueprint_awareness/document_review_ledger.yaml
+coordination/blueprint_awareness/library_coordination_foundation_alignment_v0_1.yaml
+coordination/blueprint_source.yaml
+coordination/completion_packets/records/2026-07-29__forprint_library__calculator_input_contract_v0_1_completion.yaml
+coordination/prompts/active/2026-06-23__library__make_first_semantic_reference_readiness_v0_1.md
+coordination/prompts/active/2026-06-29__library__reference_contract_foundation_v0_2.md
+coordination/prompts/active/current_blueprint_prompt.md
+coordination/prompts/index.yaml
+coordination/prompts/received/.gitkeep
+coordination/README.md
+coordination/reports/commits/2026-07-07__forprint_library__commit-report__coordination-foundation-alignment-v0-1.md
+coordination/reports/commits/.gitkeep
+coordination/reports/completion/2026-06-06__forprint_library__report__catalog-seed-v0-1-and-coordination-bootstrap.md
+coordination/reports/completion/2026-06-09__forprint_library__report__shared-operational-dictionary-v0-1.md
+coordination/reports/completion/2026-06-25__forprint_library__report__make-first-semantic-reference-readiness-v0-1.md
+coordination/reports/completion/2026-06-29__forprint_library__report__reference-contract-foundation-v0-2.md
+coordination/reports/completion/2026-07-03__forprint_library__report__coordination-foundation-alignment-v0-1.md
+coordination/reports/completion/2026-07-08__forprint_library__report__reference-consumption-pilot-v0-3.md
+coordination/reports/completion/2026-07-11__forprint_library__report__business-card-skeleton-v0-1.md
+coordination/reports/completion/forprint_library_calculator_input_contract_v0_1_completion.md
+coordination/reports/completion/.gitkeep
+coordination/reports/index.yaml
+coordination/standards/blueprint_standards_available_snapshot.txt
+coordination/status/current_status.md
+coordination/status/current_status.yaml
+coordination/status/next_questions_for_blueprint.md
